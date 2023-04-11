@@ -51,7 +51,7 @@ public class GameStateManager : MonoBehaviour
 
 
 
-
+    // MAIN MENU OPTIONS
     // loads into the beginning of the game
     public static void NewGame()
     {
@@ -59,11 +59,23 @@ public class GameStateManager : MonoBehaviour
         Play();
     }
 
+    public static void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    // PAUSE MENU OPTIONS
+    // resumes game
+    public static void ResumeGame()
+    {
+        Play();
+    }
+
+    // quits to main menu
     public static void QuitToMainMenu()
     {
         MainMenu();
     }
-
 
 
 
