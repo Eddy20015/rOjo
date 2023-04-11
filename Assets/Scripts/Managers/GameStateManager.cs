@@ -12,6 +12,9 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string MainMenuNameSetter;
     private static string MainMenuName;
 
+    [SerializeField] private string MainLevelNameSetter;
+    private static string MainLevelName;
+
     // current GameState options
     public enum GAMESTATE
     {
@@ -37,6 +40,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         MainMenuName = MainMenuNameSetter;
+        MainLevelName = MainLevelNameSetter;
     }
 
     // returns current GameState
@@ -44,6 +48,24 @@ public class GameStateManager : MonoBehaviour
     {
         return GameState;
     }
+
+
+
+
+    // loads into the beginning of the game
+    public static void NewGame()
+    {
+        SceneManager.LoadScene(MainLevelName);
+        Play();
+    }
+
+    public static void QuitToMainMenu()
+    {
+        MainMenu();
+    }
+
+
+
 
 
     // set GameState to PLAYING, would be used to resume play after a pause
