@@ -5,44 +5,44 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] float maxHealth;
-    [SerializeField] float healAmount;
-    [SerializeField] float healDelay;
-    private float health;
-    private bool startHealing = false;
+    [SerializeField] float maxExposure;
+    [SerializeField] float decreaseAmount;
+    [SerializeField] float decreaseDelay;
+    private float currentExposure;
+    private bool startDecreasing = false;
 
-    [SerializeField] Image healthBar;
+    [SerializeField] Image exposureBar;
 
     private void FixedUpdate()
     {
-        if (startHealing)
+        if (startDecreasing)
         {
-            if (health > 0)
+            if (currentExposure > 0)
             {
-                DecreaseMeter(healAmount);
+                DecreaseMeter(decreaseAmount);
             }
             else
             {
-                health = 0;
-                startHealing = false;
+                currentExposure = 0;
+                startDecreasing = false;
             }
         }
     }
 
     private void Start()
     {
-        health = 0;
-        UpdateHealthBar(health, maxHealth);
-        startHealing = false;
+        currentExposure = 0;
+        UpdateExposureBar(currentExposure, maxExposure);
+        startDecreasing = false;
     }
 
     public void IncreaseMeter(float gainedMeter)
     {
-        startHealing = false;
-        health += gainedMeter;
-        UpdateHealthBar(health, maxHealth);
+        startDecreasing = false;
+        currentExposure += gainedMeter;
+        UpdateExposureBar(currentExposure, maxExposure);
 
-        if (health >= maxHealth)
+        if (currentExposure >= maxExposure)
         {
             GameStateManager.GameOver();
         }
@@ -50,23 +50,23 @@ public class PlayerHealth : MonoBehaviour
 
     public void DecreaseMeter(float gainedHealth)
     {
-        health -= gainedHealth;
-        UpdateHealthBar(health, maxHealth);
+        currentExposure -= gainedHealth;
+        UpdateExposureBar(currentExposure, maxExposure);
     }
 
-    public void UpdateHealthBar(float currentHealth, float maxHealth)
+    public void UpdateExposureBar(float currentHealth, float maxHealth)
     {
         float fillAmount = currentHealth / maxHealth;
-        healthBar.fillAmount = fillAmount;
+        exposureBar.fillAmount = fillAmount;
     }
 
-    public void ChangeStartHealingVar(bool b)
+    public void ChangeStartDecreasingVar(bool b)
     {
-        startHealing = b;
+        startDecreasing = b;
     }
 
-    public float GetHealDelay()
+    public float GetExposureDecreaseDelay()
     {
-        return healDelay;
+        return decreaseDelay;
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Exposure : MonoBehaviour
 {
-    [SerializeField] float damageAmount;
+    [SerializeField] float fillAmount;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             StopAllCoroutines();
-            collision.gameObject.GetComponent<PlayerHealth>().IncreaseMeter(damageAmount);
+            collision.gameObject.GetComponent<PlayerHealth>().IncreaseMeter(fillAmount);
         }
     }
 
@@ -19,13 +19,13 @@ public class Exposure : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(HealAfterDelay(collision));
+            StartCoroutine(DecreaseAfterDelay(collision));
         }
     }
 
-    public IEnumerator HealAfterDelay(Collider2D collision)
+    public IEnumerator DecreaseAfterDelay(Collider2D collision)
     {
-        yield return new WaitForSeconds(collision.gameObject.GetComponent<PlayerHealth>().GetHealDelay());
-        collision.gameObject.GetComponent<PlayerHealth>().ChangeStartHealingVar(true);
+        yield return new WaitForSeconds(collision.gameObject.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
+        collision.gameObject.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
     }
 }

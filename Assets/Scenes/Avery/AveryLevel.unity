@@ -5451,6 +5451,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3764266573590916467, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
+      propertyPath: exposureBar
+      value: 
+      objectReference: {fileID: 3764266574520089585}
     - target: {fileID: 3764266573590916493, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_Name
       value: Dancer
@@ -5525,3 +5529,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
+--- !u!114 &3764266574520089585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3764266573699373691, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
+  m_PrefabInstance: {fileID: 3764266574520089584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
