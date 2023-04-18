@@ -156,10 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2711a57f7def9a241a03b737aa5a071f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  healAmount: 0.5
-  healDelay: 3
-  healthBar: {fileID: 3764266573699373691}
+  maxExposure: 100
+  decreaseAmount: 0.5
+  decreaseDelay: 3
+  exposureBar: {fileID: 0}
 --- !u!1 &3764266573597292424
 GameObject:
   m_ObjectHideFlags: 0
