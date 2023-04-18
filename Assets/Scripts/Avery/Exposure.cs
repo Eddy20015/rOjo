@@ -11,7 +11,7 @@ public class Exposure : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             StopAllCoroutines();
-            collision.gameObject.GetComponent<PlayerHealth>().DecreaseHealth(damageAmount);
+            collision.gameObject.GetComponent<PlayerHealth>().IncreaseMeter(damageAmount);
         }
     }
 

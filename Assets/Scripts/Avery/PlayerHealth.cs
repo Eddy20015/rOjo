@@ -17,13 +17,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if (startHealing)
         {
-            if (health < maxHealth)
+            if (health > 0)
             {
-                IncreaseHealth(healAmount);
+                DecreaseMeter(healAmount);
             }
             else
             {
-                health = maxHealth;
+                health = 0;
                 startHealing = false;
             }
         }
@@ -31,26 +31,26 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        health = maxHealth;
+        health = 0;
         UpdateHealthBar(health, maxHealth);
         startHealing = false;
     }
 
-    public void DecreaseHealth(float lostHealth)
+    public void IncreaseMeter(float gainedMeter)
     {
         startHealing = false;
-        health -= lostHealth;
+        health += gainedMeter;
         UpdateHealthBar(health, maxHealth);
 
-        if (health <= 0)
+        if (health >= maxHealth)
         {
             GameStateManager.GameOver();
         }
     }
 
-    public void IncreaseHealth(float gainedHealth)
+    public void DecreaseMeter(float gainedHealth)
     {
-        health += gainedHealth;
+        health -= gainedHealth;
         UpdateHealthBar(health, maxHealth);
     }
 
