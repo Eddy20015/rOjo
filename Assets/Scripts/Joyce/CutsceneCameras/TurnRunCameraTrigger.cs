@@ -7,6 +7,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     [Header("Camera Pass Off")]
     [SerializeField] private Transform HumanPlayer;
     [SerializeField] private Player3DMovement playerMoveScript;
+    [SerializeField] private Player2DMovement dancerMovement;
     protected override void StartTrigger()
     {
         switcher.SetPriority(newCamIndex);
@@ -16,6 +17,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     }
     protected override void EndTrigger()
     {
+        StopAllCoroutines();
         switcher.SetPriority(0);
         cutAnim.SetTrigger("Idle");
         mainCam.orthographic = true;
@@ -26,6 +28,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         switcher.ToggleAllCameras(false);
         mainCam.transform.SetParent(HumanPlayer);
         playerMoveScript.enabled = true;
+        dancerMovement.enabled = false;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
