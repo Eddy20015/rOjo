@@ -37,6 +37,8 @@ public class Player3DMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         anim = GetComponentInChildren<Animator>();
+        if (anim != null)
+            anim.SetBool("isMoving", isGrounded);
     }
 
     private void Update()
