@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 262.1853, g: 324.85815, b: 429.9668, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,8 +309,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InactiveClip: {fileID: 32900000, guid: 2d2949a26d11c574c8f87b68124b9f82, type: 3}
-  ActiveClip: {fileID: 0}
-  TransitionClip: {fileID: 0}
+  ActiveClip: {fileID: 32900000, guid: ff546cf9bfeaea040b119b79c82d162b, type: 3}
+  TransitionClip: {fileID: 32900000, guid: b9fceab0d35e9fb4d9b97dd7ec77a163, type: 3}
+  ReverseTransitionClip: {fileID: 32900000, guid: b9fceab0d35e9fb4d9b97dd7ec77a163, type: 3}
+  PlaySpeed: 1
+  HighSpeed: 2
 --- !u!1 &1764344392
 GameObject:
   m_ObjectHideFlags: 0

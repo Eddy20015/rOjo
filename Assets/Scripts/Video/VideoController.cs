@@ -7,8 +7,6 @@ public abstract class VideoController : MonoBehaviour
 {
     protected VideoPlayer VPlayer;
 
-    protected bool bContinue;
-
     protected void Start()
     {
         print("In the old start");
@@ -34,10 +32,5 @@ public abstract class VideoController : MonoBehaviour
     {
         VPlayer.playbackSpeed = Speed;
         StartVPlayer();
-    }
-
-    protected void CheckOver(VideoPlayer vp)
-    {
-        bContinue = true;
     }
 }

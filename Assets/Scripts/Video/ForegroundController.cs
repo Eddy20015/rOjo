@@ -30,5 +30,6 @@ public class ForegroundController : VideoController
     public void StopForeground()
     {
         StopVPlayer();
+        VPlayer.clip = null;
     }
 }

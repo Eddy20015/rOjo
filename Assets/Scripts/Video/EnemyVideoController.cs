@@ -23,33 +23,48 @@ public class EnemyVideoController : VideoController
         StartVPlayer();
     }
 
-    public void Activate()
+    private void Update()
     {
-
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Activate();
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            BeginDeactivate();
+        }
     }
 
-    public void Deactivate()
+    public void Activate()
     {
-        //Speed up Active clip to completion
-        VPlayer.loopPointReached += CheckOver;
+        VPlayer.clip = ActiveClip;
+        StartVPlayer();
+    }
+
+    public void BeginDeactivate()
+    {
+        VPlayer.loopPointReached += ReverseClip;
 
         //Speed up and finish the video forwards
         ClipSpeed(HighSpeed);
+    }
 
-        //Do nothing until the active clip loop point is reached
-        while (!bContinue) ;
-        bContinue = false;
+    public void ReverseClip(VideoPlayer vp)
+    {
+        VPlayer.loopPointReached -= ReverseClip;
+        VPlayer.loopPointReached += EndDeactivate;
 
-        //Set the playback speed back to normal, but reverse it
+        //Set the playback speed back to normal, and play ReverseTransitionClip
         VPlayer.clip = ReverseTransitionClip;
         ClipSpeed(PlaySpeed);
+    }
 
-        //Do nothing until the transition clip loop point is reached
-        while (!bContinue) ;
-        bContinue = false;
+    public void EndDeactivate(VideoPlayer vp)
+    {
+        VPlayer.loopPointReached -= EndDeactivate;
 
         //Set the playback speed back to forward normal and let the inactive clip play
         VPlayer.clip = InactiveClip;
-        ClipSpeed(PlaySpeed);
+        StartVPlayer();
     }
 }
