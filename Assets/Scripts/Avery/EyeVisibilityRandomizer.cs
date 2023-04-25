@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Eye : MonoBehaviour
+public class EyeVisibilityRandomizer : MonoBehaviour
 {
     [SerializeField] float minTime;
     [SerializeField] float maxTime;
