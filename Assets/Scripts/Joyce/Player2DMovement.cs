@@ -14,6 +14,10 @@ public class Player2DMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private int groundlayer;
     [SerializeField] private int playerLayer;
+    [Min(1)]
+    [SerializeField] private float upGravity;
+    [Min(0)]
+    [SerializeField] private float downGravity;
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
@@ -37,8 +41,7 @@ public class Player2DMovement : MonoBehaviour
 
     void Update()
     {
-        xtrans = Input.GetAxisRaw("Horizontal") * speed;
-        //xtrans = Input.GetAxis("Horizontal") * speed;
+        xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing
         {
             FlipRight();
@@ -72,6 +75,9 @@ public class Player2DMovement : MonoBehaviour
         {
             isJumping = false;
         }
+
+        myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity: upGravity;
+
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
         //anim.SetBool("Jump", isJumping);
