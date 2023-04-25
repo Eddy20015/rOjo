@@ -77,6 +77,12 @@ public class GameStateManager : MonoBehaviour
         MainMenu();
     }
 
+    //GAME OVER MENU OPTIONS
+    public static void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Play();
+    }
 
 
 
