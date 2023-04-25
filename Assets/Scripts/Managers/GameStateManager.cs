@@ -81,6 +81,7 @@ public class GameStateManager : MonoBehaviour
     public static void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Checkpoint.LoadCheckpoint();
         Play();
     }
 
