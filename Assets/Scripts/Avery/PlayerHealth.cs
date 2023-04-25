@@ -13,6 +13,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] Image exposureBar;
 
+    [SerializeField] Canvas gameOverMenu;
+
     private void FixedUpdate()
     {
         if (startDecreasing)
@@ -44,6 +46,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentExposure >= maxExposure)
         {
+            gameOverMenu.GetComponent<GameOverMenu>().EnableAllChildren();
             GameStateManager.GameOver();
         }
     }
