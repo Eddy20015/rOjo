@@ -38,6 +38,7 @@ public class Player2DMovement : MonoBehaviour
     void Update()
     {
         xtrans = Input.GetAxisRaw("Horizontal") * speed;
+        //xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing
         {
             FlipRight();
