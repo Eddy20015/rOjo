@@ -39,13 +39,15 @@ public class EnemyVideoController : VideoController
     private void FixedUpdate()
     {
         eyeFieldOfView.SetOrigin(transform.position);
-        if(Vector3.Distance(transform.position, player.transform.position) < viewDistance)
+        
+        if(Vector3.Distance(transform.position, player.transform.position) < viewDistance) //If the player is within range of enemy.
         {
             Vector3 dirToPlayer = (player.transform.position - transform.position).normalized;
-            if (Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer) < fov/2)
+            if (Mathf.Abs(Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(-eyeAngle), dirToPlayer)) < fov) //If the player is within the FOV.
             {
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance);
-                if (raycastHit2D.collider != null)
+                Debug.Log("Inside FOV!");
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance); //If there aren't any obstacles between player and Enemy.
+                if (raycastHit2D.collider != null) 
                 {
                     if(raycastHit2D.collider.gameObject.name == "Circle")
                     {
@@ -54,6 +56,7 @@ public class EnemyVideoController : VideoController
                     else
                     {
                         Debug.Log("else?");
+                        Inactive();
                         //hit somethin else?
                     }
                 }
@@ -93,9 +96,9 @@ public class EnemyVideoController : VideoController
         Debug.Log("Eye Activated!");
         PauseVPlayer();
         Vector3 dirToPlayer = (player.transform.position - transform.position);
-        eyeAngle = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
+        eyeAngle = -EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
         eyeFieldOfView.SetAimDirection(dirToPlayer);
-        float anglePct2Frame = (eyeAngle)/360f;
+        float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
         var frame = VPlayer.frameCount - (VPlayer.frameCount * anglePct2Frame);
         VPlayer.frame = (long)frame;
     }

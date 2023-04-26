@@ -18,11 +18,12 @@ public class EyeFieldOfView : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
         origin = Vector3.zero;
+
     }
 
     private void LateUpdate()
     {
-        int rayCount = 50;
+        int rayCount = 25;
         float angle = startingAngle; 
         float angleIncrease = fov/rayCount;
 
@@ -68,6 +69,8 @@ public class EyeFieldOfView : MonoBehaviour
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
+
+        
     }
 
     public void SetOrigin(Vector3 origin)
