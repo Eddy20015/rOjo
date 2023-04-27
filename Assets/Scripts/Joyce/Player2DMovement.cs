@@ -7,16 +7,20 @@ public class Player2DMovement : MonoBehaviour
     [Header("Movement Variables")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 20f;
+    [SerializeField] private float jumpBoundary = .1f;
     private float xtrans;
 
     [Header("Physics")]
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private int groundlayer;
     [SerializeField] private int playerLayer;
+    [Min(1)]
+    [SerializeField] private float upGravity;
+    [Min(0)]
+    [SerializeField] private float downGravity;
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
-    private bool faceRight;
     private Vector3 originalScale; // faces right
 
     //[Header("Audio")]
@@ -31,17 +35,15 @@ public class Player2DMovement : MonoBehaviour
         originalScale = transform.localScale;
         myRigidbody = GetComponent<Rigidbody2D>();
 
-        faceRight = true;
         isJumping = false;
         //walkTime = stepFrequencey;
     }
 
     void Update()
     {
-        xtrans = Input.GetAxisRaw("Horizontal") * speed;
+        xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing
         {
-            faceRight = true;
             FlipRight();
 
             //anim.SetBool("Moving", true);
@@ -49,7 +51,6 @@ public class Player2DMovement : MonoBehaviour
         }
         else if (xtrans < 0)
         {
-            faceRight = false;
             FlipLeft();
 
             //anim.SetBool("Moving", true);
@@ -62,7 +63,7 @@ public class Player2DMovement : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) < 0.1f) // only allows jumping if not already up
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary) // only allows jumping if not already up
         {
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isJumping = true;
@@ -70,12 +71,12 @@ public class Player2DMovement : MonoBehaviour
             //AudioManager.instance.Stop(jumpSFX);
             //AudioManager.instance.PlayOneShot(jumpSFX);
         }
-        else if (Mathf.Abs(myRigidbody.velocity.y) < 0.1f)
+        else if (Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
             isJumping = false;
         }
 
-        Physics2D.IgnoreLayerCollision(groundlayer, playerLayer, (myRigidbody.velocity.y > 0.1f));
+        myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity: upGravity;
 
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
@@ -91,9 +92,10 @@ public class Player2DMovement : MonoBehaviour
             //    AudioManager.instance.Stop(walkSFX);
             //    AudioManager.instance.PlayOneShot(walkSFX);
             //}
-            walkTime ++;
+            //walkTime ++;
         }
         transform.Translate(xtrans * Time.fixedDeltaTime, 0, 0);
+        Physics2D.IgnoreLayerCollision(groundlayer, playerLayer, (myRigidbody.velocity.y > jumpBoundary));
     }
     private void FlipRight()
     {
