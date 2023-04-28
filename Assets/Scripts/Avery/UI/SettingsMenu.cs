@@ -15,9 +15,9 @@ public class SettingsMenu : MonoBehaviour
 
     [SerializeField] TMP_Dropdown resolutionDropdown;
 
-    [SerializeField] AudioMixer masterVolumeMixer;
-    [SerializeField] AudioMixer sfxVolumeMixer;
-    [SerializeField] AudioMixer musicVolumeMixer;
+    [SerializeField] public AudioMixer masterVolumeMixer;
+    [SerializeField] public AudioMixer sfxVolumeMixer;
+    [SerializeField] public AudioMixer musicVolumeMixer;
 
     // Start is called before the first frame update
     void Start()
@@ -55,14 +55,11 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 
         masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
+        masterVolumeMixer.SetFloat("MasterVolume", masterVolumeSlider.value);
         sfxVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume");
+        sfxVolumeMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
         musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        musicVolumeMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
     }
 
     public void SetFullscreen(bool isFullscreen)
@@ -72,19 +69,19 @@ public class SettingsMenu : MonoBehaviour
 
     public void SetMasterVolume(float volume)
     {
-        masterVolumeMixer.SetFloat("MasterVolume", volume);
+        masterVolumeMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("MasterVolume", volume);
     }
 
     public void SetMusicVolume(float volume)
     {
-        musicVolumeMixer.SetFloat("MusicVolume", volume);
+        musicVolumeMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 
     public void SetSFXVolume(float volume)
     {
-        sfxVolumeMixer.SetFloat("SFXVolume", volume);
+        sfxVolumeMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 
