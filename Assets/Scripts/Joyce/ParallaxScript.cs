@@ -18,7 +18,8 @@ public class ParallaxScript : MonoBehaviour
 
     void Start()
     {
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        if (isLooping)
+            length = GetComponent<SpriteRenderer>().bounds.size.x;
         startX = transform.position.x;
         startY = transform.position.y;
     }
