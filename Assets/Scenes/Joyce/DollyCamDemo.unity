@@ -4444,13 +4444,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForce: 12
+  jumpForce: 11.5
   jumpBoundary: 0.1
   myRigidbody: {fileID: 1491474049}
   groundlayer: 6
   playerLayer: 3
   upGravity: 3
-  downGravity: 2
+  downGravity: 2.2
   anim: {fileID: 0}
 --- !u!1 &1543971372
 GameObject:
@@ -6179,7 +6179,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 996d3e0adb0226342ac4c99fe118dae2, type: 2}
+  - {fileID: 2100000, guid: ad8259069dfa7b94286d148830c16e2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6251,7 +6251,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091280771}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
