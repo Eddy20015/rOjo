@@ -91,9 +91,6 @@
             "m_Id": "5ad358f1c5c74e79bbe8ccd834a98ee2"
         },
         {
-            "m_Id": "23ab9b2a6bb446c9a886842fd9865a4e"
-        },
-        {
             "m_Id": "6cc99a1f900a4720b00ae29b87c610b3"
         },
         {
@@ -143,6 +140,9 @@
         },
         {
             "m_Id": "e4b1219a005c427e92150bafdc938061"
+        },
+        {
+            "m_Id": "e614d1967c5247348b8227ba01c772cd"
         }
     ],
     "m_GroupDatas": [
@@ -585,7 +585,7 @@
                 "m_Id": "f6c67ba4c6b248e79f1d59f527a365db"
             },
             {
-                "m_Id": "23ab9b2a6bb446c9a886842fd9865a4e"
+                "m_Id": "e614d1967c5247348b8227ba01c772cd"
             }
         ]
     },
@@ -984,39 +984,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
-    "m_ObjectId": "23ab9b2a6bb446c9a886842fd9865a4e",
-    "m_Group": {
-        "m_Id": ""
-    },
-    "m_Name": "SurfaceDescription.Alpha",
-    "m_DrawState": {
-        "m_Expanded": true,
-        "m_Position": {
-            "serializedVersion": "2",
-            "x": 0.0,
-            "y": 0.0,
-            "width": 0.0,
-            "height": 0.0
-        }
-    },
-    "m_Slots": [
-        {
-            "m_Id": "53590f597b5846de9bc83fd55783d561"
-        }
-    ],
-    "synonyms": [],
-    "m_Precision": 0,
-    "m_PreviewExpanded": true,
-    "m_PreviewMode": 0,
-    "m_CustomColors": {
-        "m_SerializableColors": []
-    },
-    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "2445d83ab5994071bddc9f6e0ce4d9f5",
     "m_Id": 2,
@@ -1128,10 +1095,25 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "27113e5f8442494c91d548602c0bc7df",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Alpha",
+    "m_StageCapability": 2,
+    "m_Value": 1.0,
+    "m_DefaultValue": 1.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.StickyNoteData",
     "m_ObjectId": "2790a1f147304b92b393dfd38f8b5faf",
     "m_Title": "to add",
-    "m_Content": "Make the crosshatching stuff in the red material\n",
+    "m_Content": "Make the crosshatching stuff in the red material\n\ntbh idk what i did wrong fuck this shit imma start over\n\n",
     "m_TextSize": 0,
     "m_Theme": 0,
     "m_Position": {
@@ -1601,21 +1583,6 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
-    "m_ObjectId": "53590f597b5846de9bc83fd55783d561",
-    "m_Id": 0,
-    "m_DisplayName": "Alpha",
-    "m_SlotType": 0,
-    "m_Hidden": false,
-    "m_ShaderOutputName": "Alpha",
-    "m_StageCapability": 2,
-    "m_Value": 1.0,
-    "m_DefaultValue": 1.0,
-    "m_Labels": []
 }
 
 {
@@ -3663,6 +3630,39 @@
         "b": 0.5,
         "a": 1.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "e614d1967c5247348b8227ba01c772cd",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Alpha",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "27113e5f8442494c91d548602c0bc7df"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Alpha"
 }
 
 {
