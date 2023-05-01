@@ -45,7 +45,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2501
   stringTagMap:
     MotionVector: User
   disabledShaderPasses:
@@ -221,7 +221,7 @@ Material:
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
     - _NoiseWith: 0.5
-    - _Noisescale: 50
+    - _Noisescale: 180
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _OpaqueCullMode: 2
@@ -287,9 +287,10 @@ Material:
     - _refraction_scale: 0
     - _waterdepth: 30
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 0, b: 0, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Basecolor: {r: 1, g: 0, b: 0, a: 1}
+    - _BoarderColor: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
@@ -299,7 +300,7 @@ Material:
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _Linecolor: {r: 0, g: 0, b: 0, a: 1}
-    - _NoiseSpeed: {r: 0.1, g: -0.5, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0.1, g: 0.06, b: 0, a: 0}
     - _Noisecolor: {r: 1, g: 1, b: 1, a: 0}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
