@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EyeFieldOfView : MonoBehaviour
 {
-    [SerializeField] private LayerMask layerMask;
+    [SerializeField] private string[] layerMask = {"Ground", "JumpThruGround"};
     private Mesh mesh;
     private float fov;
     private float viewDistance;
@@ -37,7 +37,7 @@ public class EyeFieldOfView : MonoBehaviour
         int triangleIndex = 0;
         for(int i = 0 ; i <= rayCount; i++){
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, LayerMask.GetMask(layerMask));
             if(raycastHit2D.collider == null)
             {
                 //no hit!
