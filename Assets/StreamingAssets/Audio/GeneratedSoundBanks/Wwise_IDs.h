@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
         static const AkUniqueID PLAY_WIND_IN_BRANCHES = 1771244861U;
     } // namespace EVENTS
 
