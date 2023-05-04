@@ -22,6 +22,23 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7D7C0F63-9D41-C2C1-2382-5302BD941A23}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="131488593" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WIP - Calm Wind in Branches.wav</ShortName>
+					<CachePath>SFX/WIP - Calm Wind in Branches_D79FB2B7.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1771244861" Name="Play_Wind_in_Branches" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="131488593"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{85FB997E-979E-429B-B6F1-CF88BB808457}</FileHash>
+	<FileHash>{8EF607C1-95AC-17C5-B927-833BC500FDA8}</FileHash>
 </SoundBanksInfo>

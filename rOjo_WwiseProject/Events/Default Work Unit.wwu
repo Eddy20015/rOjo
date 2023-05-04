@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" SchemaVersion="110">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Wind_in_Branches" ID="{08B4397D-3772-4090-85A3-296BB53868DA}">
+					<ChildrenList>
+						<Action Name="" ID="{27069334-1285-4041-ADD9-456A30450EE5}" ShortID="464819428">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind in Branches" ID="{077A2BBC-0E87-42B7-A2E1-90039B6AC0F9}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>
