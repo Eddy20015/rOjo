@@ -14,7 +14,8 @@ public class TurnRunCameraTrigger : CutCameraTrigger
 
     protected override void StartTrigger()
     {
-        border.SetActive(false);
+        if(border)
+            border.SetActive(false);
         switcher.SetPriority(newCamIndex);
         cutAnim.SetTrigger(cutSceneName);
         mainCam.orthographic = false;
