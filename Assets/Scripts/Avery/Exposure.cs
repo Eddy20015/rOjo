@@ -5,27 +5,33 @@ using UnityEngine;
 public class Exposure : MonoBehaviour
 {
     [SerializeField] float fillAmount;
+    private bool playerInBeam = false;
 
-    private void OnTriggerStay(Collider collision)
+    private void FixedUpdate()
+    {
+        if (playerInBeam)
+            GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerHealth>().IncreaseMeter(fillAmount);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("PLUS ONE EXPOSURE!");
             StopAllCoroutines();
-            collision.gameObject.GetComponent<PlayerHealth>().IncreaseMeter(fillAmount);
-            
+            playerInBeam = true;
         }
     }
 
-    private void OnTriggerExit(Collider collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            playerInBeam = false;
             StartCoroutine(DecreaseAfterDelay(collision));
         }
     }
 
-    public IEnumerator DecreaseAfterDelay(Collider collision)
+    public IEnumerator DecreaseAfterDelay(Collider2D collision)
     {
         yield return new WaitForSeconds(collision.gameObject.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
         collision.gameObject.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
