@@ -28,4 +28,12 @@ public class CinemachineSwitcher : MonoBehaviour
             }
         }
     }
+
+    public void ToggleAllCameras(bool enable)
+    {
+        foreach(CinemachineVirtualCamera cam in cams)
+        {
+            cam.gameObject.SetActive(enable);
+        }
+    }
 }

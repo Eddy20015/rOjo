@@ -6,16 +6,18 @@ public class Exposure : MonoBehaviour
 {
     [SerializeField] float fillAmount;
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("PLUS ONE EXPOSURE!");
             StopAllCoroutines();
             collision.gameObject.GetComponent<PlayerHealth>().IncreaseMeter(fillAmount);
+            
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -23,7 +25,7 @@ public class Exposure : MonoBehaviour
         }
     }
 
-    public IEnumerator DecreaseAfterDelay(Collider2D collision)
+    public IEnumerator DecreaseAfterDelay(Collider collision)
     {
         yield return new WaitForSeconds(collision.gameObject.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
         collision.gameObject.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
