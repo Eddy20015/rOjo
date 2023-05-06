@@ -7,17 +7,23 @@ using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
+    private const float DEFAULT_VOLUME = 50f;
+
     [SerializeField] Slider masterVolumeSlider;
     [SerializeField] Slider sfxVolumeSlider;
     [SerializeField] Slider musicVolumeSlider;
 
+    [SerializeField] private float masterVolume = 50;
+    [SerializeField] private float musicVolume = 50;
+    [SerializeField] private float sfxVolume = 50;
+
+
+    
+    
     Resolution[] resolutions;
 
     [SerializeField] TMP_Dropdown resolutionDropdown;
-
-    [SerializeField] public AudioMixer masterVolumeMixer;
-    [SerializeField] public AudioMixer sfxVolumeMixer;
-    [SerializeField] public AudioMixer musicVolumeMixer;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -54,12 +60,18 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
 
-        masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume");
-        masterVolumeMixer.SetFloat("MasterVolume", masterVolumeSlider.value);
-        sfxVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume");
-        sfxVolumeMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
-        musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume");
-        musicVolumeMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
+        masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", DEFAULT_VOLUME);
+        masterVolume = masterVolumeSlider.value;
+        AkSoundEngine.SetRTPCValue("Master_Volume", masterVolume);
+
+        musicVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume", DEFAULT_VOLUME);
+        musicVolume = musicVolumeSlider.value;
+        AkSoundEngine.SetRTPCValue("Music_Volume", musicVolume);
+
+        sfxVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", DEFAULT_VOLUME);
+        sfxVolume = sfxVolumeSlider.value;
+        AkSoundEngine.SetRTPCValue("SFX_Volume", sfxVolume);
+
     }
 
     public void SetFullscreen(bool isFullscreen)
@@ -67,21 +79,46 @@ public class SettingsMenu : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
+
+    /*public void SetSpecificVolume(string whatValue)
+    {
+        float sliderValue = volumeSlider.value;
+
+        if(whatValue == "Master") {
+            masterVolume = volumeSlider.value;
+            AkSoundEngine.SetRTPCValue("Master_Volume", masterVolume);
+        }
+
+        if (whatValue == "Music") {
+            musicVolume = volumeSlider.value;
+            AkSoundEngine.SetRTPCValue("Music_Volume", musicVolume);
+        }
+
+        if (whatValue == "Sounds") {
+            sfxVolume = volumeSlider.value;
+            AkSoundEngine.SetRTPCValue("SFX_Volume", sfxVolume);
+        }
+
+    }*/
+
     public void SetMasterVolume(float volume)
     {
-        masterVolumeMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
+        masterVolume = volume;
+        AkSoundEngine.SetRTPCValue("Master_Volume", masterVolume);
         PlayerPrefs.SetFloat("MasterVolume", volume);
     }
 
     public void SetMusicVolume(float volume)
     {
-        musicVolumeMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
+        musicVolume = volume;
+        AkSoundEngine.SetRTPCValue("Music_Volume", musicVolume);
         PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 
     public void SetSFXVolume(float volume)
     {
-        sfxVolumeMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+        sfxVolume = volume;
+        AkSoundEngine.SetRTPCValue("SFX_Volume", sfxVolume);
         PlayerPrefs.SetFloat("SFXVolume", volume);
     }
 

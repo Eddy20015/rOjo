@@ -481,10 +481,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1662542832}
   m_HandleRect: {fileID: 578850945}
   m_Direction: 0
-  m_MinValue: 0.0001
-  m_MaxValue: 1
+  m_MinValue: 0
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2860,8 +2860,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Settings
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6fe14eaeadb556947ad9ff0af75af7fe, type: 2}
-  m_sharedMaterial: {fileID: -2064853812995231140, guid: 6fe14eaeadb556947ad9ff0af75af7fe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0eb88a9f9dfb21845ba86b7140485e68, type: 2}
+  m_sharedMaterial: {fileID: -2630676593500412333, guid: 0eb88a9f9dfb21845ba86b7140485e68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3566,8 +3566,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Game
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6fe14eaeadb556947ad9ff0af75af7fe, type: 2}
-  m_sharedMaterial: {fileID: -2064853812995231140, guid: 6fe14eaeadb556947ad9ff0af75af7fe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0eb88a9f9dfb21845ba86b7140485e68, type: 2}
+  m_sharedMaterial: {fileID: -2630676593500412333, guid: 0eb88a9f9dfb21845ba86b7140485e68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5340,10 +5340,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 2102548675}
   m_HandleRect: {fileID: 378800140}
   m_Direction: 0
-  m_MinValue: 0.0001
-  m_MaxValue: 1
+  m_MinValue: 0
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.334
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6022,8 +6022,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Quit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 6fe14eaeadb556947ad9ff0af75af7fe, type: 2}
-  m_sharedMaterial: {fileID: -2064853812995231140, guid: 6fe14eaeadb556947ad9ff0af75af7fe, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0eb88a9f9dfb21845ba86b7140485e68, type: 2}
+  m_sharedMaterial: {fileID: -2630676593500412333, guid: 0eb88a9f9dfb21845ba86b7140485e68, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6549,10 +6549,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 612669632}
   m_HandleRect: {fileID: 1423015831}
   m_Direction: 0
-  m_MinValue: 0.0001
-  m_MaxValue: 1
+  m_MinValue: 0
+  m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 0.0001
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6789,10 +6789,10 @@ MonoBehaviour:
   masterVolumeSlider: {fileID: 1578290737}
   sfxVolumeSlider: {fileID: 1874888068}
   musicVolumeSlider: {fileID: 151076099}
+  masterVolume: 50
+  musicVolume: 50
+  sfxVolume: 50
   resolutionDropdown: {fileID: 1865354188}
-  masterVolumeMixer: {fileID: 24100000, guid: 5b9e1efc15a614e41b264e61b0c80efb, type: 2}
-  sfxVolumeMixer: {fileID: 24100000, guid: 38c9c46edfde8354da3d6f21a9d8da0f, type: 2}
-  musicVolumeMixer: {fileID: 24100000, guid: ca65aeb84a1ed4e469602e5d92d7ec9e, type: 2}
 --- !u!1 &2008763295
 GameObject:
   m_ObjectHideFlags: 0
