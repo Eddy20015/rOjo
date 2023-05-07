@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8633C4E7-A026-418A-B6C3-631F1F5CA7E4}" SchemaVersion="110">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{8633C4E7-A026-418A-B6C3-631F1F5CA7E4}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8633C4E7-A026-418A-B6C3-631F1F5CA7E4}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{2ADBAB53-0E9C-49C2-933C-CC9C8685C920}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Wind_in_Branches" ID="{08B4397D-3772-4090-85A3-296BB53868DA}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Jump_Landing" ID="{26E68202-6E6B-4162-9DD1-3213385FD6D3}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Footsteps" ID="{7E400A3D-B2A3-4A87-A259-E8DC9B02D632}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>

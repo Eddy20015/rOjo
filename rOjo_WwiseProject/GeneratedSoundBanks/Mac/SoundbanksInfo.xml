@@ -22,6 +22,81 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2ECDA4AB-3FCC-B414-ADB0-6F644D52710D}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="39914089" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step9.wav</ShortName>
+					<CachePath>SFX/Step9_10C4C929.wem</CachePath>
+				</File>
+				<File Id="94379695" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step3.wav</ShortName>
+					<CachePath>SFX/Step3_10C4C929.wem</CachePath>
+				</File>
+				<File Id="131488593" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WIP - Calm Wind in Branches.wav</ShortName>
+					<CachePath>SFX/WIP - Calm Wind in Branches_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="441570897" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step8.wav</ShortName>
+					<CachePath>SFX/Step8_10C4C929.wem</CachePath>
+				</File>
+				<File Id="447533665" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step1.wav</ShortName>
+					<CachePath>SFX/Step1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="468227711" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step6.wav</ShortName>
+					<CachePath>SFX/Step6_10C4C929.wem</CachePath>
+				</File>
+				<File Id="513019750" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WIP Jump or Land Placeholder.wav</ShortName>
+					<CachePath>SFX/WIP Jump or Land Placeholder_10C4C929.wem</CachePath>
+				</File>
+				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step7.wav</ShortName>
+					<CachePath>SFX/Step7_10C4C929.wem</CachePath>
+				</File>
+				<File Id="567021774" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step5.wav</ShortName>
+					<CachePath>SFX/Step5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="794721413" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step4.wav</ShortName>
+					<CachePath>SFX/Step4_10C4C929.wem</CachePath>
+				</File>
+				<File Id="800918199" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Step2.wav</ShortName>
+					<CachePath>SFX/Step2_10C4C929.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
+					<MediaRefs>
+						<MediaRef Id="39914089"/>
+						<MediaRef Id="94379695"/>
+						<MediaRef Id="441570897"/>
+						<MediaRef Id="447533665"/>
+						<MediaRef Id="468227711"/>
+						<MediaRef Id="556952082"/>
+						<MediaRef Id="567021774"/>
+						<MediaRef Id="794721413"/>
+						<MediaRef Id="800918199"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3808321334" Name="Play_Jump_Landing" DurationType="OneShot" DurationMin="0.1251035" DurationMax="0.15128708">
+					<MediaRefs>
+						<MediaRef Id="513019750"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1771244861" Name="Play_Wind_in_Branches" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="131488593"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{85FB997E-979E-429B-B6F1-CF88BB808457}</FileHash>
+	<FileHash>{D10FE836-B091-428B-D5F2-1DFF9B41B09D}</FileHash>
 </SoundBanksInfo>

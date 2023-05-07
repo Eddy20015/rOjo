@@ -8,9 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
+  - VisionBlockedObjects
   - Objects
-  - Player
   - Water
+  - UI
   - UI
   - JumpThruGround
   - 
@@ -37,8 +38,13 @@ TagManager:
   - 
   - 
   - 
-  - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3798647561
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 4174587769
     locked: 0

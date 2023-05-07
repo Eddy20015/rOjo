@@ -8,8 +8,14 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     [SerializeField] private Transform HumanPlayer;
     [SerializeField] private Player3DMovement playerMoveScript;
     [SerializeField] private Player2DMovement dancerMovement;
+
+    [Header("Border")]
+    [SerializeField] private GameObject border;
+
     protected override void StartTrigger()
     {
+        if(border)
+            border.SetActive(false);
         switcher.SetPriority(newCamIndex);
         cutAnim.SetTrigger(cutSceneName);
         mainCam.orthographic = false;
