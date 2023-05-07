@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{986487A9-2683-E47A-8688-3D0FE6FDB954}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A2EDEF21-98CC-06A9-218E-9651A15528C2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -19,10 +19,17 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="493417818" Name="Music Audio Bus"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="4084199202" Name="SFX Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="1006694123" Name="Music_Volume"/>
+				<GameParameter Id="1564184899" Name="SFX_Volume"/>
+				<GameParameter Id="4179668880" Name="Master_Volume"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2ECDA4AB-3FCC-B414-ADB0-6F644D52710D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{81925189-5A1E-B3A3-52FD-8C8757ABB303}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -70,8 +77,13 @@
 					<ShortName>Step2.wav</ShortName>
 					<CachePath>SFX/Step2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1044381033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Castanets - Reverse.wav</ShortName>
+					<CachePath>SFX/Castanets - Reverse_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2245459691" Name="Pause_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
 					<MediaRefs>
 						<MediaRef Id="39914089"/>
@@ -90,13 +102,20 @@
 						<MediaRef Id="513019750"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2946897393" Name="Play_Testing_Audio" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1044381033"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1771244861" Name="Play_Wind_in_Branches" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="131488593"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C876F507-946B-587A-B9B3-BDD636C39FF7}</FileHash>
+	<FileHash>{98551B0C-BF54-BCA8-3D7C-BD9F53D86E14}</FileHash>
 </SoundBanksInfo>

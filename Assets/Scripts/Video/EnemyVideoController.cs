@@ -11,14 +11,16 @@ public class EnemyVideoController : VideoController
     [SerializeField] VideoClip TransitionClip;
     [SerializeField] VideoClip ReverseTransitionClip;
 
-    [SerializeField] int PlaySpeed;
-    [SerializeField] int HighSpeed;
+    [SerializeField] int PlaySpeed = 1;
+    [SerializeField] int HighSpeed = 10;
     [SerializeField] Transform pfEyeFieldOfView;
     [SerializeField] private float fov = 45f;
     [SerializeField] private float viewDistance = 3f; 
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
-    private bool transitionComplete = false;
+    private bool transitionComplete = true;
+    private long eyeFrameFound = 0;
+    private float eyeFrameFoundPct = 0;
     private float eyeAngle;
 
     // Start is called before the first frame update
@@ -57,7 +59,8 @@ public class EnemyVideoController : VideoController
                     {
                         // if(!isActivated)
                         // {
-                        //     transitionComplete = false;
+                        //     eyeFrameFound = VPlayer.frame;
+                        //     eyeFrameFoundPct = eyeFrameFound/(long)VPlayer.frameCount;
                         //     StartCoroutine(Activate());
                         // }
                         
@@ -70,34 +73,57 @@ public class EnemyVideoController : VideoController
                     {
                         // if(isActivated)
                         // {
-                        //     transitionComplete = false;
-                        //     StartCoroutine(DeActivate());
+                        //     StartCoroutine(Deactivate());
                         // }
 
                         // if(transitionComplete)
                         // {
                         Inactive();
-                        // }
+                        //}
                         //hit somethin else?
                     }
                 }
                 else
                 {
-                    Debug.Log("Raycast.collider == null");
+                    // Debug.Log("Raycast.collider == null");
+                    // if(isActivated)
+                    // {
+                    //     StartCoroutine(Deactivate());
+                    // }
+
+                    // if(transitionComplete)
+                    // {
                     Inactive();
+                    // }
                 }
                 
             }
             else
             {
-                Debug.Log("Out of FOV");
+                // Debug.Log("Out of FOV");
+                // if(isActivated)
+                // {
+                //     StartCoroutine(Deactivate());
+                // }
+
+                // if(transitionComplete)
+                // {
                 Inactive();
+                // }
             }
         }
         else
         {
-            Debug.Log("out of viewDistance!");
+            // Debug.Log("out of viewDistance!");
+            // if(isActivated)
+            // {
+            //     StartCoroutine(Deactivate());
+            // }
+
+            // if(transitionComplete)
+            // {
             Inactive();
+            // }
         }
         
     }
@@ -120,6 +146,8 @@ public class EnemyVideoController : VideoController
         
     }
 
+   
+
     
 
     private IEnumerator Activate()
@@ -130,32 +158,38 @@ public class EnemyVideoController : VideoController
             transitionComplete = false;
 
             //Speed up and finish the video forwards
-            ClipSpeed(HighSpeed);
-
-
-            //Do nothing until the active clip loop point is reached
-            while (!bContinue) yield return new WaitForSeconds(1);
-            bContinue = false;
 
             //Set the playback speed back to normal, but reverse it
             VPlayer.clip = TransitionClip;
-            ClipSpeed(PlaySpeed);
-            StartVPlayer();
 
             //Do nothing until the transition clip loop point is reached
-            while (!bContinue) yield return new WaitForSeconds(1);
+            while (!bContinue) 
+            {
+                if(!isActivated) break;
+                yield return new WaitForSeconds(.01f);
+            }
             bContinue = false;
 
-            //Set the playback speed back to forward normal and let the Active clip play
             VPlayer.clip = ActiveClip;
-            StartVPlayer();
+            ClipSpeed(HighSpeed);
+
+            //Do nothing until the active clip loop point is reached
+            while ((int)VPlayer.frame != (int)(eyeFrameFoundPct*VPlayer.frameCount))
+            {
+                yield return new WaitForSeconds(.01f);
+            }
+
+            //Set the playback speed back to forward normal and let the Active clip play
+            
+            // ClipSpeed(PlaySpeed);
             transitionComplete = true;
+            
             
         
     }
 
     private void Active() //When the eye sees you.
-    {
+    {   
         VPlayer.clip = ActiveClip;
         
         Vector3 dirToPlayer = (Player.transform.position - transform.position);
@@ -173,6 +207,7 @@ public class EnemyVideoController : VideoController
         Debug.Log("Eye Deactivated!");
 
         isActivated = false;
+        transitionComplete = false;
         //Speed up Active clip to completion
         VPlayer.loopPointReached += CheckOver;
 
@@ -180,7 +215,11 @@ public class EnemyVideoController : VideoController
         ClipSpeed(HighSpeed);
 
         //Do nothing until the active clip loop point is reached
-        while (!bContinue) yield return new WaitForSeconds(1);
+        while (!bContinue)
+        {
+            if(isActivated) break;
+            yield return new WaitForSeconds(.01f);
+        } 
         bContinue = false;
 
         //Set the playback speed back to normal, but reverse it
@@ -188,11 +227,17 @@ public class EnemyVideoController : VideoController
         ClipSpeed(PlaySpeed);
 
         //Do nothing until the transition clip loop point is reached
-        while (!bContinue) yield return new WaitForSeconds(1);
+        while (!bContinue)
+        {
+            if(isActivated) break;
+            yield return new WaitForSeconds(.01f);
+        } 
         bContinue = false;
 
         //Set the playback speed back to forward normal and let the inactive clip play
         VPlayer.clip = InactiveClip;
         ClipSpeed(PlaySpeed);
+
+        transitionComplete = true;
     }
 }
