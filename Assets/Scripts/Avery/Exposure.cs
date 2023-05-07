@@ -10,12 +10,12 @@ public class Exposure : MonoBehaviour
     private void FixedUpdate()
     {
         if (playerInBeam)
-            GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<PlayerHealth>().IncreaseMeter(fillAmount);
+            GameObject.FindGameObjectWithTag("Dancer").gameObject.GetComponent<PlayerHealth>().IncreaseMeter(fillAmount);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Dancer"))
         {
             StopAllCoroutines();
             playerInBeam = true;
@@ -24,7 +24,7 @@ public class Exposure : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Dancer"))
         {
             playerInBeam = false;
             StartCoroutine(DecreaseAfterDelay(collision));
