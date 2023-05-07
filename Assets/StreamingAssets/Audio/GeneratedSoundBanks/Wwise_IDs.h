@@ -13,9 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PAUSE_WIND_IN_BRANCHES = 2245459691U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
+        static const AkUniqueID PLAY_TESTING_AUDIO = 2946897393U;
         static const AkUniqueID PLAY_WIND_IN_BRANCHES = 1771244861U;
+        static const AkUniqueID STOP_TESTING_AUDIO = 87439343U;
+        static const AkUniqueID STOP_WIND_IN_BRANCHES = 3026825475U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS

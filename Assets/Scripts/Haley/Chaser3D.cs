@@ -17,6 +17,11 @@ public class Chaser3D : MonoBehaviour
     private float speed;
     private float drag;
 
+    private void Awake()
+    {
+        text.SetActive(false);
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

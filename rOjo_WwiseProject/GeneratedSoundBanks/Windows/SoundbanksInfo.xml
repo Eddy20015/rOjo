@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{BD1DEFB8-290A-761C-E53F-1BCF2928DB29}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{81925189-5A1E-B3A3-52FD-8C8757ABB303}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -77,8 +77,13 @@
 					<ShortName>Step2.wav</ShortName>
 					<CachePath>SFX/Step2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1044381033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Castanets - Reverse.wav</ShortName>
+					<CachePath>SFX/Castanets - Reverse_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="2245459691" Name="Pause_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
 					<MediaRefs>
 						<MediaRef Id="39914089"/>
@@ -97,13 +102,20 @@
 						<MediaRef Id="513019750"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2946897393" Name="Play_Testing_Audio" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1044381033"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1771244861" Name="Play_Wind_in_Branches" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="131488593"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C7131DA4-1293-CA6D-45F1-A688D8EA0C32}</FileHash>
+	<FileHash>{98551B0C-BF54-BCA8-3D7C-BD9F53D86E14}</FileHash>
 </SoundBanksInfo>
