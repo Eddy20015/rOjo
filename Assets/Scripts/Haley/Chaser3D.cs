@@ -17,6 +17,11 @@ public class Chaser3D : MonoBehaviour
     private float speed;
     private float drag;
 
+    private void Awake()
+    {
+        text.SetActive(false);
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -43,12 +48,17 @@ public class Chaser3D : MonoBehaviour
     // Getting cause by chaser, CHANGE AS NEEDED
     private void OnTriggerEnter(Collider other)
     {
-        print("trigger on " + other.name);
+        if (other.gameObject.tag.Equals("Player")) {
+            GameStateManager.Pause();
+            text.SetActive(true);
+        }
+
+        /*print("trigger on " + other.name);
         Player3DMovement p = other.GetComponentInParent<Player3DMovement>();
         if(p != null) {
             p.enabled = false; // Stop them from moving
             text.SetActive(true);
             gameObject.SetActive(false);
-        }
+        }*/
     }
 }

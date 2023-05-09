@@ -35,10 +35,11 @@ public class Player3DMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        rb.isKinematic = false;
 
         anim = GetComponentInChildren<Animator>();
         if (anim != null)
-            anim.SetBool("isMoving", isGrounded);
+            anim.SetBool("isMoving", true);
     }
 
     private void Update()

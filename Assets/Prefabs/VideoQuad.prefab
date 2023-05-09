@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5638492712853959968}
   - component: {fileID: 5638492712853959969}
   - component: {fileID: 5638492712853959974}
+  - component: {fileID: -8670689728552945805}
   m_Layer: 0
   m_Name: VideoQuad
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 5638492712853959975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 4, y: 2.6666667, z: 2.6666667}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -107,7 +108,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5638492712853959975}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 2d2949a26d11c574c8f87b68124b9f82, type: 3}
+  m_VideoClip: {fileID: 0}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -134,3 +135,25 @@ VideoPlayer:
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
+--- !u!114 &-8670689728552945805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638492712853959975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14b876f4751de948b65e585102c0e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  InactiveClip: {fileID: 32900000, guid: 8673dd061664c45f59dbd808e7729a4c, type: 3}
+  ActiveClip: {fileID: 32900000, guid: c9bccd0b5275f4061bfaddb776b4c1cf, type: 3}
+  TransitionClip: {fileID: 32900000, guid: ff269de082e87420aa09a677afa9d0c6, type: 3}
+  ReverseTransitionClip: {fileID: 32900000, guid: 29f34b4d46b394a14b7ada03fdd44450, type: 3}
+  PlaySpeed: 1
+  HighSpeed: 4
+  pfEyeFieldOfView: {fileID: 472920625463930196, guid: 05f4d92bbddfa43769d9ede991213125, type: 3}
+  fov: 45
+  viewDistance: 3

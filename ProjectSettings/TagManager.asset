@@ -3,14 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Dancer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Objects
-  - Player
+  - VisionBlockedObjects
   - Water
+  - UI
+  - UI
   - UI
   - JumpThruGround
   - 
@@ -36,9 +38,13 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3798647561
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 4174587769
     locked: 0
