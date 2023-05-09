@@ -16,12 +16,26 @@ public class EnemyVideoController : VideoController
     [SerializeField] Transform pfEyeFieldOfView;
     [SerializeField] private float fov = 45f;
     [SerializeField] private float viewDistance = 3f; 
+    [SerializeField] private float lookingDuration = .01f;
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
-    private bool transitionComplete = true;
-    private long eyeFrameFound = 0;
-    private float eyeFrameFoundPct = 0;
+    private bool isLooking = false;
+    
+    
+    private float elapsedTime;
+    private float eyeFrameFoundPct;
     private float eyeAngle;
+
+    private enum State
+    {
+        Active,
+        Inactive,
+        Active2Inactive,
+        Inactive2Active,
+        Looking,
+    }
+
+    private State state;
 
     // Start is called before the first frame update
     protected new void Start()
@@ -36,6 +50,8 @@ public class EnemyVideoController : VideoController
         print("In the new start");
         base.Start();
 
+        state = State.Inactive;
+
         VPlayer.clip = InactiveClip;
         VPlayer.loopPointReached += CheckOver;
 
@@ -45,7 +61,33 @@ public class EnemyVideoController : VideoController
     private void FixedUpdate()
     {
         eyeFieldOfView.SetOrigin(transform.position);
-        
+
+
+        switch(state)
+        {
+            default:
+            case State.Inactive:
+                Inactive();
+                FindDancer();
+                break;
+            case State.Inactive2Active:
+                break;
+            case State.Active:
+                FindDancer();
+                break;
+            case State.Looking:
+                FindDancer();
+                break;
+            case State.Active2Inactive:
+                FindDancer();
+                break;
+
+        }
+    }
+
+
+    private void FindDancer()
+    {
         if(Vector3.Distance(transform.position, Player.transform.position) < viewDistance) //If the player is within range of enemy.
         {
             Vector3 dirToPlayer = (Player.transform.position - transform.position).normalized;
@@ -57,73 +99,41 @@ public class EnemyVideoController : VideoController
                 {
                     if(raycastHit2D.collider.gameObject.tag == "Player")
                     {
-                        // if(!isActivated)
-                        // {
-                        //     eyeFrameFound = VPlayer.frame;
-                        //     eyeFrameFoundPct = eyeFrameFound/(long)VPlayer.frameCount;
-                        //     StartCoroutine(Activate());
-                        // }
+                        if (state == State.Inactive)
+                        {
+                            float angleToPlayer = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
+                            eyeFrameFoundPct = Mathf.Abs(eyeAngle)/360f;
+                            StartCoroutine(Activate());
+                        }
+
+                        if (state == State.Active) Active();
+
+                        if (state == State.Looking || state == State.Active2Inactive)
+                        {
+                            StopAllCoroutines();
+                            state = State.Active;
+                        }
                         
-                        // if(transitionComplete)
-                        // {
-                        Active();
-                        // }
                     }
                     else
                     {
-                        // if(isActivated)
-                        // {
-                        //     StartCoroutine(Deactivate());
-                        // }
-
-                        // if(transitionComplete)
-                        // {
-                        Inactive();
-                        //}
-                        //hit somethin else?
+                        if (state == State.Active) StartCoroutine(Looking());
                     }
                 }
                 else
                 {
-                    // Debug.Log("Raycast.collider == null");
-                    // if(isActivated)
-                    // {
-                    //     StartCoroutine(Deactivate());
-                    // }
-
-                    // if(transitionComplete)
-                    // {
-                    Inactive();
-                    // }
+                    if (state == State.Active) StartCoroutine(Looking());
                 }
                 
             }
             else
             {
-                // Debug.Log("Out of FOV");
-                // if(isActivated)
-                // {
-                //     StartCoroutine(Deactivate());
-                // }
-
-                // if(transitionComplete)
-                // {
-                Inactive();
-                // }
+                if (state == State.Active) StartCoroutine(Looking());
             }
         }
         else
         {
-            // Debug.Log("out of viewDistance!");
-            // if(isActivated)
-            // {
-            //     StartCoroutine(Deactivate());
-            // }
-
-            // if(transitionComplete)
-            // {
-            Inactive();
-            // }
+            if (state == State.Active) StartCoroutine(Looking());
         }
         
     }
@@ -136,14 +146,11 @@ public class EnemyVideoController : VideoController
         //     isActivated = false;
         // }
 
-        VPlayer.clip = InactiveClip;
-
         int currentFrame = (int)VPlayer.frame; //Gets the current frame of the "eye"
         int totalFrames = (int)VPlayer.frameCount; //Gets the total amt of frames of the "eye" video.
         float framePct2Angle = (float)currentFrame/totalFrames; //Gets the percent of the current frame out of the whole video.
         eyeAngle = (framePct2Angle * 360f); 
-        eyeFieldOfView.SetAimDirection(eyeAngle); // We multiply by -1 because the "eye" is currently going clockwise.
-        
+        eyeFieldOfView.SetAimDirection(eyeAngle); 
     }
 
    
@@ -154,8 +161,7 @@ public class EnemyVideoController : VideoController
     {
             Debug.Log("Eye Activated!");
 
-            isActivated = true;
-            transitionComplete = false;
+            state = State.Inactive2Active; //Tells the state machine to wait till this is done.
 
             //Speed up and finish the video forwards
 
@@ -165,24 +171,35 @@ public class EnemyVideoController : VideoController
             //Do nothing until the transition clip loop point is reached
             while (!bContinue) 
             {
-                if(!isActivated) break;
                 yield return new WaitForSeconds(.01f);
             }
             bContinue = false;
 
             VPlayer.clip = ActiveClip;
+            var frame = VPlayer.frameCount * eyeFrameFoundPct;
+            VPlayer.frame = (long)frame + 6;
             ClipSpeed(HighSpeed);
-
             //Do nothing until the active clip loop point is reached
-            while ((int)VPlayer.frame != (int)(eyeFrameFoundPct*VPlayer.frameCount))
+            // while (!bContinue) 
+            // {
+            //     yield return new WaitForSeconds(.01f);
+            // }
+            // bContinue = false;
+            while (Mathf.Abs((int)VPlayer.frame - frame) > 5)
             {
-                yield return new WaitForSeconds(.01f);
+                Debug.Log(VPlayer.frame);
+                yield return new WaitForSeconds(.001f);
             }
-
+            bContinue = false;
+            PauseVPlayer();
             //Set the playback speed back to forward normal and let the Active clip play
             
             // ClipSpeed(PlaySpeed);
-            transitionComplete = true;
+
+            Debug.Log("Back to spotted frame");
+
+            state = State.Active;
+            
             
             
         
@@ -190,8 +207,7 @@ public class EnemyVideoController : VideoController
 
     private void Active() //When the eye sees you.
     {   
-        VPlayer.clip = ActiveClip;
-        
+        PauseVPlayer();
         Vector3 dirToPlayer = (Player.transform.position - transform.position);
         eyeAngle = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
         eyeFieldOfView.SetAimDirection(dirToPlayer);
@@ -202,22 +218,68 @@ public class EnemyVideoController : VideoController
 
     }
 
+    private IEnumerator Looking() //When the eye looks around after it loses you.
+    {
+        
+        float initEyeAngle = eyeAngle;
+        float lookRight = 30;
+        float lookLeft = -30;
+
+        elapsedTime = 0;
+        state = State.Looking;
+
+        while(elapsedTime < lookingDuration)
+        {
+            smoothLook(initEyeAngle, initEyeAngle + lookRight);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        yield return new WaitForSeconds(0.2f);
+        elapsedTime = 0;
+        initEyeAngle = eyeAngle;
+        while(elapsedTime < lookingDuration)
+        {
+            smoothLook(initEyeAngle, initEyeAngle + lookLeft*2);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        yield return new WaitForSeconds(0.2f);
+        elapsedTime = 0;
+        initEyeAngle = eyeAngle;
+        while(elapsedTime < lookingDuration)
+        {
+            smoothLook(initEyeAngle, initEyeAngle + lookRight);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+
+        StartCoroutine(Deactivate());
+    }
+
+    private void smoothLook(float lookStart, float lookDest)
+    {
+        float percentageComplete = elapsedTime / lookingDuration;
+        eyeAngle = Mathf.Lerp(lookStart, lookDest, percentageComplete);
+        eyeFieldOfView.SetAimDirection(eyeAngle);
+        float anglePct2Frame = Mathf.Abs(eyeAngle%360f)/360f;
+        var frame = VPlayer.frameCount * anglePct2Frame;
+        VPlayer.frame = (long)frame;
+        elapsedTime += Time.deltaTime;
+    }
+
+        
+
     private IEnumerator Deactivate()
     {
         Debug.Log("Eye Deactivated!");
 
-        isActivated = false;
-        transitionComplete = false;
+        state = State.Active2Inactive; //Tells the state machine to wait till this is done.
         //Speed up Active clip to completion
-        VPlayer.loopPointReached += CheckOver;
 
         //Speed up and finish the video forwards
-        ClipSpeed(HighSpeed);
-
+        StartVPlayer();
+        
         //Do nothing until the active clip loop point is reached
         while (!bContinue)
         {
-            if(isActivated) break;
+            Inactive();
             yield return new WaitForSeconds(.01f);
         } 
         bContinue = false;
@@ -229,7 +291,6 @@ public class EnemyVideoController : VideoController
         //Do nothing until the transition clip loop point is reached
         while (!bContinue)
         {
-            if(isActivated) break;
             yield return new WaitForSeconds(.01f);
         } 
         bContinue = false;
@@ -238,6 +299,7 @@ public class EnemyVideoController : VideoController
         VPlayer.clip = InactiveClip;
         ClipSpeed(PlaySpeed);
 
-        transitionComplete = true;
+        state = State.Inactive;
+        
     }
 }
