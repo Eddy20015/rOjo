@@ -48,18 +48,18 @@ public class Player2DMovement : MonoBehaviour
         {
             FlipRight();
 
-            //anim.SetBool("Moving", true);
+            anim.SetBool("Moving", true);
 
         }
         else if (xtrans < 0)
         {
             FlipLeft();
 
-            //anim.SetBool("Moving", true);
+            anim.SetBool("Moving", true);
         }
         else
         {
-            //anim.SetBool("Moving", false);
+            anim.SetBool("Moving", false);
             //AudioManager.instance.Stop(walkSFX);
             walkTime = stepFrequencey;
         }
