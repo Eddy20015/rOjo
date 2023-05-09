@@ -125,4 +125,8 @@ public class Player2DMovement : MonoBehaviour
         transform.position = goToTarget;
     }
 
+    public float GetXTrans()
+    {
+        return xtrans;
+    }
 }
