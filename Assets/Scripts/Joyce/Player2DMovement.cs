@@ -56,6 +56,7 @@ public class Player2DMovement : MonoBehaviour
             else
             {
                 xtrans /= 2;
+                anim.SetBool("Moving", false);
                 // set pushing/pulling animation here
             }
         }
@@ -70,6 +71,7 @@ public class Player2DMovement : MonoBehaviour
             else
             {
                 xtrans /= 2;
+                anim.SetBool("Moving", false);
                 // set pushing/pulling animation here
             }
         }

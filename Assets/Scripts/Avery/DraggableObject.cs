@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
-{
-    public float pullForce = 10f;
-
+{ 
     private KeyCode boundKey = KeyCode.LeftShift;
-
     private bool isGrabbingObject = false;
     private Rigidbody2D playerRigidbody;
     private Player2DMovement playerMovement;
