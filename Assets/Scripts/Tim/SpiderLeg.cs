@@ -47,7 +47,9 @@ public class SpiderLeg : MonoBehaviour
 
         if (h.collider != null)
         {
-            if (Vector2.Distance(foot.position, h.point) > distance && !moving)
+            bool canMove = Vector2.Distance(foot.position, h.point) > distance || foot.transform.localPosition.y < 0;
+
+            if (canMove && !moving)
             {
                 StartCoroutine(MoveLeg(foot.position, h.point));
             }
