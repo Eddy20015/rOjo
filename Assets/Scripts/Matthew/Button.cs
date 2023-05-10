@@ -22,9 +22,12 @@ public class Button : MonoBehaviour
     [SerializeField]
     private bool timed;
 
-    public int RotationSpeed = 1;
+    [SerializeField]
+    private int RotationSpeed;
 
-    public Vector3 startRotation;
+    private bool camera_bool;
+
+    private bool camera_back;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -40,9 +43,45 @@ public class Button : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player") && camera_tilt)
         {
-            camera.transform.eulerAngles = startRotation;
-            camera.transform.Rotate(Vector3.forward, RotationSpeed * Time.deltaTime);
+            camera_bool = true;
+            StartCoroutine("Timer");
         }
+    }
+
+    private void Update()
+    {
+        if (camera.transform.localEulerAngles.z <= 90 && camera.transform.localEulerAngles.z >= 0 && camera_bool)
+        {
+            camera.transform.Rotate(Vector3.forward, RotationSpeed * Time.deltaTime);
+            
+            if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
+            {
+                float y = camera.transform.rotation.eulerAngles.z;
+                y = y - 90;
+                camera.transform.Rotate(0, 0, -y);
+            }
+
+            Physics2D.gravity = new Vector2(9.81f, 0f);
+            
+        }
+        else
+        {
+            camera_bool = false;
+        }
+
+        if (camera_back)
+        {
+            camera.transform.Rotate(Vector3.back, RotationSpeed * Time.deltaTime);
+
+            if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
+            {
+                float y = camera.transform.rotation.eulerAngles.z;
+                camera.transform.Rotate(0, 0, -y);
+            }
+
+            Physics2D.gravity = new Vector2(0f, -2f);
+        }
+        
     }
 
     IEnumerator Timer()
@@ -50,18 +89,15 @@ public class Button : MonoBehaviour
         if (timed && time != 0)
         {
             yield return new WaitForSeconds(time);
-            door.SetActive(true);
-        }
-        
-    }
 
-    /*
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            door.SetActive(true);
+            if (button)
+            {
+                door.SetActive(true);
+            }
+            else if (camera_tilt)
+            {
+                camera_back = true;   
+            }
         }
     }
-    */
 }
