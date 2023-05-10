@@ -6,7 +6,7 @@ public class SpiderLeg : MonoBehaviour
 {
     [SerializeField] Transform foot, spider;
 
-    [SerializeField] float angleOffset, moveSpeed;
+    [SerializeField] float angleOffset, moveSpeed, distance;
 
     [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
@@ -47,7 +47,7 @@ public class SpiderLeg : MonoBehaviour
 
         if (h.collider != null)
         {
-            if (Vector2.Distance(foot.position, h.point) > 2 && !moving)
+            if (Vector2.Distance(foot.position, h.point) > distance && !moving)
             {
                 StartCoroutine(MoveLeg(foot.position, h.point));
             }
