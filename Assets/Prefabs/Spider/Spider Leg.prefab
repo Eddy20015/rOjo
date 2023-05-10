@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6621184004422892554}
   - component: {fileID: 6621184004422892557}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6621184004460070378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 6621184004514583138}
   - component: {fileID: 6621184004514583136}
   - component: {fileID: 5721571172296030053}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider 2
   m_TagString: Spider Leg
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6621184004670749728}
   - component: {fileID: 6621184004670749729}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: IK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6621184005133029768}
   - component: {fileID: 4027569018913702}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spider Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,11 @@ MonoBehaviour:
   spider: {fileID: 0}
   angleOffset: 0
   moveSpeed: 0.5
-  initialFootPosition: {x: 0, y: 0}
+  initialFootPosition: {x: 0, y: 0, z: 0}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  hit: {fileID: 1410142829967927671, guid: 4223da55260d5440d937a9c3603f5d7d, type: 3}
 --- !u!1 &6621184005849103335
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +282,7 @@ GameObject:
   - component: {fileID: 6621184005849103332}
   - component: {fileID: 6621184005849103333}
   - component: {fileID: 8763059257680652102}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Collider 1
   m_TagString: Spider Leg
   m_Icon: {fileID: 0}
@@ -398,9 +402,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2821761757288588400, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
       propertyPath: m_Name
       value: Spider Leg
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1790183945725220954, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905609870639353253, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8417361359673230750, guid: c3b28f09307604133a8b9675a75da25e, type: 3}
       propertyPath: m_Materials.Array.data[0]

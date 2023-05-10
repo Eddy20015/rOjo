@@ -8,9 +8,11 @@ public class SpiderLeg : MonoBehaviour
 
     [SerializeField] float angleOffset, moveSpeed;
 
-    [SerializeField] Vector3 initialFootPosition;
+    [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
     [SerializeField] LayerMask layerMask;
+
+    [SerializeField] GameObject hit;
 
     bool moving;
 
@@ -34,7 +36,7 @@ public class SpiderLeg : MonoBehaviour
 
     void Raycast()
     {
-        RaycastHit2D h = Physics2D.Raycast(transform.position, transform.right, 100, layerMask);
+        RaycastHit2D h = Physics2D.Raycast(transform.position, raycastDirection, 100, layerMask);
 
         if (h.collider != null)
         {
@@ -47,6 +49,13 @@ public class SpiderLeg : MonoBehaviour
 
     IEnumerator MoveLeg(Vector2 start, Vector2 end)
     {
+        moving = true;
+
+        // hit gameobject so I can tell where the raycast hits
+        GameObject h = Instantiate(hit);
+
+        h.transform.position = end;
+
         float f = 0;
 
         // interpolates leg position
@@ -64,8 +73,12 @@ public class SpiderLeg : MonoBehaviour
             foot.transform.position = Vector2.Lerp(start, end, f);
 
             // adds height
-            foot.transform.position += Mathf.Sin(f * Mathf.PI) * spider.transform.up;
+            //foot.transform.position += Mathf.Sin(f * Mathf.PI) * spider.transform.up;
             yield return new WaitForEndOfFrame();
         }
+
+        Destroy(h);
+
+        moving = false;
     }
 }
