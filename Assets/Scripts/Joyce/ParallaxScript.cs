@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ParallaxScript : MonoBehaviour
 {
-    [Range(0f, 1f)]
+    [Range(-1f, 1f)]
     [Tooltip("0 means that it will basically not move at all and 1 means it will follow the camera exactly. Use large values for far things")]
     [SerializeField] private float parallaxEffectX;
-    [Range(0f, 1f)]
+    [Range(-1f, 1f)]
     [SerializeField] private float parallaxEffectY;
 
     [SerializeField] GameObject cam;
