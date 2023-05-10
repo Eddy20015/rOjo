@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] Transform foot;
+    [SerializeField] Transform foot, spider;
 
     [SerializeField] float angleOffset, moveSpeed;
 
@@ -45,6 +45,18 @@ public class SpiderLeg : MonoBehaviour
         // speed = 1 would move the leg in 1 second, speed = 0.5f would move the leg in 2 seconds, etc.
         while (f < 1)
         {
+            f += Time.deltaTime * moveSpeed;
+
+            if (f > 1)
+            {
+                f = 1;
+            }
+
+            // moves foot
+            foot.transform.position = Vector2.Lerp(start, end, f);
+
+            // adds height
+            foot.transform.position += Mathf.Sin(f * Mathf.PI) * spider.transform.up;
             yield return new WaitForEndOfFrame();
         }
     }
