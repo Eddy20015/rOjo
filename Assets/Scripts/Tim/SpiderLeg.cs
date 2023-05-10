@@ -8,14 +8,14 @@ public class SpiderLeg : MonoBehaviour
 
     [SerializeField] float angleOffset, moveSpeed;
 
-    [SerializeField] Vector2 initialFootPosition;
+    [SerializeField] Vector3 initialFootPosition;
 
     bool moving;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        foot.transform.position = spider.transform.position + initialFootPosition;
     }
 
     // Update is called once per frame
