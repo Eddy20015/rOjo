@@ -10,12 +10,20 @@ public class SpiderLeg : MonoBehaviour
 
     [SerializeField] Vector3 initialFootPosition;
 
+    [SerializeField] LayerMask layerMask;
+
     bool moving;
+
+    ContactFilter2D contactFilter2D;
 
     // Start is called before the first frame update
     void Start()
     {
         foot.transform.position = spider.transform.position + initialFootPosition;
+
+        contactFilter2D = new();
+
+        contactFilter2D.useTriggers = false;
     }
 
     // Update is called once per frame
@@ -26,7 +34,7 @@ public class SpiderLeg : MonoBehaviour
 
     void Raycast()
     {
-        RaycastHit2D h = Physics2D.Raycast(transform.position, transform.right);
+        RaycastHit2D h = Physics2D.Raycast(transform.position, transform.right, 100, layerMask);
 
         if (h.collider != null)
         {
