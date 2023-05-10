@@ -18,6 +18,8 @@ public class SpiderLeg : MonoBehaviour
 
     ContactFilter2D contactFilter2D;
 
+    Vector3 footPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,11 @@ public class SpiderLeg : MonoBehaviour
     void Update()
     {
         Raycast();
+
+        if (!moving)
+        {
+            foot.transform.position = footPosition;
+        }
     }
 
     void Raycast()
@@ -76,6 +83,8 @@ public class SpiderLeg : MonoBehaviour
             //foot.transform.position += Mathf.Sin(f * Mathf.PI) * spider.transform.up;
             yield return new WaitForEndOfFrame();
         }
+
+        footPosition = foot.transform.position;
 
         Destroy(h);
 
