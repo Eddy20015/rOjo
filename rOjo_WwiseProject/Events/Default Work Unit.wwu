@@ -41,20 +41,7 @@
 						<Action Name="" ID="{4B45DE26-3F5F-402B-BBE1-8D1C0296A4C1}" ShortID="114320979">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Wind in Branches" ID="{077A2BBC-0E87-42B7-A2E1-90039B6AC0F9}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Pause_Wind_in_Branches" ID="{44288593-37C8-452B-844F-2DA9678F5049}">
-					<ChildrenList>
-						<Action Name="" ID="{1D089CCC-AFE3-47BF-8A27-9341E937BA23}" ShortID="829288273">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -80,20 +67,6 @@
 						<Action Name="" ID="{483390BA-55E4-4936-B95C-29D866FDC04F}" ShortID="164913570">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Testing Audio" ID="{8BF46DAB-3AED-47D4-B605-4D38FF965FFC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Break_Testing_Audio" ID="{5EF62928-E53F-4BB3-B06D-E61DE0EC4118}">
-					<ChildrenList>
-						<Action Name="" ID="{2AE7937F-C257-4C66-A81C-20A3065B501C}" ShortID="325769038">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="34"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

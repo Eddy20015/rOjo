@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameOverMenu : MonoBehaviour
 {
+    [SerializeField] private AK.Wwise.Event StopWind;
     void Awake()
     {
         DisableAllChildren();
@@ -17,6 +18,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void OnClickMainMenu()
     {
+        StopWind.Post(gameObject);
         GameStateManager.QuitToMainMenu();
     }
 
