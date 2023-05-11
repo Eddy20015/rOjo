@@ -9,6 +9,7 @@ public class Player2DMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 20f;
     [SerializeField] private float jumpBoundary = .1f;
     private float xtrans;
+    private bool isMovingObject = false;
 
     [Header("Physics")]
     [SerializeField] private Rigidbody2D myRigidbody;
@@ -46,16 +47,33 @@ public class Player2DMovement : MonoBehaviour
         xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing
         {
-            FlipRight();
+            if (!isMovingObject)
+            {
+                FlipRight();
 
-            anim.SetBool("Moving", true);
-
+                anim.SetBool("Moving", true);
+            }
+            else
+            {
+                xtrans /= 2;
+                anim.SetBool("Moving", false);
+                // set pushing/pulling animation here
+            }
         }
         else if (xtrans < 0)
         {
-            FlipLeft();
+            if (!isMovingObject)
+            {
+                FlipLeft();
 
-            anim.SetBool("Moving", true);
+                anim.SetBool("Moving", true);
+            }
+            else
+            {
+                xtrans /= 2;
+                anim.SetBool("Moving", false);
+                // set pushing/pulling animation here
+            }
         }
         else
         {
@@ -125,4 +143,13 @@ public class Player2DMovement : MonoBehaviour
         transform.position = goToTarget;
     }
 
+    public float GetXTrans()
+    {
+        return xtrans;
+    }
+
+    public void SetIsMovingObject(bool b)
+    {
+        isMovingObject = b;
+    }
 }
