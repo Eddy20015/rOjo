@@ -12,7 +12,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     [SerializeField] private Animator bobbingCamAnim;
 
     [Header("Border")]
-    [SerializeField] private GameObject border;
+    [SerializeField] private Animator borderAnim;
 
     private void Awake()
     {
@@ -21,8 +21,10 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     }
     protected override void StartTrigger()
     {
-        if(border)
-            border.SetActive(false);
+        if (borderAnim)
+        {
+            borderAnim.SetTrigger("ZoomOut");
+        }
         switcher.SetPriority(newCamIndex);
         cutAnim.SetTrigger(cutSceneName);
         mainCam.orthographic = false;
