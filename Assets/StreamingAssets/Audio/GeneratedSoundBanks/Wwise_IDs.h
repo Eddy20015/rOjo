@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BREAK_TESTING_AUDIO = 2316419224U;
         static const AkUniqueID PAUSE_WIND_IN_BRANCHES = 2245459691U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;

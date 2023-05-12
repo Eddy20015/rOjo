@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
+    [SerializeField] private AK.Wwise.Event StopWind;
+
     void Awake()
     {
         DisableAllChildren();
@@ -34,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OnClickMainMenu()
     {
+        StopWind.Post(gameObject);
         GameStateManager.QuitToMainMenu();
     }
 
