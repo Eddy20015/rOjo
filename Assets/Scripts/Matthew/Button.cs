@@ -8,96 +8,63 @@ public class Button : MonoBehaviour
     private GameObject door;
 
     [SerializeField]
-    private GameObject camera;
+    private bool two_button;
 
     [SerializeField]
-    private bool button;
+    private Button other_button;
 
+    public bool collision;
+    
     [SerializeField]
-    private bool camera_tilt;
-
+    private bool timed;
+    
     [SerializeField]
     private int time;
 
-    [SerializeField]
-    private bool timed;
-
-    [SerializeField]
-    private int RotationSpeed;
-
-    private bool camera_bool;
-
-    private bool camera_back;
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && button)
+        if (two_button)
         {
-            door.SetActive(false);
-            StartCoroutine("Timer");
+            if (other.gameObject.CompareTag("Dancer"))
+            {
+                collision = true;
+
+                if (collision && other_button.collision)
+                {
+                    door.SetActive(false);
+                    StartCoroutine("Timer");
+                }
+            }
+            else
+            {
+                door.SetActive(true);
+            }
         }
         else
         {
-            door.SetActive(true);
-        }
-
-        if (other.gameObject.CompareTag("Player") && camera_tilt)
-        {
-            camera_bool = true;
-            StartCoroutine("Timer");
-        }
-    }
-
-    private void Update()
-    {
-        if (camera.transform.localEulerAngles.z <= 90 && camera.transform.localEulerAngles.z >= 0 && camera_bool)
-        {
-            camera.transform.Rotate(Vector3.forward, RotationSpeed * Time.deltaTime);
-            
-            if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
+            if (other.gameObject.CompareTag("Dancer"))
             {
-                float y = camera.transform.rotation.eulerAngles.z;
-                y = y - 90;
-                camera.transform.Rotate(0, 0, -y);
+                door.SetActive(false);
+                StartCoroutine("Timer");
             }
-
-            Physics2D.gravity = new Vector2(9.81f, 0f);
-            
-        }
-        else
-        {
-            camera_bool = false;
-        }
-
-        if (camera_back)
-        {
-            camera.transform.Rotate(Vector3.back, RotationSpeed * Time.deltaTime);
-
-            if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
+            else
             {
-                float y = camera.transform.rotation.eulerAngles.z;
-                camera.transform.Rotate(0, 0, -y);
+                door.SetActive(true);
             }
-
-            Physics2D.gravity = new Vector2(0f, -2f);
         }
-        
     }
 
     IEnumerator Timer()
     {
-        if (timed && time != 0)
+        if (time > 0)
         {
             yield return new WaitForSeconds(time);
 
-            if (button)
-            {
-                door.SetActive(true);
-            }
-            else if (camera_tilt)
-            {
-                camera_back = true;   
-            }
+            door.SetActive(true);
+
+            collision = false;
         }
     }
 }
