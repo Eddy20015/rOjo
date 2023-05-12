@@ -23,7 +23,7 @@ public class EyeFieldOfView : MonoBehaviour
 
     private void LateUpdate()
     {
-        int rayCount = 25;
+        int rayCount = 5;
         float angle = startingAngle; 
         float angleIncrease = fov/rayCount;
 
@@ -71,6 +71,11 @@ public class EyeFieldOfView : MonoBehaviour
         mesh.triangles = triangles;
 
         
+    }
+
+    public LayerMask GetLayerMask()
+    {
+        return layerMask;
     }
 
     public void SetOrigin(Vector3 origin)
