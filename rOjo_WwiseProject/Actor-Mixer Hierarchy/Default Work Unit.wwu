@@ -273,7 +273,7 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
-				<Sound Name="Jump Landing Placeholder" ID="{CEA02282-6CB9-42D3-80D9-3B5D50AA3309}" ShortID="673616508">
+				<Sound Name="Jump Landing" ID="{CEA02282-6CB9-42D3-80D9-3B5D50AA3309}" ShortID="673616508">
 					<PropertyList>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
@@ -346,6 +346,56 @@
 					</ChildrenList>
 					<ActiveSourceList>
 						<ActiveSource Name="Castanets - Reverse" ID="{F0FA293B-C0BD-4DAF-82B7-E9ED68454BB1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="2D Music" ID="{8DE67E94-70D2-4636-9073-B6EAE622BC7E}" ShortID="1044256735">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music Audio Bus" ID="{5010C48F-1FA3-4979-B90C-37DB3B93B989}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Level Music (Audio from Musescore)" ID="{8BF26C00-55F7-4D86-8927-2C7C6B8D3260}">
+							<Language>SFX</Language>
+							<AudioFile>Level Music (Audio from Musescore).wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1055184408"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Level Music (Audio from Musescore)" ID="{8BF26C00-55F7-4D86-8927-2C7C6B8D3260}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="3D Music" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" ShortID="462333919">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music Audio Bus" ID="{5010C48F-1FA3-4979-B90C-37DB3B93B989}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="3D Music" ID="{C8ED9498-22AB-48A3-BA8D-7A0C09E4B936}">
+							<Language>SFX</Language>
+							<AudioFile>3D Music.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="143617217"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="3D Music" ID="{C8ED9498-22AB-48A3-BA8D-7A0C09E4B936}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
