@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{81925189-5A1E-B3A3-52FD-8C8757ABB303}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{34DF8E4F-2B1A-90E3-4DB7-3116B85520E5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -83,6 +83,7 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2316419224" Name="Break_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2245459691" Name="Pause_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
 					<MediaRefs>
@@ -117,5 +118,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4FC9EE0E-ECAF-54AC-A1A8-4DC7F67BC9B7}</FileHash>
+	<FileHash>{F5C902F4-3D11-9E01-A7CD-D92D3022ABBA}</FileHash>
 </SoundBanksInfo>
