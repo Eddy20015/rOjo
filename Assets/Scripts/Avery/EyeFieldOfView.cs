@@ -5,7 +5,9 @@ using UnityEngine;
 public class EyeFieldOfView : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private int rayCount = 5;
     private Mesh mesh;
+    private Bounds bounds;
     private float fov;
     private float viewDistance;
     private Vector3 origin;
@@ -16,6 +18,8 @@ public class EyeFieldOfView : MonoBehaviour
         fov = 45f;
         viewDistance = 3f;
         mesh = new Mesh();
+
+        bounds = GetComponent<MeshFilter>().mesh.bounds;
         GetComponent<MeshFilter>().mesh = mesh;
         origin = Vector3.zero;
 
@@ -23,7 +27,7 @@ public class EyeFieldOfView : MonoBehaviour
 
     private void LateUpdate()
     {
-        int rayCount = 25;
+        rayCount = 5;
         float angle = startingAngle; 
         float angleIncrease = fov/rayCount;
 
@@ -63,14 +67,22 @@ public class EyeFieldOfView : MonoBehaviour
             vertexIndex++;
             angle -= angleIncrease;
         }
-        
-        
+
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            uv[i] = new Vector2(vertices[i].x / bounds.size.x, vertices[i].y / bounds.size.y);
+        }
 
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
-
+        mesh.RecalculateBounds();
         
+    }
+
+    public LayerMask GetLayerMask()
+    {
+        return layerMask;
     }
 
     public void SetOrigin(Vector3 origin)
