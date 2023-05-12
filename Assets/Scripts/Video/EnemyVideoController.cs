@@ -41,7 +41,7 @@ public class EnemyVideoController : VideoController
     protected new void Start()
     {
 
-        eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
+        eyeFieldOfView = Instantiate(pfEyeFieldOfView, this.transform).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeAngle = 90.0f;
@@ -60,7 +60,7 @@ public class EnemyVideoController : VideoController
 
     private void FixedUpdate()
     {
-        eyeFieldOfView.SetOrigin(transform.position);
+        //eyeFieldOfView.SetOrigin(transform.position);
 
 
         switch(state)
@@ -94,7 +94,7 @@ public class EnemyVideoController : VideoController
             if (Mathf.Abs(Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer)) < fov/2) //If the player is within the FOV.
             {
                 Debug.Log("Inside FOV!");
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance); //If there aren't any obstacles between player and Enemy.
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, eyeFieldOfView.GetLayerMask()); //If there aren't any obstacles between player and Enemy.
                 if (raycastHit2D.collider != null) 
                 {
                     if(raycastHit2D.collider.gameObject.tag == "Dancer")
@@ -214,8 +214,8 @@ public class EnemyVideoController : VideoController
         float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
         var frame = VPlayer.frameCount * anglePct2Frame;
         VPlayer.frame = (long)frame;
-        
 
+        Player.GetComponent<PlayerHealth>().IncreaseMeter(1f);
     }
 
     private IEnumerator Looking() //When the eye looks around after it loses you.
@@ -264,6 +264,12 @@ public class EnemyVideoController : VideoController
         elapsedTime += Time.deltaTime;
     }
 
+    private float smoothFadeInSpot(float alphaStart, float alphaEnd)
+    {
+        float percentageComplete = elapsedTime / lookingDuration;
+        return Mathf.Lerp(alphaStart, alphaEnd, percentageComplete);
+    }
+
         
 
     private IEnumerator Deactivate()
@@ -300,6 +306,8 @@ public class EnemyVideoController : VideoController
         ClipSpeed(PlaySpeed);
 
         state = State.Inactive;
-        
+
+        yield return new WaitForSeconds(Player.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
+        Player.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
     }
 }
