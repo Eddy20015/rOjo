@@ -19,8 +19,8 @@ public class Player2DMovement : MonoBehaviour
     [SerializeField] private float upGravity = 3f;
     [Min(0)]
     [SerializeField] private float downGravity = 2.2f;
-    //[Min(0)]
-    //[SerializeField] private float groundedGravity = 50f; // used to keep player on slope
+    [Min(0)]
+    [SerializeField] private float groundedGravity = 50f; // used to keep player on slope
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
@@ -102,7 +102,10 @@ public class Player2DMovement : MonoBehaviour
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
 
-        myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity: upGravity;
+        if (isJumping)
+            myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity : upGravity;
+        else
+            myRigidbody.gravityScale = groundedGravity;
 
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
