@@ -19,6 +19,8 @@ public class Player2DMovement : MonoBehaviour
     [SerializeField] private float upGravity = 3f;
     [Min(0)]
     [SerializeField] private float downGravity = 2.2f;
+    //[Min(0)]
+    //[SerializeField] private float groundedGravity = 50f; // used to keep player on slope
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
