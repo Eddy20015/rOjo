@@ -214,8 +214,8 @@ public class EnemyVideoController : VideoController
         float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
         var frame = VPlayer.frameCount * anglePct2Frame;
         VPlayer.frame = (long)frame;
-        
 
+        Player.GetComponent<PlayerHealth>().IncreaseMeter(1f);
     }
 
     private IEnumerator Looking() //When the eye looks around after it loses you.
@@ -306,6 +306,8 @@ public class EnemyVideoController : VideoController
         ClipSpeed(PlaySpeed);
 
         state = State.Inactive;
-        
+
+        yield return new WaitForSeconds(Player.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
+        Player.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
     }
 }
