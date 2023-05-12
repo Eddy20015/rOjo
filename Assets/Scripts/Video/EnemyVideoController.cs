@@ -45,7 +45,7 @@ public class EnemyVideoController : VideoController
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeAngle = 90.0f;
-        Player = GameObject.FindWithTag("Dancer");
+        Player = GameObject.FindWithTag("Player");
 
         print("In the new start");
         base.Start();
@@ -97,7 +97,7 @@ public class EnemyVideoController : VideoController
                 RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance); //If there aren't any obstacles between player and Enemy.
                 if (raycastHit2D.collider != null) 
                 {
-                    if(raycastHit2D.collider.gameObject.tag == "Dancer")
+                    if(raycastHit2D.collider.gameObject.tag == "Player")
                     {
                         if (state == State.Inactive)
                         {
