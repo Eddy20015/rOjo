@@ -14,6 +14,10 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     [Header("Border")]
     [SerializeField] private Animator borderAnim;
 
+    [Header("Sound")]
+    [SerializeField] private AK.Wwise.Event Stop2DMusic;
+    [SerializeField] private AK.Wwise.Event Start3DMusic;
+
     private void Awake()
     {
         chaser.SetActive(false);
@@ -29,6 +33,8 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         cutAnim.SetTrigger(cutSceneName);
         mainCam.orthographic = false;
         dancerMovement.enabled = false;
+        Stop2DMusic.Post(gameObject);
+        Start3DMusic.Post(gameObject);
         StartCoroutine(OnCutSceneEnd());
     }
     protected override void EndTrigger()

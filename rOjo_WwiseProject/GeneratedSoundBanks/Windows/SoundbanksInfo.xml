@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{34DF8E4F-2B1A-90E3-4DB7-3116B85520E5}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F058773A-2BCF-57D4-AB00-09E91783362F}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -44,6 +44,10 @@
 				<File Id="131488593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WIP - Calm Wind in Branches.wav</ShortName>
 					<CachePath>SFX/WIP - Calm Wind in Branches_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="143617217" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3D Music.wav</ShortName>
+					<CachePath>SFX/3D Music_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="441570897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step8.wav</ShortName>
@@ -81,10 +85,22 @@
 					<ShortName>Castanets - Reverse.wav</ShortName>
 					<CachePath>SFX/Castanets - Reverse_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="1055184408" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Level Music (Audio from Musescore).wav</ShortName>
+					<CachePath>SFX/Level Music (Audio from Musescore)_D79FB2B7.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="2316419224" Name="Break_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2245459691" Name="Pause_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1931726204" Name="Play_2D_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1055184408"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2395092899" Name="Play_3D_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="143617217"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
 					<MediaRefs>
 						<MediaRef Id="39914089"/>
@@ -113,10 +129,12 @@
 						<MediaRef Id="131488593"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2367458202" Name="Stop_2D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3398073649" Name="Stop_3D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AE0D8376-FC20-6644-C871-2256190938D4}</FileHash>
+	<FileHash>{6B7C251C-CC94-DF74-69CA-C654CEC28934}</FileHash>
 </SoundBanksInfo>

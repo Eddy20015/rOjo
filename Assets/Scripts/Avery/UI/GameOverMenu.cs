@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Event StopWind;
+    [SerializeField] private AK.Wwise.Event Stop2DMusic;
+    [SerializeField] private AK.Wwise.Event Stop3DMusic;
     void Awake()
     {
         DisableAllChildren();
@@ -13,12 +15,17 @@ public class GameOverMenu : MonoBehaviour
     public void OnClickRestart()
     {
         DisableAllChildren();
+        StopWind.Post(gameObject);
+        Stop2DMusic.Post(gameObject);
+        Stop3DMusic.Post(gameObject);
         GameStateManager.Restart();
     }
 
     public void OnClickMainMenu()
     {
         StopWind.Post(gameObject);
+        Stop2DMusic.Post(gameObject);
+        Stop3DMusic.Post(gameObject);
         GameStateManager.QuitToMainMenu();
     }
 
