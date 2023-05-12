@@ -8,7 +8,7 @@ public class Chaser3D : MonoBehaviour
     [SerializeField] private float speedOffset;
 
     // FOR TESTING, CHANGE AS NEEDED
-    [SerializeField] private GameObject text;
+    [SerializeField] private GameObject deathScreen;
     private Player3DMovement pMove;
 
     private Vector3 moveDirection;
@@ -16,6 +16,11 @@ public class Chaser3D : MonoBehaviour
     private Rigidbody rb;
     private float speed;
     private float drag;
+
+    private void Awake()
+    {
+        deathScreen.SetActive(false);
+    }
 
     void Start()
     {
@@ -43,12 +48,17 @@ public class Chaser3D : MonoBehaviour
     // Getting cause by chaser, CHANGE AS NEEDED
     private void OnTriggerEnter(Collider other)
     {
-        print("trigger on " + other.name);
+        if (other.gameObject.tag.Equals("Player")) {
+            GameStateManager.Pause();
+            deathScreen.SetActive(true);
+        }
+
+        /*print("trigger on " + other.name);
         Player3DMovement p = other.GetComponentInParent<Player3DMovement>();
         if(p != null) {
             p.enabled = false; // Stop them from moving
             text.SetActive(true);
             gameObject.SetActive(false);
-        }
+        }*/
     }
 }

@@ -6,27 +6,32 @@ public class Player2DMovement : MonoBehaviour
 {
     [Header("Movement Variables")]
     [SerializeField] private float speed = 5f;
-    [SerializeField] private float jumpForce = 20f;
+    [SerializeField] private float jumpForce = 11.5f;
     [SerializeField] private float jumpBoundary = .1f;
     private float xtrans;
+    private bool isMovingObject = false;
 
     [Header("Physics")]
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private int groundlayer;
     [SerializeField] private int playerLayer;
     [Min(1)]
-    [SerializeField] private float upGravity;
+    [SerializeField] private float upGravity = 3f;
     [Min(0)]
-    [SerializeField] private float downGravity;
+    [SerializeField] private float downGravity = 2.2f;
+    [Min(0)]
+    [SerializeField] private float groundedGravity = 50f; // used to keep player on slope
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
     private Vector3 originalScale; // faces right
 
-    //[Header("Audio")]
+    [Header("Audio")]
     //[SerializeField] private string jumpSFX = "Jump";
     //[SerializeField] private string walkSFX = "Walk";
-    //[SerializeField] private float stepFrequencey;
+    [SerializeField] private AK.Wwise.Event jumpLanding;
+    [SerializeField] private AK.Wwise.Event step;
+    [SerializeField] private float stepFrequencey;
     private bool isJumping;
     private float walkTime;
 
@@ -36,7 +41,7 @@ public class Player2DMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
 
         isJumping = false;
-        //walkTime = stepFrequencey;
+        walkTime = stepFrequencey;
     }
 
     void Update()
@@ -44,39 +49,63 @@ public class Player2DMovement : MonoBehaviour
         xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing
         {
-            FlipRight();
+            if (!isMovingObject)
+            {
+                FlipRight();
 
-            //anim.SetBool("Moving", true);
-
+                anim.SetBool("Moving", true);
+            }
+            else
+            {
+                xtrans /= 2;
+                anim.SetBool("Moving", false);
+                // set pushing/pulling animation here
+            }
         }
         else if (xtrans < 0)
         {
-            FlipLeft();
+            if (!isMovingObject)
+            {
+                FlipLeft();
 
-            //anim.SetBool("Moving", true);
+                anim.SetBool("Moving", true);
+            }
+            else
+            {
+                xtrans /= 2;
+                anim.SetBool("Moving", false);
+                // set pushing/pulling animation here
+            }
         }
         else
         {
-            //anim.SetBool("Moving", false);
+            anim.SetBool("Moving", false);
             //AudioManager.instance.Stop(walkSFX);
-            //walkTime = stepFrequencey;
+            walkTime = stepFrequencey;
         }
 
 
         if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary) // only allows jumping if not already up
         {
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isJumping = true;
+            //isJumping = true;
 
             //AudioManager.instance.Stop(jumpSFX);
             //AudioManager.instance.PlayOneShot(jumpSFX);
         }
-        else if (Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
+        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
-            isJumping = false;
+            print("landed");
+            jumpLanding.Post(gameObject);
+            //isJumping = false;
         }
 
-        myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity: upGravity;
+        isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
+
+        if (isJumping)
+            myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity : upGravity;
+        else
+            myRigidbody.gravityScale = groundedGravity;
 
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
@@ -85,14 +114,14 @@ public class Player2DMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isJumping && xtrans != 0)
+        if (!isJumping && xtrans != 0 && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
-            //if (walkTime % stepFrequencey == 0)
-            //{
-            //    AudioManager.instance.Stop(walkSFX);
-            //    AudioManager.instance.PlayOneShot(walkSFX);
-            //}
-            //walkTime ++;
+            if (walkTime % stepFrequencey == 0) {
+                step.Post(gameObject);
+                //audiomanager.instance.stop(walksfx);
+                //audiomanager.instance.playoneshot(walksfx);
+            }
+            walkTime++;
         }
         transform.Translate(xtrans * Time.fixedDeltaTime, 0, 0);
         Physics2D.IgnoreLayerCollision(groundlayer, playerLayer, (myRigidbody.velocity.y > jumpBoundary));
@@ -119,4 +148,13 @@ public class Player2DMovement : MonoBehaviour
         transform.position = goToTarget;
     }
 
+    public float GetXTrans()
+    {
+        return xtrans;
+    }
+
+    public void SetIsMovingObject(bool b)
+    {
+        isMovingObject = b;
+    }
 }

@@ -35,18 +35,19 @@ public class Player3DMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        rb.isKinematic = false;
 
         anim = GetComponentInChildren<Animator>();
         if (anim != null)
-            anim.SetBool("isMoving", isGrounded);
+            anim.SetBool("isMoving", true);
     }
 
     private void Update()
     {
         // Checks if player is on ground, changes animation as needed
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2 + 0.1f);
-        if(anim != null)
-            anim.SetBool("isGrounded", isGrounded);
+        //if(anim != null)
+        //    anim.SetBool("isGrounded", isGrounded);
 
 
         // Updates moveDirection based on settings and keyboard input
@@ -60,6 +61,8 @@ public class Player3DMovement : MonoBehaviour
 
         // Lets the player jump
         if(Input.GetButton("Jump") && isGrounded) {
+            if (anim != null)
+                anim.SetBool("isGrounded", isGrounded);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
         }
 
