@@ -6,18 +6,19 @@ public class Player2DMovement : MonoBehaviour
 {
     [Header("Movement Variables")]
     [SerializeField] private float speed = 5f;
-    [SerializeField] private float jumpForce = 20f;
+    [SerializeField] private float jumpForce = 11.5f;
     [SerializeField] private float jumpBoundary = .1f;
     private float xtrans;
+    private bool isMovingObject = false;
 
     [Header("Physics")]
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private int groundlayer;
     [SerializeField] private int playerLayer;
     [Min(1)]
-    [SerializeField] private float upGravity;
+    [SerializeField] private float upGravity = 3f;
     [Min(0)]
-    [SerializeField] private float downGravity;
+    [SerializeField] private float downGravity = 2.2f;
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
@@ -46,20 +47,37 @@ public class Player2DMovement : MonoBehaviour
         xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing
         {
-            FlipRight();
+            if (!isMovingObject)
+            {
+                FlipRight();
 
-            //anim.SetBool("Moving", true);
-
+                anim.SetBool("Moving", true);
+            }
+            else
+            {
+                xtrans /= 2;
+                anim.SetBool("Moving", false);
+                // set pushing/pulling animation here
+            }
         }
         else if (xtrans < 0)
         {
-            FlipLeft();
+            if (!isMovingObject)
+            {
+                FlipLeft();
 
-            //anim.SetBool("Moving", true);
+                anim.SetBool("Moving", true);
+            }
+            else
+            {
+                xtrans /= 2;
+                anim.SetBool("Moving", false);
+                // set pushing/pulling animation here
+            }
         }
         else
         {
-            //anim.SetBool("Moving", false);
+            anim.SetBool("Moving", false);
             //AudioManager.instance.Stop(walkSFX);
             walkTime = stepFrequencey;
         }
@@ -125,4 +143,13 @@ public class Player2DMovement : MonoBehaviour
         transform.position = goToTarget;
     }
 
+    public float GetXTrans()
+    {
+        return xtrans;
+    }
+
+    public void SetIsMovingObject(bool b)
+    {
+        isMovingObject = b;
+    }
 }
