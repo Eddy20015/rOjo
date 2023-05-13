@@ -29,7 +29,7 @@ public class SpiderLeg : MonoBehaviour
     {
         SetFoot();
 
-        foot.transform.position = spider.transform.position + initialFootPosition;
+        foot.transform.localPosition = spider.CalculatePosition(currentFootPosition, false);
 
         contactFilter2D = new();
 
@@ -114,7 +114,7 @@ public class SpiderLeg : MonoBehaviour
             }
 
             // moves foot
-            foot.transform.position = Vector2.Lerp(start, end, f);
+            foot.transform.localPosition = Vector2.Lerp(start, end, f);
 
             // adds height
             //foot.transform.position += Mathf.Sin(f * Mathf.PI) * spider.transform.up;
