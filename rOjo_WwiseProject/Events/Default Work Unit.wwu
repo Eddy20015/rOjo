@@ -21,6 +21,7 @@
 								<Action Name="" ID="{DE873374-F5E3-4452-85D7-B4032AD7F486}" ShortID="816630466">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -82,6 +83,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Jump Landing" ID="{CEA02282-6CB9-42D3-80D9-3B5D50AA3309}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Dirt_Footsteps" ID="{0F8D6ADB-F556-420B-B6FD-D5BCD9A0C881}">
+							<ChildrenList>
+								<Action Name="" ID="{AF877718-B91B-40E7-BA35-4F71A5574013}" ShortID="68130074">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dirt_Footsteps" ID="{7F906B5A-0300-46E4-83E9-FE6D5835083A}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
