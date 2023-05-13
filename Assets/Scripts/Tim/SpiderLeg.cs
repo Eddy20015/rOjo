@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] Transform foot;
+    [SerializeField] Transform foot, spiderPlatform;
 
     [SerializeField] float angleOffset, moveSpeed, distance, positionOffset;
 
@@ -29,7 +29,7 @@ public class SpiderLeg : MonoBehaviour
     {
         SetFoot();
 
-        foot.transform.localPosition = spider.CalculatePosition(currentFootPosition, false);
+        foot.transform.position = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
 
         contactFilter2D = new();
 
@@ -41,11 +41,23 @@ public class SpiderLeg : MonoBehaviour
     {
         //Raycast();
 
-        CalculatePosition();
+        //CalculatePosition();
+
+        //SetFoot();
+
+        //foot.transform.position = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
+
+        Vector2 newPosition = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
 
         if (!moving)
         {
-            foot.transform.position = footPosition;
+            transform.position = footPosition;
+
+            if (Vector2.Distance(footPosition, newPosition) > 2)
+            {
+                SetFoot();
+                StartCoroutine(MoveLeg(foot.position, newPosition));
+            }
         }
     }
 
@@ -73,7 +85,7 @@ public class SpiderLeg : MonoBehaviour
             && !moving)
             {
                 SetFoot();
-                StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
+                StartCoroutine(MoveLeg(foot.position, (Vector2)spider.transform.position + spider.CalculatePosition(currentFootPosition, false)));
             }
         } else
         {
@@ -81,7 +93,7 @@ public class SpiderLeg : MonoBehaviour
             && !moving)
             {
                 SetFoot();
-                StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
+                StartCoroutine(MoveLeg(foot.position, (Vector2)spider.transform.position + spider.CalculatePosition(currentFootPosition, false)));
             }
         }
     }
@@ -114,7 +126,7 @@ public class SpiderLeg : MonoBehaviour
             }
 
             // moves foot
-            foot.transform.localPosition = Vector2.Lerp(start, end, f);
+            foot.transform.position = Vector2.Lerp(start, end, f);
 
             // adds height
             //foot.transform.position += Mathf.Sin(f * Mathf.PI) * spider.transform.up;
