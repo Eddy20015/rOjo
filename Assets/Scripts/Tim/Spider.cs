@@ -27,7 +27,12 @@ public class Spider : MonoBehaviour
 
         spiderPosition += Time.deltaTime;
 
-        transform.localPosition = CalculatePosition();
+        if (spiderPosition > circumference)
+        {
+            spiderPosition -= circumference;
+        }
+
+        transform.localPosition = CalculatePosition(spiderPosition);
 
         body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
             Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
@@ -38,12 +43,10 @@ public class Spider : MonoBehaviour
         circumference = (width * 2) + (height * 2);
     }
 
-    Vector2 CalculatePosition()
+    public Vector2 CalculatePosition(float f)
     {
-        if (spiderPosition > circumference)
-        {
-            spiderPosition -= circumference;
-        }
+        // this is about to be the most 1 AM code ever
+
 
         return new();
     }
