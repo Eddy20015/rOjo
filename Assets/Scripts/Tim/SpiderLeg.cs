@@ -67,7 +67,8 @@ public class SpiderLeg : MonoBehaviour
 
     void CalculatePosition()
     {
-        if (spider.GetPosition() - currentFootPosition > 2 || spider.GetPosition() + spider.GetCircumference() - currentFootPosition > 2)
+        if ((spider.GetPosition() - currentFootPosition > 2 || spider.GetPosition() + spider.GetCircumference() - currentFootPosition > 2)
+            && !moving)
         {
             SetFoot();
             StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
