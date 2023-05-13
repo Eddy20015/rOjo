@@ -8,6 +8,11 @@ public class DetectVolumeController : PostProcessController
 {
     [Header("Exposure Reference")]
     [SerializeField] private Image exposure;
+    private bool refExposure = true;
+
+    [Header("Fade Out Controls")]
+    [SerializeField] private float fadeTime;
+    private float timeElapsed;
 
     private Vignette vignetteS = null;
     [Header("Vignette Settings")]
@@ -35,6 +40,9 @@ public class DetectVolumeController : PostProcessController
 
     private void Awake()
     {
+        refExposure = true;
+        timeElapsed = 0;
+
         VignetteSetUp();
         LensDistortionSetUp();
         PaniniSetUp();
@@ -75,18 +83,35 @@ public class DetectVolumeController : PostProcessController
         filmGrainS.intensity.Override(filmIntenMin);
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        vignetteS.intensity.Override(Mathf.Lerp(vignIntenMin, vignIntenMax, exposure.fillAmount));
-        
-        lensDistortS.intensity.Override(Mathf.Lerp(lensIntenMin, lensIntenMin, exposure.fillAmount));
-        lensDistortS.yMultiplier.Override(Mathf.Lerp(lensYMultMin, lensYMultMax, exposure.fillAmount));
-        
-        paniniS.distance.Override(Mathf.Lerp(paniniDistMin, paniniDistMax, exposure.fillAmount));
-        paniniS.cropToFit.Override(Mathf.Lerp(paniniCropMin, paniniCropMax, exposure.fillAmount));
+        if (refExposure)
+        {
+            LerpEffects(exposure.fillAmount);
+        }
+        else
+        {
+            if(timeElapsed < fadeTime)
+            {
+                print("fading");
+                LerpEffects(1 - (timeElapsed/fadeTime));
+                timeElapsed += Time.deltaTime;
+            }
+        }
 
-        filmGrainS.intensity.Override(Mathf.Lerp(filmIntenMin, filmIntenMax, exposure.fillAmount));
+    }
 
+    private void LerpEffects(float lerpVal)
+    {
+        vignetteS.intensity.Override(Mathf.Lerp(vignIntenMin, vignIntenMax, lerpVal));
+
+        lensDistortS.intensity.Override(Mathf.Lerp(lensIntenMin, lensIntenMin, lerpVal));
+        lensDistortS.yMultiplier.Override(Mathf.Lerp(lensYMultMin, lensYMultMax, lerpVal));
+
+        paniniS.distance.Override(Mathf.Lerp(paniniDistMin, paniniDistMax, lerpVal));
+        paniniS.cropToFit.Override(Mathf.Lerp(paniniCropMin, paniniCropMax, lerpVal));
+
+        filmGrainS.intensity.Override(Mathf.Lerp(filmIntenMin, filmIntenMax, lerpVal));
     }
 
     private void OnDestroy()
@@ -100,5 +125,11 @@ public class DetectVolumeController : PostProcessController
         paniniS.cropToFit.Override(paniniCropMax);
 
         filmGrainS.intensity.Override(filmIntenMax);
+    }
+
+    public override void FadeOutEffects()
+    {
+        refExposure = false;
+        timeElapsed = 0;
     }
 }
