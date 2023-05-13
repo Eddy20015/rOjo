@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A1D0F3C8-F05A-5B93-B5C0-25784AD6216A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9E5D390F-F002-ED42-5424-8E3B386A2C6C}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -127,6 +127,7 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3111061815" Name="Fade_Out_2D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1931726204" Name="Play_2D_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1055184408"/>
@@ -194,5 +195,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DE24471C-4CA2-232E-C408-934AC00AED7F}</FileHash>
+	<FileHash>{8FA4C20E-A090-A6BD-372D-E4B36C38EB1F}</FileHash>
 </SoundBanksInfo>

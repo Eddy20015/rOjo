@@ -21,7 +21,22 @@
 								<Action Name="" ID="{DE873374-F5E3-4452-85D7-B4032AD7F486}" ShortID="816630466">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="2D Music" ID="{8DE67E94-70D2-4636-9073-B6EAE622BC7E}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fade_Out_2D_Music" ID="{F7C154FB-DA20-4E52-B69A-6109B3832652}">
+							<ChildrenList>
+								<Action Name="" ID="{637AA9AA-58C3-4DC6-ABCB-E274A12EE39A}" ShortID="1056959710">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
