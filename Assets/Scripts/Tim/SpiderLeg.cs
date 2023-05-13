@@ -27,13 +27,13 @@ public class SpiderLeg : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetFoot();
+
         foot.transform.position = spider.transform.position + initialFootPosition;
 
         contactFilter2D = new();
 
         contactFilter2D.useTriggers = false;
-
-        SetFoot();
     }
 
     // Update is called once per frame
@@ -67,11 +67,22 @@ public class SpiderLeg : MonoBehaviour
 
     void CalculatePosition()
     {
-        if ((spider.GetPosition() - currentFootPosition > 2 || spider.GetPosition() + spider.GetCircumference() - currentFootPosition > 2)
-            && !moving)
+        if (positionOffset > 0)
         {
-            SetFoot();
-            StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
+            if (((spider.GetPosition() - currentFootPosition) > 2 || (spider.GetPosition() + spider.GetCircumference() - currentFootPosition) > 2)
+            && !moving)
+            {
+                SetFoot();
+                StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
+            }
+        } else
+        {
+            if (((spider.GetPosition() - currentFootPosition) < -3 || (spider.GetPosition() + spider.GetCircumference() - currentFootPosition) < -3)
+            && !moving)
+            {
+                SetFoot();
+                StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
+            }
         }
     }
 

@@ -51,6 +51,16 @@ public class Spider : MonoBehaviour
 
         float remainder = f;
 
+        if (remainder > circumference)
+        {
+            remainder -= circumference;
+        }
+
+        if (remainder < 0)
+        {
+            remainder += circumference;
+        }
+
         if (remainder > height)
         {
             remainder -= height;
