@@ -8,13 +8,15 @@ public class Spider : MonoBehaviour
 
     [SerializeField] float move, rotate, moveSpeed, rotateSpeed;
 
-    float moveTime, rotateTime, width, height;
+    float moveTime, rotateTime, width, height, circumference, spiderPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         width = platform.transform.localScale.x;
         height = platform.transform.localScale.y;
+
+        CalculateCircumference();
     }
 
     // Update is called once per frame
@@ -23,9 +25,26 @@ public class Spider : MonoBehaviour
         moveTime += Time.deltaTime * moveSpeed;
         rotateTime += Time.deltaTime * rotateSpeed;
 
-        transform.position += Input.GetAxis("Horizontal") * Time.deltaTime * Vector3.right;
+        spiderPosition += Time.deltaTime;
+
+        transform.localPosition = CalculatePosition();
 
         body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
             Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
+    }
+
+    void CalculateCircumference()
+    {
+        circumference = (width * 2) + (height * 2);
+    }
+
+    Vector2 CalculatePosition()
+    {
+        if (spiderPosition > circumference)
+        {
+            spiderPosition -= circumference;
+        }
+
+        return new();
     }
 }
