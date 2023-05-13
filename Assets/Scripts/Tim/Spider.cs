@@ -32,7 +32,8 @@ public class Spider : MonoBehaviour
             spiderPosition -= circumference;
         }
 
-        transform.localPosition = CalculatePosition(spiderPosition);
+        transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition),
+            Quaternion.Euler(CalculateRotation(spiderPosition) * Vector3.forward));
 
         body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
             Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
@@ -85,5 +86,10 @@ public class Spider : MonoBehaviour
         v += remainder * Vector2.left;
 
         return v + new Vector2(-width / 2, -height / 2);
+    }
+
+    public float CalculateRotation(float f)
+    {
+        return f * 360 / circumference;
     }
 }
