@@ -47,16 +47,17 @@ public class SpiderLeg : MonoBehaviour
 
         //foot.transform.position = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
 
-        Vector2 newPosition = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
+        SetFoot();
+
+        Vector2 newPosition = GetFootPosition(currentFootPosition);
 
         if (!moving)
         {
-            transform.position = footPosition;
+            foot.transform.position = footPosition;
 
-            if (Vector2.Distance(footPosition, newPosition) > 2)
+            if (Vector2.Distance(footPosition, newPosition) > 1)
             {
-                SetFoot();
-                StartCoroutine(MoveLeg(foot.position, newPosition));
+                StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
             }
         }
     }
@@ -101,6 +102,11 @@ public class SpiderLeg : MonoBehaviour
     void SetFoot()
     {
         currentFootPosition = spider.GetPosition() + positionOffset;
+    }
+
+    Vector2 GetFootPosition(float f)
+    {
+        return (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(f, false);
     }
 
     IEnumerator MoveLeg(Vector2 start, Vector2 end)

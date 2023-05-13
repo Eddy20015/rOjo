@@ -263,14 +263,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foot: {fileID: 6621184004460070378}
-  spider: {fileID: 0}
+  spiderPlatform: {fileID: 0}
   angleOffset: 0
-  moveSpeed: 0.5
+  moveSpeed: 1.5
+  distance: 0
+  positionOffset: 0
   initialFootPosition: {x: 0, y: 0, z: 0}
+  raycastDirection: {x: 0, y: 0, z: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 1
   hit: {fileID: 1410142829967927671, guid: 4223da55260d5440d937a9c3603f5d7d, type: 3}
+  spider: {fileID: 0}
 --- !u!1 &6621184005849103335
 GameObject:
   m_ObjectHideFlags: 0
