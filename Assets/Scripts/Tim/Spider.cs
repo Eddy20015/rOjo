@@ -34,13 +34,6 @@ public class Spider : MonoBehaviour
             spiderPosition -= circumference;
         }
 
-        if (oldRotation != targetRotation)
-        {
-            oldRotation = targetRotation;
-            oldSpiderRotation = transform.localRotation;
-            rotationLerp = 0;
-        }
-
         if (rotationLerp < 1)
         {
             rotationLerp += spiderRotationSpeed * Time.deltaTime;
@@ -130,6 +123,13 @@ public class Spider : MonoBehaviour
         if (remainder > 0 && isSpider)
         {
             targetRotation = 180;
+        }
+
+        if (oldRotation != targetRotation)
+        {
+            oldRotation = targetRotation;
+            oldSpiderRotation = transform.localRotation;
+            rotationLerp = 0;
         }
 
         return v + new Vector2(-width / 2, -height / 2);

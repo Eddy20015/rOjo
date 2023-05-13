@@ -114,9 +114,9 @@ public class SpiderLeg : MonoBehaviour
         moving = true;
 
         // hit gameobject so I can tell where the raycast hits
-        GameObject h = Instantiate(hit);
+        //GameObject h = Instantiate(hit);
 
-        h.transform.position = end;
+        //h.transform.position = end;
 
         float f = 0;
 
@@ -141,7 +141,7 @@ public class SpiderLeg : MonoBehaviour
 
         footPosition = foot.transform.position;
 
-        Destroy(h);
+        //Destroy(h);
 
         moving = false;
     }
