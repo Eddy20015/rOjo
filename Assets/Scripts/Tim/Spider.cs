@@ -46,8 +46,44 @@ public class Spider : MonoBehaviour
     public Vector2 CalculatePosition(float f)
     {
         // this is about to be the most 1 AM code ever
+        Vector2 v = new();
 
+        float remainder = f;
 
-        return new();
+        if (remainder > height)
+        {
+            remainder -= height;
+            v += height * Vector2.up;
+        }
+        else
+        {
+            v += remainder * Vector2.up;
+            remainder = 0;
+        }
+
+        if (remainder > width)
+        {
+            remainder -= width;
+            v += width * Vector2.right;
+        } else
+        {
+            v += remainder * Vector2.right;
+            remainder = 0;
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+            v += height * Vector2.down;
+        }
+        else
+        {
+            v += remainder * Vector2.down;
+            remainder = 0;
+        }
+
+        v += remainder * Vector2.left;
+
+        return v + new Vector2(-width / 2, -height / 2);
     }
 }
