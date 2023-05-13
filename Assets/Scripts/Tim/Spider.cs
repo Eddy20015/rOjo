@@ -8,7 +8,7 @@ public class Spider : MonoBehaviour
 
     [SerializeField] float move, rotate, moveSpeed, rotateSpeed;
 
-    float moveTime, rotateTime, width, height, circumference, spiderPosition;
+    float moveTime, rotateTime, width, height, circumference, spiderPosition, targetRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -32,8 +32,8 @@ public class Spider : MonoBehaviour
             spiderPosition -= circumference;
         }
 
-        transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition),
-            Quaternion.Euler(CalculateRotation(spiderPosition) * Vector3.forward));
+        transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition, true),
+            Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0,0,targetRotation), Time.deltaTime));
 
         body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
             Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
@@ -44,7 +44,7 @@ public class Spider : MonoBehaviour
         circumference = (width * 2) + (height * 2);
     }
 
-    public Vector2 CalculatePosition(float f)
+    public Vector2 CalculatePosition(float f, bool isSpider)
     {
         // this is about to be the most 1 AM code ever
         Vector2 v = new();
@@ -60,6 +60,11 @@ public class Spider : MonoBehaviour
         {
             v += remainder * Vector2.up;
             remainder = 0;
+
+            if (isSpider)
+            {
+                targetRotation = -270;
+            }
         }
 
         if (remainder > width)
@@ -70,6 +75,11 @@ public class Spider : MonoBehaviour
         {
             v += remainder * Vector2.right;
             remainder = 0;
+
+            if (isSpider)
+            {
+                targetRotation = 0;
+            }
         }
 
         if (remainder > height)
@@ -81,9 +91,19 @@ public class Spider : MonoBehaviour
         {
             v += remainder * Vector2.down;
             remainder = 0;
+
+            if (isSpider)
+            {
+                targetRotation = -90;
+            }
         }
 
         v += remainder * Vector2.left;
+
+        if (remainder > 0 && isSpider)
+        {
+            targetRotation = -180;
+        }
 
         return v + new Vector2(-width / 2, -height / 2);
     }
