@@ -6,9 +6,11 @@ public class Spider : MonoBehaviour
 {
     [SerializeField] Transform body, platform;
 
-    [SerializeField] float move, rotate, moveSpeed, rotateSpeed;
+    [SerializeField] float move, rotate, moveSpeed, rotateSpeed, spiderMoveSpeed, spiderRotationSpeed;
 
-    float moveTime, rotateTime, width, height, circumference, spiderPosition, targetRotation;
+    float moveTime, rotateTime, width, height, circumference, spiderPosition, targetRotation, oldRotation, rotationLerp;
+
+    Quaternion oldSpiderRotation;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +27,30 @@ public class Spider : MonoBehaviour
         moveTime += Time.deltaTime * moveSpeed;
         rotateTime += Time.deltaTime * rotateSpeed;
 
-        spiderPosition += Time.deltaTime;
+        spiderPosition += spiderMoveSpeed * Time.deltaTime;
 
         if (spiderPosition > circumference)
         {
             spiderPosition -= circumference;
         }
 
+        if (oldRotation != targetRotation)
+        {
+            oldRotation = targetRotation;
+            oldSpiderRotation = transform.localRotation;
+            rotationLerp = 0;
+        }
+
+        if (rotationLerp < 1)
+        {
+            rotationLerp += spiderRotationSpeed * Time.deltaTime;
+        } else
+        {
+            rotationLerp = 1;
+        }
+
         transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition, true),
-            Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0,0,targetRotation), Time.deltaTime));
+            Quaternion.Lerp(oldSpiderRotation, Quaternion.Euler(0,0,targetRotation), rotationLerp));
 
         body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
             Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
