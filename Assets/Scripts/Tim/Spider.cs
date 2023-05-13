@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Spider : MonoBehaviour
 {
-    [SerializeField] Transform body;
+    [SerializeField] Transform body, platform;
 
     [SerializeField] float move, rotate, moveSpeed, rotateSpeed;
 
-    float moveTime, rotateTime;
+    float moveTime, rotateTime, width, height;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        width = platform.transform.localScale.x;
+        height = platform.transform.localScale.y;
     }
 
     // Update is called once per frame
