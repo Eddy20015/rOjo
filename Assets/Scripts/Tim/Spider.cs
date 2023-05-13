@@ -112,4 +112,14 @@ public class Spider : MonoBehaviour
     {
         return (f * -360 / circumference) + 90;
     }
+
+    public float GetPosition()
+    {
+        return spiderPosition;
+    }
+
+    public float GetCircumference()
+    {
+        return circumference;
+    }
 }

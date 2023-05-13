@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] Transform foot, spider;
+    [SerializeField] Transform foot;
 
-    [SerializeField] float angleOffset, moveSpeed, distance;
+    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset;
 
     [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
@@ -14,11 +14,15 @@ public class SpiderLeg : MonoBehaviour
 
     [SerializeField] GameObject hit;
 
+    [SerializeField] Spider spider;
+
     bool moving;
 
     ContactFilter2D contactFilter2D;
 
     Vector3 footPosition;
+
+    float currentFootPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +32,16 @@ public class SpiderLeg : MonoBehaviour
         contactFilter2D = new();
 
         contactFilter2D.useTriggers = false;
+
+        SetFoot();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Raycast();
+        //Raycast();
+
+        CalculatePosition();
 
         if (!moving)
         {
@@ -55,6 +63,20 @@ public class SpiderLeg : MonoBehaviour
                 StartCoroutine(MoveLeg(foot.position, h.point));
             }
         }
+    }
+
+    void CalculatePosition()
+    {
+        if (spider.GetPosition() - currentFootPosition > 2 || spider.GetPosition() + spider.GetCircumference() - currentFootPosition > 2)
+        {
+            SetFoot();
+            StartCoroutine(MoveLeg(foot.position, spider.CalculatePosition(currentFootPosition, false)));
+        }
+    }
+
+    void SetFoot()
+    {
+        currentFootPosition = spider.GetPosition() + positionOffset;
     }
 
     IEnumerator MoveLeg(Vector2 start, Vector2 end)
