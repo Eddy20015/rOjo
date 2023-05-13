@@ -93,7 +93,6 @@ public class DetectVolumeController : PostProcessController
         {
             if(timeElapsed < fadeTime)
             {
-                print("fading");
                 LerpEffects(1 - (timeElapsed/fadeTime));
                 timeElapsed += Time.deltaTime;
             }
