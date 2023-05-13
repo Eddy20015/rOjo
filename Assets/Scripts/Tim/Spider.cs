@@ -63,7 +63,7 @@ public class Spider : MonoBehaviour
 
             if (isSpider)
             {
-                targetRotation = -270;
+                targetRotation = 90;
             }
         }
 
@@ -71,7 +71,7 @@ public class Spider : MonoBehaviour
         {
             remainder -= width;
             v += width * Vector2.right;
-        } else
+        } else if (remainder > 0)
         {
             v += remainder * Vector2.right;
             remainder = 0;
@@ -87,14 +87,14 @@ public class Spider : MonoBehaviour
             remainder -= height;
             v += height * Vector2.down;
         }
-        else
+        else if (remainder > 0)
         {
             v += remainder * Vector2.down;
             remainder = 0;
 
             if (isSpider)
             {
-                targetRotation = -90;
+                targetRotation = 270;
             }
         }
 
@@ -102,7 +102,7 @@ public class Spider : MonoBehaviour
 
         if (remainder > 0 && isSpider)
         {
-            targetRotation = -180;
+            targetRotation = 180;
         }
 
         return v + new Vector2(-width / 2, -height / 2);
