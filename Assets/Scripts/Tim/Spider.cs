@@ -90,6 +90,6 @@ public class Spider : MonoBehaviour
 
     public float CalculateRotation(float f)
     {
-        return f * 360 / circumference;
+        return (f * -360 / circumference) + 90;
     }
 }
