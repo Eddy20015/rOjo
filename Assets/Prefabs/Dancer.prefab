@@ -89,8 +89,12 @@ MonoBehaviour:
   jumpForce: 11.5
   jumpBoundary: 0.1
   myRigidbody: {fileID: 3764266573590916465}
-  groundlayer: 6
-  playerLayer: 7
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
   upGravity: 3
   downGravity: 2.2
   groundedGravity: 50
