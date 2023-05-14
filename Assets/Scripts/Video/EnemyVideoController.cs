@@ -16,7 +16,8 @@ public class EnemyVideoController : VideoController
     [SerializeField] Transform pfEyeFieldOfView;
     [SerializeField] private float fov = 45f;
     [SerializeField] private float viewDistance = 3f; 
-    [SerializeField] private float lookingDuration = .01f;
+    [SerializeField] private float lookingDuration = .02f;
+    [SerializeField] private float fadeDuration = .01f;
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
     private bool isLooking = false;
@@ -41,9 +42,10 @@ public class EnemyVideoController : VideoController
     protected new void Start()
     {
 
-        eyeFieldOfView = Instantiate(pfEyeFieldOfView, this.transform).GetComponent<EyeFieldOfView>();
+        eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
+        eyeFieldOfView.SetFadeDuration(fadeDuration);
         eyeAngle = 90.0f;
         Player = GameObject.FindWithTag("Dancer");
 
@@ -60,7 +62,7 @@ public class EnemyVideoController : VideoController
 
     private void FixedUpdate()
     {
-        //eyeFieldOfView.SetOrigin(transform.position);
+        eyeFieldOfView.SetOrigin(transform.position);
 
 
         switch(state)
@@ -94,21 +96,24 @@ public class EnemyVideoController : VideoController
             if (Mathf.Abs(Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer)) < fov/2) //If the player is within the FOV.
             {
                 Debug.Log("Inside FOV!");
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, eyeFieldOfView.GetLayerMask()); //If there aren't any obstacles between player and Enemy.
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, LayerMask.GetMask("Dancer")); //If there aren't any obstacles between player and Enemy.
                 if (raycastHit2D.collider != null) 
                 {
                     if(raycastHit2D.collider.gameObject.tag == "Dancer")
                     {
+                        
                         if (state == State.Inactive)
                         {
-                            float angleToPlayer = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
-                            eyeFrameFoundPct = Mathf.Abs(eyeAngle)/360f;
-                            StartCoroutine(Activate());
+                            VPlayer.clip = ActiveClip;
+                            state = State.Active;
+                        //     float angleToPlayer = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
+                        //     eyeFrameFoundPct = Mathf.Abs(eyeAngle)/360f;
+                        //     StartCoroutine(Activate());
                         }
 
                         if (state == State.Active) Active();
 
-                        if (state == State.Looking || state == State.Active2Inactive)
+                        if (state == State.Looking)
                         {
                             StopAllCoroutines();
                             state = State.Active;
@@ -162,12 +167,11 @@ public class EnemyVideoController : VideoController
             Debug.Log("Eye Activated!");
 
             state = State.Inactive2Active; //Tells the state machine to wait till this is done.
-
+            bContinue = false; //Reset Checking if Loop point is reached.
             //Speed up and finish the video forwards
 
             //Set the playback speed back to normal, but reverse it
             VPlayer.clip = TransitionClip;
-
             //Do nothing until the transition clip loop point is reached
             while (!bContinue) 
             {
@@ -176,16 +180,17 @@ public class EnemyVideoController : VideoController
             bContinue = false;
 
             VPlayer.clip = ActiveClip;
-            var frame = VPlayer.frameCount * eyeFrameFoundPct;
-            VPlayer.frame = (long)frame + 6;
             ClipSpeed(HighSpeed);
+            var frame = VPlayer.frameCount * eyeFrameFoundPct;
+            VPlayer.frame = ((long)frame + 4) % (long)VPlayer.frameCount;
+            
             //Do nothing until the active clip loop point is reached
             // while (!bContinue) 
             // {
             //     yield return new WaitForSeconds(.01f);
             // }
             // bContinue = false;
-            while (Mathf.Abs((int)VPlayer.frame - frame) > 5)
+            while (Mathf.Abs((int)VPlayer.frame - frame) > 3)
             {
                 Debug.Log(VPlayer.frame);
                 yield return new WaitForSeconds(.001f);
@@ -198,6 +203,7 @@ public class EnemyVideoController : VideoController
 
             Debug.Log("Back to spotted frame");
 
+            eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeIn
             state = State.Active;
             
             
@@ -208,6 +214,7 @@ public class EnemyVideoController : VideoController
     private void Active() //When the eye sees you.
     {   
         PauseVPlayer();
+        eyeFieldOfView.FadeIn();
         Vector3 dirToPlayer = (Player.transform.position - transform.position);
         eyeAngle = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
         eyeFieldOfView.SetAimDirection(dirToPlayer);
@@ -220,10 +227,13 @@ public class EnemyVideoController : VideoController
 
     private IEnumerator Looking() //When the eye looks around after it loses you.
     {
+        Debug.Log("Now looking!");
+        bContinue = false; // Reset checking if loopPoint was reached.
         
         float initEyeAngle = eyeAngle;
         float lookRight = 30;
         float lookLeft = -30;
+        long frame = 0;
 
         elapsedTime = 0;
         state = State.Looking;
@@ -233,42 +243,56 @@ public class EnemyVideoController : VideoController
             smoothLook(initEyeAngle, initEyeAngle + lookRight);
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        yield return new WaitForSeconds(0.2f);
+        Debug.Log("Pause");
+        yield return new WaitForSeconds(0.5f);
+        elapsedTime = 0;
+        while(elapsedTime < lookingDuration)
+        {
+            smoothLook(eyeAngle, initEyeAngle + lookLeft*2);
+            yield return new WaitForSeconds(Time.deltaTime);
+        }
+        Debug.Log("Pause");
+        yield return new WaitForSeconds(0.5f);
         elapsedTime = 0;
         initEyeAngle = eyeAngle;
         while(elapsedTime < lookingDuration)
         {
-            smoothLook(initEyeAngle, initEyeAngle + lookLeft*2);
+            frame = smoothLook(eyeAngle, initEyeAngle + lookRight); //get last frame of lookaround
             yield return new WaitForSeconds(Time.deltaTime);
         }
-        yield return new WaitForSeconds(0.2f);
-        elapsedTime = 0;
-        initEyeAngle = eyeAngle;
-        while(elapsedTime < lookingDuration)
+        Debug.Log("Pause");
+        yield return new WaitForSeconds(0.5f);
+
+        //Speed up and finish the video forwards (LOOKS to the far right)
+        ClipSpeed(HighSpeed);
+        VPlayer.frame = frame; //skip to this last frame to prevent janky eyeball.
+
+        bContinue = false;
+        //Do nothing until the active clip loop point is reached
+        while (!bContinue)
         {
-            smoothLook(initEyeAngle, initEyeAngle + lookRight);
-            yield return new WaitForSeconds(Time.deltaTime);
-        }
+            Inactive();
+            yield return new WaitForSeconds(.01f);
+        } 
+        bContinue = false;
 
         StartCoroutine(Deactivate());
     }
 
-    private void smoothLook(float lookStart, float lookDest)
+    private long smoothLook(float lookStart, float lookDest)
     {
+        Debug.Log("EyeAngle: " + eyeAngle);
         float percentageComplete = elapsedTime / lookingDuration;
         eyeAngle = Mathf.Lerp(lookStart, lookDest, percentageComplete);
         eyeFieldOfView.SetAimDirection(eyeAngle);
-        float anglePct2Frame = Mathf.Abs(eyeAngle%360f)/360f;
+        float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
         var frame = VPlayer.frameCount * anglePct2Frame;
         VPlayer.frame = (long)frame;
         elapsedTime += Time.deltaTime;
+        return (long)frame;
     }
 
-    private float smoothFadeInSpot(float alphaStart, float alphaEnd)
-    {
-        float percentageComplete = elapsedTime / lookingDuration;
-        return Mathf.Lerp(alphaStart, alphaEnd, percentageComplete);
-    }
+    
 
         
 
@@ -279,25 +303,16 @@ public class EnemyVideoController : VideoController
         state = State.Active2Inactive; //Tells the state machine to wait till this is done.
         //Speed up Active clip to completion
 
-        //Speed up and finish the video forwards
-        StartVPlayer();
-        
-        //Do nothing until the active clip loop point is reached
-        while (!bContinue)
-        {
-            Inactive();
-            yield return new WaitForSeconds(.01f);
-        } 
-        bContinue = false;
-
         //Set the playback speed back to normal, but reverse it
         VPlayer.clip = ReverseTransitionClip;
         ClipSpeed(PlaySpeed);
 
         //Do nothing until the transition clip loop point is reached
+        eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeOut
         while (!bContinue)
         {
-            yield return new WaitForSeconds(.01f);
+            eyeFieldOfView.FadeOut();
+            yield return new WaitForSeconds(.001f);
         } 
         bContinue = false;
 
