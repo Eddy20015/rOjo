@@ -93,7 +93,7 @@ public class DetectVolumeController : PostProcessController
         {
             if(timeElapsed < fadeTime)
             {
-                LerpEffects(1 - (timeElapsed/fadeTime));
+                LerpEffectsFade(timeElapsed / fadeTime);
                 timeElapsed += Time.deltaTime;
             }
         }
@@ -111,6 +111,19 @@ public class DetectVolumeController : PostProcessController
         paniniS.cropToFit.Override(Mathf.Lerp(paniniCropMin, paniniCropMax, lerpVal));
 
         filmGrainS.intensity.Override(Mathf.Lerp(filmIntenMin, filmIntenMax, lerpVal));
+    }
+
+    private void LerpEffectsFade(float lerpVal)
+    {
+        vignetteS.intensity.Override(Mathf.Lerp((float)vignetteS.intensity, vignIntenMin, lerpVal));
+
+        lensDistortS.intensity.Override(Mathf.Lerp((float)lensDistortS.intensity, lensIntenMin, lerpVal));
+        lensDistortS.yMultiplier.Override(Mathf.Lerp((float)lensDistortS.yMultiplier, lensYMultMin, lerpVal));
+
+        paniniS.distance.Override(Mathf.Lerp((float)paniniS.distance, paniniDistMin, lerpVal));
+        paniniS.cropToFit.Override(Mathf.Lerp((float)paniniS.cropToFit, paniniCropMin, lerpVal));
+
+        filmGrainS.intensity.Override(Mathf.Lerp((float)filmGrainS.intensity, filmIntenMin, lerpVal));
     }
 
     private void OnDestroy()
