@@ -96,7 +96,7 @@ public class EnemyVideoController : VideoController
             if (Mathf.Abs(Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer)) < fov/2) //If the player is within the FOV.
             {
                 Debug.Log("Inside FOV!");
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, eyeFieldOfView.GetLayerMask()); //If there aren't any obstacles between player and Enemy.
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, LayerMask.GetMask("Dancer")); //If there aren't any obstacles between player and Enemy.
                 if (raycastHit2D.collider != null) 
                 {
                     if(raycastHit2D.collider.gameObject.tag == "Dancer")
