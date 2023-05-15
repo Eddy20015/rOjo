@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9E5D390F-F002-ED42-5424-8E3B386A2C6C}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5462517B-BD05-3D31-4DB1-E309FC33B221}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -109,6 +109,10 @@
 					<ShortName>Step2.wav</ShortName>
 					<CachePath>SFX/Step2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="833533991" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Castanets Click_Higher.wav</ShortName>
+					<CachePath>SFX/Castanets Click_Higher_10C4C929.wem</CachePath>
+				</File>
 				<File Id="862606870" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dirt8.wav</ShortName>
 					<CachePath>SFX/dirt8_10C4C929.wem</CachePath>
@@ -116,6 +120,10 @@
 				<File Id="991653222" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dirt5.wav</ShortName>
 					<CachePath>SFX/dirt5_10C4C929.wem</CachePath>
+				</File>
+				<File Id="1027631710" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Castanet Playing_Section.wav</ShortName>
+					<CachePath>SFX/Castanet Playing_Section_10C4C929.wem</CachePath>
 				</File>
 				<File Id="1044381033" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Castanets - Reverse.wav</ShortName>
@@ -136,6 +144,11 @@
 				<Event Id="2395092899" Name="Play_3D_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="143617217"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2034692297" Name="Play_Button_Select" DurationType="OneShot" DurationMin="0.2740363" DurationMax="0.2740363">
+					<MediaRefs>
+						<MediaRef Id="833533991"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1323035329" Name="Play_Dirt_Footsteps" DurationType="OneShot" DurationMin="0.092707485" DurationMax="0.41253445">
@@ -178,6 +191,11 @@
 						<MediaRef Id="513019750"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1401754570" Name="Play_Special_Click" DurationType="OneShot" DurationMin="2.2451875" DurationMax="2.2451875">
+					<MediaRefs>
+						<MediaRef Id="1027631710"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2946897393" Name="Play_Testing_Audio" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1044381033"/>
@@ -195,5 +213,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8FA4C20E-A090-A6BD-372D-E4B36C38EB1F}</FileHash>
+	<FileHash>{5474BFED-1E3A-4F06-A655-1CD475EAE2D9}</FileHash>
 </SoundBanksInfo>

@@ -16,9 +16,11 @@ namespace AK
         static const AkUniqueID FADE_OUT_2D_MUSIC = 3111061815U;
         static const AkUniqueID PLAY_2D_MUSIC = 1931726204U;
         static const AkUniqueID PLAY_3D_MUSIC = 2395092899U;
+        static const AkUniqueID PLAY_BUTTON_SELECT = 2034692297U;
         static const AkUniqueID PLAY_DIRT_FOOTSTEPS = 1323035329U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
+        static const AkUniqueID PLAY_SPECIAL_CLICK = 1401754570U;
         static const AkUniqueID PLAY_TESTING_AUDIO = 2946897393U;
         static const AkUniqueID PLAY_WIND_IN_BRANCHES = 1771244861U;
         static const AkUniqueID STOP_2D_MUSIC = 2367458202U;

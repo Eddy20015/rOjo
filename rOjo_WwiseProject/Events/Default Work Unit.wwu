@@ -175,6 +175,32 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI" ID="{38158BB9-DB7E-440F-A771-1C84AEBB84A0}" ShortID="210989544">
+					<ChildrenList>
+						<Event Name="Play_Button_Select" ID="{2507843D-17E6-4CF0-BC2F-290D7A0C066A}">
+							<ChildrenList>
+								<Action Name="" ID="{870F759A-4868-4C26-BAE6-C7B6D8D64237}" ShortID="919211142">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button Select" ID="{D2C9D650-E152-4CE6-850D-D45FD9E9EB44}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Special_Click" ID="{759D350A-027C-4C01-BCCF-9A13C4B93CC6}">
+							<ChildrenList>
+								<Action Name="" ID="{97F74AF0-1714-49CE-ABAB-F211B098F4D4}" ShortID="975719008">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Special Click" ID="{1134BA81-2EBE-4960-B3F1-0C0BE1776ACC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
