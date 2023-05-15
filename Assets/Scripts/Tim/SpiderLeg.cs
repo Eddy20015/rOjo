@@ -31,8 +31,10 @@ public class SpiderLeg : MonoBehaviour
     {
         SetFoot();
 
+        currentFootPosition += initialOffset;
+
         foot.transform.position = (Vector2)spiderPlatform.transform.position +
-            spider.CalculatePosition(currentFootPosition + initialOffset, false);
+            spider.CalculatePosition(currentFootPosition, false);
 
         contactFilter2D = new();
 
@@ -42,17 +44,7 @@ public class SpiderLeg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Raycast();
-
-        //CalculatePosition();
-
-        //SetFoot();
-
-        //foot.transform.position = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
-
-        SetFoot();
-
-        Vector2 newPosition = GetFootPosition(currentFootPosition);
+        Vector2 newPosition = GetFootPosition(spider.GetPosition() + positionOffset);
 
         if (!moving)
         {
@@ -62,12 +54,14 @@ public class SpiderLeg : MonoBehaviour
             {
                 if (Vector2.Distance(footPosition, newPosition) > 2)
                 {
+                    SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
                 }
             } else
             {
                 if (Vector2.Distance(transform.position, foot.transform.position) > 3.75f)
                 {
+                    SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
                 }
             }
