@@ -24,6 +24,8 @@ public class Spider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Rotate();
+
         moveTime += Time.deltaTime * moveSpeed;
         rotateTime += Time.deltaTime * rotateSpeed;
 
@@ -54,6 +56,64 @@ public class Spider : MonoBehaviour
         circumference = (width * 2) + (height * 2);
     }
 
+    void Rotate()
+    {
+        float remainder = spiderPosition - 1;
+
+        if (remainder > circumference)
+        {
+            remainder -= circumference;
+        }
+
+        if (remainder < 0)
+        {
+            remainder += circumference;
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+        }
+        else
+        {
+            targetRotation = 90;
+            remainder = 0;
+        }
+
+        if (remainder > width)
+        {
+            remainder -= width;
+
+        }
+        else if (remainder > 0)
+        {
+            targetRotation = 0;
+            remainder = 0;
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+        }
+        else if (remainder > 0)
+        {
+            targetRotation = 270;
+            remainder = 0;
+        }
+
+        if (remainder > 0)
+        {
+            targetRotation = 180;
+        }
+
+        if (oldRotation != targetRotation)
+        {
+            oldRotation = targetRotation;
+            oldSpiderRotation = transform.localRotation;
+            rotationLerp = 0;
+        }
+    }
+
     public Vector2 CalculatePosition(float f, bool isSpider)
     {
         // this is about to be the most 1 AM code ever
@@ -75,21 +135,16 @@ public class Spider : MonoBehaviour
         {
             remainder -= height;
             v += height * Vector2.up;
-
-            /*if (remainder < (height + 1) && isSpider)
-            {
-                targetRotation = 90;
-            }*/
         }
         else
         {
             v += remainder * Vector2.up;
             remainder = 0;
 
-            if (isSpider)
+            /*if (isSpider)
             {
                 targetRotation = 90;
-            }
+            }*/
         }
 
         if (remainder > width)
@@ -97,56 +152,39 @@ public class Spider : MonoBehaviour
             remainder -= width;
             v += width * Vector2.right;
 
-            /*if (remainder < (width + 1) && isSpider)
-            {
-                targetRotation = 0;
-            }*/
-
         } else if (remainder > 0)
         {
             v += remainder * Vector2.right;
             remainder = 0;
 
-            if (isSpider)
+            /*if (isSpider)
             {
                 targetRotation = 0;
-            }
+            }*/
         }
 
         if (remainder > height)
         {
             remainder -= height;
             v += height * Vector2.down;
-
-            /*if (remainder < (height + 1) && isSpider)
-            {
-                targetRotation = 270;
-            }*/
         }
         else if (remainder > 0)
         {
             v += remainder * Vector2.down;
             remainder = 0;
 
-            if (isSpider)
+            /*if (isSpider)
             {
                 targetRotation = 270;
-            }
+            }*/
         }
 
         v += remainder * Vector2.left;
 
-        if (remainder > 0 && isSpider)
+        /*if (remainder > 0 && isSpider)
         {
             targetRotation = 180;
-        }
-
-        if (oldRotation != targetRotation)
-        {
-            oldRotation = targetRotation;
-            oldSpiderRotation = transform.localRotation;
-            rotationLerp = 0;
-        }
+        }*/
 
         return v + new Vector2(-width / 2, -height / 2);
     }
