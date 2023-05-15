@@ -52,7 +52,7 @@ public class SpiderLeg : MonoBehaviour
 
             if (!backLeg)
             {
-                if (Vector2.Distance(footPosition, newPosition) > 2)
+                if (Vector2.Distance(footPosition, newPosition) > distance)
                 {
                     SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
@@ -109,7 +109,7 @@ public class SpiderLeg : MonoBehaviour
 
     void SetFoot()
     {
-        currentFootPosition = spider.GetPosition() + positionOffset;
+        currentFootPosition = spider.GetPosition() + positionOffset + initialOffset;
     }
 
     Vector2 GetFootPosition(float f)
