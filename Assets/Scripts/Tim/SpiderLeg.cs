@@ -6,7 +6,7 @@ public class SpiderLeg : MonoBehaviour
 {
     [SerializeField] Transform foot, spiderPlatform;
 
-    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset;
+    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset, initialOffset;
 
     [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
@@ -15,6 +15,8 @@ public class SpiderLeg : MonoBehaviour
     [SerializeField] GameObject hit;
 
     [SerializeField] Spider spider;
+
+    [SerializeField] bool backLeg;
 
     bool moving;
 
@@ -29,7 +31,8 @@ public class SpiderLeg : MonoBehaviour
     {
         SetFoot();
 
-        foot.transform.position = (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(currentFootPosition, false);
+        foot.transform.position = (Vector2)spiderPlatform.transform.position +
+            spider.CalculatePosition(currentFootPosition + initialOffset, false);
 
         contactFilter2D = new();
 
@@ -55,10 +58,21 @@ public class SpiderLeg : MonoBehaviour
         {
             foot.transform.position = footPosition;
 
-            if (Vector2.Distance(footPosition, newPosition) > 1)
+            if (!backLeg)
             {
-                StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
+                if (Vector2.Distance(footPosition, newPosition) > 2)
+                {
+                    StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
+                }
+            } else
+            {
+                if (Vector2.Distance(transform.position, foot.transform.position) > 3.75f)
+                {
+                    StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
+                }
             }
+
+            
         }
     }
 
