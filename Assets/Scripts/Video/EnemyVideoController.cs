@@ -17,7 +17,7 @@ public class EnemyVideoController : VideoController
     [SerializeField] private float fov = 45f;
     [SerializeField] private float viewDistance = 3f; 
     [SerializeField] private float lookingDuration = .02f;
-    [SerializeField] private float fadeDuration = .01f;
+    [SerializeField] private float fadeDuration = .5f;
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
     private bool isLooking = false;
@@ -42,10 +42,13 @@ public class EnemyVideoController : VideoController
     protected new void Start()
     {
 
-        eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
+        eyeFieldOfView = Instantiate(pfEyeFieldOfView, transform.position, Quaternion.identity).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeFieldOfView.SetFadeDuration(fadeDuration);
+        eyeFieldOfView.transform.parent = gameObject.transform;
+        
+
         eyeAngle = 90.0f;
         Player = GameObject.FindWithTag("Dancer");
 
@@ -62,9 +65,6 @@ public class EnemyVideoController : VideoController
 
     private void FixedUpdate()
     {
-        eyeFieldOfView.SetOrigin(transform.position);
-
-
         switch(state)
         {
             default:
@@ -96,7 +96,7 @@ public class EnemyVideoController : VideoController
             if (Mathf.Abs(Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer)) < fov/2) //If the player is within the FOV.
             {
                 Debug.Log("Inside FOV!");
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, LayerMask.GetMask("Dancer")); //If there aren't any obstacles between player and Enemy.
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, ~LayerMask.GetMask("Default")); //If there aren't any obstacles between player and Enemy.
                 if (raycastHit2D.collider != null) 
                 {
                     if(raycastHit2D.collider.gameObject.tag == "Dancer")
