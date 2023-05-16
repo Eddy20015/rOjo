@@ -1,14 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class Chaser3D : MonoBehaviour
 {
+    [Header("General Control Variables")]
     [SerializeField] private GameObject player;
     [SerializeField] private float speedOffset;
 
     // FOR TESTING, CHANGE AS NEEDED
+    [Header("On Death Variables")]
     [SerializeField] private GameObject deathScreen;
+    [SerializeField] private VideoPlayer cutscenePlayer;
+    [SerializeField] private GameObject cutsceneImage;
     private Player3DMovement pMove;
 
     private Vector3 moveDirection;
@@ -20,6 +25,7 @@ public class Chaser3D : MonoBehaviour
     private void Awake()
     {
         deathScreen.SetActive(false);
+        cutsceneImage.SetActive(false);
     }
 
     void Start()
@@ -49,8 +55,8 @@ public class Chaser3D : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player")) {
-            GameStateManager.Pause();
-            deathScreen.SetActive(true);
+            pMove.enabled = false;
+            StartCoroutine(PlayCutscene());
         }
 
         /*print("trigger on " + other.name);
@@ -60,5 +66,16 @@ public class Chaser3D : MonoBehaviour
             text.SetActive(true);
             gameObject.SetActive(false);
         }*/
+    }
+
+    private IEnumerator PlayCutscene()
+    {
+        cutsceneImage.SetActive(true);
+        cutscenePlayer.Play();
+        yield return new WaitForSeconds((float)cutscenePlayer.clip.length);
+        cutscenePlayer.Stop();
+        GameStateManager.Pause();
+        cutsceneImage.SetActive(false);
+        deathScreen.SetActive(true);
     }
 }

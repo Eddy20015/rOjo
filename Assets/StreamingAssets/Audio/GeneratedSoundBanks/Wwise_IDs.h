@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID PLAY_2D_MUSIC = 1931726204U;
         static const AkUniqueID PLAY_3D_MUSIC = 2395092899U;
+        static const AkUniqueID PLAY_DIRT_FOOTSTEPS = 1323035329U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
         static const AkUniqueID PLAY_TESTING_AUDIO = 2946897393U;
