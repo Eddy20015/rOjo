@@ -44,7 +44,7 @@ public class Spider : MonoBehaviour
             rotationLerp = 1;
         }
 
-        float lerp = Mathf.Sin(rotationLerp * Mathf.PI);
+        float lerp = (1 - Mathf.Cos(rotationLerp * Mathf.PI)) / 2;
 
         transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition, true),
             Quaternion.Lerp(oldSpiderRotation, Quaternion.Euler(0,0,targetRotation), lerp));
