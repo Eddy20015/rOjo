@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] Transform foot, spider;
+    [SerializeField] Transform foot, spiderPlatform;
 
-    [SerializeField] float angleOffset, moveSpeed, distance;
+    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset, initialOffset;
 
     [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
@@ -14,16 +14,27 @@ public class SpiderLeg : MonoBehaviour
 
     [SerializeField] GameObject hit;
 
+    [SerializeField] Spider spider;
+
+    [SerializeField] bool backLeg;
+
     bool moving;
 
     ContactFilter2D contactFilter2D;
 
     Vector3 footPosition;
 
+    float currentFootPosition;
+
     // Start is called before the first frame update
     void Start()
     {
-        foot.transform.position = spider.transform.position + initialFootPosition;
+        SetFoot();
+
+        currentFootPosition += initialOffset;
+
+        foot.transform.position = (Vector2)spiderPlatform.transform.position +
+            spider.CalculatePosition(currentFootPosition, false);
 
         contactFilter2D = new();
 
@@ -33,11 +44,29 @@ public class SpiderLeg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Raycast();
+        Vector2 newPosition = GetFootPosition(spider.GetPosition() + positionOffset);
 
         if (!moving)
         {
             foot.transform.position = footPosition;
+
+            if (!backLeg)
+            {
+                if (Vector2.Distance(footPosition, newPosition) > distance)
+                {
+                    SetFoot();
+                    StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
+                }
+            } else
+            {
+                if (Vector2.Distance(transform.position, foot.transform.position) > 3.75f)
+                {
+                    SetFoot();
+                    StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
+                }
+            }
+
+            
         }
     }
 
@@ -57,14 +86,45 @@ public class SpiderLeg : MonoBehaviour
         }
     }
 
+    void CalculatePosition()
+    {
+        if (positionOffset > 0)
+        {
+            if (((spider.GetPosition() - currentFootPosition) > 2 || (spider.GetPosition() + spider.GetCircumference() - currentFootPosition) > 2)
+            && !moving)
+            {
+                SetFoot();
+                StartCoroutine(MoveLeg(foot.position, (Vector2)spider.transform.position + spider.CalculatePosition(currentFootPosition, false)));
+            }
+        } else
+        {
+            if (((spider.GetPosition() - currentFootPosition) < -3 || (spider.GetPosition() + spider.GetCircumference() - currentFootPosition) < -3)
+            && !moving)
+            {
+                SetFoot();
+                StartCoroutine(MoveLeg(foot.position, (Vector2)spider.transform.position + spider.CalculatePosition(currentFootPosition, false)));
+            }
+        }
+    }
+
+    void SetFoot()
+    {
+        currentFootPosition = spider.GetPosition() + positionOffset + initialOffset;
+    }
+
+    Vector2 GetFootPosition(float f)
+    {
+        return (Vector2)spiderPlatform.transform.position + spider.CalculatePosition(f, false);
+    }
+
     IEnumerator MoveLeg(Vector2 start, Vector2 end)
     {
         moving = true;
 
         // hit gameobject so I can tell where the raycast hits
-        GameObject h = Instantiate(hit);
+        //GameObject h = Instantiate(hit);
 
-        h.transform.position = end;
+        //h.transform.position = end;
 
         float f = 0;
 
@@ -89,7 +149,7 @@ public class SpiderLeg : MonoBehaviour
 
         footPosition = foot.transform.position;
 
-        Destroy(h);
+        //Destroy(h);
 
         moving = false;
     }
