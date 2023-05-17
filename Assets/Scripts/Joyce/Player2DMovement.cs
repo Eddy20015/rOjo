@@ -13,8 +13,9 @@ public class Player2DMovement : MonoBehaviour
 
     [Header("Physics")]
     [SerializeField] private Rigidbody2D myRigidbody;
-    [SerializeField] private int groundlayer;
-    [SerializeField] private int playerLayer;
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask playerLayer;
+    private int groundLayerInt, playerLayerInt;
     [Min(1)]
     [SerializeField] private float upGravity = 3f;
     [Min(0)]
@@ -42,6 +43,9 @@ public class Player2DMovement : MonoBehaviour
 
         isJumping = false;
         walkTime = stepFrequencey;
+
+        groundLayerInt = Mathf.RoundToInt(Mathf.Log(groundLayer.value, 2));
+        playerLayerInt = Mathf.RoundToInt(Mathf.Log(playerLayer.value, 2));
     }
 
     void Update()
@@ -124,7 +128,7 @@ public class Player2DMovement : MonoBehaviour
             walkTime++;
         }
         transform.Translate(xtrans * Time.fixedDeltaTime, 0, 0);
-        Physics2D.IgnoreLayerCollision(groundlayer, playerLayer, (myRigidbody.velocity.y > jumpBoundary));
+        Physics2D.IgnoreLayerCollision(groundLayerInt, playerLayerInt, (myRigidbody.velocity.y > jumpBoundary));
     }
     private void FlipRight()
     {

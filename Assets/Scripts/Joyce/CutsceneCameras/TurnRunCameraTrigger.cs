@@ -14,6 +14,10 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     [Header("Border")]
     [SerializeField] private Animator borderAnim;
 
+    [Header("VFX")]
+    [SerializeField] private PostProcessController ppc2D;
+    //[SerializeField] private PostProcessController ppc3D;
+
     [Header("Sound")]
     [SerializeField] private AK.Wwise.Event Stop2DMusic;
     [SerializeField] private AK.Wwise.Event Start3DMusic;
@@ -32,9 +36,14 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         switcher.SetPriority(newCamIndex);
         cutAnim.SetTrigger(cutSceneName);
         mainCam.orthographic = false;
+
         dancerMovement.enabled = false;
+
         Stop2DMusic.Post(gameObject);
         Start3DMusic.Post(gameObject);
+
+        ppc2D.FadeOutEffects();
+
         StartCoroutine(OnCutSceneEnd());
     }
     protected override void EndTrigger()
@@ -47,9 +56,11 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     protected override IEnumerator OnCutSceneEnd()
     {
         yield return new WaitForSeconds(cutSceneClip.length);
+
         switcher.ToggleAllCameras(false);
         mainCam.transform.SetParent(HumanPlayer);
         bobbingCamAnim.enabled = true;
+
         playerMoveScript.enabled = true;
         chaser.SetActive(true);
         dancerMovement.enabled = false;

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4424640374806347426}
   - component: {fileID: 4424640374806347425}
+  - component: {fileID: 8217040893672861949}
   m_Layer: 0
   m_Name: DetectGlobalVolume
   m_TagString: Untagged
@@ -49,3 +50,29 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 2757a828fef441047b453008f4fd3e2a, type: 2}
+--- !u!114 &8217040893672861949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4424640374806347424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 762fa73c221f95a4fbb48d3254bcd080, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vProfile: {fileID: 11400000, guid: 2757a828fef441047b453008f4fd3e2a, type: 2}
+  exposure: {fileID: 0}
+  vignIntenMin: 0
+  vignIntenMax: 0.6
+  lensIntenMin: 0
+  lensIntenMax: -0.35
+  lensYMultMin: 1
+  lensYMultMax: 0
+  paniniDistMin: 0
+  paniniDistMax: 0.3
+  paniniCropMin: 1
+  paniniCropMax: 0
+  filmIntenMin: 0
+  filmIntenMax: 1

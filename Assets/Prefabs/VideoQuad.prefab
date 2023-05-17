@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 5638492712853959975}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 2.6666667, z: 2.6666667}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -151,10 +151,11 @@ MonoBehaviour:
   InactiveClip: {fileID: 32900000, guid: 8673dd061664c45f59dbd808e7729a4c, type: 3}
   ActiveClip: {fileID: 32900000, guid: c9bccd0b5275f4061bfaddb776b4c1cf, type: 3}
   TransitionClip: {fileID: 32900000, guid: ff269de082e87420aa09a677afa9d0c6, type: 3}
-  ReverseTransitionClip: {fileID: 32900000, guid: e6fb48f403c54304e877baf73f410a81, type: 3}
+  ReverseTransitionClip: {fileID: 32900000, guid: ccf38a00ba3ed441eaa7f757d61b24e9, type: 3}
   PlaySpeed: 1
-  HighSpeed: 4
+  HighSpeed: 10
   pfEyeFieldOfView: {fileID: 472920625463930196, guid: 05f4d92bbddfa43769d9ede991213125, type: 3}
   fov: 45
   viewDistance: 3
   lookingDuration: 0.01
+  fadeDuration: 1

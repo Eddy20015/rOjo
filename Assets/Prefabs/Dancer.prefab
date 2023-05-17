@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3764266573590916464}
   - component: {fileID: 3764266573590916466}
   - component: {fileID: 3764266573590916467}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Dancer
   m_TagString: Dancer
   m_Icon: {fileID: 0}
@@ -89,10 +89,15 @@ MonoBehaviour:
   jumpForce: 11.5
   jumpBoundary: 0.1
   myRigidbody: {fileID: 3764266573590916465}
-  groundlayer: 6
-  playerLayer: 3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
   upGravity: 3
   downGravity: 2.2
+  groundedGravity: 50
   anim: {fileID: 4477519357236371916}
   jumpLanding:
     idInternal: 0
