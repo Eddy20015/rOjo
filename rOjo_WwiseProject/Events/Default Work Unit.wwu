@@ -201,6 +201,46 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Eye Beam" ID="{5661785A-A0FA-4F5A-82A0-21EDB2E7C097}" ShortID="161672035">
+					<ChildrenList>
+						<Event Name="Play_EyeBeam_Default" ID="{418F7732-F144-4939-AA36-EED4047566A8}">
+							<ChildrenList>
+								<Action Name="" ID="{CD7C0E7D-AF9C-44A1-84A4-B70FFA3F1749}" ShortID="336414710">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_EyeBeam_Default" ID="{1E4AB8CA-0E46-409B-9751-79E8915C19C5}">
+							<ChildrenList>
+								<Action Name="" ID="{629B3F6E-C05B-4EBC-98A8-2153BB0BF2E7}" ShortID="556084801">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}">
+					<ChildrenList>
+						<Action Name="" ID="{0F6318B3-7964-47D5-AE7B-ED5642321040}" ShortID="785968804">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

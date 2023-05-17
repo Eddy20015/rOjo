@@ -29,10 +29,14 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5462517B-BD05-3D31-4DB1-E309FC33B221}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0D46C615-AB62-11C8-EA19-2D6F48C76D32}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="24771127" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EyeBeamDefault.wav</ShortName>
+					<CachePath>SFX/EyeBeamDefault_81238AE1.wem</CachePath>
+				</File>
 				<File Id="39914089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step9.wav</ShortName>
 					<CachePath>SFX/Step9_10C4C929.wem</CachePath>
@@ -173,6 +177,11 @@
 						<MediaRef Id="991653222"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3227116378" Name="Play_EyeBeam_Default" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="24771127"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
 					<MediaRefs>
 						<MediaRef Id="39914089"/>
@@ -208,10 +217,12 @@
 				</Event>
 				<Event Id="2367458202" Name="Stop_2D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3398073649" Name="Stop_3D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2047366256" Name="Stop_EyeBeam_Default" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{AADCE6A0-8AE8-9D49-6259-A242C62E35D7}</FileHash>
+	<FileHash>{3B67167D-0580-F627-5F0F-353928B740FD}</FileHash>
 </SoundBanksInfo>

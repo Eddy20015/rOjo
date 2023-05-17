@@ -18,6 +18,12 @@ public class EnemyVideoController : VideoController
     [SerializeField] private float viewDistance = 3f; 
     [SerializeField] private float lookingDuration = .02f;
     [SerializeField] private float fadeDuration = .5f;
+
+    [Header("Sounds")]
+    [SerializeField] AK.Wwise.Event startDefault;
+    [SerializeField] AK.Wwise.Event stopDefault;
+    private bool playingDefaultSound;
+
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
     private bool isLooking = false;
@@ -85,11 +91,19 @@ public class EnemyVideoController : VideoController
             case State.Active:
                 FindDancer();
                 Active();
+                if (!playingDefaultSound) {
+                    startDefault.Post(gameObject);
+                    playingDefaultSound = true;
+                }
                 break;
             case State.Looking:
                 FindDancer();
                 break;
             case State.Active2Inactive:
+                if (playingDefaultSound) {
+                    stopDefault.Post(gameObject);
+                    playingDefaultSound = false;
+                }
                 FindDancer();
                 break;
 

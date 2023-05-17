@@ -710,6 +710,40 @@
 						<ActiveSource Name="Castanet Playing_Section" ID="{94CAE4A7-25D3-446A-9EB0-8DC3C34E31B6}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" ShortID="213434284">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-2</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EyeBeamDefault" ID="{9E8112EA-D82B-4006-9263-FA11FF68E419}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>EyeBeamDefault.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="24771127"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="EyeBeamDefault" ID="{9E8112EA-D82B-4006-9263-FA11FF68E419}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
