@@ -4,27 +4,205 @@ using UnityEngine;
 
 public class Spider : MonoBehaviour
 {
-    [SerializeField] Transform body;
+    [SerializeField] Transform body, platform;
 
-    [SerializeField] float move, rotate, moveSpeed, rotateSpeed;
+    [SerializeField] float move, rotate, moveSpeed, rotateSpeed, spiderMoveSpeed, spiderRotationSpeed;
 
-    float moveTime, rotateTime;
+    float moveTime, rotateTime, width, height, circumference, spiderPosition, targetRotation, oldRotation, rotationLerp;
+
+    Quaternion oldSpiderRotation;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        width = platform.transform.localScale.x;
+        height = platform.transform.localScale.y;
+
+        CalculateCircumference();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Rotate();
+
         moveTime += Time.deltaTime * moveSpeed;
         rotateTime += Time.deltaTime * rotateSpeed;
 
-        transform.position += Input.GetAxis("Horizontal") * Time.deltaTime * Vector3.right;
+        spiderPosition += spiderMoveSpeed * Time.deltaTime;
+
+        if (spiderPosition > circumference)
+        {
+            spiderPosition -= circumference;
+        }
+
+        if (rotationLerp < 1)
+        {
+            rotationLerp += spiderRotationSpeed * Time.deltaTime;
+        } else
+        {
+            rotationLerp = 1;
+        }
+
+        float lerp = (1 - Mathf.Cos(rotationLerp * Mathf.PI)) / 2;
+
+        transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition, true),
+            Quaternion.Lerp(oldSpiderRotation, Quaternion.Euler(0,0,targetRotation), lerp));
 
         body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
             Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
+    }
+
+    void CalculateCircumference()
+    {
+        circumference = (width * 2) + (height * 2);
+    }
+
+    void Rotate()
+    {
+        float remainder = spiderPosition + 1;
+
+        if (remainder > circumference)
+        {
+            remainder -= circumference;
+        }
+
+        if (remainder < 0)
+        {
+            remainder += circumference;
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+        }
+        else
+        {
+            targetRotation = 90;
+            remainder = 0;
+        }
+
+        if (remainder > width)
+        {
+            remainder -= width;
+
+        }
+        else if (remainder > 0)
+        {
+            targetRotation = 0;
+            remainder = 0;
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+        }
+        else if (remainder > 0)
+        {
+            targetRotation = 270;
+            remainder = 0;
+        }
+
+        if (remainder > 0)
+        {
+            targetRotation = 180;
+        }
+
+        if (oldRotation != targetRotation)
+        {
+            oldRotation = targetRotation;
+            oldSpiderRotation = transform.localRotation;
+            rotationLerp = 0;
+        }
+    }
+
+    public Vector2 CalculatePosition(float f, bool isSpider)
+    {
+        // this is about to be the most 1 AM code ever
+        Vector2 v = new();
+
+        float remainder = f;
+
+        if (remainder > circumference)
+        {
+            remainder -= circumference;
+        }
+
+        if (remainder < 0)
+        {
+            remainder += circumference;
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+            v += height * Vector2.up;
+        }
+        else
+        {
+            v += remainder * Vector2.up;
+            remainder = 0;
+
+            /*if (isSpider)
+            {
+                targetRotation = 90;
+            }*/
+        }
+
+        if (remainder > width)
+        {
+            remainder -= width;
+            v += width * Vector2.right;
+
+        } else if (remainder > 0)
+        {
+            v += remainder * Vector2.right;
+            remainder = 0;
+
+            /*if (isSpider)
+            {
+                targetRotation = 0;
+            }*/
+        }
+
+        if (remainder > height)
+        {
+            remainder -= height;
+            v += height * Vector2.down;
+        }
+        else if (remainder > 0)
+        {
+            v += remainder * Vector2.down;
+            remainder = 0;
+
+            /*if (isSpider)
+            {
+                targetRotation = 270;
+            }*/
+        }
+
+        v += remainder * Vector2.left;
+
+        /*if (remainder > 0 && isSpider)
+        {
+            targetRotation = 180;
+        }*/
+
+        return v + new Vector2(-width / 2, -height / 2);
+    }
+
+    public float CalculateRotation(float f)
+    {
+        return (f * -360 / circumference) + 90;
+    }
+
+    public float GetPosition()
+    {
+        return spiderPosition;
+    }
+
+    public float GetCircumference()
+    {
+        return circumference;
     }
 }
