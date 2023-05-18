@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{0D46C615-AB62-11C8-EA19-2D6F48C76D32}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{64304BB0-4596-8562-07F2-7BE7741C7AF6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -177,7 +177,7 @@
 						<MediaRef Id="991653222"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3227116378" Name="Play_EyeBeam_Default" DurationType="Infinite">
+				<Event Id="3227116378" Name="Play_EyeBeam_Default" MaxAttenuation="20" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24771127"/>
 					</MediaRefs>
@@ -224,5 +224,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3B67167D-0580-F627-5F0F-353928B740FD}</FileHash>
+	<FileHash>{D6586BA9-9AE9-EE6E-7442-FB34F72ED66C}</FileHash>
 </SoundBanksInfo>
