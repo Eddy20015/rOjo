@@ -33,6 +33,8 @@ public class Player2DMovement : MonoBehaviour
     [SerializeField] private AK.Wwise.Event jumpLanding;
     [SerializeField] private AK.Wwise.Event step;
     [SerializeField] private float stepFrequencey;
+    private const float airTimeLimit = 0.5f;
+    private float airTime;
     private bool isJumping;
     private float walkTime;
 
@@ -42,6 +44,7 @@ public class Player2DMovement : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
 
         isJumping = false;
+        airTime = 0;
         walkTime = stepFrequencey;
 
         groundLayerInt = Mathf.RoundToInt(Mathf.Log(groundLayer.value, 2));
@@ -97,7 +100,7 @@ public class Player2DMovement : MonoBehaviour
             //AudioManager.instance.Stop(jumpSFX);
             //AudioManager.instance.PlayOneShot(jumpSFX);
         }
-        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
+        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary && airTime > airTimeLimit)
         {
             print("landed");
             jumpLanding.Post(gameObject);
@@ -106,10 +109,14 @@ public class Player2DMovement : MonoBehaviour
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
 
-        if (isJumping)
+        if (isJumping) {
             myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity : upGravity;
-        else
+            airTime += Time.deltaTime;
+
+        } else {
             myRigidbody.gravityScale = groundedGravity;
+            airTime = 0;
+        }
 
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
