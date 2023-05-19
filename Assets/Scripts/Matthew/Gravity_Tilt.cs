@@ -39,7 +39,7 @@ public class Gravity_Tilt : MonoBehaviour
                 camera.transform.Rotate(0, 0, -y);
             }
 
-            Physics2D.gravity = new Vector2(9.81f, 0f);
+            Physics2D.gravity = new Vector2(Mathf.Lerp(0f, 9.81f, 9.81f), Mathf.Lerp(-2f, 0f, 0f));
 
         }
         else
@@ -57,7 +57,7 @@ public class Gravity_Tilt : MonoBehaviour
                 camera.transform.Rotate(0, 0, -y);
             }
 
-            Physics2D.gravity = new Vector2(0f, -2f);
+            Physics2D.gravity = new Vector2(Mathf.Lerp(0f, 9.81f, 0f), Mathf.Lerp(-2f, 0f, -2f));
         }
 
     }
