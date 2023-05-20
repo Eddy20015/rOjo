@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{EC1D93AE-8940-F3C3-600A-F056872003BB}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{80ABC0DC-9B07-27B0-B103-7252706F5C8A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -24,12 +24,14 @@
 				<Bus Id="4084199202" Name="SFX Audio Bus"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="215992295" Name="Player_Health"/>
 				<GameParameter Id="1006694123" Name="Music_Volume"/>
 				<GameParameter Id="1564184899" Name="SFX_Volume"/>
+				<GameParameter Id="4015289221" Name="FlamencoMusicVolume"/>
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{83A9A7F0-789F-B1F7-3D01-0F9D43979FB3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D6A8B1E3-DCD2-0D2A-3159-C91E066D8A68}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -277,11 +279,6 @@
 						<MediaRef Id="1055184408"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2395092899" Name="Play_3D_Music" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="143617217"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2034692297" Name="Play_Button_Select" DurationType="OneShot" DurationMin="0.2740363" DurationMax="0.2740363">
 					<MediaRefs>
 						<MediaRef Id="833533991"/>
@@ -401,6 +398,11 @@
 						<MediaRef Id="800918199"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4172395845" Name="Play_Horror_Test" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="143617217"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3808321334" Name="Play_Jump_Landing" DurationType="OneShot" DurationMin="0.1251035" DurationMax="0.15128708">
 					<MediaRefs>
 						<MediaRef Id="513019750"/>
@@ -422,15 +424,18 @@
 					</MediaRefs>
 				</Event>
 				<Event Id="2367458202" Name="Stop_2D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3398073649" Name="Stop_3D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2047366256" Name="Stop_EyeBeam_Default" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3359382657" Name="Stop_EyeBeam_Intensified" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3080773409" Name="Stop_EyeBeam_Intensified2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2289315611" Name="Stop_Horror_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="215992295" Name="Player_Health"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{93DAE236-527D-3144-6677-7E469DF76670}</FileHash>
+	<FileHash>{2BAB58B6-37B2-6C10-0469-3A8BCF734052}</FileHash>
 </SoundBanksInfo>

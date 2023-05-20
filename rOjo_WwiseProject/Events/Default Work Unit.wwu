@@ -49,20 +49,20 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="3D_Music" ID="{9B7ED429-C40D-456E-8743-CC6A78C38FFA}" ShortID="16240666">
+				<Folder Name="Horror_Test" ID="{9B7ED429-C40D-456E-8743-CC6A78C38FFA}" ShortID="16240666">
 					<ChildrenList>
-						<Event Name="Play_3D_Music" ID="{F43ED426-4896-4CA7-9909-60C700D6D5B0}">
+						<Event Name="Play_Horror_Test" ID="{F43ED426-4896-4CA7-9909-60C700D6D5B0}">
 							<ChildrenList>
 								<Action Name="" ID="{7920228B-495C-4440-8A16-0EE0585F5628}" ShortID="82013390">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="3D Music" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+											<ObjectRef Name="HorrorTest" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Stop_3D_Music" ID="{F989F61A-222C-4374-B76D-208B19143D48}">
+						<Event Name="Stop_Horror_Test" ID="{F989F61A-222C-4374-B76D-208B19143D48}">
 							<ChildrenList>
 								<Action Name="" ID="{D46166BF-29F4-49CF-9AA9-64CCB65EAB98}" ShortID="38643551">
 									<PropertyList>
@@ -71,7 +71,7 @@
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="3D Music" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+											<ObjectRef Name="HorrorTest" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
