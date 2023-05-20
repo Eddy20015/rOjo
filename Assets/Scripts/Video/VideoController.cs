@@ -9,7 +9,7 @@ public abstract class VideoController : MonoBehaviour
 
     protected bool bContinue;
 
-    protected void Start()
+    protected virtual void Start()
     {
         print("In the old start");
         VPlayer = gameObject.GetComponent<VideoPlayer>();
@@ -18,6 +18,7 @@ public abstract class VideoController : MonoBehaviour
     protected void StartVPlayer()
     {
         VPlayer.Play();
+        
     }
 
     protected void PauseVPlayer()

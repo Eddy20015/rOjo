@@ -17,15 +17,26 @@ public class EnemyVideoController : VideoController
     [SerializeField] private float fov = 45f;
     [SerializeField] private float viewDistance = 3f; 
     [SerializeField] private float lookingDuration = .02f;
-    [SerializeField] private float fadeDuration = .01f;
+    [SerializeField] private float fadeDuration = .5f;
+
+    [Header("Sounds")]
+    [SerializeField] AK.Wwise.Event startDefault;
+    [SerializeField] AK.Wwise.Event stopDefault;
+    [SerializeField] AK.Wwise.Event startIntensified;
+    [SerializeField] AK.Wwise.Event stopIntensified;
+    private bool playingDefaultSound = false;
+    private bool playingIntensifiedSound = false;
+
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
     private bool isLooking = false;
+    private float sign = 1;
     
     
     private float elapsedTime;
     private float eyeFrameFoundPct;
     private float eyeAngle;
+    private float flip = 0;
 
     private enum State
     {
@@ -46,6 +57,20 @@ public class EnemyVideoController : VideoController
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeFieldOfView.SetFadeDuration(fadeDuration);
+        eyeFieldOfView.transform.localScale = eyeFieldOfView.transform.localScale * sign;
+        
+        sign = Mathf.Sign(transform.localScale.x);
+
+        if (sign < 0)
+        {
+            eyeFieldOfView.setReverse(true);
+            flip = 180.0f;
+        }
+        else
+        {
+            eyeFieldOfView.setReverse(false);
+        }
+
         eyeAngle = 90.0f;
         Player = GameObject.FindWithTag("Dancer");
 
@@ -63,24 +88,35 @@ public class EnemyVideoController : VideoController
     private void FixedUpdate()
     {
         eyeFieldOfView.SetOrigin(transform.position);
-
-
         switch(state)
         {
             default:
             case State.Inactive:
-                Inactive();
                 FindDancer();
+                Inactive();
                 break;
             case State.Inactive2Active:
                 break;
             case State.Active:
                 FindDancer();
+                Active();
+                if (!playingDefaultSound) {
+                    startDefault.Post(gameObject);
+                    playingDefaultSound = true;
+                }
                 break;
             case State.Looking:
                 FindDancer();
+                if (playingIntensifiedSound) {
+                    stopIntensified.Post(gameObject);
+                    playingIntensifiedSound = false;
+                }
                 break;
             case State.Active2Inactive:
+                if (playingDefaultSound) {
+                    stopDefault.Post(gameObject);
+                    playingDefaultSound = false;
+                }
                 FindDancer();
                 break;
 
@@ -90,13 +126,15 @@ public class EnemyVideoController : VideoController
 
     private void FindDancer()
     {
+        Debug.DrawRay(transform.position, Quaternion.Euler(0.0f, flip, 0.0f) * EyeFieldOfView.GetVectorFromAngle(eyeAngle), Color.green);
         if(Vector3.Distance(transform.position, Player.transform.position) < viewDistance) //If the player is within range of enemy.
         {
             Vector3 dirToPlayer = (Player.transform.position - transform.position).normalized;
-            if (Mathf.Abs(Vector3.Angle(EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer)) < fov/2) //If the player is within the FOV.
+            if (Mathf.Abs(Vector3.Angle(Quaternion.Euler(0.0f, flip, 0.0f) * EyeFieldOfView.GetVectorFromAngle(eyeAngle), dirToPlayer)) < fov/2) //If the player is within the FOV.
             {
                 Debug.Log("Inside FOV!");
-                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, LayerMask.GetMask("Dancer")); //If there aren't any obstacles between player and Enemy.
+                
+                RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, dirToPlayer, viewDistance, ~LayerMask.GetMask("Default")); //If there aren't any obstacles between player and Enemy.
                 if (raycastHit2D.collider != null) 
                 {
                     if(raycastHit2D.collider.gameObject.tag == "Dancer")
@@ -111,7 +149,6 @@ public class EnemyVideoController : VideoController
                         //     StartCoroutine(Activate());
                         }
 
-                        if (state == State.Active) Active();
 
                         if (state == State.Looking)
                         {
@@ -216,17 +253,22 @@ public class EnemyVideoController : VideoController
         PauseVPlayer();
         eyeFieldOfView.FadeIn();
         Vector3 dirToPlayer = (Player.transform.position - transform.position);
-        eyeAngle = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
-        eyeFieldOfView.SetAimDirection(dirToPlayer);
+        eyeAngle = EyeFieldOfView.GetAngleFromVectorFloat(Quaternion.Euler(0, flip, 0) * dirToPlayer);
+        eyeFieldOfView.SetAimDirection(eyeAngle); 
         float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
         var frame = VPlayer.frameCount * anglePct2Frame;
         VPlayer.frame = (long)frame;
 
+        if (!playingIntensifiedSound) {
+            startIntensified.Post(gameObject);
+            playingIntensifiedSound = true;
+        }
         Player.GetComponent<PlayerHealth>().IncreaseMeter(1f);
     }
 
     private IEnumerator Looking() //When the eye looks around after it loses you.
     {
+        
         Debug.Log("Now looking!");
         bContinue = false; // Reset checking if loopPoint was reached.
         
