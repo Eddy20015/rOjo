@@ -29,7 +29,7 @@
 				<GameParameter Id="4179668880" Name="Master_Volume"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{27776E1B-8B15-228B-0F4F-9C83DDEE6BFC}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{83A9A7F0-789F-B1F7-3D01-0F9D43979FB3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -351,6 +351,43 @@
 						<MediaRef Id="1037799982"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2142483231" Name="Play_EyeBeam_Intensified2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="37321306"/>
+						<MediaRef Id="101637563"/>
+						<MediaRef Id="119134536"/>
+						<MediaRef Id="188501217"/>
+						<MediaRef Id="215979946"/>
+						<MediaRef Id="234919899"/>
+						<MediaRef Id="293235742"/>
+						<MediaRef Id="430397931"/>
+						<MediaRef Id="560556572"/>
+						<MediaRef Id="600366808"/>
+						<MediaRef Id="627323670"/>
+						<MediaRef Id="627698659"/>
+						<MediaRef Id="685135932"/>
+						<MediaRef Id="706803607"/>
+						<MediaRef Id="709093758"/>
+						<MediaRef Id="720207293"/>
+						<MediaRef Id="728844885"/>
+						<MediaRef Id="748295014"/>
+						<MediaRef Id="761734425"/>
+						<MediaRef Id="769564896"/>
+						<MediaRef Id="797256899"/>
+						<MediaRef Id="800309362"/>
+						<MediaRef Id="804560681"/>
+						<MediaRef Id="805324008"/>
+						<MediaRef Id="852492158"/>
+						<MediaRef Id="861748742"/>
+						<MediaRef Id="875559642"/>
+						<MediaRef Id="901624723"/>
+						<MediaRef Id="943376979"/>
+						<MediaRef Id="985543759"/>
+						<MediaRef Id="987764891"/>
+						<MediaRef Id="1011580158"/>
+						<MediaRef Id="1037799982"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.09068624" DurationMax="0.16292766">
 					<MediaRefs>
 						<MediaRef Id="39914089"/>
@@ -389,10 +426,11 @@
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2047366256" Name="Stop_EyeBeam_Default" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3359382657" Name="Stop_EyeBeam_Intensified" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3080773409" Name="Stop_EyeBeam_Intensified2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DC6B9C0A-C1D7-EB01-16B2-B24915C64C01}</FileHash>
+	<FileHash>{93DAE236-527D-3144-6677-7E469DF76670}</FileHash>
 </SoundBanksInfo>

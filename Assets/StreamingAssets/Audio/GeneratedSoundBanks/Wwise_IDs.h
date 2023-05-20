@@ -20,6 +20,7 @@ namespace AK
         static const AkUniqueID PLAY_DIRT_FOOTSTEPS = 1323035329U;
         static const AkUniqueID PLAY_EYEBEAM_DEFAULT = 3227116378U;
         static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED = 2379313215U;
+        static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED2 = 2142483231U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_JUMP_LANDING = 3808321334U;
         static const AkUniqueID PLAY_SPECIAL_CLICK = 1401754570U;
@@ -30,6 +31,7 @@ namespace AK
         static const AkUniqueID STOP_ALL = 452547817U;
         static const AkUniqueID STOP_EYEBEAM_DEFAULT = 2047366256U;
         static const AkUniqueID STOP_EYEBEAM_INTENSIFIED = 3359382657U;
+        static const AkUniqueID STOP_EYEBEAM_INTENSIFIED2 = 3080773409U;
         static const AkUniqueID STOP_TESTING_AUDIO = 87439343U;
         static const AkUniqueID STOP_WIND_IN_BRANCHES = 3026825475U;
     } // namespace EVENTS
