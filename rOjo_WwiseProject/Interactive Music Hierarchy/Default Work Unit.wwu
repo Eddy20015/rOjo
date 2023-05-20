@@ -1,6 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}" SchemaVersion="110">
 	<InteractiveMusic>
-		<WorkUnit Name="Default Work Unit" ID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="Level Music (Audio from Musescore)" ID="{93C138C1-D8FC-43BF-ACB0-D3AFCECA2847}" ShortID="908443926">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="86153.8548752834"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Level Music (Audio from Musescore)" ID="{29C32636-7E69-4692-BDF7-1788AF05AB6D}" ShortID="5951420">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Level Music (Audio from Musescore)" ID="{92646A2F-2208-48FB-B6BE-D34731A3015C}">
+									<Language>SFX</Language>
+									<AudioFile>Level Music (Audio from Musescore).wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1055184408"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{8375AE11-A057-4426-B39F-3C6C393AD643}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<ObjectLists>
+								<ObjectList Name="Sequences">
+									<Reference>
+										<Local>
+											<MusicTrackSequence Name="" ID="{2CC6BE91-194C-419A-ADDA-6EC450EAB4DE}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<Reference>
+															<Local>
+																<MusicClip Name="Level Music (Audio from Musescore)" ID="{CEE9DCEF-89EB-4A7E-81BF-9F85A52CCD59}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="86153.8548752834"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Level Music (Audio from Musescore)" ID="{92646A2F-2208-48FB-B6BE-D34731A3015C}"/>
+																</MusicClip>
+															</Local>
+														</Reference>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</MusicTrack>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Cues">
+							<Reference>
+								<Local>
+									<MusicCue Name="Entry Cue" ID="{ECD81889-2011-46FE-B13E-A7E1D43E3706}"/>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<MusicCue Name="Exit Cue" ID="{728004DF-DF8F-41F1-92E9-59951A2C764B}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="86153.8548752834"/>
+										</PropertyList>
+									</MusicCue>
+								</Local>
+							</Reference>
+						</ObjectList>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{6C728A4A-6B9C-4BB1-B701-4EC070704CAA}" ShortID="7367565">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="FlamencoMusicVolume" ID="{4E3D2431-697E-46D3-8841-23D7EDE0EE65}" WorkUnitID="{B0F1DAB9-B28B-421F-8E26-349EB7410416}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{6EF1116F-32C7-49EC-96BF-C68D22F79DE8}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-0.06411</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
 	</InteractiveMusic>
 </WwiseDocument>
