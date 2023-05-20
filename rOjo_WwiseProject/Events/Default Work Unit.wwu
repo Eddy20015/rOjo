@@ -228,6 +228,38 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Stop_EyeBeam_Intensified" ID="{B1DEAC2E-82FD-43CE-BA0E-10CAC837902D}">
+							<ChildrenList>
+								<Action Name="" ID="{09EBCF99-D371-499B-9333-1AADCC885B7B}" ShortID="373608657">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Intensified" ID="{FFDBDE1C-C490-489E-84F8-CB7143FB8D01}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EyeBeam_Intensified" ID="{12F9B44F-597E-470F-BD25-6B694C277F8F}">
+							<ChildrenList>
+								<Action Name="" ID="{879CD54B-8BAD-4047-A002-9814AE530B6A}" ShortID="222939227">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Intensified" ID="{FFDBDE1C-C490-489E-84F8-CB7143FB8D01}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}">

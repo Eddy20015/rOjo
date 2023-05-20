@@ -22,7 +22,10 @@ public class EnemyVideoController : VideoController
     [Header("Sounds")]
     [SerializeField] AK.Wwise.Event startDefault;
     [SerializeField] AK.Wwise.Event stopDefault;
-    private bool playingDefaultSound;
+    [SerializeField] AK.Wwise.Event startIntensified;
+    [SerializeField] AK.Wwise.Event stopIntensified;
+    private bool playingDefaultSound = false;
+    private bool playingIntensifiedSound = false;
 
     private EyeFieldOfView eyeFieldOfView;
     private bool isActivated = false;
@@ -104,6 +107,10 @@ public class EnemyVideoController : VideoController
                 break;
             case State.Looking:
                 FindDancer();
+                if (playingIntensifiedSound) {
+                    stopIntensified.Post(gameObject);
+                    playingIntensifiedSound = false;
+                }
                 break;
             case State.Active2Inactive:
                 if (playingDefaultSound) {
@@ -251,13 +258,17 @@ public class EnemyVideoController : VideoController
         float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
         var frame = VPlayer.frameCount * anglePct2Frame;
         VPlayer.frame = (long)frame;
-        
 
+        if (!playingIntensifiedSound) {
+            startIntensified.Post(gameObject);
+            playingIntensifiedSound = true;
+        }
         Player.GetComponent<PlayerHealth>().IncreaseMeter(1f);
     }
 
     private IEnumerator Looking() //When the eye looks around after it loses you.
     {
+        
         Debug.Log("Now looking!");
         bContinue = false; // Reset checking if loopPoint was reached.
         
