@@ -106,6 +106,11 @@
 				<Sound Name="2D Music" ID="{8DE67E94-70D2-4636-9073-B6EAE622BC7E}" ShortID="1044256735">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -128,7 +133,7 @@
 						<ActiveSource Name="Level Music (Audio from Musescore)" ID="{8BF26C00-55F7-4D86-8927-2C7C6B8D3260}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="3D Music" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" ShortID="462333919">
+				<Sound Name="HorrorTest" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" ShortID="462333919">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
@@ -159,7 +164,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -424,9 +429,6 @@
 									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>3</Value>
-									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{58C322CF-2D98-4663-86AF-3499D2AB8D6A}">
@@ -649,6 +651,2712 @@
 							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
+				</BlendContainer>
+				<Sound Name="Button Select" ID="{D2C9D650-E152-4CE6-850D-D45FD9E9EB44}" ShortID="561676510">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Castanets Click_Higher" ID="{2A94569A-B142-4386-97C6-58C32C1BB3D1}">
+							<Language>SFX</Language>
+							<AudioFile>Castanets Click_Higher.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="833533991"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Castanets Click_Higher" ID="{2A94569A-B142-4386-97C6-58C32C1BB3D1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Special Click" ID="{1134BA81-2EBE-4960-B3F1-0C0BE1776ACC}" ShortID="573548073">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Castanet Playing_Section" ID="{94CAE4A7-25D3-446A-9EB0-8DC3C34E31B6}">
+							<Language>SFX</Language>
+							<AudioFile>Castanet Playing_Section.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1027631710"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Castanet Playing_Section" ID="{94CAE4A7-25D3-446A-9EB0-8DC3C34E31B6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" ShortID="213434284">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="2"/>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Beam Attenuation" ID="{31C77CB4-F151-4D18-8A22-D8BF0C7ACF1F}" WorkUnitID="{B3D4B40B-45F9-4CC0-9D34-2A90892BF4EA}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EyeBeamDefault" ID="{9E8112EA-D82B-4006-9263-FA11FF68E419}">
+							<PropertyList>
+								<Property Name="LoopBegin" Type="Real64" Value="0"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>EyeBeamDefault.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="24771127"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{FCA61C01-E595-4781-A320-0A816E3109C0}"/>
+						<Position Name="" ID="{393CB534-2FA5-40E3-874D-204ABA796574}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="EyeBeamDefault" ID="{9E8112EA-D82B-4006-9263-FA11FF68E419}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<BlendContainer Name="EyeBeam_Intensified" ID="{FFDBDE1C-C490-489E-84F8-CB7143FB8D01}" ShortID="822246554">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A1D798D7-9259-4249-B7CF-16A7A5A4CC1F}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="EyeBeamIntensifier" ID="{5AE660CF-C126-48B2-A22C-FDABA85DE3EC}" ShortID="109974175">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Beam Attenuation" ID="{31C77CB4-F151-4D18-8A22-D8BF0C7ACF1F}" WorkUnitID="{B3D4B40B-45F9-4CC0-9D34-2A90892BF4EA}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EyeBeamIntensifier" ID="{939E37BA-D7EB-4ED9-A311-158EEC63A8C9}">
+									<Language>SFX</Language>
+									<AudioFile>EyeBeamIntensifier.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1011580158"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EyeBeamIntensifier" ID="{939E37BA-D7EB-4ED9-A311-158EEC63A8C9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="Hijo Mio" ID="{0BF7082D-B203-441E-8328-EEC82847EB78}" ShortID="871650426">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{503F9802-6570-4A53-A2FE-C0E8E7B9BA6D}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1A7B0C2A-4DAA-4288-8B8B-3BFE263012FD}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="HijoMioNorm" ID="{7A8BF346-A3A0-4FD9-AE92-167362F07423}" ShortID="309869313">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HijoMioNorm" ID="{6DD2234F-9771-49DF-8A71-DECD9616313C}">
+											<Language>SFX</Language>
+											<AudioFile>HijoMioNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="761734425"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HijoMioNorm" ID="{6DD2234F-9771-49DF-8A71-DECD9616313C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HijoMioRev1" ID="{9DD4FF99-E9B7-4DFB-AF1C-D2C0437FAB87}" ShortID="222971280">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HijoMioRev1" ID="{DF6DCD3A-B4EB-453C-8EE0-D70C35D41B5B}">
+											<Language>SFX</Language>
+											<AudioFile>HijoMioRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="861748742"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HijoMioRev1" ID="{DF6DCD3A-B4EB-453C-8EE0-D70C35D41B5B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HijoMioRev2" ID="{BB15ECF2-BBCA-49B9-8D70-FC7DC65C36C8}" ShortID="469794896">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HijoMioRev2" ID="{EA0F2CC3-6BD7-4936-A2D0-882BE0AACACD}">
+											<Language>SFX</Language>
+											<AudioFile>HijoMioRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="215979946"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HijoMioRev2" ID="{EA0F2CC3-6BD7-4936-A2D0-882BE0AACACD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HijoMioRev3" ID="{E48621CA-64D6-48C8-B7A4-571460C4B815}" ShortID="213568364">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HijoMioRev3" ID="{DBE1CDCF-77BA-4EC8-9726-F1F383C1B05B}">
+											<Language>SFX</Language>
+											<AudioFile>HijoMioRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="430397931"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HijoMioRev3" ID="{DBE1CDCF-77BA-4EC8-9726-F1F383C1B05B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="HijoMioRev4" ID="{01A3D119-981C-4010-AD95-46EA24B5E3BA}" ShortID="437832047">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="HijoMioRev4" ID="{B016C61F-EDB6-4C57-BE1A-9D45CF27F51B}">
+											<Language>SFX</Language>
+											<AudioFile>HijoMioRev4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="627698659"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="HijoMioRev4" ID="{B016C61F-EDB6-4C57-BE1A-9D45CF27F51B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{A95C7281-28C2-4A84-9352-8A37CF76B033}"/>
+								<Position Name="" ID="{8D84423C-7929-4918-A263-5600E8E82201}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{37503414-87AE-434A-A6FD-6F9C0BD1F74D}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{29BA56B1-35F7-4E54-B36E-7D220DB1CD3E}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{7345B034-1DE9-4F76-9E06-6962F874CF28}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{BE88305C-A4E9-4390-B12D-6FBB87929E60}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{3D1E299F-00B4-4194-AAE4-10ADA609D95D}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{ACD29DC7-9E33-497F-A192-D215FFE3E50D}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{17847080-AFFF-4698-8760-005FE897DD84}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{9EA95235-600C-42DF-ADF5-46C021A1D834}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{E9B603B8-B25F-4557-B514-7A13A132E518}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{9D28E35E-53CF-4295-92B3-9CA461BC1FAB}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{1A819B4D-B631-4517-B03E-D6C126233B0C}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{F5D8C0FA-484A-4EE4-A486-C9ACA11B3DE1}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{50DDFF06-E637-43CC-B984-D18360F6BF94}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Dejalo Respirar" ID="{EA599C57-3A77-476E-9A74-1E7EFC9060EA}" ShortID="643408900">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D28E613F-C0CA-4476-90B1-637699141444}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D69C1763-4B00-4938-BEE8-4508B658549F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="DejaloRespirarNorm" ID="{7EAEAACA-D563-402F-8CEB-DF2FA1B39371}" ShortID="183738320">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DejaloRespirarNorm" ID="{91110FE2-2F2F-45B9-869C-F96E0B5BDE6E}">
+											<Language>SFX</Language>
+											<AudioFile>DejaloRespirarNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="769564896"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DejaloRespirarNorm" ID="{91110FE2-2F2F-45B9-869C-F96E0B5BDE6E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DejaloRespirarRev1" ID="{AA1FC3BA-3120-4730-91E5-16BE4BADFD07}" ShortID="235221702">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DejaloRespirarRev1" ID="{3EEC9785-EA27-446E-B426-52C47A3FBFBF}">
+											<Language>SFX</Language>
+											<AudioFile>DejaloRespirarRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="987764891"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DejaloRespirarRev1" ID="{3EEC9785-EA27-446E-B426-52C47A3FBFBF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DejaloRespirarRev2" ID="{1E712FBD-A5C9-45A0-AE43-DEB050A3F797}" ShortID="741478075">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DejaloRespirarRev2" ID="{2A2FD370-DEAF-41F6-A221-FC92DDB3A9F0}">
+											<Language>SFX</Language>
+											<AudioFile>DejaloRespirarRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="706803607"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DejaloRespirarRev2" ID="{2A2FD370-DEAF-41F6-A221-FC92DDB3A9F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DejaloRespirarRev3" ID="{B465EBE1-4617-4555-9850-E37380658A9F}" ShortID="148028189">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DejaloRespirarRev3" ID="{ED2430C1-45E7-41C5-9057-DCC1742A593B}">
+											<Language>SFX</Language>
+											<AudioFile>DejaloRespirarRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="875559642"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DejaloRespirarRev3" ID="{ED2430C1-45E7-41C5-9057-DCC1742A593B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{A37FBF43-3F93-408E-9D7C-1099E19FF445}"/>
+								<Position Name="" ID="{F5E0AAFE-CC2C-457E-BCA6-06C26FFFFB18}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{A03843EB-8EFD-4969-972D-FBFC8DCC15A4}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{29CE8754-4D53-44C1-B711-5EF3C3AA47B8}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{D5D6FB72-E59A-49D0-898A-DF6526A04110}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{AB3EE723-91E3-4CBD-AC6F-31B73D3A3206}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{95E6532D-BD63-4A75-A5F1-A2CBC483AA00}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{7B82F753-9F6A-4554-B35C-98D6DCBACE5C}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{DEC79C0E-AE9E-4A5E-8DCF-1D6F1AB1ECEF}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{0898EE80-A306-4B2F-BDA4-7123F0DF2FAD}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{CCEFD749-8B50-4306-9185-3C2A48C4C4FC}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{3B9C4DBF-D321-4A1B-873E-7D1D2E1A9631}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{584A03A5-A8AD-4BE7-BA7B-2A2787625859}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{E0A44DD5-2366-46F4-8CAC-322473148BCE}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{75455BF8-C9A3-499B-95FE-68477D8AC3B5}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Al inferno te vas" ID="{AB1547E6-79C5-478A-A8FA-16CECCF1C778}" ShortID="890465149">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{0E75AFED-6E98-4A4A-B67B-97487FDA2FCC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{75349EFC-2F8A-4934-A030-0CC361576DD2}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="AlIAlInfernoTeVasRev4" ID="{9C1AFBB3-9C8A-4C89-A252-9B1A7E8B5B5A}" ShortID="142147598">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AlIAlInfernoTeVasRev4" ID="{9B557AE1-C9F1-4365-8034-EA7BFA69D4E3}">
+											<Language>SFX</Language>
+											<AudioFile>AlIAlInfernoTeVasRev4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="805324008"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AlIAlInfernoTeVasRev4" ID="{9B557AE1-C9F1-4365-8034-EA7BFA69D4E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AlInfernoTeVasNorm" ID="{71F0419D-57E1-4506-ACA7-056C42055AB3}" ShortID="571117236">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AlInfernoTeVasNorm" ID="{7C00A8B3-49FF-4E77-9DC0-9B03617B4901}">
+											<Language>SFX</Language>
+											<AudioFile>AlInfernoTeVasNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="101637563"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AlInfernoTeVasNorm" ID="{7C00A8B3-49FF-4E77-9DC0-9B03617B4901}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AlInfernoTeVasRev1" ID="{4F0A7E77-A0CD-4A46-A0EC-2766A6D68605}" ShortID="146691999">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AlInfernoTeVasRev1" ID="{8EDEEFBD-D664-44B2-8A2E-CDCCB72AE7BB}">
+											<Language>SFX</Language>
+											<AudioFile>AlInfernoTeVasRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="797256899"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AlInfernoTeVasRev1" ID="{8EDEEFBD-D664-44B2-8A2E-CDCCB72AE7BB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AlInfernoTeVasRev2" ID="{53EE0FA7-2677-45DE-9093-B991DEF5D22F}" ShortID="600606249">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AlInfernoTeVasRev2" ID="{173B7E8F-8E4E-4D03-9976-93A0AD2FAEEC}">
+											<Language>SFX</Language>
+											<AudioFile>AlInfernoTeVasRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="685135932"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AlInfernoTeVasRev2" ID="{173B7E8F-8E4E-4D03-9976-93A0AD2FAEEC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AlInfernoTeVasRev3" ID="{B4E8D4B2-AF53-478F-95A7-A3A0D87C1D77}" ShortID="398190290">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AlInfernoTeVasRev3" ID="{E1D0F5F4-6295-4EDB-A218-A79D1C5268AA}">
+											<Language>SFX</Language>
+											<AudioFile>AlInfernoTeVasRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="293235742"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AlInfernoTeVasRev3" ID="{E1D0F5F4-6295-4EDB-A218-A79D1C5268AA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="AlInfernoTeVasRev5" ID="{AAAAE722-042C-40FF-9ED9-7856F4524594}" ShortID="503714898">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="AlInfernoTeVasRev5" ID="{709B23F5-6FE6-489B-84DE-72394BAFBDA5}">
+											<Language>SFX</Language>
+											<AudioFile>AlInfernoTeVasRev5.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="119134536"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="AlInfernoTeVasRev5" ID="{709B23F5-6FE6-489B-84DE-72394BAFBDA5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{76CF7E75-9840-4503-93D4-33A84181D166}"/>
+								<Position Name="" ID="{142DA9CA-2AF6-460A-8304-46DC530EE7A8}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{AAE3906E-4B8E-4B67-A38E-44237AF7580F}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{D28803E6-115B-45D7-A255-C58A4DC43281}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{39C58C22-4104-4557-B862-FE940EFE42CF}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{A7093FFC-79D2-4281-946C-130C61A6C7C5}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{0CAF432D-BB97-4BF7-90A2-1FFEBE0C69BF}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{54D9C2C3-AC50-40C6-8585-4E0539B3344D}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{7D87588F-4BAA-49BE-805E-B828E1D87619}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{3440232A-3A08-477C-871D-FC5AC5F80AA9}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{E0AAFB79-C837-4272-9B32-C8152B48642C}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{8044DDB5-B5BF-4695-AC22-FBC752438397}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{7405E024-9FE6-47AA-A8B8-4851AAE29DDD}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{94C13A8A-DC5F-4E45-A7DB-3B047539C3C2}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{7278A4FB-E1B1-4C6E-9DE8-0EB540FCBF98}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Muestrame Piedad" ID="{BEF176FB-DFF4-446E-A4E7-35A448C0A86B}" ShortID="827683906">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D1E3190D-DE22-44AD-89EB-293F37EC32E1}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{8531BE8E-D95D-4472-A8CD-76AFD719C060}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MuestramePiedadNorm" ID="{14F5AD29-AD73-4D4E-9F7C-A9A37309A101}" ShortID="5589903">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MuestramePiedadNorm" ID="{CAE5BE45-2C45-4D42-B1D0-AD09E50A80B5}">
+											<Language>SFX</Language>
+											<AudioFile>MuestramePiedadNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1037799982"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MuestramePiedadNorm" ID="{CAE5BE45-2C45-4D42-B1D0-AD09E50A80B5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MuestramePiedadRev1" ID="{F3E84EF5-CCC4-4446-AA5C-512B78138662}" ShortID="87014935">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MuestramePiedadRev1" ID="{CEB77446-5201-458D-ABC4-B1D95C7D7E70}">
+											<Language>SFX</Language>
+											<AudioFile>MuestramePiedadRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="720207293"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MuestramePiedadRev1" ID="{CEB77446-5201-458D-ABC4-B1D95C7D7E70}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MuestramePiedadRev2" ID="{714E4077-AE8B-4563-9802-D464159C326B}" ShortID="985403800">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MuestramePiedadRev2" ID="{B4F4B60D-68F0-40DB-912F-C1948FEB70ED}">
+											<Language>SFX</Language>
+											<AudioFile>MuestramePiedadRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="748295014"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MuestramePiedadRev2" ID="{B4F4B60D-68F0-40DB-912F-C1948FEB70ED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MuestramePiedadRev3" ID="{C16A538F-324D-4F30-9266-FBBA15F5141C}" ShortID="713315160">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MuestramePiedadRev3" ID="{D235025F-55F8-4A31-8D53-489A7E35EC1F}">
+											<Language>SFX</Language>
+											<AudioFile>MuestramePiedadRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="852492158"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MuestramePiedadRev3" ID="{D235025F-55F8-4A31-8D53-489A7E35EC1F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{51854C0E-38D8-4CCE-A8C6-2D360CB9FD60}"/>
+								<Position Name="" ID="{A8529110-14DB-420C-9F25-33D4F6CD0597}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{4B78F365-419F-434C-9CFB-AC14BACAFDDD}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{0D14A52D-80C1-46BC-ADA4-3D6604B4B98D}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{F40E7D12-7363-4640-8BC0-A21F1A32A5AD}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{265598A5-5956-456A-BFB1-53CFD1EF6CDD}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{2A4A61B0-DF91-4627-ABC4-3EA6F5AE32D4}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{78C6FD0E-BF19-4897-A653-51DAD06F5B44}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{245549A6-98DD-48D6-B7B1-F839B946191E}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{CDA9EA0C-DDD3-4541-91DF-413A9D3455B2}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{FC567B28-57D7-46AA-9953-A9CD675C2DC7}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{C4F23138-9799-4A61-A867-44049D1C035A}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{099EAB82-7487-4654-879A-B02171D9F6E2}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{BA0E0168-AAAA-42A5-AAD0-91A242BD3A45}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{BA980E6F-A990-467F-85CE-735B67E263DB}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Dios Protegeme" ID="{499A1001-F808-4542-9347-287CA539E098}" ShortID="739643209">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{E8177983-8818-4356-89D3-3055E9CD2989}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{FE816078-AECF-4AB0-A4D6-987B878F1314}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="DiosProtegemeNorm" ID="{EBDB31F8-C658-41C5-AB97-35E0C5F71DC2}" ShortID="577222004">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DiosProtegemeNorm" ID="{346B1B0A-A203-4E9E-AE71-2788A3F354DC}">
+											<Language>SFX</Language>
+											<AudioFile>DiosProtegemeNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="800309362"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DiosProtegemeNorm" ID="{346B1B0A-A203-4E9E-AE71-2788A3F354DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DiosProtegemeRev1" ID="{E24F3BE8-5CBD-440F-85D7-70CA60AF7982}" ShortID="890513028">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DiosProtegemeRev1" ID="{CA436468-BAE2-49A7-9CE2-0F8839F12F5F}">
+											<Language>SFX</Language>
+											<AudioFile>DiosProtegemeRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="560556572"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DiosProtegemeRev1" ID="{CA436468-BAE2-49A7-9CE2-0F8839F12F5F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DiosProtegemeRev2" ID="{BE0F9FA2-7DA9-4BE1-A3DA-875D8E371A66}" ShortID="974388111">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DiosProtegemeRev2" ID="{8F8B211D-EA53-404E-A5CE-12B0AA250259}">
+											<Language>SFX</Language>
+											<AudioFile>DiosProtegemeRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="709093758"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DiosProtegemeRev2" ID="{8F8B211D-EA53-404E-A5CE-12B0AA250259}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="DiosProtegemeRev3" ID="{3E9E0ED3-7BF3-476B-9059-C9CC3158067B}" ShortID="805229564">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="DiosProtegemeRev3" ID="{3D8F2C11-11CB-40A0-81A8-A1FFDAABB281}">
+											<Language>SFX</Language>
+											<AudioFile>DiosProtegemeRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="627323670"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="DiosProtegemeRev3" ID="{3D8F2C11-11CB-40A0-81A8-A1FFDAABB281}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{5632BD18-51E3-48EB-B226-C3EE94B20AA1}"/>
+								<Position Name="" ID="{0A266C19-C4D8-42A0-9FFB-F6DB577ED041}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{3AFFD503-209C-4488-BFAD-6EE23A204D59}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{A119A334-ADC5-4A25-B3F1-750D976A41EC}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{1DB0B5B1-2EC5-49F1-BB31-0CC6CA0B9D23}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{1490DC45-869E-401C-B919-6DEF21FFFF71}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{AFFE71A2-C4F2-4965-837B-7DF061AD1782}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{1E9CC533-2C6D-4F7D-8519-DF17E78CCB94}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{F2BD6C87-C021-46DB-BCA1-DB55DBDDDF7A}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{D0A30932-D34E-4E52-99FB-2161C7B4FD18}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{8CD399FD-053D-48CB-AE76-D5827302DB03}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{9EA68F4D-4D14-49EC-AE42-ADBB4307FC0A}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{7193F5A2-4D7F-4DE7-B94A-821336DFD3A5}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{363CF580-146F-4C55-B9E0-947C1688D5C0}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{D3BCADC4-DD29-48A7-A0D1-8519A0351AAC}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Satanas Me Llama" ID="{6B5A29D5-7F14-491B-A4F3-0C25B7F4F5E1}" ShortID="688968015">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AAEDC57F-0D7E-4DCE-915F-E0EACC83D798}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A7890387-2FFC-454D-A72E-40DAC435F02A}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="SatanasMeLlamaNorm" ID="{8E51BB05-EE34-4700-A7C1-5261837E793D}" ShortID="92654463">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SatanasMeLlamaNorm" ID="{04C383F1-2C85-42DA-9C9D-4651D147FBE8}">
+											<Language>SFX</Language>
+											<AudioFile>SatanasMeLlamaNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="728844885"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SatanasMeLlamaNorm" ID="{04C383F1-2C85-42DA-9C9D-4651D147FBE8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SatanasMeLlamaRev1" ID="{1A77C87D-61DD-416F-811D-36DAECC5789A}" ShortID="612348207">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SatanasMeLlamaRev1" ID="{64F9F397-39AD-4B50-95B8-04A4A4EE82D5}">
+											<Language>SFX</Language>
+											<AudioFile>SatanasMeLlamaRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="234919899"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SatanasMeLlamaRev1" ID="{64F9F397-39AD-4B50-95B8-04A4A4EE82D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SatanasMeLlamaRev2" ID="{12564A20-9417-4A34-B31A-2AA382E335E0}" ShortID="182439032">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SatanasMeLlamaRev2" ID="{3180DF28-AF6B-44E2-8DE3-B81500DEE813}">
+											<Language>SFX</Language>
+											<AudioFile>SatanasMeLlamaRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="804560681"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SatanasMeLlamaRev2" ID="{3180DF28-AF6B-44E2-8DE3-B81500DEE813}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SatanasMeLlamaRev3" ID="{2F64486C-CC6F-4B39-A957-D9E2DE6919C2}" ShortID="746970588">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SatanasMeLlamaRev3" ID="{4B02EE96-F435-4CAD-9343-82DB2764720B}">
+											<Language>SFX</Language>
+											<AudioFile>SatanasMeLlamaRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="943376979"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="SatanasMeLlamaRev3" ID="{4B02EE96-F435-4CAD-9343-82DB2764720B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{B4B86221-B7EE-4F20-AC8D-B2A77DE495E3}"/>
+								<Position Name="" ID="{6F261183-4608-47AA-9D2C-8D01CAEB1DDD}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{3881ABBB-002F-4F0B-925A-9E894293949A}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{A5EF8B9E-CEEC-4A66-B06A-6AA20A60E04A}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{B30DCCA3-2A65-4C14-9475-723C72910BDD}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{ADC43756-0776-4BC2-9E4A-C7F1944E2D35}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{C6495C0A-9909-4E81-8B29-D7C9737AD880}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{71292D38-783E-4083-ABEC-2F369D56BEFC}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{CA62711A-DD34-4424-B152-359B1F5E1F03}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{E953FCC9-4198-49F9-9787-8E574B60D949}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{ECA0B387-D8C6-41FC-9A66-E88D68C773CB}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{3068A65C-32C1-4865-81ED-5C7FE8B58E04}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{56335AAB-AEE5-47BE-AC22-520B715ABF04}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{56CB5C22-ABA9-4158-8CF6-C01C95F483B1}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{38925F8E-2CEC-43FA-80B6-E2DE1F5C1433}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="MeOyes" ID="{4FF0911B-B27D-437D-A4DC-27DDD0FD2560}" ShortID="22390341">
+							<PropertyList>
+								<Property Name="3DPosition" Type="int16" Value="2"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="InitialDelay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{B8ED8E5E-626F-4561-93EB-18813934B707}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="5"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{D30F8D3F-F996-4291-816F-8AA28958B263}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Min" Type="Real64" Value="-1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="MeOyesNorm" ID="{53DFEA0C-2A72-46BF-A616-159CBD03CF7E}" ShortID="412179185">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeOyesNorm" ID="{20930CC5-988A-4801-AABA-EE9F1A164052}">
+											<Language>SFX</Language>
+											<AudioFile>MeOyesNorm.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="985543759"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeOyesNorm" ID="{20930CC5-988A-4801-AABA-EE9F1A164052}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MeOyesRev1" ID="{AAF94FA1-D4BC-48A4-9633-A4DC6B98D75F}" ShortID="942528551">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeOyesRev1" ID="{8B8964B7-766C-43BE-8528-23CDB5E224BC}">
+											<Language>SFX</Language>
+											<AudioFile>MeOyesRev1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="901624723"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeOyesRev1" ID="{8B8964B7-766C-43BE-8528-23CDB5E224BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MeOyesRev2" ID="{E279E1B3-ACD9-46EE-B84A-13257ED68539}" ShortID="822944690">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeOyesRev2" ID="{A00254D3-94BA-45A3-A22B-BCC7527C54D8}">
+											<Language>SFX</Language>
+											<AudioFile>MeOyesRev2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="37321306"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeOyesRev2" ID="{A00254D3-94BA-45A3-A22B-BCC7527C54D8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MeOyesRev3" ID="{BD52F961-DF77-4D64-A650-BC6890870B91}" ShortID="684844925">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeOyesRev3" ID="{C3F9C8E2-E560-43B4-9558-76DED6D9E0C8}">
+											<Language>SFX</Language>
+											<AudioFile>MeOyesRev3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="600366808"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeOyesRev3" ID="{C3F9C8E2-E560-43B4-9558-76DED6D9E0C8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="MeOyesRev4" ID="{441364AC-8ED5-4EB2-9402-62CC5F2DF0FB}" ShortID="660941671">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MeOyesRev4" ID="{686DFCE5-E202-4D91-823C-AE2DCBB07BBD}">
+											<Language>SFX</Language>
+											<AudioFile>MeOyesRev4.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="188501217"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MeOyesRev4" ID="{686DFCE5-E202-4D91-823C-AE2DCBB07BBD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{7EFAE29D-D811-4C0E-A906-5F23DFDBD885}"/>
+								<Position Name="" ID="{5F4ABB44-0810-4117-A8A4-D2ED3780B484}">
+									<PropertyList>
+										<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+									</PropertyList>
+									<ChildrenList>
+										<Path2D Name="Whispers_Path" ID="{BB6C5B1E-CAB5-4E73-9C6C-F67AE07DA0BC}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-54.54545</XPos>
+													<YPos>57.3593</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_01" ID="{3F5B660B-EB06-45E6-A830-1CC92359D5B4}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>58.09313</XPos>
+													<YPos>58.65801</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_02" ID="{5903B6DB-8DAD-4430-8A63-67462ED2A502}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>54.54545</XPos>
+													<YPos>-51.2987</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_03" ID="{2B895C11-3AB4-48EF-A591-8E23EE592787}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-51.44124</XPos>
+													<YPos>-50.00001</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_04" ID="{4CEFE0A0-ECE2-4D83-8F05-1E57C931C4F5}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-16.40798</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_05" ID="{23B3AAEA-F356-485F-A458-10ECA7F31BCF}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>19.5122</XPos>
+													<YPos>78.57143</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_06" ID="{A1165881-1783-4B6B-8AE2-29C15BA5F937}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>11.03896</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_07" ID="{1D9D280B-919E-4011-A3E0-0131D398488A}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>67.84922</XPos>
+													<YPos>-8.44156</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_08" ID="{14AE81C0-F620-4778-9A8A-50E15C8BA34D}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>10.19956</XPos>
+													<YPos>-76.83983</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_09" ID="{C9255655-F88D-4209-B46A-7EE6E7B6669C}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-13.30377</XPos>
+													<YPos>-78.13853</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_10" ID="{A72B0500-A511-488A-AE42-95FA398D6F6E}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-75.38803</XPos>
+													<YPos>-12.33766</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_11" ID="{CA557837-1DDB-4944-AE23-D22E3BABA7E1}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-80.26607</XPos>
+													<YPos>10.60606</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+										<Path2D Name="Whispers_Path_12" ID="{8F0806EC-5E39-4235-9D4F-21157042DEB5}">
+											<PropertyList>
+												<Property Name="RandomX" Type="Real64" Value="5"/>
+												<Property Name="RandomY" Type="Real64" Value="5"/>
+												<Property Name="RandomZ" Type="Real64" Value="5"/>
+											</PropertyList>
+											<PointList>
+												<Point>
+													<XPos>-8.86918</XPos>
+													<YPos>27.05627</YPos>
+													<Flags>12</Flags>
+													<Time>0</Time>
+												</Point>
+											</PointList>
+										</Path2D>
+									</ChildrenList>
+								</Position>
+							</PositioningInfo>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{C61B00DE-D323-4EB5-A586-07F61BF28138}" ShortID="1045000534">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Player_Health" ID="{C5CD4904-4A5A-498A-98E1-77BA38F0869E}" WorkUnitID="{B0F1DAB9-B28B-421F-8E26-349EB7410416}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{8B95863E-4925-43B6-BB25-33DA06024365}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>

@@ -3,9 +3,23 @@
 	<GameParameters>
 		<WorkUnit Name="Default Work Unit" ID="{B0F1DAB9-B28B-421F-8E26-349EB7410416}" PersistMode="Standalone">
 			<ChildrenList>
-				<GameParameter Name="Master_Volume" ID="{2576ACAD-AA96-4A94-B911-E89AC535D157}"/>
-				<GameParameter Name="Music_Volume" ID="{FED460C7-6EEC-4B38-AF26-4C9BDD225A9E}"/>
-				<GameParameter Name="SFX_Volume" ID="{03762346-D206-415E-8335-D07AFD74C1FA}"/>
+				<Folder Name="LevelMusicRTPCs" ID="{4D74A0E8-9C01-4DED-B1AA-CE9089A6C10C}" ShortID="251115480">
+					<ChildrenList>
+						<GameParameter Name="FlamencoMusicVolume" ID="{4E3D2431-697E-46D3-8841-23D7EDE0EE65}"/>
+					</ChildrenList>
+				</Folder>
+				<GameParameter Name="Player_Health" ID="{C5CD4904-4A5A-498A-98E1-77BA38F0869E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<Folder Name="VolumeRTPCs" ID="{A2F440C3-C9FE-4612-A1CB-32080B28BA2F}" ShortID="1064384540">
+					<ChildrenList>
+						<GameParameter Name="Master_Volume" ID="{2576ACAD-AA96-4A94-B911-E89AC535D157}"/>
+						<GameParameter Name="SFX_Volume" ID="{03762346-D206-415E-8335-D07AFD74C1FA}"/>
+						<GameParameter Name="Music_Volume" ID="{FED460C7-6EEC-4B38-AF26-4C9BDD225A9E}"/>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
