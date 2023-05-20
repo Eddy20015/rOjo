@@ -50,17 +50,22 @@ public class EnemyVideoController : VideoController
     protected new void Start()
     {
 
-        eyeFieldOfView = Instantiate(pfEyeFieldOfView, gameObject.transform).GetComponent<EyeFieldOfView>();
+        eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeFieldOfView.SetFadeDuration(fadeDuration);
-        eyeFieldOfView.transform.localScale = eyeFieldOfView.transform.localScale/Mathf.Abs(transform.localScale.x);
+        eyeFieldOfView.transform.localScale = eyeFieldOfView.transform.localScale * sign;
         
         sign = Mathf.Sign(transform.localScale.x);
 
         if (sign < 0)
         {
+            eyeFieldOfView.setReverse(true);
             flip = 180.0f;
+        }
+        else
+        {
+            eyeFieldOfView.setReverse(false);
         }
 
         eyeAngle = 90.0f;
@@ -79,6 +84,7 @@ public class EnemyVideoController : VideoController
 
     private void FixedUpdate()
     {
+        eyeFieldOfView.SetOrigin(transform.position);
         switch(state)
         {
             default:
