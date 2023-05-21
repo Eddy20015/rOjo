@@ -108,7 +108,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-10</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -133,7 +133,7 @@
 						<ActiveSource Name="Level Music (Audio from Musescore)" ID="{8BF26C00-55F7-4D86-8927-2C7C6B8D3260}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="3D Music" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" ShortID="462333919">
+				<Sound Name="HorrorTest" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" ShortID="462333919">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 					</PropertyList>
@@ -159,6 +159,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<BlendContainer Name="Dirt_Footsteps" ID="{7F906B5A-0300-46E4-83E9-FE6D5835083A}" ShortID="995026677">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
@@ -654,9 +661,14 @@
 				</BlendContainer>
 				<Sound Name="Button Select" ID="{D2C9D650-E152-4CE6-850D-D45FD9E9EB44}" ShortID="561676510">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>60</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-7</Value>
+								<Value>-2</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -683,6 +695,11 @@
 				</Sound>
 				<Sound Name="Special Click" ID="{1134BA81-2EBE-4960-B3F1-0C0BE1776ACC}" ShortID="573548073">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-1</Value>
@@ -716,7 +733,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-2</Value>
+								<Value>12</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -775,11 +792,6 @@
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-8</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Attenuation">
@@ -3323,6 +3335,45 @@
 							</PositioningInfo>
 						</RandomSequenceContainer>
 					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{C61B00DE-D323-4EB5-A586-07F61BF28138}" ShortID="1045000534">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Player_Health" ID="{C5CD4904-4A5A-498A-98E1-77BA38F0869E}" WorkUnitID="{B0F1DAB9-B28B-421F-8E26-349EB7410416}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{8B95863E-4925-43B6-BB25-33DA06024365}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
 				</BlendContainer>
 			</ChildrenList>
 		</WorkUnit>

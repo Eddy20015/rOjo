@@ -14,7 +14,6 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickQuitGame()
     {
-        PlayClickSound();
         GameStateManager.QuitGame();
     }
 

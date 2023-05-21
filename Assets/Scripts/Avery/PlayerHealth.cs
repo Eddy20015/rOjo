@@ -40,9 +40,12 @@ public class PlayerHealth : MonoBehaviour
 
     public void IncreaseMeter(float gainedMeter)
     {
-        startDecreasing = false;
-        currentExposure += gainedMeter;
-        UpdateExposureBar(currentExposure, maxExposure);
+        if (currentExposure < maxExposure) {
+            startDecreasing = false;
+            currentExposure += gainedMeter;
+            AkSoundEngine.SetRTPCValue("Player_Health", (currentExposure / maxExposure * 100));
+            UpdateExposureBar(currentExposure, maxExposure);
+        }
 
         if (currentExposure >= maxExposure)
         {
