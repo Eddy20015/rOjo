@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    [Serialized Field]
-    private GameObject player;
+    
 }
