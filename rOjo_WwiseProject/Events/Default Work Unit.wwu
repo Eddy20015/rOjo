@@ -21,7 +21,22 @@
 								<Action Name="" ID="{DE873374-F5E3-4452-85D7-B4032AD7F486}" ShortID="816630466">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="2"/>
-										<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="2D Music" ID="{8DE67E94-70D2-4636-9073-B6EAE622BC7E}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fade_Out_2D_Music" ID="{F7C154FB-DA20-4E52-B69A-6109B3832652}">
+							<ChildrenList>
+								<Action Name="" ID="{637AA9AA-58C3-4DC6-ABCB-E274A12EE39A}" ShortID="1056959710">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 										<Property Name="Scope" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
@@ -160,6 +175,312 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="UI" ID="{38158BB9-DB7E-440F-A771-1C84AEBB84A0}" ShortID="210989544">
+					<ChildrenList>
+						<Event Name="Play_Button_Select" ID="{2507843D-17E6-4CF0-BC2F-290D7A0C066A}">
+							<ChildrenList>
+								<Action Name="" ID="{870F759A-4868-4C26-BAE6-C7B6D8D64237}" ShortID="919211142">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button Select" ID="{D2C9D650-E152-4CE6-850D-D45FD9E9EB44}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Special_Click" ID="{759D350A-027C-4C01-BCCF-9A13C4B93CC6}">
+							<ChildrenList>
+								<Action Name="" ID="{97F74AF0-1714-49CE-ABAB-F211B098F4D4}" ShortID="975719008">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Special Click" ID="{1134BA81-2EBE-4960-B3F1-0C0BE1776ACC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Eye Beam" ID="{5661785A-A0FA-4F5A-82A0-21EDB2E7C097}" ShortID="161672035">
+					<ChildrenList>
+						<Event Name="Play_EyeBeam_Default" ID="{418F7732-F144-4939-AA36-EED4047566A8}">
+							<ChildrenList>
+								<Action Name="" ID="{CD7C0E7D-AF9C-44A1-84A4-B70FFA3F1749}" ShortID="336414710">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_EyeBeam_Default" ID="{1E4AB8CA-0E46-409B-9751-79E8915C19C5}">
+							<ChildrenList>
+								<Action Name="" ID="{629B3F6E-C05B-4EBC-98A8-2153BB0BF2E7}" ShortID="556084801">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_EyeBeam_Intensified" ID="{B1DEAC2E-82FD-43CE-BA0E-10CAC837902D}">
+							<ChildrenList>
+								<Action Name="" ID="{09EBCF99-D371-499B-9333-1AADCC885B7B}" ShortID="373608657">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.25"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Intensified" ID="{FFDBDE1C-C490-489E-84F8-CB7143FB8D01}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EyeBeam_Intensified" ID="{12F9B44F-597E-470F-BD25-6B694C277F8F}">
+							<ChildrenList>
+								<Action Name="" ID="{879CD54B-8BAD-4047-A002-9814AE530B6A}" ShortID="222939227">
+									<PropertyList>
+										<Property Name="FadeInCurve" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeam_Intensified" ID="{FFDBDE1C-C490-489E-84F8-CB7143FB8D01}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Event Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}">
+					<ChildrenList>
+						<Action Name="" ID="{0F6318B3-7964-47D5-AE7B-ED5642321040}" ShortID="785968804">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_EyeBeam_Intensified2" ID="{3A9EE42A-B2CD-4E56-A417-FAC65D77C251}">
+					<ChildrenList>
+						<Action Name="" ID="{5B061B65-CC07-47C8-B365-252887604EE9}" ShortID="18494219">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EyeBeamIntensifier" ID="{5AE660CF-C126-48B2-A22C-FDABA85DE3EC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F460110B-E9D3-450B-BA2A-356CA22C8FF6}" ShortID="739787787">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Al inferno te vas" ID="{AB1547E6-79C5-478A-A8FA-16CECCF1C778}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A6D731AF-2669-444D-9D6A-8455F4C7768D}" ShortID="934607006">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dejalo Respirar" ID="{EA599C57-3A77-476E-9A74-1E7EFC9060EA}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2C802ECA-9582-4E7A-B04F-F5186CFBE91D}" ShortID="388334161">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dios Protegeme" ID="{499A1001-F808-4542-9347-287CA539E098}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{369FA4A4-09A1-41D1-B71D-599FB58A26ED}" ShortID="633412959">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hijo Mio" ID="{0BF7082D-B203-441E-8328-EEC82847EB78}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{32C4A717-43E5-4F1B-AFBB-32C1726814D3}" ShortID="308184703">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MeOyes" ID="{4FF0911B-B27D-437D-A4DC-27DDD0FD2560}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CF02C026-3FF8-41B8-B251-C9ECC8E26840}" ShortID="389860058">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Muestrame Piedad" ID="{BEF176FB-DFF4-446E-A4E7-35A448C0A86B}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{18C21D93-9A46-481D-83DA-889CCE553F17}" ShortID="720745349">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.05"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Satanas Me Llama" ID="{6B5A29D5-7F14-491B-A4F3-0C25B7F4F5E1}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_EyeBeam_Intensified2" ID="{1F13CE81-D55A-470E-B4F3-F8028D0744C1}">
+					<ChildrenList>
+						<Action Name="" ID="{A3963CFB-14B1-4A4D-89B6-D356451B1A44}" ShortID="2405745">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.35"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EyeBeamIntensifier" ID="{5AE660CF-C126-48B2-A22C-FDABA85DE3EC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3C9B1094-5677-4B5A-9461-A88933C312C3}" ShortID="317575560">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Al inferno te vas" ID="{AB1547E6-79C5-478A-A8FA-16CECCF1C778}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5C87CA00-0728-4F97-99D8-DD14BB4164F6}" ShortID="335410272">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dejalo Respirar" ID="{EA599C57-3A77-476E-9A74-1E7EFC9060EA}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CB38657D-7E80-4F14-99F5-752750EDBA19}" ShortID="81025973">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Dios Protegeme" ID="{499A1001-F808-4542-9347-287CA539E098}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{672A735C-42C3-4A29-A938-4E6AB95EFCE4}" ShortID="669477009">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hijo Mio" ID="{0BF7082D-B203-441E-8328-EEC82847EB78}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AF5AFB87-3B00-49C2-BA72-D4D167442635}" ShortID="94661502">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MeOyes" ID="{4FF0911B-B27D-437D-A4DC-27DDD0FD2560}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E7699EF6-FA35-4035-9170-A7810A88D7FB}" ShortID="435997714">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Muestrame Piedad" ID="{BEF176FB-DFF4-446E-A4E7-35A448C0A86B}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F6B276CE-1F51-41E9-888F-C4F12E4C6A8B}" ShortID="605808207">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeInCurve" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Satanas Me Llama" ID="{6B5A29D5-7F14-491B-A4F3-0C25B7F4F5E1}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
