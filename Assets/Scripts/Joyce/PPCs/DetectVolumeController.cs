@@ -10,10 +10,6 @@ public class DetectVolumeController : PostProcessController
     [SerializeField] private Image exposure;
     private bool refExposure = true;
 
-    [Header("Fade Out Controls")]
-    [SerializeField] private float fadeTime;
-    private float timeElapsed;
-
     private Vignette vignetteS = null;
     [Header("Vignette Settings")]
     [SerializeField] private float vignIntenMin;
@@ -97,7 +93,6 @@ public class DetectVolumeController : PostProcessController
                 timeElapsed += Time.deltaTime;
             }
         }
-
     }
 
     private void LerpEffects(float lerpVal)
@@ -139,8 +134,10 @@ public class DetectVolumeController : PostProcessController
         filmGrainS.intensity.Override(filmIntenMax);
     }
 
-    public override void FadeOutEffects()
+    public override void FadeOutEffects(float time = -1)
     {
+        if (time >= 0)
+            fadeTime = time;
         refExposure = false;
         timeElapsed = 0;
     }

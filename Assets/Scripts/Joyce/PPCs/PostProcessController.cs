@@ -8,6 +8,12 @@ public abstract class PostProcessController : MonoBehaviour
     [Header("Volume")]
     [SerializeField] protected VolumeProfile vProfile;
 
-    public virtual void FadeInEffects() { }
-    public virtual void FadeOutEffects() { }
+    [Header("Fade Controls")]
+    [SerializeField] protected float fadeTime; 
+    protected float timeElapsed;
+
+    public virtual void FadeInEffects(float time = -1) { }
+    public virtual void FadeOutEffects(float time = -1) { }
+
+    public virtual void ToggleEffect(bool on) { }
 }
