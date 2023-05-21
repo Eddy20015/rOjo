@@ -5,7 +5,7 @@ using UnityEngine;
 public class EyeFieldOfView : MonoBehaviour
 {
     [SerializeField] private LayerMask layerMask;
-    [SerializeField] private int rayCount = 5;
+    [SerializeField] private int rayCount = 25;
     [SerializeField] private float fadeDuration = .01f;
     private float elapsedTime;
 
@@ -17,6 +17,9 @@ public class EyeFieldOfView : MonoBehaviour
     private float viewDistance;
     private Vector3 origin;
     private float startingAngle;
+    private float sign = 1;
+    private float flip = 0;
+
     // Creates the FOV for the enemy.
     private void Start()
     {   
@@ -31,12 +34,16 @@ public class EyeFieldOfView : MonoBehaviour
         NoiseColor = meshRenderer.material.GetColor("_Noisecolor");
         meshRenderer.material.SetColor("_BaseColor", Color.black);
         meshRenderer.material.SetColor("_Noisecolor", Color.black);
+        sign = Mathf.Sign(transform.localScale.x);
 
+        if (sign < 0)
+        {
+            flip = 180.0f;
+        }
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        rayCount = 5;
         float angle = startingAngle; 
         float angleIncrease = fov/rayCount;
 
@@ -48,13 +55,14 @@ public class EyeFieldOfView : MonoBehaviour
 
         int vertexIndex = 1;
         int triangleIndex = 0;
+        Debug.DrawRay(origin, Quaternion.Euler(0.0f, flip, 0.0f) * GetVectorFromAngle(angle), Color.red);
         for(int i = 0 ; i <= rayCount; i++){
             Vector3 vertex;
-            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, GetVectorFromAngle(angle), viewDistance, layerMask);
+            RaycastHit2D raycastHit2D = Physics2D.Raycast(origin, Quaternion.Euler(0.0f, flip, 0.0f) * GetVectorFromAngle(angle), viewDistance, layerMask);
             if(raycastHit2D.collider == null)
             {
                 //no hit!
-                vertex = origin + GetVectorFromAngle(angle) * viewDistance;
+                vertex = origin + Quaternion.Euler(0.0f, flip, 0.0f) * GetVectorFromAngle(angle) * viewDistance;
             }
             else
             {
@@ -87,6 +95,18 @@ public class EyeFieldOfView : MonoBehaviour
         mesh.triangles = triangles;
         mesh.RecalculateBounds();
         
+    }
+
+    public void setReverse(bool isReversed)
+    {
+        if(isReversed)
+        {
+            flip = 180.0f;
+        }
+        else
+        { 
+            flip = 0.0f;
+        }
     }
 
     public void resetElapsedTime()
