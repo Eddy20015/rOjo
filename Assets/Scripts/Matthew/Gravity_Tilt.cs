@@ -8,6 +8,9 @@ public class Gravity_Tilt : MonoBehaviour
     private GameObject camera;
 
     [SerializeField]
+    private GameObject player;
+
+    [SerializeField]
     private int time;
 
     [SerializeField]
@@ -30,17 +33,23 @@ public class Gravity_Tilt : MonoBehaviour
     {
         if (camera.transform.localEulerAngles.z <= 90 && camera.transform.localEulerAngles.z >= 0 && camera_bool)
         {
-            camera.transform.Rotate(Vector3.forward, RotationSpeed * Time.deltaTime);
+            float spd_time = RotationSpeed * Time.deltaTime; 
+            camera.transform.Rotate(Vector3.forward, spd_time);
+            player.transform.Rotate(Vector3.forward, spd_time);
+
+            if(spd_time <= 9.81)
+            {
+                Physics2D.gravity = new Vector2(RotationSpeed*Time.deltaTime, 0f);
+            }
 
             if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
             {
                 float y = camera.transform.rotation.eulerAngles.z;
                 y = y - 90;
                 camera.transform.Rotate(0, 0, -y);
+                player.transform.Rotate(0, 0, -y);
+                Physics2D.gravity = new Vector2(9.81f, 0f);
             }
-
-            Physics2D.gravity = new Vector2(Mathf.Lerp(0f, 9.81f, 9.81f), Mathf.Lerp(-2f, 0f, 0f));
-
         }
         else
         {
@@ -50,14 +59,16 @@ public class Gravity_Tilt : MonoBehaviour
         if (camera_back)
         {
             camera.transform.Rotate(Vector3.back, RotationSpeed * Time.deltaTime);
+            player.transform.Rotate(Vector3.back, RotationSpeed * Time.deltaTime);
 
             if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
             {
                 float y = camera.transform.rotation.eulerAngles.z;
                 camera.transform.Rotate(0, 0, -y);
+                player.transform.Rotate(0, 0, -y);
             }
 
-            Physics2D.gravity = new Vector2(Mathf.Lerp(0f, 9.81f, 0f), Mathf.Lerp(-2f, 0f, -2f));
+            Physics2D.gravity = new Vector2(0f, -9.81f);
         }
 
     }
