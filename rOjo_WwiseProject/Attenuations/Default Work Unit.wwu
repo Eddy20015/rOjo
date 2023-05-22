@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Attenuation Name="Beam Attenuation" ID="{31C77CB4-F151-4D18-8A22-D8BF0C7ACF1F}" ShortID="863271994">
 					<PropertyList>
-						<Property Name="RadiusMax" Type="Real64" Value="15"/>
+						<Property Name="RadiusMax" Type="Real64" Value="20"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
@@ -22,13 +22,13 @@
 											<SegmentShape>Log1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>10</XPos>
-											<YPos>-0</YPos>
+											<XPos>5</XPos>
+											<YPos>0</YPos>
 											<Flags>0</Flags>
 											<SegmentShape>Exp1</SegmentShape>
 										</Point>
 										<Point>
-											<XPos>15</XPos>
+											<XPos>20</XPos>
 											<YPos>-200</YPos>
 											<Flags>37</Flags>
 										</Point>
