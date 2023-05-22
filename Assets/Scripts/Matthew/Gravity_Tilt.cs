@@ -37,9 +37,9 @@ public class Gravity_Tilt : MonoBehaviour
             camera.transform.Rotate(Vector3.forward, spd_time);
             player.transform.Rotate(Vector3.forward, spd_time);
 
-            if(spd_time <= 9.81)
+            if (spd_time <= 4.81)
             {
-                Physics2D.gravity = new Vector2(RotationSpeed*Time.deltaTime, 0f);
+                Physics2D.gravity = new Vector2(2 + spd_time, -1f);
             }
 
             if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
