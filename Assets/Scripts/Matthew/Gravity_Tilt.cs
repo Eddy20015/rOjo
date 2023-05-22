@@ -39,7 +39,7 @@ public class Gravity_Tilt : MonoBehaviour
 
             if (spd_time <= 4.81)
             {
-                Physics2D.gravity = new Vector2(2 + spd_time, -0.5f);
+                Physics2D.gravity = new Vector2(2 + spd_time, 0f);
             }
 
             if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
@@ -48,7 +48,7 @@ public class Gravity_Tilt : MonoBehaviour
                 y = y - 90;
                 camera.transform.Rotate(0, 0, -y);
                 player.transform.Rotate(0, 0, -y);
-                Physics2D.gravity = new Vector2(9.81f, 0f);
+                Physics2D.gravity = new Vector2(9.81f, -0.2f);
             }
         }
         else
@@ -78,6 +78,7 @@ public class Gravity_Tilt : MonoBehaviour
         if (time > 0)
         {
             yield return new WaitForSeconds(time);
+            camera_bool = false;
             camera_back = true;
         }
     }
