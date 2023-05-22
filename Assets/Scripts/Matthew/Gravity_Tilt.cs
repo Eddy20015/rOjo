@@ -39,7 +39,7 @@ public class Gravity_Tilt : MonoBehaviour
 
             if (spd_time <= 4.81)
             {
-                Physics2D.gravity = new Vector2(2 + spd_time, -1f);
+                Physics2D.gravity = new Vector2(2 + spd_time, -0.5f);
             }
 
             if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
