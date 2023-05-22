@@ -357,6 +357,7 @@ public class EnemyVideoController : EyeAnimatorController
 
         //Do nothing until the transition clip loop point is reached
         eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeOut
+        
         while (!bContinue)
         {
             eyeFieldOfView.FadeOut();
