@@ -22,7 +22,6 @@ public class Player2DMovement : MonoBehaviour
     [SerializeField] private float downGravity = 2.2f;
     [Min(0)]
     [SerializeField] private float groundedGravity = 50f; // used to keep player on slope
-    [SerializeField] private SlopeDetect slopeDetect;
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
@@ -96,7 +95,6 @@ public class Player2DMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary) // only allows jumping if not already up
         {
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            slopeDetect.enabled = false;
             //isJumping = true;
 
             //AudioManager.instance.Stop(jumpSFX);
@@ -106,7 +104,6 @@ public class Player2DMovement : MonoBehaviour
         {
             print("landed");
             jumpLanding.Post(gameObject);
-            slopeDetect.enabled = true;
             //isJumping = false;
         }
 
@@ -117,8 +114,7 @@ public class Player2DMovement : MonoBehaviour
             airTime += Time.deltaTime;
 
         } else {
-            myRigidbody.gravityScale = slopeDetect.onSlope ? groundedGravity : upGravity;
-            //myRigidbody.gravityScale = groundedGravity;
+            myRigidbody.gravityScale = groundedGravity;
             airTime = 0;
         }
 
@@ -172,5 +168,4 @@ public class Player2DMovement : MonoBehaviour
     {
         isMovingObject = b;
     }
-
 }

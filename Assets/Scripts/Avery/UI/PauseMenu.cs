@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private AK.Wwise.Event StopAll;
+    [SerializeField] private AK.Wwise.Event StopWind;
+    [SerializeField] private AK.Wwise.Event Stop2DMusic;
+    [SerializeField] private AK.Wwise.Event Stop3DMusic;
 
     void Awake()
     {
@@ -36,7 +38,9 @@ public class PauseMenu : MonoBehaviour
 
     public void OnClickMainMenu()
     {
-        StopAll.Post(gameObject);
+        StopWind.Post(gameObject);
+        Stop2DMusic.Post(gameObject);
+        Stop3DMusic.Post(gameObject);
         GameStateManager.QuitToMainMenu();
     }
 

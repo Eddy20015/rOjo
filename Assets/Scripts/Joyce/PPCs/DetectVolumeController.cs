@@ -10,6 +10,10 @@ public class DetectVolumeController : PostProcessController
     [SerializeField] private Image exposure;
     private bool refExposure = true;
 
+    [Header("Fade Out Controls")]
+    [SerializeField] private float fadeTime;
+    private float timeElapsed;
+
     private Vignette vignetteS = null;
     [Header("Vignette Settings")]
     [SerializeField] private float vignIntenMin;
@@ -89,10 +93,11 @@ public class DetectVolumeController : PostProcessController
         {
             if(timeElapsed < fadeTime)
             {
-                LerpEffectsFade(timeElapsed / fadeTime);
+                LerpEffects(1 - (timeElapsed/fadeTime));
                 timeElapsed += Time.deltaTime;
             }
         }
+
     }
 
     private void LerpEffects(float lerpVal)
@@ -108,19 +113,6 @@ public class DetectVolumeController : PostProcessController
         filmGrainS.intensity.Override(Mathf.Lerp(filmIntenMin, filmIntenMax, lerpVal));
     }
 
-    private void LerpEffectsFade(float lerpVal)
-    {
-        vignetteS.intensity.Override(Mathf.Lerp((float)vignetteS.intensity, vignIntenMin, lerpVal));
-
-        lensDistortS.intensity.Override(Mathf.Lerp((float)lensDistortS.intensity, lensIntenMin, lerpVal));
-        lensDistortS.yMultiplier.Override(Mathf.Lerp((float)lensDistortS.yMultiplier, lensYMultMin, lerpVal));
-
-        paniniS.distance.Override(Mathf.Lerp((float)paniniS.distance, paniniDistMin, lerpVal));
-        paniniS.cropToFit.Override(Mathf.Lerp((float)paniniS.cropToFit, paniniCropMin, lerpVal));
-
-        filmGrainS.intensity.Override(Mathf.Lerp((float)filmGrainS.intensity, filmIntenMin, lerpVal));
-    }
-
     private void OnDestroy()
     {
         vignetteS.intensity.Override(vignIntenMax);
@@ -134,10 +126,8 @@ public class DetectVolumeController : PostProcessController
         filmGrainS.intensity.Override(filmIntenMax);
     }
 
-    public override void FadeOutEffects(float time = -1)
+    public override void FadeOutEffects()
     {
-        if (time >= 0)
-            fadeTime = time;
         refExposure = false;
         timeElapsed = 0;
     }
