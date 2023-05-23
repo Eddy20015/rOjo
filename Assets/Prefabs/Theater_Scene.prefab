@@ -724,15 +724,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838302920476921680}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 114.369995, y: 2.1200001, z: 0}
+  m_LocalPosition: {x: 23.279999, y: -1.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 838302921029273979}
   - {fileID: 838302920843773184}
   - {fileID: 838302921817435711}
-  m_Father: {fileID: 4536191400794227998}
-  m_RootOrder: 2
+  m_Father: {fileID: 838302922105557890}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &838302920496408745
 GameObject:
@@ -862,6 +862,7 @@ MonoBehaviour:
   - {fileID: 838302920261401639}
   - {fileID: 838302921776251940}
   manager: {fileID: 838302922105557891}
+  isResetButton: 0
 --- !u!1 &838302920502916997
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,6 +991,7 @@ MonoBehaviour:
   - {fileID: 838302920869396931}
   - {fileID: 838302922005064576}
   manager: {fileID: 838302922105557891}
+  isResetButton: 0
 --- !u!1 &838302920587812311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +1849,7 @@ MonoBehaviour:
   - {fileID: 838302921946301344}
   - {fileID: 838302921827111012}
   manager: {fileID: 838302922105557891}
+  isResetButton: 0
 --- !u!1 &838302921656332337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,7 +1992,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4536191400794227998}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &838302921714112535
 SpriteRenderer:
@@ -3417,7 +3420,9 @@ Transform:
   m_LocalPosition: {x: 91.09, y: 3.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 838302920476921687}
+  - {fileID: 8558911489079779534}
   m_Father: {fileID: 4536191400794227998}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3440,6 +3445,11 @@ MonoBehaviour:
   - {fileID: 838302921776251940}
   - {fileID: 838302921827111012}
   - {fileID: 838302922005064576}
+  allButtons:
+  - {fileID: 838302922288041561}
+  - {fileID: 838302920496408745}
+  - {fileID: 838302920502916997}
+  - {fileID: 838302921450311393}
   door: {fileID: 838302920476921680}
 --- !u!1 &838302922288041561
 GameObject:
@@ -3570,6 +3580,7 @@ MonoBehaviour:
   - {fileID: 838302920261401639}
   - {fileID: 838302920869396931}
   manager: {fileID: 838302922105557891}
+  isResetButton: 0
 --- !u!1 &838302922329587661
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,9 +3695,7 @@ Transform:
   m_Children:
   - {fileID: 838302921974041534}
   - {fileID: 838302922105557890}
-  - {fileID: 838302920476921687}
   - {fileID: 838302921714112528}
-  - {fileID: 8558911489079779534}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3751,8 +3760,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3614728059376973258}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -91.09, y: -3.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3761,8 +3770,8 @@ Transform:
   - {fileID: 7520218952935644586}
   - {fileID: 83536989594378096}
   - {fileID: 838302920989184326}
-  m_Father: {fileID: 4536191400794227998}
-  m_RootOrder: 4
+  m_Father: {fileID: 838302922105557890}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6430650950777564397
 GameObject:
