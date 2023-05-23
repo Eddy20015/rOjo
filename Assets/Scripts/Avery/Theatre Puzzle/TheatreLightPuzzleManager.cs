@@ -24,10 +24,7 @@ public class TheatreLightPuzzleManager : MonoBehaviour
             i++;
         }
 
-        for (int j = 0; j < numOfLights; ++j)
-        {
-            initialLightStates.CopyTo(currentLightStates, j);
-        }
+        initialLightStates.CopyTo(currentLightStates, 0);
     }
 
     public void UpdateCurrentLightStates()
