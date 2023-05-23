@@ -6,27 +6,29 @@ public class TheatreLightButton : MonoBehaviour
 {
     [SerializeField] List<GameObject> boundLights;
     [SerializeField] TheatreLightPuzzleManager manager;
-    int netChangeInActiveLights = 0;
+    [SerializeField] bool isResetButton = false;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Dancer"))
+        if (collision.gameObject.CompareTag("Dancer") && !isResetButton)
         {
             foreach (GameObject b in boundLights)
             {
                 if (b.activeInHierarchy)
                 {
                     b.SetActive(false);
-                    netChangeInActiveLights--;
                 }
                 else
                 {
                     b.SetActive(true);
-                    netChangeInActiveLights++;
                 }
             }
 
-            manager.UpdateNumActive(netChangeInActiveLights);
+            manager.UpdateCurrentLightStates();
+        }
+        else if (collision.gameObject.CompareTag("Dancer") && isResetButton)
+        {
+            manager.ResetPuzzle();
         }
     }
 }
