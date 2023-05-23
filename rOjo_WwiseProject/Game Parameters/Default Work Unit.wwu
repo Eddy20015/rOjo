@@ -22,24 +22,96 @@
 				</Folder>
 				<Folder Name="HorrorStemsRTPCs" ID="{096FA3B7-8D54-4C15-80A2-9584AA8A5EAD}" ShortID="686612750">
 					<ChildrenList>
-						<GameParameter Name="BaseBassVol" ID="{EE9AD8C9-7A08-470E-9D71-A1026A1AC739}"/>
-						<GameParameter Name="ChokeVol" ID="{3884FAF5-6D10-4E23-B73B-1AE9513552A6}"/>
-						<GameParameter Name="CreepyOrganVol" ID="{1DC8D401-AD54-4348-A161-296869BEB9C9}"/>
-						<GameParameter Name="DeepHitToBreath1Vol" ID="{03980792-2963-464D-9F34-141C51DF02CB}"/>
-						<GameParameter Name="DeepHitToBreath2Vol" ID="{647BA826-EAC6-4D5D-9783-544472494247}"/>
-						<GameParameter Name="DeepHitToBreath3Vol" ID="{7BF98A56-1E90-4E6F-8BF3-9D8EEE2196DD}"/>
-						<GameParameter Name="DeepHitToBreath4Vol" ID="{BD4F7B55-FB3E-4940-A1A9-8418B27D0566}"/>
-						<GameParameter Name="EtherealToneVol" ID="{8186CBDE-0A43-4AA5-A97B-AC9A268C3BC9}"/>
-						<GameParameter Name="GradIncHighPitchVol" ID="{A13ABD2A-61A7-4CA2-8945-DB7407A6E58C}"/>
-						<GameParameter Name="GrowlVol" ID="{9C75A269-0E27-4F00-9A53-1C566D03DCD4}"/>
-						<GameParameter Name="LowCelloVol" ID="{2F6FC2BB-CF55-4501-8669-7C4C3ECB660E}"/>
-						<GameParameter Name="MusicBox1Vol" ID="{E07601A5-7E02-4392-94B5-7456F077E344}"/>
-						<GameParameter Name="MusicBox2Vol" ID="{AF3723EF-CEDD-43AF-AA7F-FF73D14B737B}"/>
-						<GameParameter Name="MusicBox3Vol" ID="{40B3E2D7-C106-4BFB-83DF-BF4E87AA172D}"/>
-						<GameParameter Name="PanFluteVol" ID="{CF02D913-087A-413E-A5BB-4EAF1977B8B9}"/>
-						<GameParameter Name="PulseToSirenVol" ID="{B252C5B2-906D-4560-872A-0EDEAEDCB516}"/>
-						<GameParameter Name="WawaDistortionVol" ID="{AC18CB4B-FED4-4558-8180-7A372B14567A}"/>
-						<GameParameter Name="WhistleBreathingVol" ID="{C099A867-A4DE-48F2-86A8-C50290A7C220}"/>
+						<GameParameter Name="BaseBassVol" ID="{EE9AD8C9-7A08-470E-9D71-A1026A1AC739}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="ChokeVol" ID="{3884FAF5-6D10-4E23-B73B-1AE9513552A6}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="CreepyOrganVol" ID="{1DC8D401-AD54-4348-A161-296869BEB9C9}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="DeepHitToBreath1Vol" ID="{03980792-2963-464D-9F34-141C51DF02CB}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="DeepHitToBreath2Vol" ID="{647BA826-EAC6-4D5D-9783-544472494247}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="DeepHitToBreath3Vol" ID="{7BF98A56-1E90-4E6F-8BF3-9D8EEE2196DD}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="DeepHitToBreath4Vol" ID="{BD4F7B55-FB3E-4940-A1A9-8418B27D0566}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="EtherealToneVol" ID="{8186CBDE-0A43-4AA5-A97B-AC9A268C3BC9}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GradIncHighPitchVol" ID="{A13ABD2A-61A7-4CA2-8945-DB7407A6E58C}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="GrowlVol" ID="{9C75A269-0E27-4F00-9A53-1C566D03DCD4}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="LowCelloVol" ID="{2F6FC2BB-CF55-4501-8669-7C4C3ECB660E}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="MusicBox1Vol" ID="{E07601A5-7E02-4392-94B5-7456F077E344}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="MusicBox2Vol" ID="{AF3723EF-CEDD-43AF-AA7F-FF73D14B737B}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="MusicBox3Vol" ID="{40B3E2D7-C106-4BFB-83DF-BF4E87AA172D}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="PanFluteVol" ID="{CF02D913-087A-413E-A5BB-4EAF1977B8B9}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="PulseToSirenVol" ID="{B252C5B2-906D-4560-872A-0EDEAEDCB516}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="WawaDistortionVol" ID="{AC18CB4B-FED4-4558-8180-7A372B14567A}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
+						<GameParameter Name="WhistleBreathingVol" ID="{C099A867-A4DE-48F2-86A8-C50290A7C220}">
+							<PropertyList>
+								<Property Name="RTPCRamping" Type="int16" Value="1"/>
+							</PropertyList>
+						</GameParameter>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
