@@ -57,11 +57,29 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BASEBASSVOL = 1419528906U;
+        static const AkUniqueID CHOKEVOL = 4026379618U;
+        static const AkUniqueID CREEPYORGANVOL = 2412606391U;
+        static const AkUniqueID DEEPHITTOBREATH1VOL = 2829592975U;
+        static const AkUniqueID DEEPHITTOBREATH2VOL = 4036542190U;
+        static const AkUniqueID DEEPHITTOBREATH3VOL = 2215379557U;
+        static const AkUniqueID DEEPHITTOBREATH4VOL = 1122702348U;
+        static const AkUniqueID ETHEREALTONEVOL = 429408522U;
         static const AkUniqueID FLAMENCOMUSICVOLUME = 4015289221U;
+        static const AkUniqueID GRADINCHIGHPITCHVOL = 2912448678U;
+        static const AkUniqueID GROWLVOL = 452215995U;
+        static const AkUniqueID LOWCELLOVOL = 4064624855U;
         static const AkUniqueID MASTER_VOLUME = 4179668880U;
         static const AkUniqueID MUSIC_VOLUME = 1006694123U;
+        static const AkUniqueID MUSICBOX1VOL = 1477291085U;
+        static const AkUniqueID MUSICBOX2VOL = 3949021176U;
+        static const AkUniqueID MUSICBOX3VOL = 2127858551U;
+        static const AkUniqueID PANFLUTEVOL = 2335835475U;
         static const AkUniqueID PLAYER_HEALTH = 215992295U;
+        static const AkUniqueID PULSETOSIRENVOL = 2685063653U;
         static const AkUniqueID SFX_VOLUME = 1564184899U;
+        static const AkUniqueID WAWADISTORTIONVOL = 4222622707U;
+        static const AkUniqueID WHISTLEBREATHINGVOL = 3844727424U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS
