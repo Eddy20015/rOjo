@@ -16,7 +16,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
 
     [Header("VFX")]
     [SerializeField] private PostProcessController ppc2D;
-    //[SerializeField] private PostProcessController ppc3D;
+    [SerializeField] private PostProcessController ppc3D;
 
     [Header("Sound")]
     [SerializeField] private AK.Wwise.Event Stop2DMusic;
@@ -42,8 +42,6 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         Stop2DMusic.Post(gameObject);
         Start3DMusic.Post(gameObject);
 
-        ppc2D.FadeOutEffects();
-
         StartCoroutine(OnCutSceneEnd());
     }
     protected override void EndTrigger()
@@ -55,6 +53,11 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     }
     protected override IEnumerator OnCutSceneEnd()
     {
+        ppc2D.FadeOutEffects(cutSceneClip.length);
+
+        if(ppc3D)
+            ppc3D.FadeInEffects(cutSceneClip.length);
+
         yield return new WaitForSeconds(cutSceneClip.length);
 
         switcher.ToggleAllCameras(false);

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class EnemyVideoController : VideoController
+public class EnemyVideoController : EyeAnimatorController
 {
     [SerializeField] GameObject Player;
-    [SerializeField] VideoClip InactiveClip;
-    [SerializeField] VideoClip ActiveClip;
-    [SerializeField] VideoClip TransitionClip;
-    [SerializeField] VideoClip ReverseTransitionClip;
+    // [SerializeField] Animation anim;
+    // [SerializeField] AnimationClip ActiveClip;
+    // [SerializeField] AnimationClip InactiveClip;
+    // [SerializeField] AnimationClip ReverseTransitionClip;
 
     [SerializeField] int PlaySpeed = 1;
     [SerializeField] int HighSpeed = 10;
@@ -79,10 +79,10 @@ public class EnemyVideoController : VideoController
 
         state = State.Inactive;
 
-        VPlayer.clip = InactiveClip;
-        VPlayer.loopPointReached += CheckOver;
+        // VPlayer.clip = InactiveClip;
+        // VPlayer.loopPointReached += CheckOver;
 
-        StartVPlayer();
+        // StartVPlayer();
     }
 
     private void FixedUpdate()
@@ -142,7 +142,8 @@ public class EnemyVideoController : VideoController
                         
                         if (state == State.Inactive)
                         {
-                            VPlayer.clip = ActiveClip;
+                            // VPlayer.clip = ActiveClip;
+                            VPlayer.SetBool("Activated", true);
                             state = State.Active;
                         //     float angleToPlayer = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
                         //     eyeFrameFoundPct = Mathf.Abs(eyeAngle)/360f;
@@ -187,11 +188,13 @@ public class EnemyVideoController : VideoController
         //     StartCoroutine(Deactivate());
         //     isActivated = false;
         // }
-
-        int currentFrame = (int)VPlayer.frame; //Gets the current frame of the "eye"
-        int totalFrames = (int)VPlayer.frameCount; //Gets the total amt of frames of the "eye" video.
-        float framePct2Angle = (float)currentFrame/totalFrames; //Gets the percent of the current frame out of the whole video.
-        eyeAngle = (framePct2Angle * 360f); 
+        
+        float currentTime = GetTime(); //Gets the current frame of the "eye"
+        float totalTime = GetTotalTime(); //Gets the total amt of frames of the "eye" video.
+        float timePct2Angle = currentTime/totalTime; //Gets the percent of the current frame out of the whole video.
+        Debug.Log("Current Time: " + currentTime);
+        Debug.Log("Total Time: " +  totalTime);
+        eyeAngle = (timePct2Angle * 360f); 
         eyeFieldOfView.SetAimDirection(eyeAngle); 
     }
 
@@ -199,54 +202,55 @@ public class EnemyVideoController : VideoController
 
     
 
-    private IEnumerator Activate()
-    {
-            Debug.Log("Eye Activated!");
+    // private IEnumerator Activate()
+    // {
+    //         Debug.Log("Eye Activated!");
 
-            state = State.Inactive2Active; //Tells the state machine to wait till this is done.
-            bContinue = false; //Reset Checking if Loop point is reached.
-            //Speed up and finish the video forwards
-
-            //Set the playback speed back to normal, but reverse it
-            VPlayer.clip = TransitionClip;
-            //Do nothing until the transition clip loop point is reached
-            while (!bContinue) 
-            {
-                yield return new WaitForSeconds(.01f);
-            }
-            bContinue = false;
-
-            VPlayer.clip = ActiveClip;
-            ClipSpeed(HighSpeed);
-            var frame = VPlayer.frameCount * eyeFrameFoundPct;
-            VPlayer.frame = ((long)frame + 4) % (long)VPlayer.frameCount;
+    //         state = State.Inactive2Active; //Tells the state machine to wait till this is done.
             
-            //Do nothing until the active clip loop point is reached
-            // while (!bContinue) 
-            // {
-            //     yield return new WaitForSeconds(.01f);
-            // }
-            // bContinue = false;
-            while (Mathf.Abs((int)VPlayer.frame - frame) > 3)
-            {
-                Debug.Log(VPlayer.frame);
-                yield return new WaitForSeconds(.001f);
-            }
-            bContinue = false;
-            PauseVPlayer();
-            //Set the playback speed back to forward normal and let the Active clip play
+    //         //Speed up and finish the video forwards
+
+    //         //Set the playback speed back to normal, but reverse it
+    //         VPlayer.SetBool("Activated", true);
+    //         //Do nothing until the transition clip loop point is reached
+    //         bContinue = false; //Reset Checking if Loop point is reached.
+    //         while (!bContinue) 
+    //         {
+    //             yield return new WaitForSeconds(.01f);
+    //         }
+    //         bContinue = false;
+
+    //         // VPlayer.clip = ActiveClip;
+    //         ClipSpeed(HighSpeed);
+    //         // var time = VPlayer.length * eyeFrameFoundPct;
+    //         // VPlayer.time = ((long)time + 4) % (long)VPlayer.length;
             
-            // ClipSpeed(PlaySpeed);
+    //         //Do nothing until the active clip loop point is reached
+    //         // while (!bContinue) 
+    //         // {
+    //         //     yield return new WaitForSeconds(.01f);
+    //         // }
+    //         // bContinue = false;
+    //         while (Mathf.Abs((int)VPlayer.time - time) > 3)
+    //         {
+    //             Debug.Log(VPlayer.time);
+    //             yield return new WaitForSeconds(.001f);
+    //         }
+    //         bContinue = false;
+    //         PauseVPlayer();
+    //         //Set the playback speed back to forward normal and let the Active clip play
+            
+    //         // ClipSpeed(PlaySpeed);
 
-            Debug.Log("Back to spotted frame");
+    //         Debug.Log("Back to spotted frame");
 
-            eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeIn
-            state = State.Active;
+    //         eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeIn
+    //         state = State.Active;
             
             
             
         
-    }
+    // }
 
     private void Active() //When the eye sees you.
     {   
@@ -255,9 +259,9 @@ public class EnemyVideoController : VideoController
         Vector3 dirToPlayer = (Player.transform.position - transform.position);
         eyeAngle = EyeFieldOfView.GetAngleFromVectorFloat(Quaternion.Euler(0, flip, 0) * dirToPlayer);
         eyeFieldOfView.SetAimDirection(eyeAngle); 
-        float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
-        var frame = VPlayer.frameCount * anglePct2Frame;
-        VPlayer.frame = (long)frame;
+        float anglePct2Time = Mathf.Abs(eyeAngle)/360f;
+        float time = GetTotalTime() * anglePct2Time;
+        SetTime(time);
 
         if (!playingIntensifiedSound) {
             startIntensified.Post(gameObject);
@@ -270,12 +274,13 @@ public class EnemyVideoController : VideoController
     {
         
         Debug.Log("Now looking!");
+        PauseVPlayer();
         bContinue = false; // Reset checking if loopPoint was reached.
         
         float initEyeAngle = eyeAngle;
         float lookRight = 30;
         float lookLeft = -30;
-        long frame = 0;
+        float time = 0;
 
         elapsedTime = 0;
         state = State.Looking;
@@ -299,7 +304,7 @@ public class EnemyVideoController : VideoController
         initEyeAngle = eyeAngle;
         while(elapsedTime < lookingDuration)
         {
-            frame = smoothLook(eyeAngle, initEyeAngle + lookRight); //get last frame of lookaround
+            time = smoothLook(eyeAngle, initEyeAngle + lookRight); //get last frame of lookaround
             yield return new WaitForSeconds(Time.deltaTime);
         }
         Debug.Log("Pause");
@@ -307,7 +312,7 @@ public class EnemyVideoController : VideoController
 
         //Speed up and finish the video forwards (LOOKS to the far right)
         ClipSpeed(HighSpeed);
-        VPlayer.frame = frame; //skip to this last frame to prevent janky eyeball.
+        SetTime(time); //skip to this last frame to prevent janky eyeball.
 
         bContinue = false;
         //Do nothing until the active clip loop point is reached
@@ -318,20 +323,21 @@ public class EnemyVideoController : VideoController
         } 
         bContinue = false;
 
+        VPlayer.SetBool("Activated", false);
         StartCoroutine(Deactivate());
     }
 
-    private long smoothLook(float lookStart, float lookDest)
+    private float smoothLook(float lookStart, float lookDest)
     {
         Debug.Log("EyeAngle: " + eyeAngle);
         float percentageComplete = elapsedTime / lookingDuration;
         eyeAngle = Mathf.Lerp(lookStart, lookDest, percentageComplete);
         eyeFieldOfView.SetAimDirection(eyeAngle);
-        float anglePct2Frame = Mathf.Abs(eyeAngle)/360f;
-        var frame = VPlayer.frameCount * anglePct2Frame;
-        VPlayer.frame = (long)frame;
+        float anglePct2Time = Mathf.Abs(eyeAngle)/360f;
+        float time = GetTotalTime() * anglePct2Time;
+        SetTime(time);
         elapsedTime += Time.deltaTime;
-        return (long)frame;
+        return time;
     }
 
     
@@ -344,13 +350,14 @@ public class EnemyVideoController : VideoController
 
         state = State.Active2Inactive; //Tells the state machine to wait till this is done.
         //Speed up Active clip to completion
-
+        
         //Set the playback speed back to normal, but reverse it
-        VPlayer.clip = ReverseTransitionClip;
+        // VPlayer.clip = ReverseTransitionClip;
         ClipSpeed(PlaySpeed);
 
         //Do nothing until the transition clip loop point is reached
         eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeOut
+        
         while (!bContinue)
         {
             eyeFieldOfView.FadeOut();
@@ -359,7 +366,7 @@ public class EnemyVideoController : VideoController
         bContinue = false;
 
         //Set the playback speed back to forward normal and let the inactive clip play
-        VPlayer.clip = InactiveClip;
+        // VPlayer.clip = InactiveClip;
         ClipSpeed(PlaySpeed);
 
         state = State.Inactive;

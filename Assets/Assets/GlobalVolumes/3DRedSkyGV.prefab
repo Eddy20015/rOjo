@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 908892609631951878}
   - component: {fileID: 5419982692075455958}
+  - component: {fileID: 693017947730007267}
   m_Layer: 0
   m_Name: 3DRedSkyGV
   m_TagString: Untagged
@@ -46,6 +47,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsGlobal: 1
   priority: 0
-  blendDistance: 0
+  blendDistance: 0.2
   weight: 1
   sharedProfile: {fileID: 11400000, guid: bf5f5b90a7d6c6d43abecc65934636ce, type: 2}
+--- !u!114 &693017947730007267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7097453689381187610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757d0ac9e789e9c42bca27e943378de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vProfile: {fileID: 11400000, guid: bf5f5b90a7d6c6d43abecc65934636ce, type: 2}
+  fadeTime: 1.6
+  toggleTime: 1.6
+  filmIntenMin: 0
+  filmIntenMax: 1
+  lensIntenMin: 0
+  lensIntenMax: -0.4
+  lensXMultMin: 0
+  lensXMultMax: 1
+  lensScaleMin: 1
+  lensScaleMax: 1.25
+  vignIntenMin: 0
+  vignIntenMax: 0.4
+  depthStartMin: 1000
+  depthStartMax: 70
+  colorAdjustPostMin: 0
+  colorAdjustPostMax: 0.5
+  colorAdjustConstrastMin: 0
+  colorAdjustConstrastMax: 20
+  colorAdjustSatMin: 0
+  colorAdjustSatMax: 100

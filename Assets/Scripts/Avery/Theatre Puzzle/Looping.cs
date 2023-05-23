@@ -6,6 +6,12 @@ public class Looping : MonoBehaviour
 {
     [SerializeField] Transform checkpoint;
     [SerializeField] GameObject jumpScarePlaceholder; // testing
+    TheatreLightPuzzleManager manager;
+
+    private void Start()
+    {
+        manager = GetComponentInParent<TheatreLightPuzzleManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,5 +26,6 @@ public class Looping : MonoBehaviour
         yield return new WaitForSeconds(2f);
         jumpScarePlaceholder.SetActive(false);
         go.transform.position = checkpoint.position;
+        manager.ResetPuzzle();
     }
 }
