@@ -4,27 +4,67 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public GameObject door;
+    [SerializeField]
+    private GameObject door;
 
-    private void OnCollisionEnter2D(Collision2D other)
+    [SerializeField]
+    private bool two_button;
+
+    [SerializeField]
+    private Button other_button;
+
+    public bool collision;
+    
+    [SerializeField]
+    private bool timed;
+    
+    [SerializeField]
+    private int time;
+
+    
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (two_button)
         {
-            door.SetActive(false);
+            if (other.gameObject.CompareTag("Dancer"))
+            {
+                collision = true;
+
+                if (collision && other_button.collision)
+                {
+                    door.SetActive(false);
+                    StartCoroutine("Timer");
+                }
+            }
+            else
+            {
+                door.SetActive(true);
+            }
         }
         else
         {
-            door.SetActive(true);
+            if (other.gameObject.CompareTag("Dancer"))
+            {
+                door.SetActive(false);
+                StartCoroutine("Timer");
+            }
+            else
+            {
+                door.SetActive(true);
+            }
         }
     }
 
-    /*
-    private void OnCollisionExit2D(Collision2D other)
+    IEnumerator Timer()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (time > 0)
         {
+            yield return new WaitForSeconds(time);
+
             door.SetActive(true);
+
+            collision = false;
         }
     }
-    */
 }
