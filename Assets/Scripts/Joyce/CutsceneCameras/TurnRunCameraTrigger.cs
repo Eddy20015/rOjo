@@ -54,7 +54,9 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     protected override IEnumerator OnCutSceneEnd()
     {
         ppc2D.FadeOutEffects(cutSceneClip.length);
-        ppc3D.FadeInEffects(cutSceneClip.length);
+
+        if(ppc3D)
+            ppc3D.FadeInEffects(cutSceneClip.length);
 
         yield return new WaitForSeconds(cutSceneClip.length);
 
