@@ -7,6 +7,7 @@ public class TheatreLightPuzzleManager : MonoBehaviour
     [SerializeField] List<GameObject> allLights;
     [SerializeField] List<GameObject> allButtons;
     [SerializeField] GameObject door;
+    [SerializeField] GameObject loopActivator; //purely to deactivate it when solved
     bool[] initialLightStates;
     bool[] currentLightStates;
     int numOfLights;
@@ -49,6 +50,7 @@ public class TheatreLightPuzzleManager : MonoBehaviour
         if (allTrue)
         {
             door.SetActive(false);
+            loopActivator.SetActive(false);
             print("SOLVED");
 
             foreach (GameObject b in allButtons)
