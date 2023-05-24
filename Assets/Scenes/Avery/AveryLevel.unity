@@ -1791,13 +1791,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: VideoQuad FINAL
       objectReference: {fileID: 0}
-    - target: {fileID: 6755796955637778620, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
-      propertyPath: m_positionOffsetData.positionOffset.x
-      value: 0.4171772
-      objectReference: {fileID: 0}
     - target: {fileID: 5062432678510040055, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755796955637778620, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
+      propertyPath: m_positionOffsetData.positionOffset.x
+      value: 0.4171772
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
@@ -9409,6 +9409,10 @@ PrefabInstance:
     - target: {fileID: 3887638208897827230, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
       propertyPath: m_Name
       value: Poem Fade Trigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827230, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
