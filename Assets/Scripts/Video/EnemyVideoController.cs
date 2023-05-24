@@ -18,6 +18,7 @@ public class EnemyVideoController : EyeAnimatorController
     [SerializeField] private float viewDistance = 3f; 
     [SerializeField] private float lookingDuration = .02f;
     [SerializeField] private float fadeDuration = .5f;
+    [SerializeField] private float exposeRate = 0.2f;
 
     [Header("Sounds")]
     [SerializeField] AK.Wwise.Event startDefault;
@@ -267,7 +268,7 @@ public class EnemyVideoController : EyeAnimatorController
             startIntensified.Post(gameObject);
             playingIntensifiedSound = true;
         }
-        Player.GetComponent<PlayerHealth>().IncreaseMeter(1f);
+        Player.GetComponent<PlayerHealth>().IncreaseMeter(exposeRate);
     }
 
     private IEnumerator Looking() //When the eye looks around after it loses you.

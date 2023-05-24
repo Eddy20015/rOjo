@@ -4065,6 +4065,7 @@ MonoBehaviour:
   upGravity: 3
   downGravity: 2.2
   groundedGravity: 50
+  slopeDetect: {fileID: 0}
   anim: {fileID: 1491474051}
   jumpLanding:
     idInternal: 0
@@ -5249,6 +5250,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 838302921029273860, guid: 6193f1e944ce374409efb52b7aee63db, type: 3}
+      propertyPath: m_Name
+      value: killbox
+      objectReference: {fileID: 0}
     - target: {fileID: 838302921714112534, guid: 6193f1e944ce374409efb52b7aee63db, type: 3}
       propertyPath: cam
       value: 
