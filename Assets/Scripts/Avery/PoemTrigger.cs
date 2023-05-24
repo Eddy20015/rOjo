@@ -20,6 +20,7 @@ public class PoemTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Dancer") && !hasBeentriggered)
         {
+            hasBeentriggered = true;
             StartCoroutine(FadeTextToFullAlpha(visibilitySpeedChange, poemText));
         }
     }

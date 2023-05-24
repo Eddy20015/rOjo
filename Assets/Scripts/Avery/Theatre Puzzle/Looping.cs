@@ -26,7 +26,7 @@ public class Looping : MonoBehaviour
 
     IEnumerator JumpscareAndSendBack(GameObject go)
     {
-        if(jumpscare)
+        if (jumpscare)
         {
             //put jumpscare logic here! this is just placeholder code
             jumpScarePlaceholder.SetActive(true);
