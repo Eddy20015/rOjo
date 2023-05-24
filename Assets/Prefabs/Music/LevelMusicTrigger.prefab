@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8475082313657469179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2971448545609933869}
+  - component: {fileID: 7798438828932623264}
+  - component: {fileID: 5040072435693036722}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2971448545609933869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475082313657469179}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.06, y: -1.82, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7798438828932623264
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475082313657469179}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &5040072435693036722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8475082313657469179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
