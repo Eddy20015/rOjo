@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] Transform foot, spiderPlatform;
+    [SerializeField] Transform foot, spiderPlatform, legTop, legBottom, look;
 
-    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset, initialOffset;
+    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset, initialOffset, legContraction;
 
     [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
@@ -65,9 +65,14 @@ public class SpiderLeg : MonoBehaviour
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
                 }
             }
-
-            
         }
+
+        float legDistance = Vector3.Distance(transform.position, foot.transform.position);
+
+        legTop.transform.localRotation = Quaternion.Euler(0, 0, legDistance * legContraction);
+        legBottom.transform.localRotation = Quaternion.Euler(0, 0, -legDistance * legContraction);
+
+        look.transform.LookAt(foot);
     }
 
     void Raycast()
