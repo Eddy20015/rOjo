@@ -6,15 +6,19 @@ public class Spider : MonoBehaviour
 {
     [SerializeField] Transform body, platform;
 
-    [SerializeField] float move, rotate, moveSpeed, rotateSpeed, spiderMoveSpeed, spiderRotationSpeed;
+    [SerializeField] float bodyMoveStrength, bodyRotateStrength, bodyMoveSpeed, bodyRotateSpeed, spiderMoveSpeed, spiderRotateSpeed;
 
-    float moveTime, rotateTime, width, height, circumference, spiderPosition, targetRotation, oldRotation, rotationLerp;
+    float bodyMoveTime, bodyRotateTime, width, height, circumference, spiderPosition, targetRotation, oldRotation, rotationLerp;
 
     Quaternion oldSpiderRotation;
+
+    bool moving;
 
     // Start is called before the first frame update
     void Start()
     {
+        moving = true;
+
         width = platform.transform.localScale.x;
         height = platform.transform.localScale.y;
 
@@ -24,10 +28,15 @@ public class Spider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!moving)
+        {
+            return;
+        }
+
         Rotate();
 
-        moveTime += Time.deltaTime * moveSpeed;
-        rotateTime += Time.deltaTime * rotateSpeed;
+        bodyMoveTime += Time.deltaTime * bodyMoveSpeed;
+        bodyRotateTime += Time.deltaTime * bodyRotateSpeed;
 
         spiderPosition += spiderMoveSpeed * Time.deltaTime;
 
@@ -38,7 +47,7 @@ public class Spider : MonoBehaviour
 
         if (rotationLerp < 1)
         {
-            rotationLerp += spiderRotationSpeed * Time.deltaTime;
+            rotationLerp += spiderRotateSpeed * Time.deltaTime;
         } else
         {
             rotationLerp = 1;
@@ -49,8 +58,13 @@ public class Spider : MonoBehaviour
         transform.SetLocalPositionAndRotation(CalculatePosition(spiderPosition, true),
             Quaternion.Lerp(oldSpiderRotation, Quaternion.Euler(0,0,targetRotation), lerp));
 
-        body.transform.SetLocalPositionAndRotation(move * Mathf.Sin(moveTime) * Vector3.up,
-            Quaternion.Euler(rotate * Mathf.Sin(rotateTime) * Vector3.forward));
+        body.transform.SetLocalPositionAndRotation(bodyMoveStrength * Mathf.Sin(bodyMoveTime) * Vector3.up,
+            Quaternion.Euler(bodyRotateStrength * Mathf.Sin(bodyRotateTime) * Vector3.forward));
+    }
+
+    public void SetMoving(bool b)
+    {
+        moving = b;
     }
 
     void CalculateCircumference()
