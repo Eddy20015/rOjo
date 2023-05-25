@@ -73,6 +73,8 @@ public class SpiderLeg : MonoBehaviour
         legBottom.transform.localRotation = Quaternion.Euler(0, 0, -legDistance * legContraction);
 
         look.transform.LookAt(foot);
+
+        look.transform.localRotation = Quaternion.Euler(look.transform.localEulerAngles.x, look.transform.localEulerAngles.y, 0);
     }
 
     void Raycast()

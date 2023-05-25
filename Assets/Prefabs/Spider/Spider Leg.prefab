@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1442696545701822230}
   m_Layer: 9
-  m_Name: Leg 2
+  m_Name: Leg \Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7294026251726311790}
   m_Layer: 9
-  m_Name: Leg No IK
+  m_Name: Leg Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,8 +583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foot: {fileID: 6621184004460070378}
   spiderPlatform: {fileID: 0}
-  legTop: {fileID: 0}
-  legBottom: {fileID: 0}
+  legTop: {fileID: 7294026251726311790}
+  legBottom: {fileID: 1442696545701822230}
+  look: {fileID: 7589683608424153645}
   angleOffset: 0
   moveSpeed: 1.5
   distance: 0
