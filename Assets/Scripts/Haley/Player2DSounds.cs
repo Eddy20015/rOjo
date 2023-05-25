@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Player2DSounds : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private AK.Wwise.Event jumpLanding;
+    [SerializeField] private AK.Wwise.Event step;
+    void PlayFootsteps()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        step.Post(gameObject);
     }
 }
