@@ -729,18 +729,14 @@
 				</Sound>
 				<Sound Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" ShortID="213434284">
 					<PropertyList>
-						<Property Name="3DSpatialization" Type="int16" Value="2"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>12</Value>
+								<Value>6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
-						<Reference Name="Attenuation">
-							<ObjectRef Name="Beam Attenuation" ID="{31C77CB4-F151-4D18-8A22-D8BF0C7ACF1F}" WorkUnitID="{B3D4B40B-45F9-4CC0-9D34-2A90892BF4EA}"/>
-						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
 						</Reference>
@@ -777,6 +773,11 @@
 									<Modifier Name="" ID="{A1D798D7-9259-4249-B7CF-16A7A5A4CC1F}"/>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -834,6 +835,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -844,7 +850,7 @@
 											<Modifier Name="" ID="{1A7B0C2A-4DAA-4288-8B8B-3BFE263012FD}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -1203,6 +1209,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -1213,7 +1224,7 @@
 											<Modifier Name="" ID="{D69C1763-4B00-4938-BEE8-4508B658549F}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -1550,6 +1561,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -1560,7 +1576,7 @@
 											<Modifier Name="" ID="{75349EFC-2F8A-4934-A030-0CC361576DD2}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -1941,6 +1957,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -1951,7 +1972,7 @@
 											<Modifier Name="" ID="{8531BE8E-D95D-4472-A8CD-76AFD719C060}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -2288,6 +2309,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -2298,7 +2324,7 @@
 											<Modifier Name="" ID="{FE816078-AECF-4AB0-A4D6-987B878F1314}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -2635,6 +2661,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -2645,7 +2676,7 @@
 											<Modifier Name="" ID="{A7890387-2FFC-454D-A72E-40DAC435F02A}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -2982,6 +3013,11 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -2992,7 +3028,7 @@
 											<Modifier Name="" ID="{D30F8D3F-F996-4291-816F-8AA28958B263}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 													<Property Name="Min" Type="Real64" Value="-1"/>
 												</PropertyList>
 											</Modifier>
@@ -3356,7 +3392,7 @@
 														<PointList>
 															<Point>
 																<XPos>0</XPos>
-																<YPos>-200</YPos>
+																<YPos>-15</YPos>
 																<Flags>5</Flags>
 															</Point>
 															<Point>

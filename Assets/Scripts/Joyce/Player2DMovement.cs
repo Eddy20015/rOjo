@@ -32,7 +32,7 @@ public class Player2DMovement : MonoBehaviour
     //[SerializeField] private string jumpSFX = "Jump";
     //[SerializeField] private string walkSFX = "Walk";
     [SerializeField] private AK.Wwise.Event jumpLanding;
-    [SerializeField] private AK.Wwise.Event step;
+    /*[SerializeField] private AK.Wwise.Event step;*/
     [SerializeField] private float stepFrequencey;
     private const float airTimeLimit = 0.5f;
     private float airTime;
@@ -129,7 +129,7 @@ public class Player2DMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isJumping && xtrans != 0 && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
+        /*if (!isJumping && xtrans != 0 && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
             if (walkTime % stepFrequencey == 0) {
                 step.Post(gameObject);
@@ -137,7 +137,7 @@ public class Player2DMovement : MonoBehaviour
                 //audiomanager.instance.playoneshot(walksfx);
             }
             walkTime++;
-        }
+        }*/
         transform.Translate(xtrans * Time.fixedDeltaTime, 0, 0);
         Physics2D.IgnoreLayerCollision(groundLayerInt, playerLayerInt, (myRigidbody.velocity.y > jumpBoundary));
     }

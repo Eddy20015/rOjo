@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6EE6E993-A2F0-5EEB-DEB2-64D3AF6C193B}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1BC04CA0-8542-13D7-2BC0-6EADADB2CDD4}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -49,7 +49,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{D782EFD0-41AC-D2C5-189C-BC0445642838}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{FAA5BC4B-1CE1-A7A4-C9FC-62A332512CE2}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -440,49 +440,12 @@
 						<MediaRef Id="726649052"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3227116378" Name="Play_EyeBeam_Default" MaxAttenuation="15" DurationType="Infinite">
+				<Event Id="3227116378" Name="Play_EyeBeam_Default" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24771127"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2379313215" Name="Play_EyeBeam_Intensified" DurationType="Infinite">
-					<MediaRefs>
-						<MediaRef Id="37321306"/>
-						<MediaRef Id="101637563"/>
-						<MediaRef Id="119134536"/>
-						<MediaRef Id="188501217"/>
-						<MediaRef Id="215979946"/>
-						<MediaRef Id="234919899"/>
-						<MediaRef Id="293235742"/>
-						<MediaRef Id="430397931"/>
-						<MediaRef Id="560556572"/>
-						<MediaRef Id="600366808"/>
-						<MediaRef Id="627323670"/>
-						<MediaRef Id="627698659"/>
-						<MediaRef Id="685135932"/>
-						<MediaRef Id="706803607"/>
-						<MediaRef Id="709093758"/>
-						<MediaRef Id="720207293"/>
-						<MediaRef Id="728844885"/>
-						<MediaRef Id="748295014"/>
-						<MediaRef Id="761734425"/>
-						<MediaRef Id="769564896"/>
-						<MediaRef Id="797256899"/>
-						<MediaRef Id="800309362"/>
-						<MediaRef Id="804560681"/>
-						<MediaRef Id="805324008"/>
-						<MediaRef Id="852492158"/>
-						<MediaRef Id="861748742"/>
-						<MediaRef Id="875559642"/>
-						<MediaRef Id="901624723"/>
-						<MediaRef Id="943376979"/>
-						<MediaRef Id="985543759"/>
-						<MediaRef Id="987764891"/>
-						<MediaRef Id="1011580158"/>
-						<MediaRef Id="1037799982"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="2142483231" Name="Play_EyeBeam_Intensified2" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="37321306"/>
 						<MediaRef Id="101637563"/>
@@ -616,7 +579,6 @@
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2047366256" Name="Stop_EyeBeam_Default" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3359382657" Name="Stop_EyeBeam_Intensified" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3080773409" Name="Stop_EyeBeam_Intensified2" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2289315611" Name="Stop_Horror_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -644,5 +606,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{070EEBED-29D2-2B16-F36D-D71217F806E7}</FileHash>
+	<FileHash>{CB9F2420-4994-2FD1-60C1-DC59A5E71CF8}</FileHash>
 </SoundBanksInfo>
