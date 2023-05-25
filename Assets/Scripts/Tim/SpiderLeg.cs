@@ -69,12 +69,14 @@ public class SpiderLeg : MonoBehaviour
 
         float legDistance = Vector3.Distance(transform.position, foot.transform.position);
 
+        Vector3 direction = foot.transform.position - transform.position;
+
         legTop.transform.localRotation = Quaternion.Euler(0, 0, legDistance * legContraction);
         legBottom.transform.localRotation = Quaternion.Euler(0, 0, -legDistance * legContraction);
 
-        look.transform.LookAt(foot);
+        //look.transform.LookAt(foot);
 
-        look.transform.localRotation = Quaternion.Euler(look.transform.localEulerAngles.x, look.transform.localEulerAngles.y, 0);
+        //look.transform.localRotation = Quaternion.Euler(look.transform.localEulerAngles.x, look.transform.localEulerAngles.y, 0);
     }
 
     void Raycast()
