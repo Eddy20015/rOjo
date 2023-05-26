@@ -6,27 +6,21 @@ using UnityEngine.Video;
 public class SpiderEye : MonoBehaviour
 {
     [SerializeField] Spider spider;
+    [SerializeField] float exposeRate = 0.1f;
+    bool isSeeingPlayer = false;
+    GameObject Player;
+
+    private void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag("Dancer");
+    }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        return;
-
-        RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, transform.right, 10, ~LayerMask.GetMask("Default"));
-
-        if (raycastHit2D)
+        if (isSeeingPlayer)
         {
-            if (raycastHit2D.collider.CompareTag("Dancer"))
-            {
-                spider.SetMoving(false);
-
-            } else
-            {
-                spider.SetMoving(true);
-            }
-        } else
-        {
-            spider.SetMoving(true);
+            Player.GetComponent<PlayerHealth>().IncreaseMeter(exposeRate);
         }
     }
 
@@ -34,6 +28,8 @@ public class SpiderEye : MonoBehaviour
     {
         if (collision.CompareTag("Dancer"))
         {
+            StopCoroutine(PlayerRecovers());
+            isSeeingPlayer = true;
             spider.SetMoving(false);
         }
     }
@@ -43,6 +39,14 @@ public class SpiderEye : MonoBehaviour
         if (collision.CompareTag("Dancer"))
         {
             spider.SetMoving(true);
+            isSeeingPlayer = false;
+            StartCoroutine(PlayerRecovers());
         }
+    }
+
+    public IEnumerator PlayerRecovers()
+    {
+        yield return new WaitForSeconds(Player.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
+        Player.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
     }
 }
