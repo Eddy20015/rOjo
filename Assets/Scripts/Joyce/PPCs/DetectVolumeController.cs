@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Rendering.Universal;
 
 public class DetectVolumeController : PostProcessController
 {
     [Header("Exposure Reference")]
-    [SerializeField] private Image exposure;
+    [SerializeField] private PlayerHealth exposure;
     private bool refExposure = true;
 
     private Vignette vignetteS = null;
@@ -83,7 +82,7 @@ public class DetectVolumeController : PostProcessController
     {
         if (refExposure)
         {
-            LerpEffects(exposure.fillAmount);
+            LerpEffects(exposure.GetExposure());
         }
         else
         {
