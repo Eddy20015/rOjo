@@ -24,7 +24,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Chroma
-  m_Shader: {fileID: 4800000, guid: 3ae55dbf410098e4186d8837a774441b, type: 3}
+  m_Shader: {fileID: 4800000, guid: 38149226d4d1e4c4b8abb63f5fd21e02, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _DISABLE_SSR_TRANSPARENT
@@ -50,10 +50,17 @@ Material:
     m_Ints: []
     m_Floats:
     - _Border: 1000
+    - _ColorCutoff: 0.5
+    - _ColorFeathering: 0.5
+    - _Despill: 1
+    - _DespillLuminanceAdd: 0.278
+    - _MaskFeathering: 1
     - _Near: 0.01
     - _Sensitivity: 0.5
+    - _Sharpening: 0.5
     - _Smooth: 0.5
     m_Colors:
     - _KeyColor: {r: 0, g: 1, b: 0, a: 1}
     - _MaskCol: {r: 1, g: 0, b: 0, a: 1}
+    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
