@@ -151,7 +151,8 @@ public class LevelMusicTrigger : MonoBehaviour
                 levelMusicSystem.WhistleBreathing.Post(levelMusicSystem.gameObject);
                 AkSoundEngine.SetRTPCValue("WhistleBreathingVol", WhistleBreathingVol);
             }
-
+            
+            gameObject.SetActive(false);
 
         }
     }
