@@ -6,13 +6,15 @@ using UnityEngine.Video;
 public class SpiderEye : MonoBehaviour
 {
     [SerializeField] Spider spider;
-    [SerializeField] float exposeRate = 0.1f;
+    [SerializeField] float exposeRate = 0.3f;
     bool isSeeingPlayer = false;
     GameObject Player;
+    SpriteRenderer rend;
 
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Dancer");
+        rend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -28,6 +30,8 @@ public class SpiderEye : MonoBehaviour
     {
         if (collision.CompareTag("Dancer"))
         {
+            StopCoroutine("WaitToDeactivateBeam");
+            rend.enabled = true;
             StopCoroutine(PlayerRecovers());
             isSeeingPlayer = true;
             spider.SetMoving(false);
@@ -38,6 +42,7 @@ public class SpiderEye : MonoBehaviour
     {
         if (collision.CompareTag("Dancer"))
         {
+            StartCoroutine(WaitToDeactivateBeam(3f));
             spider.SetMoving(true);
             isSeeingPlayer = false;
             StartCoroutine(PlayerRecovers());
@@ -48,5 +53,12 @@ public class SpiderEye : MonoBehaviour
     {
         yield return new WaitForSeconds(Player.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
         Player.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
+    }
+
+    public IEnumerator WaitToDeactivateBeam(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        rend.enabled = false;
     }
 }
