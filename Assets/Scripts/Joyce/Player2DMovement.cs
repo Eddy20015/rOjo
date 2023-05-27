@@ -97,17 +97,30 @@ public class Player2DMovement : MonoBehaviour
         {
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             slopeDetect.enabled = false;
+            anim.SetBool("Jumping", true);
+            anim.SetFloat("JumpState", 0f);
             //isJumping = true;
 
             //AudioManager.instance.Stop(jumpSFX);
             //AudioManager.instance.PlayOneShot(jumpSFX);
         }
-        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary && airTime > airTimeLimit)
+        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
-            print("landed");
-            jumpLanding.Post(gameObject);
-            slopeDetect.enabled = true;
-            //isJumping = false;
+            anim.SetFloat("JumpState", Mathf.Lerp(anim.GetFloat("JumpState"), 1f, Time.deltaTime * 20f));
+            anim.SetBool("Jumping", false);
+            if (airTime > airTimeLimit)
+            {
+                print("landed");
+                jumpLanding.Post(gameObject);
+                slopeDetect.enabled = true;
+                //isJumping = false;
+            }
+        }
+
+        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary && airTime > .2f)
+        {
+            anim.SetBool("Jumping", true);
+            anim.SetFloat("JumpState", Mathf.Lerp(anim.GetFloat("JumpState"), 0.5f, Time.deltaTime * 5f));
         }
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
@@ -172,5 +185,4 @@ public class Player2DMovement : MonoBehaviour
     {
         isMovingObject = b;
     }
-
 }
