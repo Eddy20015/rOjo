@@ -98,7 +98,7 @@ public class Player2DMovement : MonoBehaviour
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             slopeDetect.enabled = false;
             anim.SetBool("Jumping", true);
-            anim.SetFloat("JumpState", 0f);
+            anim.SetFloat("JumpState", 0f); //initial jump animation
             //isJumping = true;
 
             //AudioManager.instance.Stop(jumpSFX);
@@ -106,7 +106,7 @@ public class Player2DMovement : MonoBehaviour
         }
         if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
-            anim.SetFloat("JumpState", Mathf.Lerp(anim.GetFloat("JumpState"), 1f, Time.deltaTime * 20f));
+            anim.SetFloat("JumpState", 1f); //landing animation
             anim.SetBool("Jumping", false);
             if (airTime > airTimeLimit)
             {
@@ -120,7 +120,7 @@ public class Player2DMovement : MonoBehaviour
         if (isJumping && Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary && airTime > .2f)
         {
             anim.SetBool("Jumping", true);
-            anim.SetFloat("JumpState", Mathf.Lerp(anim.GetFloat("JumpState"), 0.5f, Time.deltaTime * 5f));
+            anim.SetFloat("JumpState", Mathf.Lerp(anim.GetFloat("JumpState"), 0.5f, Time.deltaTime * 5f)); //midair animation
         }
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
