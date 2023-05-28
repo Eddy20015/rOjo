@@ -26,6 +26,7 @@ public class Player2DMovement : MonoBehaviour
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
+    //[SerializeField] private AnimationClip riseClip;
     private Vector3 originalScale; // faces right
 
     [Header("Audio")]
@@ -95,10 +96,9 @@ public class Player2DMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary) // only allows jumping if not already up
         {
+            //StartCoroutine(StartRise());
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             slopeDetect.enabled = false;
-            anim.SetBool("Jumping", true);
-            anim.SetFloat("JumpState", 0f); //initial jump animation
             //isJumping = true;
 
             //AudioManager.instance.Stop(jumpSFX);
@@ -106,7 +106,6 @@ public class Player2DMovement : MonoBehaviour
         }
         if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
-            anim.SetFloat("JumpState", 1f); //landing animation
             anim.SetBool("Jumping", false);
             if (airTime > airTimeLimit)
             {
@@ -115,12 +114,6 @@ public class Player2DMovement : MonoBehaviour
                 slopeDetect.enabled = true;
                 //isJumping = false;
             }
-        }
-
-        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary && airTime > .2f)
-        {
-            anim.SetBool("Jumping", true);
-            anim.SetFloat("JumpState", Mathf.Lerp(anim.GetFloat("JumpState"), 0.5f, Time.deltaTime * 5f)); //midair animation
         }
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
@@ -137,7 +130,7 @@ public class Player2DMovement : MonoBehaviour
 
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
-        //anim.SetBool("Jump", isJumping);
+        anim.SetBool("Jumping", isJumping);
     }
 
     private void FixedUpdate()
@@ -158,6 +151,17 @@ public class Player2DMovement : MonoBehaviour
     {
         transform.localScale = originalScale;
     }
+
+    //private IEnumerator StartRise()
+    //{
+    //    anim.SetTrigger("Rise");
+    //    anim.speed = 2;
+    //    yield return new WaitForSeconds(riseClip.length / anim.speed);
+    //    anim.speed = 1;
+    //    myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+    //    slopeDetect.enabled = false;
+
+    //}
     
     private void FlipLeft()
     {
