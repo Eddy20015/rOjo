@@ -2993,8 +2993,9 @@ MonoBehaviour:
   - {fileID: 838302920496408745}
   - {fileID: 838302920502916997}
   - {fileID: 838302921450311393}
-  door: {fileID: 4687972863958211700}
-  loopActivator: {fileID: 412857876772582904}
+  objectsToDisableOnSolve:
+  - {fileID: 4687972863958211700}
+  - {fileID: 412857876772582904}
 --- !u!1 &838302922288041561
 GameObject:
   m_ObjectHideFlags: 0
