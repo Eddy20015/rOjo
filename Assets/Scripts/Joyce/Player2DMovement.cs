@@ -26,13 +26,14 @@ public class Player2DMovement : MonoBehaviour
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
+    //[SerializeField] private AnimationClip riseClip;
     private Vector3 originalScale; // faces right
 
     [Header("Audio")]
     //[SerializeField] private string jumpSFX = "Jump";
     //[SerializeField] private string walkSFX = "Walk";
     [SerializeField] private AK.Wwise.Event jumpLanding;
-    [SerializeField] private AK.Wwise.Event step;
+    /*[SerializeField] private AK.Wwise.Event step;*/
     [SerializeField] private float stepFrequencey;
     private const float airTimeLimit = 0.5f;
     private float airTime;
@@ -95,6 +96,7 @@ public class Player2DMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary) // only allows jumping if not already up
         {
+            //StartCoroutine(StartRise());
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             slopeDetect.enabled = false;
             //isJumping = true;
@@ -102,12 +104,16 @@ public class Player2DMovement : MonoBehaviour
             //AudioManager.instance.Stop(jumpSFX);
             //AudioManager.instance.PlayOneShot(jumpSFX);
         }
-        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary && airTime > airTimeLimit)
+        if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
-            print("landed");
-            jumpLanding.Post(gameObject);
-            slopeDetect.enabled = true;
-            //isJumping = false;
+            anim.SetBool("Jumping", false);
+            if (airTime > airTimeLimit)
+            {
+                print("landed");
+                jumpLanding.Post(gameObject);
+                slopeDetect.enabled = true;
+                //isJumping = false;
+            }
         }
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
@@ -124,12 +130,12 @@ public class Player2DMovement : MonoBehaviour
 
         //anim.SetFloat("Speed", xtrans);
         //anim.SetBool("FaceRight", faceRight);
-        //anim.SetBool("Jump", isJumping);
+        anim.SetBool("Jumping", isJumping);
     }
 
     private void FixedUpdate()
     {
-        if (!isJumping && xtrans != 0 && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
+        /*if (!isJumping && xtrans != 0 && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
             if (walkTime % stepFrequencey == 0) {
                 step.Post(gameObject);
@@ -137,7 +143,7 @@ public class Player2DMovement : MonoBehaviour
                 //audiomanager.instance.playoneshot(walksfx);
             }
             walkTime++;
-        }
+        }*/
         transform.Translate(xtrans * Time.fixedDeltaTime, 0, 0);
         Physics2D.IgnoreLayerCollision(groundLayerInt, playerLayerInt, (myRigidbody.velocity.y > jumpBoundary));
     }
@@ -145,6 +151,17 @@ public class Player2DMovement : MonoBehaviour
     {
         transform.localScale = originalScale;
     }
+
+    //private IEnumerator StartRise()
+    //{
+    //    anim.SetTrigger("Rise");
+    //    anim.speed = 2;
+    //    yield return new WaitForSeconds(riseClip.length / anim.speed);
+    //    anim.speed = 1;
+    //    myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+    //    slopeDetect.enabled = false;
+
+    //}
     
     private void FlipLeft()
     {
@@ -172,5 +189,4 @@ public class Player2DMovement : MonoBehaviour
     {
         isMovingObject = b;
     }
-
 }

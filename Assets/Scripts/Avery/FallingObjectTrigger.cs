@@ -17,10 +17,14 @@ public class FallingObjectTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (GameObject obj in objects)
+        if (collision.gameObject.CompareTag("Dancer"))
         {
-            Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
-            rb.gravityScale = 1f;
+            foreach (GameObject obj in objects)
+            {
+                Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+                rb.gravityScale = 1f;
+            }
         }
+        
     }
 }
