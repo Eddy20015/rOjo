@@ -13,6 +13,7 @@ public class CreditsText : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameStateManager.Cinematics();
         numOfTexts = text.Count;
         StartCoroutine(MoveTextAcrossScreen(text[currentIndex]));
     }
@@ -28,5 +29,7 @@ public class CreditsText : MonoBehaviour
 
         if (currentIndex < numOfTexts)
             StartCoroutine(MoveTextAcrossScreen(text[currentIndex]));
+        else
+            GameStateManager.MainMenu();
     }
 }
