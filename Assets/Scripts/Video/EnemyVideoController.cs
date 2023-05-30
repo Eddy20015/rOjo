@@ -211,8 +211,8 @@ public class EnemyVideoController : EyeAnimatorController
         float currentTime = GetTime(); //Gets the current frame of the "eye"
         float totalTime = GetTotalTime(); //Gets the total amt of frames of the "eye" video.
         float timePct2Angle = currentTime/totalTime; //Gets the percent of the current frame out of the whole video.
-        Debug.Log("Current Time: " + currentTime);
-        Debug.Log("Total Time: " +  totalTime);
+        //Debug.Log("Current Time: " + currentTime);
+        //Debug.Log("Total Time: " +  totalTime);
         eyeAngle = (timePct2Angle * 360f); 
         eyeFieldOfView.SetAimDirection(eyeAngle); 
     }

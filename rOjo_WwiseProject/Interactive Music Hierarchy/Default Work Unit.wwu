@@ -2129,7 +2129,7 @@
 							<ChildrenList>
 								<MusicSegment Name="ShepardsTone" ID="{B56FA5EF-838D-4A45-9A76-CF89EDDFDFC7}" ShortID="717300001">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="188795.986394558"/>
+										<Property Name="EndPosition" Type="Real64" Value="218678.692594771"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -2175,10 +2175,68 @@
 																				<MusicClip Name="ShepardsTone" ID="{53DBF852-7344-4DA5-9EA3-18EF127D1478}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="188795.986394558"/>
-																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
 																					<AudioSourceRef Name="ShepardsTone" ID="{75B6EFF6-546C-49D3-9973-02B382DD5C2B}"/>
+																					<PropertyCurveList>
+																						<PropertyCurve PropertyName="Highpass">
+																							<Curve Name="" ID="{D4947DA2-F26F-4E60-B4B2-4BED5351CB50}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>188.795986394558</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Lowpass">
+																							<Curve Name="" ID="{FC5521FC-4A20-49A6-A678-628E55BECFF0}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="1"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>188.795986394558</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																						<PropertyCurve PropertyName="Volume">
+																							<Curve Name="" ID="{5EA17A86-36AC-44B3-8A27-CAA46CEA3046}">
+																								<PropertyList>
+																									<Property Name="Flags" Type="int32" Value="3"/>
+																								</PropertyList>
+																								<PointList>
+																									<Point>
+																										<XPos>0</XPos>
+																										<YPos>0</YPos>
+																										<Flags>5</Flags>
+																									</Point>
+																									<Point>
+																										<XPos>188.795986394558</XPos>
+																										<YPos>0</YPos>
+																										<Flags>37</Flags>
+																									</Point>
+																								</PointList>
+																							</Curve>
+																						</PropertyCurve>
+																					</PropertyCurveList>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -2230,6 +2288,14 @@
 									<PropertyList>
 										<Property Name="LoopCount" Type="int16" Value="0"/>
 									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{97B8FD0F-002F-4004-96CA-C7B02E0CC3E0}" ShortID="120685366">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="ShepardsTone" ID="{B56FA5EF-838D-4A45-9A76-CF89EDDFDFC7}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
 								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
