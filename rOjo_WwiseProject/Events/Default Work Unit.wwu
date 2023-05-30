@@ -663,6 +663,17 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Spider_Steps" ID="{5DF8CC64-1007-44EF-A031-D0BC377D4FA0}">
+					<ChildrenList>
+						<Action Name="" ID="{BDD22DF2-9D17-4484-B5C4-0FDEE754E4D8}" ShortID="790538735">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spider Steps" ID="{C8765093-D9A3-4BB4-A306-48D36608F349}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -167,10 +167,6 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 02b4184117b7ec742a7535391ca86644, type: 2}
-  step:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 432f8db205d329e4a956d839f62ae137, type: 2}
   stepFrequencey: 20
 --- !u!114 &3764266573590916467
 MonoBehaviour:
@@ -282,6 +278,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
+--- !u!1 &4477519357236371915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1114738897305909939, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
+  m_PrefabInstance: {fileID: 3556437701307194232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2935604253702361257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4477519357236371915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c1684f75fdd33429cd6bbf31fa0f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpLanding:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 02b4184117b7ec742a7535391ca86644, type: 2}
+  step:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 351c3be2766ef4740ae7340992d63cc0, type: 2}
 --- !u!95 &4477519357236371916 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1114738897305909940, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
