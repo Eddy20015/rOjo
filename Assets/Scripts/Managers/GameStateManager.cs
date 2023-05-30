@@ -92,6 +92,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.PLAYING;
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // sets GameState to PAUSE
@@ -99,6 +101,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.PAUSED;
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to MAINMENU, loads main menu scene
@@ -107,6 +111,8 @@ public class GameStateManager : MonoBehaviour
         GameState = GAMESTATE.MAINMENU;
         SceneManager.LoadScene(MainMenuName);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to GAMEOVER
@@ -114,6 +120,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.GAMEOVER;
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to CINEMATIC
@@ -121,6 +129,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.CINEMATIC;
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // sets GameState to WIN
@@ -128,5 +138,7 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.WIN;
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
