@@ -23,8 +23,7 @@ public class Player3DMovement : MonoBehaviour
     [SerializeField] private float jumpForce;
     [SerializeField] private float airDrag = 2f;
 
-    [Header("Camera")]
-    [SerializeField] Camera cam;
+    [Header("Looking")]
     [SerializeField] private float lookSpeedY = 2f;
     [SerializeField] private float lookSpeedX = 2f;
     [SerializeField] private float minRotationValue = -25f;
@@ -50,6 +49,7 @@ public class Player3DMovement : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         if (anim != null)
             anim.SetBool("isMoving", true);
+
     }
 
     private void Update()
@@ -80,17 +80,14 @@ public class Player3DMovement : MonoBehaviour
         rb.drag = isGrounded ? groundDrag : airDrag;
 
         // Look around
-        lookY = Input.GetAxis("Mouse Y") * lookSpeedY;
+        lookY += Input.GetAxis("Mouse Y") * lookSpeedY;
         lookX += Input.GetAxis("Mouse X") * lookSpeedX;
 
         lookX = Mathf.Clamp(lookX, minRotationValue, maxRotationValue);
         lookY = Mathf.Clamp(lookY, minRotationValue, maxRotationValue);
 
         // Rotate the player object left and right
-        transform.rotation = Quaternion.Euler(0f, lookX + 180, 0f);
-
-        // Rotate the camera vertically
-        cam.transform.rotation = Quaternion.Euler(-lookY, 0f, 0f);
+        transform.rotation = Quaternion.Euler(-lookY, lookX + 180, 0f);
     }
 
     private void FixedUpdate()
