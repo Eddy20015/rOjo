@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player3DMovement : MonoBehaviour
 {
@@ -21,7 +22,16 @@ public class Player3DMovement : MonoBehaviour
     [SerializeField] private float airSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float airDrag = 2f;
-    
+
+    [Header("Camera")]
+    [SerializeField] Camera cam;
+    [SerializeField] private float lookSpeedY = 2f;
+    [SerializeField] private float lookSpeedX = 2f;
+    [SerializeField] private float minRotationValue = -25f;
+    [SerializeField] private float maxRotationValue = 25f;
+
+    private float lookX = 0f, lookY = 0f;
+
 
     private float horizontalMovement;
     private Vector3 moveDirection;
@@ -69,6 +79,18 @@ public class Player3DMovement : MonoBehaviour
         // Changes drag as needed
         rb.drag = isGrounded ? groundDrag : airDrag;
 
+        // Look around
+        lookY = Input.GetAxis("Mouse Y") * lookSpeedY;
+        lookX += Input.GetAxis("Mouse X") * lookSpeedX;
+
+        lookX = Mathf.Clamp(lookX, minRotationValue, maxRotationValue);
+        lookY = Mathf.Clamp(lookY, minRotationValue, maxRotationValue);
+
+        // Rotate the player object left and right
+        transform.rotation = Quaternion.Euler(0f, lookX + 180, 0f);
+
+        // Rotate the camera vertically
+        cam.transform.rotation = Quaternion.Euler(-lookY, 0f, 0f);
     }
 
     private void FixedUpdate()
