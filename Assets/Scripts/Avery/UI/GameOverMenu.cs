@@ -15,12 +15,14 @@ public class GameOverMenu : MonoBehaviour
     {
         DisableAllChildren();
         StopAll.Post(gameObject);
+        PlayClickSound();
         GameStateManager.Restart();
     }
 
     public void OnClickMainMenu()
     {
         StopAll.Post(gameObject);
+        PlayClickSound();
         GameStateManager.QuitToMainMenu();
     }
 
