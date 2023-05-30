@@ -24,7 +24,7 @@ public class SpiderLeg : MonoBehaviour
 
     Vector3 footPosition;
 
-    float currentFootPosition;
+    float currentFootPosition, scale;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,8 @@ public class SpiderLeg : MonoBehaviour
         contactFilter2D = new();
 
         contactFilter2D.useTriggers = false;
+
+        scale = spider.transform.lossyScale.x;
     }
 
     // Update is called once per frame
@@ -52,14 +54,14 @@ public class SpiderLeg : MonoBehaviour
 
             if (!backLeg)
             {
-                if (Vector2.Distance(footPosition, newPosition) > distance)
+                if (Vector2.Distance(footPosition, newPosition) > (distance * scale))
                 {
                     SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
                 }
             } else
             {
-                if (Vector2.Distance(transform.position, foot.transform.position) > 3.75f)
+                if (Vector2.Distance(transform.position, foot.transform.position) > (3.75f * scale))
                 {
                     SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
@@ -67,7 +69,7 @@ public class SpiderLeg : MonoBehaviour
             }
         }
 
-        float legDistance = 4 - Vector3.Distance(transform.position, foot.transform.position);
+        float legDistance = (4 - Vector3.Distance(transform.position, foot.transform.position)) * scale;
 
         Vector3 direction = foot.transform.position - transform.position;
 
