@@ -15,6 +15,9 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string MainLevelNameSetter;
     private static string MainLevelName;
 
+    public delegate void OnPlay();
+    public static event OnPlay Restarted;
+
     // current GameState options
     public enum GAMESTATE
     {
@@ -55,7 +58,9 @@ public class GameStateManager : MonoBehaviour
     // loads into the beginning of the game
     public static void NewGame()
     {
-        SceneManager.LoadScene(MainLevelName);
+        EnemyVideoController.numDefaultSound = 0;
+        EnemyVideoController.numIntensifiedSound = 0;
+        SceneManager.LoadScene(MainLevelName); // replace with async loading later
         Play();
     }
 
@@ -80,9 +85,8 @@ public class GameStateManager : MonoBehaviour
     //GAME OVER MENU OPTIONS
     public static void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Checkpoint.LoadCheckpoint();
-        Play();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Instance.StartCoroutine(ReloadSceneAsync(SceneManager.GetActiveScene().name));
     }
 
 
@@ -133,6 +137,12 @@ public class GameStateManager : MonoBehaviour
         Cursor.visible = false;
     }
 
+    public static void CursorOn()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     // sets GameState to WIN
     public static void Win()
     {
@@ -141,4 +151,24 @@ public class GameStateManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+
+    public static IEnumerator ReloadSceneAsync(string scene)
+    {
+        EnemyVideoController.numDefaultSound = 0;
+        EnemyVideoController.numIntensifiedSound = 0;
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+        while (!operation.isDone)
+        {
+            yield return null;
+        }
+        Checkpoint.LoadCheckpoint();
+        Play();
+        if (Restarted != null)
+            Restarted.Invoke();
+    }
+
+    //public IEnumerator LoadLevelAsync()
+    //{
+
+    //}
 }
