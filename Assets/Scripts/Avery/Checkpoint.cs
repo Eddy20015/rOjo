@@ -14,7 +14,7 @@ public class Checkpoint : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Dancer"))
         {
             checkpointPosition = collision.gameObject.transform.position;
             hasReachedAtLeastOneCheckpoint = true;
@@ -38,6 +38,6 @@ public class Checkpoint : MonoBehaviour
         Vector3 checkpointPosition = new Vector3(checkpointX, checkpointY, checkpointZ);
         
         if (hasReachedAtLeastOneCheckpoint)
-            GameObject.FindGameObjectWithTag("Player").transform.position = checkpointPosition;
+            GameObject.FindGameObjectWithTag("Dancer").transform.position = checkpointPosition;
     }
 }
