@@ -225,10 +225,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Step1" ID="{6ED894A6-7F55-4020-B899-73FC6DBE5804}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0207945703215669"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00463397320870601"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.00408087538178951"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.12976730587248"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0215713981686935"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Step1.wav</AudioFile>
@@ -309,10 +309,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Step4" ID="{DA625D9A-817E-44EB-8921-BAAC5D96E25D}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.0365715892656275"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00400347222222222"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 												<Property Name="TrimBegin" Type="Real64" Value="0.00317764337699156"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.0671362508257895"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0183466207349081"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Step4.wav</AudioFile>
@@ -371,10 +371,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Step6" ID="{D83E46B0-2060-4069-B67A-097A34EA21E3}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.010751782033471"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00226562053467863"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.00698044245744734"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.0779337454048826"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00475898576453396"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0170211614173228"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Step6.wav</AudioFile>
@@ -399,9 +399,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Step7" ID="{B5B81C7F-FEE1-4629-B9A9-8201F6B07F10}">
 											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00300546806649169"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.00439655287037612"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.0208380315636333"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0053834208223972"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0168747769704575"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Step7.wav</AudioFile>
@@ -426,10 +427,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Step8" ID="{E4150889-C94D-436D-AC36-3FD9058711FC}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.00691974155043293"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0023500656167979"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.0120326616960306"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.0876258180774578"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.00364665354330709"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0153699693788277"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Step8.wav</AudioFile>
@@ -454,10 +455,10 @@
 									<ChildrenList>
 										<AudioFileSource Name="Step9" ID="{E9F6D929-DA70-459E-A170-06309BC18499}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.00349748802305277"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.00557819668447009"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.00630352831685703"/>
-												<Property Name="TrimEnd" Type="Real64" Value="0.102577089051868"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.000594488188976379"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.0160511811023622"/>
 											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>Step9.wav</AudioFile>
@@ -836,7 +837,7 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>6</Value>
+								<Value>9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -880,7 +881,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>5</Value>
+								<Value>10</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
