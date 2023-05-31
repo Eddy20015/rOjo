@@ -33,7 +33,7 @@ public class Player3DMovement : MonoBehaviour
 
 
     private float horizontalMovement;
-    private Vector3 moveDirection;
+    private Vector3 moveDirection, initialForwardDirection;
 
     private bool isGrounded;
 
@@ -50,6 +50,7 @@ public class Player3DMovement : MonoBehaviour
         if (anim != null)
             anim.SetBool("isMoving", true);
 
+        initialForwardDirection = transform.forward;
     }
 
     private void Update()
@@ -64,9 +65,9 @@ public class Player3DMovement : MonoBehaviour
         horizontalMovement = Input.GetAxisRaw("Horizontal");
 
         if(controlMovement)
-            moveDirection = transform.forward * Input.GetAxisRaw("Vertical") + transform.right * horizontalMovement;
+            moveDirection = initialForwardDirection * Input.GetAxisRaw("Vertical") + transform.right * horizontalMovement;
         else
-            moveDirection = transform.forward * Forwardspeed + transform.right * horizontalMovement;
+            moveDirection = initialForwardDirection * Forwardspeed + transform.right * horizontalMovement;
 
 
         // Lets the player jump
