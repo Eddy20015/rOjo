@@ -16,6 +16,9 @@ public class Gravity_Tilt : MonoBehaviour
     [SerializeField]
     private int RotationSpeed;
 
+    [SerializeField]
+    private bool rotation_bool;
+
     private bool camera_bool;
 
     private bool camera_back;
@@ -42,7 +45,7 @@ public class Gravity_Tilt : MonoBehaviour
                 Physics2D.gravity = new Vector2(2 + spd_time, 0f);
             }
 
-            if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
+            if ((camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0) && rotation_bool)
             {
                 float y = camera.transform.rotation.eulerAngles.z;
                 y = y - 90;
@@ -61,7 +64,7 @@ public class Gravity_Tilt : MonoBehaviour
             camera.transform.Rotate(Vector3.back, RotationSpeed * Time.deltaTime);
             player.transform.Rotate(Vector3.back, RotationSpeed * Time.deltaTime);
 
-            if (camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0)
+            if ((camera.transform.localEulerAngles.z > 90 || camera.transform.localEulerAngles.z < 0) && rotation_bool)
             {
                 float y = camera.transform.rotation.eulerAngles.z;
                 camera.transform.Rotate(0, 0, -y);
