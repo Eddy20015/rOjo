@@ -963,7 +963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207069407558147614, guid: 37c356c6c36f2ed46a1276fa508eb3db, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10.3231535
+      value: 6.5810103
       objectReference: {fileID: 0}
     - target: {fileID: 4207069407558147614, guid: 37c356c6c36f2ed46a1276fa508eb3db, type: 3}
       propertyPath: m_LocalScale.y
@@ -971,7 +971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207069407558147614, guid: 37c356c6c36f2ed46a1276fa508eb3db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.3
+      value: -18.203
       objectReference: {fileID: 0}
     - target: {fileID: 4207069407558147614, guid: 37c356c6c36f2ed46a1276fa508eb3db, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2180,7 +2180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154702068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -131.2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6928,7 +6928,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: fc9da636b75602f4ca137f1502ff95b3, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7929,6 +7929,18 @@ PrefabInstance:
     - target: {fileID: 1766264954568927086, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
       propertyPath: m_Name
       value: rojoForeground (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8623477034145026158, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
       propertyPath: m_RootOrder
@@ -9136,6 +9148,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1651607813}
     m_Modifications:
+    - target: {fileID: 1347065397183887088, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8823273980599502448, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10411,6 +10427,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: rojoForeground
       objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8623477034145026158, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -10620,7 +10648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 226
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12340,6 +12368,10 @@ PrefabInstance:
     - target: {fileID: 172908247509058382, guid: 0d0a811c51816bf43a4e8427e7a10e27, type: 3}
       propertyPath: m_Name
       value: CamSizeTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 172908247509058382, guid: 0d0a811c51816bf43a4e8427e7a10e27, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d0a811c51816bf43a4e8427e7a10e27, type: 3}
@@ -15715,17 +15747,14 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 56, y: 9}
-      - {x: 44.849575, y: 17.838295}
-      - {x: 33.64579, y: 19.645845}
-      - {x: 21.037113, y: 20.09729}
-      - {x: 14.589784, y: 20.303333}
-      - {x: 10.939443, y: 20.027645}
       - {x: -9, y: 9}
       - {x: -9, y: -5}
-      - {x: 9.759404, y: -125.13565}
-      - {x: 11.010759, y: -125.36087}
-      - {x: 12.70471, y: -125.66574}
-      - {x: 15.354773, y: -125.30141}
+      - {x: 0.32581472, y: -5.12757}
+      - {x: 4.785018, y: -19.84501}
+      - {x: 4.565918, y: -131.54428}
+      - {x: 8.835427, y: -130.95284}
+      - {x: 8.363648, y: -19.82917}
+      - {x: 12.800776, y: -4.492985}
       - {x: 56, y: -5}
 --- !u!4 &1408652021
 Transform:
@@ -15735,8 +15764,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408652019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 71.4, y: 0, z: 0}
-  m_LocalScale: {x: 10.88, y: 1, z: 1}
+  m_LocalPosition: {x: 103, y: 0, z: 0}
+  m_LocalScale: {x: 16, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 506812166}
@@ -16100,7 +16129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421764289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 226, y: -3, z: -4.75}
+  m_LocalPosition: {x: 60.00831, y: -0.28117895, z: -4.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17160,6 +17189,18 @@ PrefabInstance:
     - target: {fileID: 1766264954568927086, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
       propertyPath: m_Name
       value: rojoForeground (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220153755613941353, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8623477034145026158, guid: 73200d57a54dc4c4bab8e15a993a2e7b, type: 3}
       propertyPath: m_RootOrder
