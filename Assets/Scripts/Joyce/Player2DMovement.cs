@@ -60,18 +60,21 @@ public class Player2DMovement : MonoBehaviour
         xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing, moving right
         {
+            anim.speed = 1;
             if (!isMovingObject)
             {
                 FlipRight();
 
                 anim.SetBool("Pulling", false);
                 anim.SetBool("Pushing", false);
+                anim.SetBool("MovingObject", false);
                 anim.SetBool("Moving", true);
             }
             else
             {
                 xtrans /= 2;
                 anim.SetBool("Moving", false);
+                anim.SetBool("MovingObject", true);
 
                 if (transform.localScale == originalScale) //facing right & moving right == pushing
                 {
@@ -89,18 +92,21 @@ public class Player2DMovement : MonoBehaviour
         }
         else if (xtrans < 0)
         {
+            anim.speed = 1;
             if (!isMovingObject)
             {
                 FlipLeft();
 
                 anim.SetBool("Pulling", false);
                 anim.SetBool("Pushing", false);
+                anim.SetBool("MovingObject", false);
                 anim.SetBool("Moving", true);
             }
             else
             {
                 xtrans /= 2;
                 anim.SetBool("Moving", false);
+                anim.SetBool("MovingObject", true);
 
                 if (transform.localScale == originalScale) //facing right & moving left == pulling
                 {
@@ -118,9 +124,17 @@ public class Player2DMovement : MonoBehaviour
         }
         else
         {
-            anim.SetBool("Moving", false);
-            anim.SetBool("Pushing", false);
-            anim.SetBool("Pulling", false);
+            if (!isMovingObject)
+            {
+                anim.speed = 1;
+                anim.SetBool("Moving", false);
+                anim.SetBool("MovingObject", false);
+                anim.SetBool("Pushing", false);
+                anim.SetBool("Pulling", false);
+            }       
+            else
+                anim.speed = 0;
+            
             //AudioManager.instance.Stop(walkSFX);
             walkTime = stepFrequencey;
         }
