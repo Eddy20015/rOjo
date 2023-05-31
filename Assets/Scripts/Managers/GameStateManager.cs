@@ -58,6 +58,8 @@ public class GameStateManager : MonoBehaviour
     // loads into the beginning of the game
     public static void NewGame()
     {
+        EnemyVideoController.numDefaultSound = 0;
+        EnemyVideoController.numIntensifiedSound = 0;
         SceneManager.LoadScene(MainLevelName); // replace with async loading later
         Play();
     }
@@ -152,6 +154,8 @@ public class GameStateManager : MonoBehaviour
 
     public static IEnumerator ReloadSceneAsync(string scene)
     {
+        EnemyVideoController.numDefaultSound = 0;
+        EnemyVideoController.numIntensifiedSound = 0;
         AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
         while (!operation.isDone)
         {
