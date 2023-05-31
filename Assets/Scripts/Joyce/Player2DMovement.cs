@@ -58,19 +58,33 @@ public class Player2DMovement : MonoBehaviour
     void Update()
     {
         xtrans = Input.GetAxis("Horizontal") * speed;
-        if (xtrans > 0) // determines which way the player is facing
+        if (xtrans > 0) // determines which way the player is facing, moving right
         {
             if (!isMovingObject)
             {
                 FlipRight();
 
+                anim.SetBool("Pulling", false);
+                anim.SetBool("Pushing", false);
                 anim.SetBool("Moving", true);
             }
             else
             {
                 xtrans /= 2;
                 anim.SetBool("Moving", false);
-                // set pushing/pulling animation here
+
+                if (transform.localScale == originalScale) //facing right & moving right == pushing
+                {
+                    print("FACING RIGHT & PUSHING");
+                    anim.SetBool("Pulling", false);
+                    anim.SetBool("Pushing", true);
+                }
+                else // facing left and moving right == pulling
+                {
+                    print("FACING LEFT & PULLING");
+                    anim.SetBool("Pushing", false);
+                    anim.SetBool("Pulling", true);
+                }                 
             }
         }
         else if (xtrans < 0)
@@ -79,24 +93,40 @@ public class Player2DMovement : MonoBehaviour
             {
                 FlipLeft();
 
+                anim.SetBool("Pulling", false);
+                anim.SetBool("Pushing", false);
                 anim.SetBool("Moving", true);
             }
             else
             {
                 xtrans /= 2;
                 anim.SetBool("Moving", false);
-                // set pushing/pulling animation here
+
+                if (transform.localScale == originalScale) //facing right & moving left == pulling
+                {
+                    print("FACING RIGHT & PULLING");
+                    anim.SetBool("Pushing", false);
+                    anim.SetBool("Pulling", true);
+                }
+                else // facing left and moving left == pushing
+                {
+                    print("FACING LEFT & PUSHING");
+                    anim.SetBool("Pulling", false);
+                    anim.SetBool("Pushing", true);
+                }
             }
         }
         else
         {
             anim.SetBool("Moving", false);
+            anim.SetBool("Pushing", false);
+            anim.SetBool("Pulling", false);
             //AudioManager.instance.Stop(walkSFX);
             walkTime = stepFrequencey;
         }
 
 
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary) // only allows jumping if not already up
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary && !isMovingObject) // only allows jumping if not already up
         {
             //StartCoroutine(StartRise());
             myRigidbody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
