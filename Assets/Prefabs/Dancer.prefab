@@ -158,6 +158,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  branchLayer:
+    serializedVersion: 2
+    m_Bits: 256
   upGravity: 3
   downGravity: 2.2
   groundedGravity: 50
@@ -185,6 +188,7 @@ MonoBehaviour:
   decreaseDelay: 3
   exposureBar: {fileID: 0}
   gameOverMenu: {fileID: 0}
+  showBar: 0
 --- !u!1001 &3556437701307194232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -206,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1114738897305909941, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.9111614
+      value: -0.91084814
       objectReference: {fileID: 0}
     - target: {fileID: 1114738897305909941, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -214,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1114738897305909941, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 6.4982386
+      value: 6.498363
       objectReference: {fileID: 0}
     - target: {fileID: 1114738897305909941, guid: 4ae6eebc15ff1364d84f2b9174916540, type: 3}
       propertyPath: m_Bounds.m_Extent.y
