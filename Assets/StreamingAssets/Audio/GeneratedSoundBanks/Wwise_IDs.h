@@ -38,6 +38,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSICBOX3 = 359053977U;
         static const AkUniqueID PLAY_PANFLUTE = 672662027U;
         static const AkUniqueID PLAY_PULSETOSIREN = 2576967453U;
+        static const AkUniqueID PLAY_SCREAMS = 2700195184U;
         static const AkUniqueID PLAY_SHEPARDSTONE = 845845902U;
         static const AkUniqueID PLAY_SPECIAL_CLICK = 1401754570U;
         static const AkUniqueID PLAY_SPIDER_STEPS = 2624903825U;

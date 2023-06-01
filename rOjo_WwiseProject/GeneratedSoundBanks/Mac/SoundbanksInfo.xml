@@ -49,7 +49,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{82DBE0D2-9F1A-01B9-684D-08A5B6D68C4A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{032EB5E1-0E5E-FE51-E254-4ED88CD19C62}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -155,7 +155,7 @@
 				</File>
 				<File Id="422500357" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WIP Jump.wav</ShortName>
-					<CachePath>SFX/WIP Jump_0F17D97B.wem</CachePath>
+					<CachePath>SFX/WIP Jump_46F7238F.wem</CachePath>
 				</File>
 				<File Id="425600712" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\DeepHitToBreath3.wav</ShortName>
@@ -188,6 +188,10 @@
 				<File Id="482014655" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dirt3.wav</ShortName>
 					<CachePath>SFX/dirt3_46A8EBAC.wem</CachePath>
+				</File>
+				<File Id="509309381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>screams.wav</ShortName>
+					<CachePath>SFX/screams_76D29DF4.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
@@ -594,6 +598,11 @@
 						<MediaRef Id="1015923652"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2700195184" Name="Play_screams" DurationType="OneShot" DurationMin="3.1934083" DurationMax="3.1934083">
+					<MediaRefs>
+						<MediaRef Id="509309381"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="845845902" Name="Play_ShepardsTone" DurationType="OneShot" DurationMin="188.79599" DurationMax="188.79599">
 					<MediaRefs>
 						<MediaRef Id="168685019"/>
@@ -669,5 +678,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CD480E55-120C-8F1A-607A-DFD58BE0DC4F}</FileHash>
+	<FileHash>{E833D87B-DBF3-19D0-31E9-96CC07C0DE27}</FileHash>
 </SoundBanksInfo>

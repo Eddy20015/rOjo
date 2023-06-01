@@ -681,6 +681,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_screams" ID="{C09F5604-63FC-499C-837C-EBA707729321}">
+					<ChildrenList>
+						<Action Name="" ID="{20135399-667D-41F4-9374-D23A7790EE4A}" ShortID="503873687">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="screams" ID="{E41F8C89-61FF-4801-B63E-F5106FEB05D1}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
