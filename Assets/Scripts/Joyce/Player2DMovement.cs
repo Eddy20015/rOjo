@@ -153,13 +153,13 @@ public class Player2DMovement : MonoBehaviour
         if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
             anim.SetBool("Jumping", false);
-            if (airTime > airTimeLimit)
+            /*if (airTime > airTimeLimit)
             {
                 print("landed");
                 jumpLanding.Post(gameObject);
                 slopeDetect.enabled = true;
                 //isJumping = false;
-            }
+            }*/
         }
 
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;

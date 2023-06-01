@@ -44,6 +44,9 @@
 							</ModifierList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>2</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{2C5B9038-E2DB-41DA-9B18-F76F36C3A9CD}">
@@ -73,9 +76,21 @@
 								<MediaID ID="513019750"/>
 							</MediaIDList>
 						</AudioFileSource>
+						<AudioFileSource Name="WIP Jump" ID="{EB5560B7-65AF-4CCE-97AB-DCBD2EDC87AC}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.00132555511586048"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.0507171390708003"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>WIP Jump.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="422500357"/>
+							</MediaIDList>
+						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="WIP Jump or Land Placeholder" ID="{721FCE19-BD12-45CB-B551-C81A9D1462B3}" Platform="Linked"/>
+						<ActiveSource Name="WIP Jump" ID="{EB5560B7-65AF-4CCE-97AB-DCBD2EDC87AC}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Testing Audio" ID="{8BF46DAB-3AED-47D4-B605-4D38FF965FFC}" ShortID="390963387">
