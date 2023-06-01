@@ -9,5 +9,12 @@ public class Player2DSounds : MonoBehaviour
     void PlayFootsteps()
     {
         step.Post(gameObject);
+        print("Step");
+    }
+
+    void PlayJumpLanding()
+    {
+        jumpLanding.Post(gameObject);
+        print("jump");
     }
 }
