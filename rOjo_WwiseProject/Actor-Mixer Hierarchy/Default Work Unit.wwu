@@ -3546,7 +3546,7 @@
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -3907,6 +3907,61 @@
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</BlendContainer>
+				<Sound Name="screams" ID="{E41F8C89-61FF-4801-B63E-F5106FEB05D1}" ShortID="191620898">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="screams" ID="{6B81C076-BCB6-49EB-8C0D-F90EEEB3FEA7}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.518587676540432"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.19340832395951"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>screams.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="509309381"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="screams" ID="{6B81C076-BCB6-49EB-8C0D-F90EEEB3FEA7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Button Click" ID="{75A1600E-C9C6-4F27-82B8-F459DF3E3D19}" ShortID="376796325">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Button Click" ID="{377AAE5C-EEA3-4202-ACE6-6A3252C8E059}">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0281570909989866"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="0.0139840586169463"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.324370146203362"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Button Click.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="124192241"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Button Click" ID="{377AAE5C-EEA3-4202-ACE6-6A3252C8E059}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
