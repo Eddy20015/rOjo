@@ -22,6 +22,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2379313215	Play_EyeBeam_Intensified			\Default Work Unit\Eye Beam\Play_EyeBeam_Intensified	
 	2576967453	Play_PulseToSiren			\Default Work Unit\Horror Stems\Play_PulseToSiren	
 	2624903825	Play_Spider_Steps			\Default Work Unit\Play_Spider_Steps	
+	2700195184	Play_screams			\Default Work Unit\Play_screams	
 	2946897393	Play_Testing_Audio			\Default Work Unit\Testing\Play_Testing_Audio	
 	3026825475	Stop_Wind_in_Branches			\Default Work Unit\Wind\Stop_Wind_in_Branches	
 	3111061815	Fade_Out_2D_Music			\Default Work Unit\2D_Music\Fade_Out_2D_Music	
@@ -32,6 +33,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3808321334	Play_Jump_Landing			\Default Work Unit\Walking\Play_Jump_Landing	
 	3854155799	Play_Footsteps			\Default Work Unit\Walking\Play_Footsteps	
 	4119780300	Play_EtherealTone			\Default Work Unit\Horror Stems\Play_EtherealTone	
+	4168403010	Play_Game_Button_Click			\Default Work Unit\Play_Game_Button_Click	
 	4172395845	Play_Horror_Test			\Default Work Unit\Horror_Test\Play_Horror_Test	
 	4207504401	Play_CreepyOrgan			\Default Work Unit\Horror Stems\Play_CreepyOrgan	
 	4250637632	Play_DeepHitToBreath2			\Default Work Unit\Horror Stems\Play_DeepHitToBreath2	
@@ -63,11 +65,12 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	24771127	EyeBeam_Default	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\EyeBeamDefault_81238AE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Default		4939296
 	37321306	MeOyesRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\MeOyesRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\MeOyes\MeOyesRev2		127984
-	39914089	Step9	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step9_FCF1E942.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step9		1578
+	39914089	Step9	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step9_08F93BE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step9		1578
 	94379695	Step3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step3_B2124D25.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step3		14228
 	101637563	AlInfernoTeVasNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\AlInfernoTeVasNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasNorm		330844
 	119134536	AlInfernoTeVasRev5	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\AlInfernoTeVasRev5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev5		294684
 	119632406	LowCello	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\LowCello_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\LowCello\LowCello\LowCello		2926572
+	124192241	Button Click	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Button Click_F60342F9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button Click		27520
 	131488593	Wind in Branches	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\WIP - Calm Wind in Branches_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wind in Branches		4333818
 	143617217	HorrorTest	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\3D Music_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\HorrorTest		35168964
 	167237944	Step8	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step8_694D515F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step8		1852
@@ -86,16 +89,17 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	400889494	Choke	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\Choke_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\Choke\Choke		15462436
 	402796264	dirt1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\dirt1_BADE6132.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt1		19516
 	416008110	dirt6	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\dirt6_1D5EF5C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt6		9446
+	422500357	Jump Landing	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\WIP Jump_46F7238F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump Landing		4502
 	425600712	DeepHitToBreath3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\DeepHitToBreath3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath3\DeepHitToBreath3		3344640
 	430397931	HijoMioRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\HijoMioRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Hijo Mio\HijoMioRev3		211776
-	441570897	Step8	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step8_E220244B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step8		1222
+	441570897	Step8	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step8_5D67EDE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step8		1222
 	443098611	Growl	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\Growl_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\Growl\Growl		7634156
-	447533665	Step1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step1_51E6CBFC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step1		1774
+	447533665	Step1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step1_4B14B70C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step1		1774
 	457631943	Step1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step1_DCFA141B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step1		2252
-	468227711	Step6	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step6_9B613504.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step6		1274
+	468227711	Step6	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step6_4212E194.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step6		1274
 	482014655	dirt3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\dirt3_46A8EBAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt3		8138
-	513019750	Jump Landing	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\WIP Jump or Land Placeholder_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump Landing		12018
-	556952082	Step7	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step7_2954BF4B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step7		1200
+	509309381	screams	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\screams_F78178CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\screams		563460
+	556952082	Step7	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step7_B8B72C17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step7		1200
 	560556572	DiosProtegemeRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DiosProtegemeRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev1		214420
 	567021774	Step5	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step5_A938E58F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step5		4496
 	587648693	dirt4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\dirt4_388A7FA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt4		8436
@@ -119,7 +123,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	761734425	HijoMioNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\HijoMioNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Hijo Mio\HijoMioNorm		176496
 	769564896	DejaloRespirarNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DejaloRespirarNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarNorm		273516
 	790883363	Step4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step4_BBE3A70A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step4		1778
-	794721413	Step4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step4_79C6A5CE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step4		1552
+	794721413	Step4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step4_E0656FBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step4		1552
 	795595669	DeepHitToBreath2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\DeepHitToBreath2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath2\DeepHitToBreath2		2258016
 	797256899	AlInfernoTeVasRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\AlInfernoTeVasRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev1		308792
 	800309362	DiosProtegemeNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DiosProtegemeNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeNorm		156208

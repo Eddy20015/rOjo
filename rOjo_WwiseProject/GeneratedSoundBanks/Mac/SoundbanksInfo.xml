@@ -49,7 +49,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{8206C5E4-C821-55BA-59D5-4ABEE6FC35DF}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{17BC38BD-C188-C41B-587C-C68231E6C6A0}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -63,7 +63,7 @@
 				</File>
 				<File Id="39914089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step9.wav</ShortName>
-					<CachePath>SFX/Step9_FCF1E942.wem</CachePath>
+					<CachePath>SFX/Step9_08F93BE0.wem</CachePath>
 				</File>
 				<File Id="94379695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step3.wav</ShortName>
@@ -80,6 +80,10 @@
 				<File Id="119632406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\LowCello.wav</ShortName>
 					<CachePath>SFX/Horror Stems/LowCello_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="124192241" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button Click.wav</ShortName>
+					<CachePath>SFX/Button Click_F60342F9.wem</CachePath>
 				</File>
 				<File Id="131488593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WIP - Calm Wind in Branches.wav</ShortName>
@@ -153,6 +157,10 @@
 					<ShortName>dirt6.wav</ShortName>
 					<CachePath>SFX/dirt6_1D5EF5C1.wem</CachePath>
 				</File>
+				<File Id="422500357" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>WIP Jump.wav</ShortName>
+					<CachePath>SFX/WIP Jump_46F7238F.wem</CachePath>
+				</File>
 				<File Id="425600712" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\DeepHitToBreath3.wav</ShortName>
 					<CachePath>SFX/Horror Stems/DeepHitToBreath3_D79FB2B7.wem</CachePath>
@@ -163,7 +171,7 @@
 				</File>
 				<File Id="441570897" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step8.wav</ShortName>
-					<CachePath>SFX/Step8_E220244B.wem</CachePath>
+					<CachePath>SFX/Step8_5D67EDE3.wem</CachePath>
 				</File>
 				<File Id="443098611" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\Growl.wav</ShortName>
@@ -171,7 +179,7 @@
 				</File>
 				<File Id="447533665" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step1.wav</ShortName>
-					<CachePath>SFX/Step1_51E6CBFC.wem</CachePath>
+					<CachePath>SFX/Step1_4B14B70C.wem</CachePath>
 				</File>
 				<File Id="457631943" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step1.wav</ShortName>
@@ -179,19 +187,19 @@
 				</File>
 				<File Id="468227711" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step6.wav</ShortName>
-					<CachePath>SFX/Step6_9B613504.wem</CachePath>
+					<CachePath>SFX/Step6_4212E194.wem</CachePath>
 				</File>
 				<File Id="482014655" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dirt3.wav</ShortName>
 					<CachePath>SFX/dirt3_46A8EBAC.wem</CachePath>
 				</File>
-				<File Id="513019750" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>WIP Jump or Land Placeholder.wav</ShortName>
-					<CachePath>SFX/WIP Jump or Land Placeholder_10C4C929.wem</CachePath>
+				<File Id="509309381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>screams.wav</ShortName>
+					<CachePath>SFX/screams_F78178CF.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
-					<CachePath>SFX/Step7_2954BF4B.wem</CachePath>
+					<CachePath>SFX/Step7_B8B72C17.wem</CachePath>
 				</File>
 				<File Id="560556572" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DiosProtegemeRev1.wav</ShortName>
@@ -287,7 +295,7 @@
 				</File>
 				<File Id="794721413" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step4.wav</ShortName>
-					<CachePath>SFX/Step4_79C6A5CE.wem</CachePath>
+					<CachePath>SFX/Step4_E0656FBB.wem</CachePath>
 				</File>
 				<File Id="795595669" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\DeepHitToBreath2.wav</ShortName>
@@ -535,6 +543,11 @@
 						<MediaRef Id="800918199"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4168403010" Name="Play_Game_Button_Click" DurationType="OneShot" DurationMin="0.3103861" DurationMax="0.3103861">
+					<MediaRefs>
+						<MediaRef Id="124192241"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="352180650" Name="Play_GraduallyIncreasingHighPitch" DurationType="OneShot" DurationMin="4.2349887" DurationMax="4.2349887">
 					<MediaRefs>
 						<MediaRef Id="672950188"/>
@@ -550,9 +563,18 @@
 						<MediaRef Id="143617217"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3808321334" Name="Play_Jump_Landing" DurationType="OneShot" DurationMin="0.1251035" DurationMax="0.15128708">
+				<Event Id="3808321334" Name="Play_Jump_Landing" DurationType="OneShot" DurationMin="0.06730324" DurationMax="0.24448586">
 					<MediaRefs>
-						<MediaRef Id="513019750"/>
+						<MediaRef Id="171236694"/>
+						<MediaRef Id="309432596"/>
+						<MediaRef Id="402796264"/>
+						<MediaRef Id="416008110"/>
+						<MediaRef Id="422500357"/>
+						<MediaRef Id="482014655"/>
+						<MediaRef Id="587648693"/>
+						<MediaRef Id="656878381"/>
+						<MediaRef Id="862606870"/>
+						<MediaRef Id="991653222"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1795348239" Name="Play_LowCello" DurationType="OneShot" DurationMin="16.59" DurationMax="16.59">
@@ -583,6 +605,11 @@
 				<Event Id="2576967453" Name="Play_PulseToSiren" DurationType="OneShot" DurationMin="26.91" DurationMax="26.91">
 					<MediaRefs>
 						<MediaRef Id="1015923652"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2700195184" Name="Play_screams" DurationType="OneShot" DurationMin="3.1934083" DurationMax="3.1934083">
+					<MediaRefs>
+						<MediaRef Id="509309381"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="845845902" Name="Play_ShepardsTone" DurationType="OneShot" DurationMin="188.79599" DurationMax="188.79599">
@@ -660,5 +687,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EF17174D-0302-F673-4573-7B18EADB37BB}</FileHash>
+	<FileHash>{A539A231-831E-1E94-A2CF-DC9107CE22C2}</FileHash>
 </SoundBanksInfo>
