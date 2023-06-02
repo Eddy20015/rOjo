@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_EYEBEAM_DEFAULT = 3227116378U;
         static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED = 2379313215U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_GAME_BUTTON_CLICK = 4168403010U;
         static const AkUniqueID PLAY_GRADUALLYINCREASINGHIGHPITCH = 352180650U;
         static const AkUniqueID PLAY_GROWL = 3133528005U;
         static const AkUniqueID PLAY_HORROR_TEST = 4172395845U;
@@ -38,8 +39,10 @@ namespace AK
         static const AkUniqueID PLAY_MUSICBOX3 = 359053977U;
         static const AkUniqueID PLAY_PANFLUTE = 672662027U;
         static const AkUniqueID PLAY_PULSETOSIREN = 2576967453U;
+        static const AkUniqueID PLAY_SCREAMS = 2700195184U;
         static const AkUniqueID PLAY_SHEPARDSTONE = 845845902U;
         static const AkUniqueID PLAY_SPECIAL_CLICK = 1401754570U;
+        static const AkUniqueID PLAY_SPIDER_STEPS = 2624903825U;
         static const AkUniqueID PLAY_TESTING_AUDIO = 2946897393U;
         static const AkUniqueID PLAY_WAWADISTORTION = 1918741923U;
         static const AkUniqueID PLAY_WHISTLEBREATHING = 1329546286U;
