@@ -28,6 +28,7 @@ namespace AK
         static const AkUniqueID PLAY_EYEBEAM_DEFAULT = 3227116378U;
         static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED = 2379313215U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
+        static const AkUniqueID PLAY_GAME_BUTTON_CLICK = 4168403010U;
         static const AkUniqueID PLAY_GRADUALLYINCREASINGHIGHPITCH = 352180650U;
         static const AkUniqueID PLAY_GROWL = 3133528005U;
         static const AkUniqueID PLAY_HORROR_TEST = 4172395845U;
