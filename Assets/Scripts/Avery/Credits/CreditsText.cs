@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class CreditsText : MonoBehaviour
 {
     [SerializeField] List<GameObject> text;
+    [SerializeField] GameObject dedication;
     [SerializeField] Transform destination;
+    [SerializeField] Transform middleOfScreenPosition;
     [SerializeField] float moveSpeed = 2f;
     [SerializeField] GameObject blackScreen;
     int numOfTexts, currentIndex = 0;
@@ -70,9 +72,28 @@ public class CreditsText : MonoBehaviour
             StartCoroutine(MoveTextAcrossScreen(text[currentIndex]));
         else
         {
-            StartCoroutine(FadeIn());
-            yield return new WaitForSeconds(fadeSpeed + 1f);
-            GameStateManager.MainMenu();
+            StartCoroutine(DedicationFreezesOnScreen(dedication));
         }
+    }
+
+    IEnumerator DedicationFreezesOnScreen(GameObject o)
+    {
+        while (o.transform.localPosition != middleOfScreenPosition.localPosition)
+        {
+            o.transform.localPosition = Vector3.MoveTowards(o.transform.localPosition, middleOfScreenPosition.localPosition, moveSpeed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return new WaitForSeconds(7f);
+
+        while (o.transform.localPosition != destination.localPosition)
+        {
+            o.transform.localPosition = Vector3.MoveTowards(o.transform.localPosition, destination.localPosition, moveSpeed * Time.deltaTime);
+            yield return new WaitForEndOfFrame();
+        }
+
+        StartCoroutine(FadeIn());
+        yield return new WaitForSeconds(fadeSpeed + 1f);
+        GameStateManager.MainMenu();
     }
 }
