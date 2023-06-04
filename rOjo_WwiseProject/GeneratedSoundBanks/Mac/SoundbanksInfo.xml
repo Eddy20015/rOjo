@@ -49,7 +49,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{032EB5E1-0E5E-FE51-E254-4ED88CD19C62}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{17BC38BD-C188-C41B-587C-C68231E6C6A0}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -80,6 +80,10 @@
 				<File Id="119632406" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\LowCello.wav</ShortName>
 					<CachePath>SFX/Horror Stems/LowCello_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="124192241" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Button Click.wav</ShortName>
+					<CachePath>SFX/Button Click_F60342F9.wem</CachePath>
 				</File>
 				<File Id="131488593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WIP - Calm Wind in Branches.wav</ShortName>
@@ -191,7 +195,7 @@
 				</File>
 				<File Id="509309381" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>screams.wav</ShortName>
-					<CachePath>SFX/screams_76D29DF4.wem</CachePath>
+					<CachePath>SFX/screams_F78178CF.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
@@ -539,6 +543,11 @@
 						<MediaRef Id="800918199"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4168403010" Name="Play_Game_Button_Click" DurationType="OneShot" DurationMin="0.3103861" DurationMax="0.3103861">
+					<MediaRefs>
+						<MediaRef Id="124192241"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="352180650" Name="Play_GraduallyIncreasingHighPitch" DurationType="OneShot" DurationMin="4.2349887" DurationMax="4.2349887">
 					<MediaRefs>
 						<MediaRef Id="672950188"/>
@@ -678,5 +687,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E833D87B-DBF3-19D0-31E9-96CC07C0DE27}</FileHash>
+	<FileHash>{A539A231-831E-1E94-A2CF-DC9107CE22C2}</FileHash>
 </SoundBanksInfo>
