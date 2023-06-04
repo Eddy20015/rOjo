@@ -1687,7 +1687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainMenuNameSetter: MainMenu
   MainLevelNameSetter: Level
-  CreditsNameSetter: 
+  CreditsNameSetter: Credits
 --- !u!1 &121467022
 GameObject:
   m_ObjectHideFlags: 0
@@ -9706,6 +9706,10 @@ PrefabInstance:
     - target: {fileID: 8823273980703984535, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823273980772887366, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
+      propertyPath: m_Damping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8823273980772887366, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
       propertyPath: m_BoundingShape2D
@@ -23177,6 +23181,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1736286673}
+    - target: {fileID: 7876110763641486873, guid: 3a0bf12868dfc0346879f8ac8184e436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1476032062}
+    - target: {fileID: 7876110763641486873, guid: 3a0bf12868dfc0346879f8ac8184e436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876110763641486873, guid: 3a0bf12868dfc0346879f8ac8184e436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EndingUI, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0bf12868dfc0346879f8ac8184e436, type: 3}
 --- !u!1 &1819790337 stripped
@@ -23952,6 +23968,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 770084916}
     m_Modifications:
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1893042797}
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToCreditButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EndingUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089470218037563604, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8032174015327326352, guid: ad736d82f72444c47aa4d72ca5c96709, type: 3}
       propertyPath: m_Pivot.x
       value: 0

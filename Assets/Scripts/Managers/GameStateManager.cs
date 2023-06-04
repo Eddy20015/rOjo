@@ -47,6 +47,7 @@ public class GameStateManager : MonoBehaviour
 
         MainMenuName = MainMenuNameSetter;
         MainLevelName = MainLevelNameSetter;
+        CreditsName = CreditsNameSetter;
     }
 
     // returns current GameState
