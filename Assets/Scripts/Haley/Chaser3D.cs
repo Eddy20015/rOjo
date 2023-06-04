@@ -49,6 +49,7 @@ public class Chaser3D : EndingUI
         if (other.gameObject.tag.Equals("Player")) {
             Halt();
             pMove.enabled = false;
+            // play hand vid here instead, then play menu
             PlayMenu();
         }
 

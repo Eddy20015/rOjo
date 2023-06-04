@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private AK.Wwise.Event StopAll;
+    [SerializeField] private List<GameObject> toggleObjects;
 
     void Awake()
     {
@@ -18,7 +19,8 @@ public class PauseMenu : MonoBehaviour
         {
             if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.PLAYING)
             {
-                EnableAllChildren();
+                //EnableAllChildren();
+                ToggleOn();
                 GameStateManager.Pause();
             }
             else if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.PAUSED)
@@ -56,5 +58,11 @@ public class PauseMenu : MonoBehaviour
         {
             child.gameObject.SetActive(true);
         }
+    }
+
+    public void ToggleOn()
+    {
+        foreach (GameObject g in toggleObjects)
+            g.SetActive(true);
     }
 }
