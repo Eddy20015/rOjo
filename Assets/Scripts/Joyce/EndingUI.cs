@@ -66,4 +66,10 @@ public class EndingUI : MonoBehaviour
         StopAll.Post(gameObject);
         GameStateManager.QuitToMainMenu();
     }
+
+    public void ToSceneButton()
+    {
+        StopAll.Post(gameObject);
+        GameStateManager.LoadCredits();
+    }
 }
