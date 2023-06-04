@@ -41,7 +41,15 @@ public class DraggableObject : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(playerMovement.GetXTrans(), GetComponent<Rigidbody2D>().velocity.y);
             playerMovement.SetIsMovingObject(true);
         }
-        else if (!isGrabbingObject && other.gameObject.CompareTag("Dancer"))
+        else if (!isGrabbingObject && other.gameObject.CompareTag("Facing Forward Check"))
+        {
+            playerMovement.SetIsMovingObject(false);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Facing Forward Check")
         {
             playerMovement.SetIsMovingObject(false);
         }
