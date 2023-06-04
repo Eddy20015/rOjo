@@ -22,8 +22,12 @@ public class Player2DMovement : MonoBehaviour
     [Min(0)]
     [SerializeField] private float downGravity = 2.2f;
     [Min(0)]
+    [SerializeField] private float slowFallGravity = .5f;
+    [Min(0)]
     [SerializeField] private float groundedGravity = 50f; // used to keep player on slope
     [SerializeField] private SlopeDetect slopeDetect;
+    private float currDownGravity;
+
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
@@ -49,6 +53,7 @@ public class Player2DMovement : MonoBehaviour
         isJumping = false;
         airTime = 0;
         walkTime = stepFrequencey;
+        currDownGravity = downGravity;
 
         groundLayerInt = Mathf.RoundToInt(Mathf.Log(groundLayer.value, 2));
         playerLayerInt = Mathf.RoundToInt(Mathf.Log(playerLayer.value, 2));
@@ -57,6 +62,11 @@ public class Player2DMovement : MonoBehaviour
 
     void Update()
     {
+        if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.CINEMATIC)
+        {
+            anim.SetBool("Moving", false);
+            return;
+        }
         xtrans = Input.GetAxis("Horizontal") * speed;
         if (xtrans > 0) // determines which way the player is facing, moving right
         {
@@ -165,7 +175,7 @@ public class Player2DMovement : MonoBehaviour
         isJumping = Mathf.Abs(myRigidbody.velocity.y) > jumpBoundary;
 
         if (isJumping) {
-            myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? downGravity : upGravity;
+            myRigidbody.gravityScale = myRigidbody.velocity.y < 0 ? currDownGravity : upGravity;
             airTime += Time.deltaTime;
 
         } else {
@@ -235,5 +245,10 @@ public class Player2DMovement : MonoBehaviour
     public void SetIsMovingObject(bool b)
     {
         isMovingObject = b;
+    }
+
+    public void SlowFall(bool on)
+    {
+        currDownGravity = on ? slowFallGravity: downGravity;
     }
 }

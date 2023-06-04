@@ -15,6 +15,9 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string MainLevelNameSetter;
     private static string MainLevelName;
 
+    [SerializeField] private string CreditsNameSetter;
+    private static string CreditsName;
+
     public delegate void OnPlay();
     public static event OnPlay Restarted;
 
@@ -44,6 +47,7 @@ public class GameStateManager : MonoBehaviour
 
         MainMenuName = MainMenuNameSetter;
         MainLevelName = MainLevelNameSetter;
+        CreditsName = CreditsNameSetter;
     }
 
     // returns current GameState
@@ -165,6 +169,12 @@ public class GameStateManager : MonoBehaviour
         Play();
         if (Restarted != null)
             Restarted.Invoke();
+    }
+
+    public static void LoadCredits()
+    {
+        //Win();
+        SceneManager.LoadScene(CreditsName);
     }
 
     //public IEnumerator LoadLevelAsync()
