@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DraggableObject : MonoBehaviour
 { 
-    private KeyCode boundKey = KeyCode.LeftShift;
+    private KeyCode boundKey = KeyCode.E;
     private bool isGrabbingObject = false;
     private Rigidbody2D playerRigidbody;
     private Player2DMovement playerMovement;
@@ -35,8 +35,9 @@ public class DraggableObject : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (isGrabbingObject && other.gameObject.CompareTag("Dancer"))
+        if (isGrabbingObject && other.gameObject.name == "Facing Forward Check")
         {
+            print("PLAYER FACING BOX!!");
             GetComponent<Rigidbody2D>().velocity = new Vector2(playerMovement.GetXTrans(), GetComponent<Rigidbody2D>().velocity.y);
             playerMovement.SetIsMovingObject(true);
         }
