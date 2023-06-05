@@ -39,7 +39,7 @@ public class Button : MonoBehaviour
             }
             else
             {
-                door.SetActive(true);
+                //door.SetActive(true);
             }
         }
         else
@@ -51,7 +51,7 @@ public class Button : MonoBehaviour
             }
             else
             {
-                door.SetActive(true);
+                //door.SetActive(true);
             }
         }
     }
