@@ -8762,6 +8762,7 @@ MonoBehaviour:
   checkpoint: {fileID: 5885776599244500158}
   jumpScarePlaceholder: {fileID: 0}
   jumpscare: 0
+  checkpointTime: 0.25
 --- !u!1 &1833181546613561132
 GameObject:
   m_ObjectHideFlags: 0
@@ -10202,7 +10203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -496319735
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3ef9ca63d6aec6149ad15ced9cbb735d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11573,7 +11574,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -496319735
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3ef9ca63d6aec6149ad15ced9cbb735d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11988,7 +11989,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -496319735
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3ef9ca63d6aec6149ad15ced9cbb735d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12641,7 +12642,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -496319735
   m_SortingLayer: -1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 3ef9ca63d6aec6149ad15ced9cbb735d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13121,7 +13122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: exposeRate
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: viewDistance
@@ -13409,7 +13410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: exposeRate
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: viewDistance
@@ -13491,7 +13492,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: exposeRate
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5062432678510040050, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: m_RootOrder
@@ -13734,7 +13735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: exposeRate
-      value: 0.8
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: viewDistance
@@ -14457,6 +14458,10 @@ PrefabInstance:
     - target: {fileID: 5250843420524143766, guid: 6a1e04f18b8ae504785cf4131177105e, type: 3}
       propertyPath: m_LocalPosition.y
       value: -6.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250843420524143767, guid: 6a1e04f18b8ae504785cf4131177105e, type: 3}
+      propertyPath: checkpointTime
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5250843420524143767, guid: 6a1e04f18b8ae504785cf4131177105e, type: 3}
       propertyPath: jumpScarePlaceholder
