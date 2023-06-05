@@ -21,6 +21,20 @@ public class Button : MonoBehaviour
     [SerializeField]
     private int time;
 
+    [SerializeField]
+    private Sprite button_pressed;
+
+    [SerializeField]
+    private Sprite button_unpressed;
+
+    [SerializeField]
+    private SpriteRenderer button_sprite;
+
+    
+    private void ButtonPress(Sprite sprite)
+    {
+        button_sprite.sprite = sprite;
+    }
     
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +44,7 @@ public class Button : MonoBehaviour
             if (other.gameObject.CompareTag("Dancer"))
             {
                 collision = true;
+                ButtonPress(button_pressed);
 
                 if (collision && other_button.collision)
                 {
@@ -37,22 +52,23 @@ public class Button : MonoBehaviour
                     StartCoroutine("Timer");
                 }
             }
-            else
-            {
-                //door.SetActive(true);
-            }
         }
         else
         {
             if (other.gameObject.CompareTag("Dancer"))
             {
+                ButtonPress(button_pressed);
                 door.SetActive(false);
                 StartCoroutine("Timer");
             }
-            else
-            {
-                //door.SetActive(true);
-            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Dancer"))
+        {
+            ButtonPress(button_unpressed);
         }
     }
 
