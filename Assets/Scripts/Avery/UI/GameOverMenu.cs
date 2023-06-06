@@ -6,15 +6,6 @@ public class GameOverMenu : EndingUI
 {
     [SerializeField] private AK.Wwise.Event clickSound;
 
-    private void OnEnable()
-    {
-        GameStateManager.Restarted += Reloaded;
-    }
-    private void OnDisable()
-    {
-        GameStateManager.Restarted -= Reloaded;
-    }
-
     private void Reloaded()
     {
         ToggleUI(false);    
@@ -25,6 +16,7 @@ public class GameOverMenu : EndingUI
         //DisableAllChildren();
         StopAll.Post(gameObject);
         PlayClickSound();
+        ToggleUI(false);
         GameStateManager.Restart();
     }
 

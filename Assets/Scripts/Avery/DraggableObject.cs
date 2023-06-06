@@ -38,7 +38,9 @@ public class DraggableObject : MonoBehaviour
         if (isGrabbingObject && other.gameObject.name == "Facing Forward Check")
         {
             print("PLAYER FACING BOX!!");
-            GetComponent<Rigidbody2D>().velocity = new Vector2(playerMovement.GetXTrans(), GetComponent<Rigidbody2D>().velocity.y);
+
+            transform.Translate(playerMovement.GetXTrans() * Time.deltaTime, 0, 0);
+;
             playerMovement.SetIsMovingObject(true);
         }
         else if (!isGrabbingObject && other.gameObject.CompareTag("Facing Forward Check"))
