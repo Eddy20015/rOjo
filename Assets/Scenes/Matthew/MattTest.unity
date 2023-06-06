@@ -123,6 +123,810 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &49260637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 49260640}
+  - component: {fileID: 49260639}
+  - component: {fileID: 49260638}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &49260638
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49260637}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &49260639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49260637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 1
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: 100
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &49260640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 49260637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -25.67, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &51932924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 51932927}
+  - component: {fileID: 51932926}
+  - component: {fileID: 51932925}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &51932925
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51932924}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &51932926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51932924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 1
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: 100
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &51932927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51932924}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -52.62, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &118136639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118136642}
+  - component: {fileID: 118136641}
+  - component: {fileID: 118136640}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &118136640
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118136639}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &118136641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118136639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 1
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: 100
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &118136642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118136639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -67.92, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &326166523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326166526}
+  - component: {fileID: 326166525}
+  - component: {fileID: 326166524}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &326166524
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326166523}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &326166525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326166523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 1
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: 100
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &326166526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326166523}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -45.4, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &332529025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 332529028}
+  - component: {fileID: 332529027}
+  - component: {fileID: 332529026}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &332529026
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332529025}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &332529027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332529025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 1
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: 100
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &332529028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332529025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -61.31, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &575203729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575203732}
+  - component: {fileID: 575203731}
+  - component: {fileID: 575203730}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &575203730
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575203729}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &575203731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575203729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 1
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: 100
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &575203732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575203729}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.54, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 25
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &585049328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
@@ -192,7 +996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630176880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.0300007, z: 0}
+  m_LocalPosition: {x: -0.0000076293945, y: -3.0300007, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -217,6 +1021,599 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1497999382}
   m_ConfineScreenEdges: 1
   m_Damping: 0
+--- !u!1001 &800632486
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 189139348855113655, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_Name
+      value: LevelMusicSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.367874
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.85692
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 462836139340025031, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25f6af49a48f9cd4d860425c11d9662b, type: 3}
+--- !u!1 &828646298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828646301}
+  - component: {fileID: 828646300}
+  - component: {fileID: 828646299}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &828646299
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828646298}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &828646300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828646298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 1
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: 100
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &828646301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828646298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -31.3, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &862493140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 862493143}
+  - component: {fileID: 862493142}
+  - component: {fileID: 862493141}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &862493141
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862493140}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &862493142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862493140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 1
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: 100
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &862493143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862493140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.74, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &945908537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 945908540}
+  - component: {fileID: 945908539}
+  - component: {fileID: 945908538}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &945908538
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945908537}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &945908539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945908537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 1
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: 100
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &945908540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 945908537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -16.29, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1027742838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1027742841}
+  - component: {fileID: 1027742840}
+  - component: {fileID: 1027742839}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1027742839
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027742838}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1027742840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027742838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 1
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: 100
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &1027742841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027742838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.52, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 26
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1211479759
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +1685,274 @@ Transform:
   m_Father: {fileID: 1914798076}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1336992728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336992731}
+  - component: {fileID: 1336992730}
+  - component: {fileID: 1336992729}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1336992729
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336992728}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1336992730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336992728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 1
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: 100
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &1336992731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336992728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -18.9, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1469224613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469224616}
+  - component: {fileID: 1469224615}
+  - component: {fileID: 1469224614}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1469224614
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469224613}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1469224615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469224613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 1
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: 100
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &1469224616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469224613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.54, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1486772885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -305,11 +1970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.29
+      value: -72.4
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -403,12 +2068,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497999381}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -148.93, y: 0, z: 0}
+  m_LocalScale: {x: 7.3375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1553568643
 GameObject:
@@ -537,11 +2202,11 @@ Transform:
   m_GameObject: {fileID: 1553568643}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 23.5, y: -4.5, z: 0}
-  m_LocalScale: {x: 65, y: 1, z: 1}
+  m_LocalScale: {x: 319.3125, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554556636
 GameObject:
@@ -631,6 +2296,274 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1560286569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560286572}
+  - component: {fileID: 1560286571}
+  - component: {fileID: 1560286570}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1560286570
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560286569}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1560286571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560286569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 1
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: 100
+--- !u!4 &1560286572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560286569}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.6100006, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1603884442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1603884445}
+  - component: {fileID: 1603884444}
+  - component: {fileID: 1603884443}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1603884443
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603884442}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1603884444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603884442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 1
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: 100
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &1603884445
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603884442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -22.9, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679434179
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +2695,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1739584315
 GameObject:
@@ -879,6 +2812,274 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1814173538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1814173541}
+  - component: {fileID: 1814173540}
+  - component: {fileID: 1814173539}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (06)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1814173539
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814173538}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1814173540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814173538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 1
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: 100
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &1814173541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814173538}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -43, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1874095634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874095637}
+  - component: {fileID: 1874095636}
+  - component: {fileID: 1874095635}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1874095635
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874095634}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1874095636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874095634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 1
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: 100
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &1874095637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874095634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -56.47, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887057769
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,7 +3146,141 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1888224930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1888224933}
+  - component: {fileID: 1888224932}
+  - component: {fileID: 1888224931}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1888224931
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888224930}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1888224932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888224930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 0
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 1
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: -1
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: 100
+  WhistleBreathingVol: -1
+--- !u!4 &1888224933
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888224930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.28, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914798070
 GameObject:
@@ -1019,6 +3354,7 @@ MonoBehaviour:
   - {fileID: 630176881}
   - {fileID: 1211479760}
   startCamIndex: 0
+  finalSize: 0
 --- !u!114 &1914798073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,14 +3442,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914798070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.29, y: 0.00000047683716, z: -2.2099993}
+  m_LocalPosition: {x: -72.399994, y: 0.00000047683716, z: -2.2099993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 630176882}
   - {fileID: 1211479761}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1914798077
 MonoBehaviour:
@@ -1279,8 +3615,142 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &2038605901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038605904}
+  - component: {fileID: 2038605903}
+  - component: {fileID: 2038605902}
+  m_Layer: 0
+  m_Name: LevelMusicTrigger (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &2038605902
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038605901}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: cef43472d37a92346b42f81091fe8eca, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &2038605903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038605901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69b3bd913698594d9f5f476cf07a464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerBaseBass: 0
+  TriggerChoke: 0
+  TriggerCreepyOrgan: 0
+  TriggerDeepHitToBreath1: 0
+  TriggerDeepHitToBreath2: 0
+  TriggerDeepHitToBreath3: 0
+  TriggerDeepHitToBreath4: 1
+  TriggerEtherealTone: 0
+  TriggerGradIncHighPitch: 0
+  TriggerGrowl: 0
+  TriggerLowCello: 0
+  TriggerMusicBox1: 0
+  TriggerMusicBox2: 0
+  TriggerMusicBox3: 0
+  TriggerPanFlute: 0
+  TriggerPulseToSiren: 0
+  TriggerShepardsTone: 0
+  TriggerWawaDistortion: 0
+  TriggerWhistleBreathing: 0
+  BaseBassVol: -1
+  ChokeVol: -1
+  CreepyOrganVol: -1
+  DeepHitToBreath1Vol: -1
+  DeepHitToBreath2Vol: -1
+  DeepHitToBreath3Vol: -1
+  DeepHitToBreath4Vol: 100
+  EtherealToneVol: -1
+  GradIncHighPitchVol: -1
+  GrowlVol: -1
+  LowCelloVol: -1
+  MusicBox1Vol: -1
+  MusicBox2Vol: -1
+  MusicBox3Vol: -1
+  PanFluteVol: -1
+  PulseToSirenVol: -1
+  WawaDistortionVol: -1
+  WhistleBreathingVol: -1
+--- !u!4 &2038605904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038605901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -36.92, y: -1.76, z: 0}
+  m_LocalScale: {x: 1, y: 4.3, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1127433858068329922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1298,7 +3768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1127433857535177168, guid: 243753e8ebe3dfa46826d6d474ef982a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1127433857535177168, guid: 243753e8ebe3dfa46826d6d474ef982a, type: 3}
       propertyPath: m_LocalPosition.x

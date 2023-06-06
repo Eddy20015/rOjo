@@ -7,9 +7,8 @@ public class Looping : MonoBehaviour
     [SerializeField] Transform checkpoint;
     [SerializeField] GameObject jumpScarePlaceholder; // testing
     [SerializeField] bool jumpscare;
+    [SerializeField] float checkpointTime = 1f;
     TheatreLightPuzzleManager manager;
-
-
 
     private void Start()
     {
@@ -37,7 +36,7 @@ public class Looping : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(checkpointTime);
             go.transform.position = checkpoint.position;
         }
     }
