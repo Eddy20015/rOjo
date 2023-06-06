@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class SpiderSoundFix : MonoBehaviour
 {
+    [SerializeField] GameObject spider;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spider.SetActive(false);
+        StartCoroutine(Activate());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator Activate()
     {
-        
+        yield return new WaitForEndOfFrame();
+        spider.SetActive(true);
     }
 }
