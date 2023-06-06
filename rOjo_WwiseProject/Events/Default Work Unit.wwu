@@ -703,6 +703,35 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CreditMusic" ID="{B38691B6-C01D-41FA-8203-ECC9C6CA116A}">
+					<ChildrenList>
+						<Action Name="" ID="{29FEA4E7-5B41-43E5-986B-65F4131F20A1}" ShortID="529202235">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TristezaDeAmor" ID="{30435052-61FA-42CA-AD50-D48941272B07}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ChaseMusic" ID="{1728CF81-64C7-4F3E-8230-9C92264F19BF}">
+					<ChildrenList>
+						<Action Name="" ID="{3E4B0BDC-2032-43B8-A29B-FE6AC0457E34}" ShortID="742861683">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChaseMusicFinal" ID="{E89387FE-B32B-4E77-A6C3-C82751C89711}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E713EB29-56C9-485F-8231-82F6DE4E580D}" ShortID="274121336">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChaseMusicFinalDrum" ID="{D62E6B00-194F-4CB9-8356-50B4D516AB49}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
