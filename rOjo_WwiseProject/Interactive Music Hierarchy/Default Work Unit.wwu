@@ -1877,7 +1877,7 @@
 						</MusicSegment>
 						<MusicSegment Name="WawaDistortion" ID="{79DBDB66-849B-4767-AE34-E87FBD267BD1}" ShortID="351591456">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="85850"/>
+								<Property Name="EndPosition" Type="Real64" Value="85850.0000000001"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1922,11 +1922,71 @@
 																	<Local>
 																		<MusicClip Name="WawaDistortion" ID="{709414DA-B562-43CA-AFE1-0C75281CD0BB}">
 																			<PropertyList>
+																				<Property Name="BeginTrimOffset" Type="Real64" Value="4650.91948310139"/>
 																				<Property Name="EndTrimOffset" Type="Real64" Value="85850"/>
 																				<Property Name="FadeInMode" Type="int16" Value="0"/>
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="WawaDistortion" ID="{9AEB7858-64FC-4E66-BDBB-79DF9161B420}"/>
+																			<PropertyCurveList>
+																				<PropertyCurve PropertyName="Highpass">
+																					<Curve Name="" ID="{FEB193A0-9371-4623-A80F-C74FFDD5C085}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>4.65092</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>85.85</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Lowpass">
+																					<Curve Name="" ID="{F3555131-DB8E-4B18-BBF3-3EAD347F5E8C}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="1"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>4.65092</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>85.85</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																				<PropertyCurve PropertyName="Volume">
+																					<Curve Name="" ID="{5E7F277C-B8D6-483C-980A-C73F0B20345D}">
+																						<PropertyList>
+																							<Property Name="Flags" Type="int32" Value="3"/>
+																						</PropertyList>
+																						<PointList>
+																							<Point>
+																								<XPos>4.65092</XPos>
+																								<YPos>0</YPos>
+																								<Flags>5</Flags>
+																							</Point>
+																							<Point>
+																								<XPos>85.85</XPos>
+																								<YPos>0</YPos>
+																								<Flags>37</Flags>
+																							</Point>
+																						</PointList>
+																					</Curve>
+																				</PropertyCurve>
+																			</PropertyCurveList>
 																		</MusicClip>
 																	</Local>
 																</Reference>
@@ -2875,7 +2935,32 @@
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
 												</PropertyList>
-												<ReferenceList/>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="MonsterDistance" ID="{66D2E81E-FDB5-41A1-B91E-A8A5DE9D5D17}" WorkUnitID="{B0F1DAB9-B28B-421F-8E26-349EB7410416}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C136C106-0880-4970-8F2B-C2656B689525}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>3</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>200</XPos>
+																		<YPos>-6</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
 											</RTPC>
 										</Local>
 									</Reference>
