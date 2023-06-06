@@ -18,6 +18,8 @@ public class SpiderLeg : MonoBehaviour
 
     [SerializeField] bool backLeg;
 
+    [SerializeField] AK.Wwise.Event sfxFootstep;
+
     bool moving;
 
     ContactFilter2D contactFilter2D;
@@ -161,6 +163,8 @@ public class SpiderLeg : MonoBehaviour
         footPosition = foot.transform.position;
 
         //Destroy(h);
+
+        sfxFootstep.Post(foot.gameObject);
 
         moving = false;
     }
