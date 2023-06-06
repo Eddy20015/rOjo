@@ -25,8 +25,8 @@ public class EnemyVideoController : EyeAnimatorController
     [SerializeField] AK.Wwise.Event stopDefault;
     [SerializeField] AK.Wwise.Event startIntensified;
     [SerializeField] AK.Wwise.Event stopIntensified;
-    private static int numDefaultSound = 0;
-    private static int numIntensifiedSound = 0;
+    public static int numDefaultSound = 0;
+    public static int numIntensifiedSound = 0;
     private bool playingDefaultSound = false;
     private bool playingIntensifiedSound = false;
 
@@ -55,8 +55,10 @@ public class EnemyVideoController : EyeAnimatorController
     // Start is called before the first frame update
     protected new void Start()
     {
+        playingDefaultSound = false;
+        playingIntensifiedSound = false;
 
-        eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
+    eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeFieldOfView.SetFadeDuration(fadeDuration);
@@ -211,8 +213,8 @@ public class EnemyVideoController : EyeAnimatorController
         float currentTime = GetTime(); //Gets the current frame of the "eye"
         float totalTime = GetTotalTime(); //Gets the total amt of frames of the "eye" video.
         float timePct2Angle = currentTime/totalTime; //Gets the percent of the current frame out of the whole video.
-        Debug.Log("Current Time: " + currentTime);
-        Debug.Log("Total Time: " +  totalTime);
+        //Debug.Log("Current Time: " + currentTime);
+        //Debug.Log("Total Time: " +  totalTime);
         eyeAngle = (timePct2Angle * 360f); 
         eyeFieldOfView.SetAimDirection(eyeAngle); 
     }

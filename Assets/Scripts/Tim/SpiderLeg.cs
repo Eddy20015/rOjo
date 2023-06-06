@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SpiderLeg : MonoBehaviour
 {
-    [SerializeField] Transform foot, spiderPlatform;
+    [SerializeField] Transform foot, spiderPlatform, legTop, legBottom, look;
 
-    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset, initialOffset;
+    [SerializeField] float angleOffset, moveSpeed, distance, positionOffset, initialOffset, legContraction;
 
     [SerializeField] Vector3 initialFootPosition, raycastDirection;
 
@@ -24,7 +24,7 @@ public class SpiderLeg : MonoBehaviour
 
     Vector3 footPosition;
 
-    float currentFootPosition;
+    float currentFootPosition, scale;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +39,8 @@ public class SpiderLeg : MonoBehaviour
         contactFilter2D = new();
 
         contactFilter2D.useTriggers = false;
+
+        scale = spider.transform.lossyScale.x;
     }
 
     // Update is called once per frame
@@ -52,22 +54,31 @@ public class SpiderLeg : MonoBehaviour
 
             if (!backLeg)
             {
-                if (Vector2.Distance(footPosition, newPosition) > distance)
+                if (Vector2.Distance(footPosition, newPosition) > (distance * scale))
                 {
                     SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
                 }
             } else
             {
-                if (Vector2.Distance(transform.position, foot.transform.position) > 3.75f)
+                if (Vector2.Distance(transform.position, foot.transform.position) > (3.75f * scale))
                 {
                     SetFoot();
                     StartCoroutine(MoveLeg(foot.position, GetFootPosition(currentFootPosition)));
                 }
             }
-
-            
         }
+
+        float legDistance = (4 - Vector3.Distance(transform.position, foot.transform.position)) * scale;
+
+        Vector3 direction = foot.transform.position - transform.position;
+
+        legTop.transform.localRotation = Quaternion.Euler(0, -90, legDistance * legContraction * 0.5f);
+        legBottom.transform.localRotation = Quaternion.Euler(0, 0, -legDistance * legContraction);
+
+        look.transform.LookAt(foot);
+
+        look.transform.localRotation = Quaternion.Euler(look.transform.localEulerAngles.x, look.transform.localEulerAngles.y, 0);
     }
 
     void Raycast()

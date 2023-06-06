@@ -8,12 +8,14 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float maxExposure;
     [SerializeField] float decreaseAmount;
     [SerializeField] float decreaseDelay;
-    private float currentExposure;
+    public float currentExposure { get; private set; }
     private bool startDecreasing = false;
 
     [SerializeField] Image exposureBar;
 
-    [SerializeField] Canvas gameOverMenu;
+    [SerializeField] EndingUI gameOverMenu;
+
+    [SerializeField] private bool showBar;
 
     private void FixedUpdate()
     {
@@ -44,20 +46,22 @@ public class PlayerHealth : MonoBehaviour
             startDecreasing = false;
             currentExposure += gainedMeter;
             AkSoundEngine.SetRTPCValue("Player_Health", (currentExposure / maxExposure * 100));
-            //UpdateExposureBar(currentExposure, maxExposure);
+            if (showBar)
+                UpdateExposureBar(currentExposure, maxExposure);
         }
 
         if (currentExposure >= maxExposure)
         {
-            gameOverMenu.GetComponent<GameOverMenu>().EnableAllChildren();
-            GameStateManager.GameOver();
+            gameOverMenu.PlayMenu();
+            //GameStateManager.GameOver();
         }
     }
 
     public void DecreaseMeter(float gainedHealth)
     {
         currentExposure -= gainedHealth;
-        //UpdateExposureBar(currentExposure, maxExposure);
+        if (showBar)
+            UpdateExposureBar(currentExposure, maxExposure);
     }
 
     public void UpdateExposureBar(float currentHealth, float maxHealth)
@@ -74,5 +78,10 @@ public class PlayerHealth : MonoBehaviour
     public float GetExposureDecreaseDelay()
     {
         return decreaseDelay;
+    }
+
+    public float GetExposure()
+    {
+        return currentExposure / maxExposure; 
     }
 }

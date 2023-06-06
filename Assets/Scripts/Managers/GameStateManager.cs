@@ -15,6 +15,12 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string MainLevelNameSetter;
     private static string MainLevelName;
 
+    [SerializeField] private string CreditsNameSetter;
+    private static string CreditsName;
+
+    public delegate void OnPlay();
+    public static event OnPlay Restarted;
+
     // current GameState options
     public enum GAMESTATE
     {
@@ -41,6 +47,7 @@ public class GameStateManager : MonoBehaviour
 
         MainMenuName = MainMenuNameSetter;
         MainLevelName = MainLevelNameSetter;
+        CreditsName = CreditsNameSetter;
     }
 
     // returns current GameState
@@ -55,7 +62,9 @@ public class GameStateManager : MonoBehaviour
     // loads into the beginning of the game
     public static void NewGame()
     {
-        SceneManager.LoadScene(MainLevelName);
+        EnemyVideoController.numDefaultSound = 0;
+        EnemyVideoController.numIntensifiedSound = 0;
+        SceneManager.LoadScene(MainLevelName); // replace with async loading later
         Play();
     }
 
@@ -80,9 +89,8 @@ public class GameStateManager : MonoBehaviour
     //GAME OVER MENU OPTIONS
     public static void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Checkpoint.LoadCheckpoint();
-        Play();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Instance.StartCoroutine(ReloadSceneAsync(SceneManager.GetActiveScene().name));
     }
 
 
@@ -92,6 +100,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.PLAYING;
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // sets GameState to PAUSE
@@ -99,6 +109,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.PAUSED;
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to MAINMENU, loads main menu scene
@@ -107,6 +119,8 @@ public class GameStateManager : MonoBehaviour
         GameState = GAMESTATE.MAINMENU;
         SceneManager.LoadScene(MainMenuName);
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to GAMEOVER
@@ -114,6 +128,8 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.GAMEOVER;
         Time.timeScale = 0f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to CINEMATIC
@@ -121,6 +137,14 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.CINEMATIC;
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public static void CursorOn()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // sets GameState to WIN
@@ -128,5 +152,33 @@ public class GameStateManager : MonoBehaviour
     {
         GameState = GAMESTATE.WIN;
         Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
+
+    public static IEnumerator ReloadSceneAsync(string scene)
+    {
+        EnemyVideoController.numDefaultSound = 0;
+        EnemyVideoController.numIntensifiedSound = 0;
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+        while (!operation.isDone)
+        {
+            yield return null;
+        }
+        Checkpoint.LoadCheckpoint();
+        Play();
+        if (Restarted != null)
+            Restarted.Invoke();
+    }
+
+    public static void LoadCredits()
+    {
+        //Win();
+        SceneManager.LoadScene(CreditsName);
+    }
+
+    //public IEnumerator LoadLevelAsync()
+    //{
+
+    //}
 }

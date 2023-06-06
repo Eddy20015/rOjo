@@ -3,30 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class Chaser3D : MonoBehaviour
+public class Chaser3D : EndingUI
 {
     [Header("General Control Variables")]
     [SerializeField] private GameObject player;
     [SerializeField] private float speedOffset;
-
-    // FOR TESTING, CHANGE AS NEEDED
-    [Header("On Death Variables")]
-    [SerializeField] private GameObject deathScreen;
-    [SerializeField] private VideoPlayer cutscenePlayer;
-    [SerializeField] private GameObject cutsceneImage;
     private Player3DMovement pMove;
 
     private Vector3 moveDirection;
 
     private Rigidbody rb;
     private float speed;
+    private bool moving = true;
     private float drag;
 
-    private void Awake()
-    {
-        deathScreen.SetActive(false);
-        cutsceneImage.SetActive(false);
-    }
 
     void Start()
     {
@@ -37,6 +27,7 @@ public class Chaser3D : MonoBehaviour
         pMove = player.GetComponent<Player3DMovement>();
         speed = pMove.getSpeed();
         drag = pMove.getDrag();
+        moving = true;
     }
 
     void Update()
@@ -48,15 +39,18 @@ public class Chaser3D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.AddForce(moveDirection.normalized * (speed - speedOffset), ForceMode.Acceleration);
+        if(moving)
+            rb.AddForce(moveDirection.normalized * (speed - speedOffset), ForceMode.Acceleration);
     }
 
     // Getting cause by chaser, CHANGE AS NEEDED
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Player")) {
+            Halt();
             pMove.enabled = false;
-            StartCoroutine(PlayCutscene());
+            // play hand vid here instead, then play menu
+            PlayMenu();
         }
 
         /*print("trigger on " + other.name);
@@ -68,14 +62,8 @@ public class Chaser3D : MonoBehaviour
         }*/
     }
 
-    private IEnumerator PlayCutscene()
+    public void Halt()
     {
-        cutsceneImage.SetActive(true);
-        cutscenePlayer.Play();
-        yield return new WaitForSeconds((float)cutscenePlayer.clip.length);
-        cutscenePlayer.Stop();
-        GameStateManager.Pause();
-        cutsceneImage.SetActive(false);
-        deathScreen.SetActive(true);
+        moving = false;
     }
 }

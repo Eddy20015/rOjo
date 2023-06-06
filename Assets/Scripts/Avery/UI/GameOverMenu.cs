@@ -2,25 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOverMenu : MonoBehaviour
+public class GameOverMenu : EndingUI
 {
-    [SerializeField] private AK.Wwise.Event StopAll;
     [SerializeField] private AK.Wwise.Event clickSound;
-    void Awake()
+
+    private void OnEnable()
     {
-        DisableAllChildren();
+        GameStateManager.Restarted += Reloaded;
+    }
+    private void OnDisable()
+    {
+        GameStateManager.Restarted -= Reloaded;
+    }
+
+    private void Reloaded()
+    {
+        ToggleUI(false);    
     }
 
     public void OnClickRestart()
     {
-        DisableAllChildren();
+        //DisableAllChildren();
         StopAll.Post(gameObject);
+        PlayClickSound();
         GameStateManager.Restart();
     }
 
     public void OnClickMainMenu()
     {
         StopAll.Post(gameObject);
+        PlayClickSound();
         GameStateManager.QuitToMainMenu();
     }
 

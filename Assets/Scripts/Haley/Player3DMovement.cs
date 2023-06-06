@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Player3DMovement : MonoBehaviour
 {
@@ -21,10 +22,18 @@ public class Player3DMovement : MonoBehaviour
     [SerializeField] private float airSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float airDrag = 2f;
-    
+
+    [Header("Looking")]
+    [SerializeField] private float lookSpeedY = 2f;
+    [SerializeField] private float lookSpeedX = 2f;
+    [SerializeField] private float minRotationValue = -25f;
+    [SerializeField] private float maxRotationValue = 25f;
+
+    private float lookX = 0f, lookY = 0f;
+
 
     private float horizontalMovement;
-    private Vector3 moveDirection;
+    private Vector3 moveDirection, initialForwardDirection;
 
     private bool isGrounded;
 
@@ -40,12 +49,15 @@ public class Player3DMovement : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
         if (anim != null)
             anim.SetBool("isMoving", true);
+
+        initialForwardDirection = transform.forward;
     }
 
     private void Update()
     {
         // Checks if player is on ground, changes animation as needed
         isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2 + 0.1f);
+        print(isGrounded);
         //if(anim != null)
         //    anim.SetBool("isGrounded", isGrounded);
 
@@ -54,13 +66,14 @@ public class Player3DMovement : MonoBehaviour
         horizontalMovement = Input.GetAxisRaw("Horizontal");
 
         if(controlMovement)
-            moveDirection = transform.forward * Input.GetAxisRaw("Vertical") + transform.right * horizontalMovement;
+            moveDirection = initialForwardDirection * Input.GetAxisRaw("Vertical") + transform.right * horizontalMovement;
         else
-            moveDirection = transform.forward * Forwardspeed + transform.right * horizontalMovement;
+            moveDirection = initialForwardDirection * Forwardspeed + transform.right * horizontalMovement;
 
 
         // Lets the player jump
         if(Input.GetButton("Jump") && isGrounded) {
+            print("JUMPING");
             if (anim != null)
                 anim.SetBool("isGrounded", isGrounded);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
@@ -69,6 +82,15 @@ public class Player3DMovement : MonoBehaviour
         // Changes drag as needed
         rb.drag = isGrounded ? groundDrag : airDrag;
 
+        // Look around
+        lookY += Input.GetAxis("Mouse Y") * lookSpeedY;
+        lookX += Input.GetAxis("Mouse X") * lookSpeedX;
+
+        lookX = Mathf.Clamp(lookX, minRotationValue, maxRotationValue);
+        lookY = Mathf.Clamp(lookY, minRotationValue, maxRotationValue);
+
+        // Rotate the player object left and right
+        transform.rotation = Quaternion.Euler(-lookY, lookX + 180, 0f);
     }
 
     private void FixedUpdate()

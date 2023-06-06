@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a92506d65debc48bcb8616f9f9b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerFacingForwardCheck: {fileID: 3547449946390339526, guid: fd103092d8425834488a7edb2ace1044, type: 3}
 --- !u!61 &9119154684645183896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -171,5 +172,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
