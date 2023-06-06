@@ -15,7 +15,7 @@ public class SpiderSoundFix : MonoBehaviour
 
     IEnumerator Activate()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(1);
         spider.SetActive(true);
     }
 }

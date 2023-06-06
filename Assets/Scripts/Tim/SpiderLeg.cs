@@ -164,6 +164,8 @@ public class SpiderLeg : MonoBehaviour
 
         //Destroy(h);
 
+        Debug.Log("Me when I post a wwise event: " + gameObject.name);
+
         sfxFootstep.Post(foot.gameObject);
 
         moving = false;
