@@ -7,7 +7,6 @@ public class SpiderEye : MonoBehaviour
 {
     [SerializeField] Spider spider;
     [SerializeField] float exposeRate = 0.3f;
-    [SerializeField] float timeToDisableBeam = 0f;
     bool isSeeingPlayer = false;
     GameObject Player;
     SpriteRenderer rend;
@@ -16,7 +15,6 @@ public class SpiderEye : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Dancer");
         rend = GetComponent<SpriteRenderer>();
-        rend.enabled = false;
     }
 
     // Update is called once per frame
@@ -44,7 +42,7 @@ public class SpiderEye : MonoBehaviour
     {
         if (collision.CompareTag("Dancer"))
         {
-            StartCoroutine(WaitToDeactivateBeam(timeToDisableBeam));
+            StartCoroutine(WaitToDeactivateBeam(3f));
             spider.SetMoving(true);
             isSeeingPlayer = false;
             StartCoroutine(PlayerRecovers());
