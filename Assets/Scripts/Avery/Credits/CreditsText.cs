@@ -14,6 +14,8 @@ public class CreditsText : MonoBehaviour
     int numOfTexts, currentIndex = 0;
     float fadeSpeed = 3f;
 
+    public AK.Wwise.Event CreditsMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class CreditsText : MonoBehaviour
         numOfTexts = text.Count;
         StartCoroutine(FadeAway());
         StartCoroutine(MoveTextAcrossScreen(text[currentIndex]));
+
+        CreditsMusic.Post(gameObject);
     }
 
     IEnumerator FadeIn()
