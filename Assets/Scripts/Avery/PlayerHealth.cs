@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private bool showBar;
 
+    private bool isDead = false;
+
     private void FixedUpdate()
     {
         if (startDecreasing)
@@ -50,8 +52,9 @@ public class PlayerHealth : MonoBehaviour
                 UpdateExposureBar(currentExposure, maxExposure);
         }
 
-        if (currentExposure >= maxExposure)
+        if (currentExposure >= maxExposure && !isDead)
         {
+            isDead = true;
             gameOverMenu.PlayMenu();
             //GameStateManager.GameOver();
         }
@@ -83,5 +86,21 @@ public class PlayerHealth : MonoBehaviour
     public float GetExposure()
     {
         return currentExposure / maxExposure; 
+    }
+
+    private void OnEnable()
+    {
+        GameStateManager.Restarted += OnRestart;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.Restarted -= OnRestart;
+    }
+
+    public void OnRestart()
+    {
+        isDead = false;
+        currentExposure = 0;
     }
 }

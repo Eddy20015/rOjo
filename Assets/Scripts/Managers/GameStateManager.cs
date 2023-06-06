@@ -160,15 +160,13 @@ public class GameStateManager : MonoBehaviour
     {
         EnemyVideoController.numDefaultSound = 0;
         EnemyVideoController.numIntensifiedSound = 0;
-        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
-        while (!operation.isDone)
-        {
-            yield return null;
-        }
+
         Checkpoint.LoadCheckpoint();
         Play();
         if (Restarted != null)
             Restarted.Invoke();
+
+        yield return new WaitForEndOfFrame();
     }
 
     public static void LoadCredits()
