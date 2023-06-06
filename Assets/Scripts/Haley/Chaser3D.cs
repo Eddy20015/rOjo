@@ -34,7 +34,6 @@ public class Chaser3D : EndingUI
     private void OnEnable()
     {
         ChaseMusic.Post(gameObject);
-        Debug.LogError("ChaseMusic should be posted");
     }
 
     void Update()
