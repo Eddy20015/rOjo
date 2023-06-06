@@ -444,6 +444,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_EyeBeamDeactivation" ID="{F1E67CFB-8DE6-4960-9B35-EF66A03F997A}">
+							<ChildrenList>
+								<Action Name="" ID="{334B3E27-6B4E-4A76-8F1D-EAECB04C25EC}" ShortID="856546223">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamDeactivation" ID="{5CC38D63-B335-4068-B583-41495955BB6D}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EyeBeamActivation" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}">
+							<ChildrenList>
+								<Action Name="" ID="{6CF9774C-5F57-4FDC-9D84-4161888B1963}" ShortID="977743056">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamActivation" ID="{02125F75-4FB0-47D4-8380-D1F925AEF729}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}">
