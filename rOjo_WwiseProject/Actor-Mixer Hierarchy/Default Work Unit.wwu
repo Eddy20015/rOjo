@@ -3984,9 +3984,16 @@
 								<MediaID ID="916682109"/>
 							</MediaIDList>
 						</AudioFileSource>
+						<AudioFileSource Name="EyeBeamDeactivation" ID="{CBC41A13-B536-4AA1-BC6A-1B3A2B9960BD}">
+							<Language>SFX</Language>
+							<AudioFile>EyeBeamDeactivation.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="528600874"/>
+							</MediaIDList>
+						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="EyeBeamActivation" ID="{0C36D357-9E87-4C1B-8BEA-A8D40084ED2F}" Platform="Linked"/>
+						<ActiveSource Name="EyeBeamDeactivation" ID="{CBC41A13-B536-4AA1-BC6A-1B3A2B9960BD}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="EyeBeamDeactivation" ID="{5CC38D63-B335-4068-B583-41495955BB6D}" ShortID="947473290">
