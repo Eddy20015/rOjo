@@ -11,24 +11,29 @@ Event	ID	Name			Wwise Object Path	Notes
 	1323035329	Play_Dirt_Footsteps			\Default Work Unit\Walking\Play_Dirt_Footsteps	
 	1329546286	Play_WhistleBreathing			\Default Work Unit\Horror Stems\Play_WhistleBreathing	
 	1401754570	Play_Special_Click			\Default Work Unit\UI\Play_Special_Click	
+	1734519570	Play_CreditMusic			\Default Work Unit\Play_CreditMusic	
 	1771244861	Play_Wind_in_Branches			\Default Work Unit\Wind\Play_Wind_in_Branches	
 	1795348239	Play_LowCello			\Default Work Unit\Horror Stems\Play_LowCello	
 	1918741923	Play_WawaDistortion			\Default Work Unit\Horror Stems\Play_WawaDistortion	
 	1931726204	Play_2D_Music			\Default Work Unit\2D_Music\Play_2D_Music	
 	2034692297	Play_Button_Select			\Default Work Unit\UI\Play_Button_Select	
 	2047366256	Stop_EyeBeam_Default			\Default Work Unit\Eye Beam\Stop_EyeBeam_Default	
+	2141970788	Play_Victory_Music			\Default Work Unit\Play_Victory_Music	
 	2289315611	Stop_Horror_Test			\Default Work Unit\Horror_Test\Stop_Horror_Test	
 	2367458202	Stop_2D_Music			\Default Work Unit\2D_Music\Stop_2D_Music	
 	2379313215	Play_EyeBeam_Intensified			\Default Work Unit\Eye Beam\Play_EyeBeam_Intensified	
+	2516728121	Play_EyeBeamDeactivation			\Default Work Unit\Eye Beam\Play_EyeBeamDeactivation	
 	2576967453	Play_PulseToSiren			\Default Work Unit\Horror Stems\Play_PulseToSiren	
 	2624903825	Play_Spider_Steps			\Default Work Unit\Play_Spider_Steps	
 	2700195184	Play_screams			\Default Work Unit\Play_screams	
+	2784914665	Play_ChaseMusic			\Default Work Unit\Play_ChaseMusic	
 	2946897393	Play_Testing_Audio			\Default Work Unit\Testing\Play_Testing_Audio	
 	3026825475	Stop_Wind_in_Branches			\Default Work Unit\Wind\Stop_Wind_in_Branches	
 	3111061815	Fade_Out_2D_Music			\Default Work Unit\2D_Music\Fade_Out_2D_Music	
 	3133528005	Play_Growl			\Default Work Unit\Horror Stems\Play_Growl	
 	3227116378	Play_EyeBeam_Default			\Default Work Unit\Eye Beam\Play_EyeBeam_Default	
 	3359382657	Stop_EyeBeam_Intensified			\Default Work Unit\Eye Beam\Stop_EyeBeam_Intensified	
+	3430199064	Play_EyeBeamActivation			\Default Work Unit\Eye Beam\Play_EyeBeamActivation	
 	3606198378	Play_Choke			\Default Work Unit\Horror Stems\Play_Choke	
 	3808321334	Play_Jump_Landing			\Default Work Unit\Walking\Play_Jump_Landing	
 	3854155799	Play_Footsteps			\Default Work Unit\Walking\Play_Footsteps	
@@ -45,6 +50,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	215992295	Player_Health			\Default Work Unit\Player_Health	
 	429408522	EtherealToneVol			\Default Work Unit\HorrorStemsRTPCs\EtherealToneVol	
 	452215995	GrowlVol			\Default Work Unit\HorrorStemsRTPCs\GrowlVol	
+	1048095920	MonsterDistance			\Default Work Unit\MonsterDistance	
 	1122702348	DeepHitToBreath4Vol			\Default Work Unit\HorrorStemsRTPCs\DeepHitToBreath4Vol	
 	1419528906	BaseBassVol			\Default Work Unit\HorrorStemsRTPCs\BaseBassVol	
 	1477291085	MusicBox1Vol			\Default Work Unit\HorrorStemsRTPCs\MusicBox1Vol	
@@ -82,6 +88,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	209649964	DeepHitToBreath4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\DeepHitToBreath4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath4\DeepHitToBreath4		2582592
 	215979946	HijoMioRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\HijoMioRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Hijo Mio\HijoMioRev2		198544
 	234919899	SatanasMeLlamaRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\SatanasMeLlamaRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev1		232944
+	285998284	TristezaDeAmor	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\TristezaDeAmor_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\TristezaDeAmor\TristezaDeAmor		13219512
 	293235742	AlInfernoTeVasRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\AlInfernoTeVasRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev3		362596
 	300024926	Step9	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step9_B8BD6497.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step9		1678
 	308771699	DeepHitToBreath1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\DeepHitToBreath1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath1\DeepHitToBreath1		1868520
@@ -99,6 +106,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	468227711	Step6	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step6_4212E194.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step6		1274
 	482014655	dirt3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\dirt3_46A8EBAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt3		8138
 	509309381	screams	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\screams_F78178CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\screams		563460
+	528600874	EyeBeamDeactivation	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\EyeBeamDeactivation_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeamDeactivation		1808196
 	556952082	Step7	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step7_B8B72C17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step7		1200
 	560556572	DiosProtegemeRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DiosProtegemeRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev1		214420
 	567021774	Step5	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step5_A938E58F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step5		4496
@@ -121,6 +129,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	728844885	SatanasMeLlamaNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\SatanasMeLlamaNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaNorm		250584
 	748295014	MuestramePiedadRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\MuestramePiedadRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev2		247056
 	761734425	HijoMioNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\HijoMioNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Hijo Mio\HijoMioNorm		176496
+	768801266	ChaseMusicFinal	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\ChaseMusicFinal_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ChaseMusic\ChaseMusicFinal\ChaseMusicFinal		35168964
 	769564896	DejaloRespirarNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DejaloRespirarNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarNorm		273516
 	790883363	Step4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step4_BBE3A70A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step4		1778
 	794721413	Step4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Step4_E0656FBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step4		1552
@@ -132,13 +141,16 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	805324008	AlIAlInfernoTeVasRev4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\AlIAlInfernoTeVasRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Al inferno te vas\AlIAlInfernoTeVasRev4		307032
 	824338145	Stick3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Stick3_BDE16019.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Stick3		30916
 	833533991	Button Select	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Castanets Click_Higher_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button Select		48436
+	840613638	ChaseMusicFinalDrum	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\ChaseMusicFinalDrum_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ChaseMusic\ChaseMusicFinalDrum\ChaseMusicFinalDrum		35168964
 	852492158	MuestramePiedadRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\MuestramePiedadRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev3		185316
 	861748742	HijoMioRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\HijoMioRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Hijo Mio\HijoMioRev1		185316
+	862207827	Victory	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Victory_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Victory Music\Victory\Victory		3175296
 	862606870	dirt8	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\dirt8_579193F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt8		13202
 	872878570	MusicBox2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\MusicBox2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox2\MusicBox2		910320
 	875559642	DejaloRespirarRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DejaloRespirarRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev3		189724
 	881563779	WawaDistortion	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\Horror Stems\WawaDistortion_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\WawaDistortion\WawaDistortion		15144036
 	901624723	MeOyesRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\MeOyesRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\MeOyes\MeOyesRev1		132396
+	916682109	EyeBeamActivation	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\EyeBeamActivation_DEF4A3F3.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeamActivation		1621044
 	943376979	SatanasMeLlamaRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\SatanasMeLlamaRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev3		222360
 	985543759	MeOyesNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\MeOyesNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\MeOyes\MeOyesNorm		136804
 	987764891	DejaloRespirarRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Windows\SFX\DejaloRespirarRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev1		277924

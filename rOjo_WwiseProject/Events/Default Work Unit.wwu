@@ -754,6 +754,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Victory_Music" ID="{7BDA5D61-A5F5-4EB2-A09F-23898DCE63E9}">
+					<ChildrenList>
+						<Action Name="" ID="{2728093B-3C57-4DFB-847B-52463246ADF6}" ShortID="678393043">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Button Select" ID="{D2C9D650-E152-4CE6-850D-D45FD9E9EB44}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{755158DF-33CC-4F10-8E06-4D78D5C63E98}" ShortID="174694660">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LowCello" ID="{FD5CAF34-9718-47CC-AB1A-63B6C5128C1C}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B23AA9C-6FC4-479C-8B90-8E904CE9C7AF}" ShortID="710066877">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Victory Music" ID="{4BA426AC-54B0-49F4-97B6-0A20141259AE}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

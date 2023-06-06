@@ -17,6 +17,7 @@ public class Chaser3D : EndingUI
     private bool moving = true;
     private float drag;
 
+    public AK.Wwise.Event ChaseMusic;
 
     void Start()
     {
@@ -30,11 +31,22 @@ public class Chaser3D : EndingUI
         moving = true;
     }
 
+    private void OnEnable()
+    {
+        ChaseMusic.Post(gameObject);
+        Debug.LogError("ChaseMusic should be posted");
+    }
+
     void Update()
     {
         moveDirection = pMove.getMoveDirection();
         //moveDirection = transform.forward;
         rb.drag = drag;
+
+        if(moving)
+        {
+            DistanceFromPlayer();
+        }
     }
 
     private void FixedUpdate()
@@ -65,5 +77,12 @@ public class Chaser3D : EndingUI
     public void Halt()
     {
         moving = false;
+    }
+
+    public void DistanceFromPlayer()
+    {
+        float currDistance = Mathf.Abs(transform.position.z - player.transform.position.z);
+
+        AkSoundEngine.SetRTPCValue("MonsterDistance", currDistance);
     }
 }
