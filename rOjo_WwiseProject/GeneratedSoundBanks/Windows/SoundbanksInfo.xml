@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1BC04CA0-8542-13D7-2BC0-6EADADB2CDD4}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{6C88353F-CAE6-D39D-9317-7DECBEEC9FAD}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -28,6 +28,7 @@
 				<GameParameter Id="429408522" Name="EtherealToneVol"/>
 				<GameParameter Id="452215995" Name="GrowlVol"/>
 				<GameParameter Id="1006694123" Name="Music_Volume"/>
+				<GameParameter Id="1048095920" Name="MonsterDistance"/>
 				<GameParameter Id="1122702348" Name="DeepHitToBreath4Vol"/>
 				<GameParameter Id="1419528906" Name="BaseBassVol"/>
 				<GameParameter Id="1477291085" Name="MusicBox1Vol"/>
@@ -49,7 +50,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{17BC38BD-C188-C41B-587C-C68231E6C6A0}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{95C40FEC-2612-E5E0-975B-A8946223D359}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -83,7 +84,7 @@
 				</File>
 				<File Id="124192241" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Button Click.wav</ShortName>
-					<CachePath>SFX/Button Click_F60342F9.wem</CachePath>
+					<CachePath>SFX/Button Click_3CF7E987.wem</CachePath>
 				</File>
 				<File Id="131488593" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>WIP - Calm Wind in Branches.wav</ShortName>
@@ -128,6 +129,10 @@
 				<File Id="234919899" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SatanasMeLlamaRev1.wav</ShortName>
 					<CachePath>SFX/SatanasMeLlamaRev1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="285998284" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TristezaDeAmor.wav</ShortName>
+					<CachePath>SFX/TristezaDeAmor_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="293235742" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AlInfernoTeVasRev3.wav</ShortName>
@@ -196,6 +201,10 @@
 				<File Id="509309381" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>screams.wav</ShortName>
 					<CachePath>SFX/screams_F78178CF.wem</CachePath>
+				</File>
+				<File Id="528600874" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EyeBeamDeactivation.wav</ShortName>
+					<CachePath>SFX/EyeBeamDeactivation_10C4C929.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
@@ -285,6 +294,10 @@
 					<ShortName>HijoMioNorm.wav</ShortName>
 					<CachePath>SFX/HijoMioNorm_10C4C929.wem</CachePath>
 				</File>
+				<File Id="768801266" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ChaseMusicFinal.wav</ShortName>
+					<CachePath>SFX/ChaseMusicFinal_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="769564896" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>DejaloRespirarNorm.wav</ShortName>
 					<CachePath>SFX/DejaloRespirarNorm_10C4C929.wem</CachePath>
@@ -329,6 +342,10 @@
 					<ShortName>Castanets Click_Higher.wav</ShortName>
 					<CachePath>SFX/Castanets Click_Higher_10C4C929.wem</CachePath>
 				</File>
+				<File Id="840613638" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ChaseMusicFinalDrum.wav</ShortName>
+					<CachePath>SFX/ChaseMusicFinalDrum_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="852492158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MuestramePiedadRev3.wav</ShortName>
 					<CachePath>SFX/MuestramePiedadRev3_10C4C929.wem</CachePath>
@@ -336,6 +353,10 @@
 				<File Id="861748742" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>HijoMioRev1.wav</ShortName>
 					<CachePath>SFX/HijoMioRev1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="862207827" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Victory.wav</ShortName>
+					<CachePath>SFX/Victory_D79FB2B7.wem</CachePath>
 				</File>
 				<File Id="862606870" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>dirt8.wav</ShortName>
@@ -356,6 +377,10 @@
 				<File Id="901624723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MeOyesRev1.wav</ShortName>
 					<CachePath>SFX/MeOyesRev1_10C4C929.wem</CachePath>
+				</File>
+				<File Id="916682109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EyeBeamActivation.wav</ShortName>
+					<CachePath>SFX/EyeBeamActivation_DEF4A3F3.wem</CachePath>
 				</File>
 				<File Id="943376979" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SatanasMeLlamaRev3.wav</ShortName>
@@ -421,7 +446,7 @@
 						<MediaRef Id="1055184408"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1291943636" Name="Play_BaseBass" DurationType="OneShot" DurationMin="82.65" DurationMax="82.65">
+				<Event Id="1291943636" Name="Play_BaseBass" DurationType="OneShot" DurationMin="81.376564" DurationMax="81.376564">
 					<MediaRefs>
 						<MediaRef Id="648441544"/>
 					</MediaRefs>
@@ -431,9 +456,20 @@
 						<MediaRef Id="833533991"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2784914665" Name="Play_ChaseMusic" DurationType="OneShot" DurationMin="199.37" DurationMax="199.37">
+					<MediaRefs>
+						<MediaRef Id="768801266"/>
+						<MediaRef Id="840613638"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3606198378" Name="Play_Choke" DurationType="OneShot" DurationMin="87.65499" DurationMax="87.65499">
 					<MediaRefs>
 						<MediaRef Id="400889494"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1734519570" Name="Play_CreditMusic" DurationType="OneShot" DurationMin="101.459526" DurationMax="101.459526">
+					<MediaRefs>
+						<MediaRef Id="285998284"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="4207504401" Name="Play_CreepyOrgan" DurationType="OneShot" DurationMin="38.55" DurationMax="38.55">
@@ -530,6 +566,16 @@
 						<MediaRef Id="1037799982"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3430199064" Name="Play_EyeBeamActivation" DurationType="OneShot" DurationMin="9.189045" DurationMax="9.189045">
+					<MediaRefs>
+						<MediaRef Id="916682109"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2516728121" Name="Play_EyeBeamDeactivation" DurationType="OneShot" DurationMin="10.25" DurationMax="10.25">
+					<MediaRefs>
+						<MediaRef Id="528600874"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3854155799" Name="Play_Footsteps" DurationType="OneShot" DurationMin="0.008260008" DurationMax="0.09683064">
 					<MediaRefs>
 						<MediaRef Id="39914089"/>
@@ -602,7 +648,7 @@
 						<MediaRef Id="188098597"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2576967453" Name="Play_PulseToSiren" DurationType="OneShot" DurationMin="26.91" DurationMax="26.91">
+				<Event Id="2576967453" Name="Play_PulseToSiren" DurationType="OneShot" DurationMin="25.184656" DurationMax="25.184656">
 					<MediaRefs>
 						<MediaRef Id="1015923652"/>
 					</MediaRefs>
@@ -641,6 +687,13 @@
 						<MediaRef Id="1044381033"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2141970788" Name="Play_Victory_Music" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="119632406"/>
+						<MediaRef Id="833533991"/>
+						<MediaRef Id="862207827"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1918741923" Name="Play_WawaDistortion" DurationType="OneShot" DurationMin="85.85" DurationMax="85.85">
 					<MediaRefs>
 						<MediaRef Id="881563779"/>
@@ -668,6 +721,7 @@
 				<GameParameter Id="215992295" Name="Player_Health"/>
 				<GameParameter Id="429408522" Name="EtherealToneVol"/>
 				<GameParameter Id="452215995" Name="GrowlVol"/>
+				<GameParameter Id="1048095920" Name="MonsterDistance"/>
 				<GameParameter Id="1122702348" Name="DeepHitToBreath4Vol"/>
 				<GameParameter Id="1419528906" Name="BaseBassVol"/>
 				<GameParameter Id="1477291085" Name="MusicBox1Vol"/>
@@ -687,5 +741,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{65BE6FE1-9573-3FD8-2F92-79F14E9584A3}</FileHash>
+	<FileHash>{02915328-C78C-212E-6DD2-293105CA6B75}</FileHash>
 </SoundBanksInfo>

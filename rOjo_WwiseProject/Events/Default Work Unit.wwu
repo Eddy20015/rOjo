@@ -444,6 +444,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_EyeBeamDeactivation" ID="{F1E67CFB-8DE6-4960-9B35-EF66A03F997A}">
+							<ChildrenList>
+								<Action Name="" ID="{334B3E27-6B4E-4A76-8F1D-EAECB04C25EC}" ShortID="856546223">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamDeactivation" ID="{5CC38D63-B335-4068-B583-41495955BB6D}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_EyeBeamActivation" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}">
+							<ChildrenList>
+								<Action Name="" ID="{6CF9774C-5F57-4FDC-9D84-4161888B1963}" ShortID="977743056">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamActivation" ID="{02125F75-4FB0-47D4-8380-D1F925AEF729}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}">
@@ -698,6 +720,60 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Button Click" ID="{75A1600E-C9C6-4F27-82B8-F459DF3E3D19}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CreditMusic" ID="{B38691B6-C01D-41FA-8203-ECC9C6CA116A}">
+					<ChildrenList>
+						<Action Name="" ID="{29FEA4E7-5B41-43E5-986B-65F4131F20A1}" ShortID="529202235">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tristeza De Amor" ID="{E19B7ED9-0A2E-45AA-A481-88E94A9A2B19}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ChaseMusic" ID="{1728CF81-64C7-4F3E-8230-9C92264F19BF}">
+					<ChildrenList>
+						<Action Name="" ID="{3E4B0BDC-2032-43B8-A29B-FE6AC0457E34}" ShortID="742861683">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChaseMusicFinal" ID="{E89387FE-B32B-4E77-A6C3-C82751C89711}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E713EB29-56C9-485F-8231-82F6DE4E580D}" ShortID="274121336">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChaseMusicFinalDrum" ID="{D62E6B00-194F-4CB9-8356-50B4D516AB49}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Victory_Music" ID="{7BDA5D61-A5F5-4EB2-A09F-23898DCE63E9}">
+					<ChildrenList>
+						<Action Name="" ID="{2728093B-3C57-4DFB-847B-52463246ADF6}" ShortID="678393043">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Button Select" ID="{D2C9D650-E152-4CE6-850D-D45FD9E9EB44}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{755158DF-33CC-4F10-8E06-4D78D5C63E98}" ShortID="174694660">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LowCello" ID="{FD5CAF34-9718-47CC-AB1A-63B6C5128C1C}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3B23AA9C-6FC4-479C-8B90-8E904CE9C7AF}" ShortID="710066877">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Victory Music" ID="{4BA426AC-54B0-49F4-97B6-0A20141259AE}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

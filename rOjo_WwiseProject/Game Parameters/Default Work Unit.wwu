@@ -42,6 +42,11 @@
 						<GameParameter Name="WhistleBreathingVol" ID="{C099A867-A4DE-48F2-86A8-C50290A7C220}"/>
 					</ChildrenList>
 				</Folder>
+				<GameParameter Name="MonsterDistance" ID="{66D2E81E-FDB5-41A1-B91E-A8A5DE9D5D17}">
+					<PropertyList>
+						<Property Name="Max" Type="Real64" Value="50"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

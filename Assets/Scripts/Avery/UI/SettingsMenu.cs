@@ -64,11 +64,11 @@ public class SettingsMenu : MonoBehaviour
         masterVolume = masterVolumeSlider.value;
         AkSoundEngine.SetRTPCValue("Master_Volume", masterVolume);
 
-        musicVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume", DEFAULT_VOLUME);
+        musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", DEFAULT_VOLUME);
         musicVolume = musicVolumeSlider.value;
         AkSoundEngine.SetRTPCValue("Music_Volume", musicVolume);
 
-        sfxVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", DEFAULT_VOLUME);
+        sfxVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume", DEFAULT_VOLUME);
         sfxVolume = sfxVolumeSlider.value;
         AkSoundEngine.SetRTPCValue("SFX_Volume", sfxVolume);
 
