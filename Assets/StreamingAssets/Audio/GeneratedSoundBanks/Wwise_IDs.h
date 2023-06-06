@@ -71,6 +71,7 @@ namespace AK
         static const AkUniqueID GROWLVOL = 452215995U;
         static const AkUniqueID LOWCELLOVOL = 4064624855U;
         static const AkUniqueID MASTER_VOLUME = 4179668880U;
+        static const AkUniqueID MONSTERDISTANCE = 1048095920U;
         static const AkUniqueID MUSIC_VOLUME = 1006694123U;
         static const AkUniqueID MUSICBOX1VOL = 1477291085U;
         static const AkUniqueID MUSICBOX2VOL = 3949021176U;
