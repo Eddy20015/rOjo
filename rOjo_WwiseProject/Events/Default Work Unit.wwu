@@ -101,6 +101,13 @@
 										</Reference>
 									</ReferenceList>
 								</Action>
+								<Action Name="" ID="{A3995B10-F84C-4238-8A49-CBA8514A0695}" ShortID="635288816">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Dirt" ID="{DD3CC9DF-725F-4D49-BAAD-6BFB088C5A47}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 							</ChildrenList>
 						</Event>
 						<Event Name="Play_Dirt_Footsteps" ID="{0F8D6ADB-F556-420B-B6FD-D5BCD9A0C881}">
@@ -194,6 +201,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Special Click" ID="{1134BA81-2EBE-4960-B3F1-0C0BE1776ACC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Game_Button_Click" ID="{8A0EE6E9-98C9-428B-ABBA-D64CF18E5513}">
+							<ChildrenList>
+								<Action Name="" ID="{AE80F185-5C98-456E-8491-3F2FE2E24AA4}" ShortID="106892672">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Button Click" ID="{75A1600E-C9C6-4F27-82B8-F459DF3E3D19}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -663,6 +681,57 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Spider_Steps" ID="{5DF8CC64-1007-44EF-A031-D0BC377D4FA0}">
+					<ChildrenList>
+						<Action Name="" ID="{BDD22DF2-9D17-4484-B5C4-0FDEE754E4D8}" ShortID="790538735">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Spider Steps" ID="{C8765093-D9A3-4BB4-A306-48D36608F349}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_screams" ID="{C09F5604-63FC-499C-837C-EBA707729321}">
+					<ChildrenList>
+						<Action Name="" ID="{20135399-667D-41F4-9374-D23A7790EE4A}" ShortID="503873687">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="screams" ID="{E41F8C89-61FF-4801-B63E-F5106FEB05D1}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CreditsMusic" ID="{5A088E74-A8C6-49B7-8513-8E3AC25F5654}">
+					<ChildrenList>
+						<Action Name="" ID="{7439C539-3881-4376-BD12-50B12E5CE261}" ShortID="1065843807">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TristezaDeAmor" ID="{A0AE83B1-654F-46F2-933E-D509C380BB82}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_ChaseMusic" ID="{829E0CC4-A254-4EFB-98D0-587F3288098F}">
+					<ChildrenList>
+						<Action Name="" ID="{0FC8CBF1-7138-4175-A5BB-1A885B84D382}" ShortID="356168581">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChaseMusicFinal" ID="{A5D22531-BD18-45BF-BA22-D2E22D406238}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DEC30B01-31C4-4CD8-82C9-274C65401956}" ShortID="813398861">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ChaseMusicFinalDrum" ID="{522C57B0-9FDB-4EF9-ABF5-1FA5A42317FE}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
