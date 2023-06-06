@@ -3432,7 +3432,7 @@
 					<ChildrenList>
 						<MusicSegment Name="ChaseMusicFinal" ID="{E89387FE-B32B-4E77-A6C3-C82751C89711}" ShortID="346355550">
 							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="199370"/>
+								<Property Name="EndPosition" Type="Real64" Value="398740"/>
 								<Property Name="Priority" Type="int16">
 									<ValueList>
 										<Value>100</Value>
@@ -3462,6 +3462,13 @@
 												<MediaID ID="768801266"/>
 											</MediaIDList>
 										</AudioFileSource>
+										<AudioFileSource Name="ChaseMusicFinalDrum" ID="{8F6F68EA-DD4D-4031-A3FC-941924E38D28}">
+											<Language>SFX</Language>
+											<AudioFile>ChaseMusicFinalDrum.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="840613638"/>
+											</MediaIDList>
+										</AudioFileSource>
 									</ChildrenList>
 									<TransitionList>
 										<MusicTransition Name="Root" ID="{3C7840B1-AB84-4AA6-B8C2-789D517A520D}">
@@ -3487,6 +3494,19 @@
 																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																			</PropertyList>
 																			<AudioSourceRef Name="ChaseMusicFinal" ID="{3955277A-372E-48BD-AB7A-DD0F5165FC74}"/>
+																		</MusicClip>
+																	</Local>
+																</Reference>
+																<Reference>
+																	<Local>
+																		<MusicClip Name="ChaseMusicFinalDrum" ID="{A32AD53B-8C1E-48F6-A7FE-BBFF3C2DFE64}">
+																			<PropertyList>
+																				<Property Name="EndTrimOffset" Type="Real64" Value="199370"/>
+																				<Property Name="FadeInMode" Type="int16" Value="0"/>
+																				<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																				<Property Name="PlayAt" Type="Real64" Value="199370"/>
+																			</PropertyList>
+																			<AudioSourceRef Name="ChaseMusicFinalDrum" ID="{8F6F68EA-DD4D-4031-A3FC-941924E38D28}"/>
 																		</MusicClip>
 																	</Local>
 																</Reference>
