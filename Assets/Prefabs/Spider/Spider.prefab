@@ -390,8 +390,8 @@ MonoBehaviour:
   bodyRotateStrength: 1
   bodyMoveSpeed: 1
   bodyRotateSpeed: 1
-  spiderMoveSpeed: 0.5
-  spiderRotateSpeed: 0.3
+  spiderMoveSpeed: 0.3
+  spiderRotateSpeed: 0.2
 --- !u!1 &7501405379900302926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,15 +1176,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027569018913702, guid: 79a546011e34a4047aea1f328c7f4ed9, type: 3}
       propertyPath: initialOffset
-      value: -1.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027569018913702, guid: 79a546011e34a4047aea1f328c7f4ed9, type: 3}
       propertyPath: positionOffset
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4027569018913702, guid: 79a546011e34a4047aea1f328c7f4ed9, type: 3}
       propertyPath: raycastDirection.x
-      value: -0.4
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4027569018913702, guid: 79a546011e34a4047aea1f328c7f4ed9, type: 3}
       propertyPath: raycastDirection.y
@@ -1192,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4027569018913702, guid: 79a546011e34a4047aea1f328c7f4ed9, type: 3}
       propertyPath: initialFootPosition.x
-      value: -2
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4027569018913702, guid: 79a546011e34a4047aea1f328c7f4ed9, type: 3}
       propertyPath: initialFootPosition.y
