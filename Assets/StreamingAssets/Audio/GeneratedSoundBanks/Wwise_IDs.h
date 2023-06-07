@@ -13,9 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID FADE_OUT_2D_MUSIC = 3111061815U;
-        static const AkUniqueID PLAY_2D_MUSIC = 1931726204U;
+        static const AkUniqueID FADE_OUT_AMALIA_MUSIC = 1557423726U;
+        static const AkUniqueID PLAY_AMALIA_MUSIC = 2043365649U;
         static const AkUniqueID PLAY_BASEBASS = 1291943636U;
+        static const AkUniqueID PLAY_BRANCH_BREAKING = 3935030902U;
+        static const AkUniqueID PLAY_BRANCH_IMPACT = 1700739467U;
         static const AkUniqueID PLAY_BUTTON_SELECT = 2034692297U;
         static const AkUniqueID PLAY_CHASEMUSIC = 2784914665U;
         static const AkUniqueID PLAY_CHOKE = 3606198378U;
@@ -43,6 +45,7 @@ namespace AK
         static const AkUniqueID PLAY_MUSICBOX3 = 359053977U;
         static const AkUniqueID PLAY_PANFLUTE = 672662027U;
         static const AkUniqueID PLAY_PULSETOSIREN = 2576967453U;
+        static const AkUniqueID PLAY_PUSHING_STONE = 2068827636U;
         static const AkUniqueID PLAY_SCREAMS = 2700195184U;
         static const AkUniqueID PLAY_SHEPARDSTONE = 845845902U;
         static const AkUniqueID PLAY_SPECIAL_CLICK = 1401754570U;
@@ -52,11 +55,12 @@ namespace AK
         static const AkUniqueID PLAY_WAWADISTORTION = 1918741923U;
         static const AkUniqueID PLAY_WHISTLEBREATHING = 1329546286U;
         static const AkUniqueID PLAY_WIND_IN_BRANCHES = 1771244861U;
-        static const AkUniqueID STOP_2D_MUSIC = 2367458202U;
         static const AkUniqueID STOP_ALL = 452547817U;
+        static const AkUniqueID STOP_AMALIA_MUSIC = 4241119515U;
         static const AkUniqueID STOP_EYEBEAM_DEFAULT = 2047366256U;
         static const AkUniqueID STOP_EYEBEAM_INTENSIFIED = 3359382657U;
         static const AkUniqueID STOP_HORROR_TEST = 2289315611U;
+        static const AkUniqueID STOP_PUSHING_STONE = 2251314098U;
         static const AkUniqueID STOP_TESTING_AUDIO = 87439343U;
         static const AkUniqueID STOP_WIND_IN_BRANCHES = 3026825475U;
     } // namespace EVENTS

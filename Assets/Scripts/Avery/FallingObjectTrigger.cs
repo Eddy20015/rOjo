@@ -5,6 +5,8 @@ using UnityEngine;
 public class FallingObjectTrigger : MonoBehaviour
 {
     [SerializeField] List<GameObject> objects;
+    [SerializeField] AK.Wwise.Event playBranches;
+    
 
     private void Start()
     {
@@ -12,6 +14,7 @@ public class FallingObjectTrigger : MonoBehaviour
         {
             Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
             rb.gravityScale = 0f;
+            obj.AddComponent<BranchSounds>();
         }
     }
 
@@ -23,6 +26,8 @@ public class FallingObjectTrigger : MonoBehaviour
             {
                 Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
                 rb.gravityScale = 1f;
+                print("here");
+                playBranches.Post(gameObject);
             }
         }
         

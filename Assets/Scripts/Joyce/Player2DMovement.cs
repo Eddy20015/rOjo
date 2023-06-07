@@ -37,7 +37,7 @@ public class Player2DMovement : MonoBehaviour
     [Header("Audio")]
     //[SerializeField] private string jumpSFX = "Jump";
     //[SerializeField] private string walkSFX = "Walk";
-    [SerializeField] private AK.Wwise.Event jumpLanding;
+    //[SerializeField] private AK.Wwise.Event jumpLanding;
     /*[SerializeField] private AK.Wwise.Event step;*/
     [SerializeField] private float stepFrequencey;
     private const float airTimeLimit = 0.5f;

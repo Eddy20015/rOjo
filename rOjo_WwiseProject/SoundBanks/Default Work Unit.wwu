@@ -16,13 +16,15 @@
 						<ObjectRef Name="Play_EyeBeamActivation" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BaseBass" ID="{3F4C2CEF-22F8-425D-BDEA-302EBE31D5A9}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Game_Button_Click" ID="{8A0EE6E9-98C9-428B-ABBA-D64CF18E5513}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Pushing_Stone" ID="{3C426C6F-94F1-42C3-BAA2-7326E470DE18}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PanFlute" ID="{149B2C79-94A1-42D7-9ADD-ECB3F0A39DA9}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Horror_Test" ID="{F989F61A-222C-4374-B76D-208B19143D48}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EtherealTone" ID="{0BD62C97-A1CB-44D8-8805-96BE8037DAE5}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Spider_Steps" ID="{5DF8CC64-1007-44EF-A031-D0BC377D4FA0}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Choke" ID="{36BC3AA3-1EB4-4567-87ED-6ADE704E93CD}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_2D_Music" ID="{45920070-F9A7-45B4-8EA8-3C66C0D26C35}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Amalia_Music" ID="{45920070-F9A7-45B4-8EA8-3C66C0D26C35}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PulseToSiren" ID="{645B138C-4BE5-45C2-9009-2C102A003F17}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Branch_Breaking" ID="{4A39DF6A-AFEE-4631-9C4F-76900B549D55}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Wind_in_Branches" ID="{42E9939F-A8CC-466B-A813-8D07147D590C}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepHitToBreath1" ID="{F325EFA8-37AE-46C3-9B72-C709C3784F83}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_EyeBeam_Intensified" ID="{1F13CE81-D55A-470E-B4F3-F8028D0744C1}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
@@ -35,6 +37,7 @@
 						<ObjectRef Name="Play_DeepHitToBreath4" ID="{93258156-CA94-4B08-8030-DD83E181E233}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepHitToBreath2" ID="{986A9527-5733-4B81-AA6F-FBCD13A9095C}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Pushing_Stone" ID="{8EE500DF-CD8D-4B92-A157-81489C0B3A6F}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusicBox1" ID="{01B86EFC-D5D9-4BE8-B5DF-8DF1C14F2F0B}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Special_Click" ID="{759D350A-027C-4C01-BCCF-9A13C4B93CC6}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Testing_Audio" ID="{3297D852-AF3E-4C2F-8857-91217EBC7BB2}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
@@ -44,11 +47,12 @@
 						<ObjectRef Name="Play_Button_Select" ID="{2507843D-17E6-4CF0-BC2F-290D7A0C066A}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CreepyOrgan" ID="{6B3DC18C-5121-4DB2-8E6A-50F5AEF14DD9}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepHitToBreath3" ID="{5F9F8B07-9295-4DCF-8269-C5E400586EFF}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_2D_Music" ID="{523D6A0D-A907-4E01-BE70-4FBC12E92E53}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Fade_Out_2D_Music" ID="{F7C154FB-DA20-4E52-B69A-6109B3832652}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Amalia_Music" ID="{523D6A0D-A907-4E01-BE70-4FBC12E92E53}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Fade_Out_Amalia_Music" ID="{F7C154FB-DA20-4E52-B69A-6109B3832652}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EyeBeam_Intensified" ID="{3A9EE42A-B2CD-4E56-A417-FAC65D77C251}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Victory_Music" ID="{7BDA5D61-A5F5-4EB2-A09F-23898DCE63E9}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ChaseMusic" ID="{1728CF81-64C7-4F3E-8230-9C92264F19BF}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Branch_Impact" ID="{6C959647-16C7-4F6A-846A-1C31D881CBC9}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_WawaDistortion" ID="{94F1C6BB-9AEC-4FBD-9CE3-8FE28647C782}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_LowCello" ID="{69E32791-DFDB-4FF3-BB04-17731917892E}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
