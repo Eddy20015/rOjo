@@ -10,6 +10,10 @@ public class ForegroundController : VideoController
     [SerializeField] private VideoClip[] Clips;
     private RawImage rawImage;
 
+    [SerializeField] private RawImage HandVideo;
+    [SerializeField] private VideoClip[] HandClips;
+    [SerializeField] private Vector3[] HandVideoPositions;
+
     int CurrIdx = 0;
 
     protected override void Start()
@@ -32,6 +36,19 @@ public class ForegroundController : VideoController
         rawImage.enabled = true;
     }
 
+    public void PlayNewHandVideo(int HandIdx)
+    {
+        VideoPlayer HandPlayer = HandVideo.gameObject.GetComponent<VideoPlayer>();
+        if (HandIdx - 1 >= 0 && HandIdx < HandClips.Length && HandIdx < HandVideoPositions.Length)
+        {
+            HandPlayer.clip = HandClips[HandIdx - 1];
+            HandVideo.gameObject.transform.position = HandVideoPositions[HandIdx - 1];
+        }
+        HandVideo.enabled = true;
+        
+        HandPlayer.Play();
+    }
+
     public void PauseForeground()
     {
         PauseVPlayer();
@@ -41,5 +58,6 @@ public class ForegroundController : VideoController
     {
         StopVPlayer();
         rawImage.enabled = false;
+        HandVideo.enabled = false;
     }
 }

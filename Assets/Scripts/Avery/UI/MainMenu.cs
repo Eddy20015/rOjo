@@ -6,8 +6,10 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] AK.Wwise.Event clickSound;
     [SerializeField] AK.Wwise.Event specialClickSound;
+    [SerializeField] AK.Wwise.Event stopMusic;
     public void OnClickNewGame()
     {
+        stopMusic.Post(gameObject);
         specialClickSound.Post(gameObject);
         GameStateManager.NewGame();
     }
