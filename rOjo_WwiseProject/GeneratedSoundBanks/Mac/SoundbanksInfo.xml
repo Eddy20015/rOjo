@@ -50,7 +50,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{16CFD594-58E7-9547-1B62-F0751C90065A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AA368808-0C7B-1C8C-F670-06C598D5C883}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -66,6 +66,10 @@
 					<ShortName>Step9.wav</ShortName>
 					<CachePath>SFX/Step9_08F93BE0.wem</CachePath>
 				</File>
+				<File Id="84490070" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pushing Stone.wav</ShortName>
+					<CachePath>SFX/Pushing Stone_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="94379695" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step3.wav</ShortName>
 					<CachePath>SFX/Step3_B2124D25.wem</CachePath>
@@ -73,6 +77,10 @@
 				<File Id="101637563" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AlInfernoTeVasNorm.wav</ShortName>
 					<CachePath>SFX/AlInfernoTeVasNorm_10C4C929.wem</CachePath>
+				</File>
+				<File Id="114392987" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Branch Impact.wav</ShortName>
+					<CachePath>SFX/Branch Impact_10C4C929.wem</CachePath>
 				</File>
 				<File Id="119134536" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>AlInfernoTeVasRev5.wav</ShortName>
@@ -93,6 +101,10 @@
 				<File Id="143617217" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3D Music.wav</ShortName>
 					<CachePath>SFX/3D Music_D79FB2B7.wem</CachePath>
+				</File>
+				<File Id="161364360" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Branch Breaking.wav</ShortName>
+					<CachePath>SFX/Branch Breaking_10C4C929.wem</CachePath>
 				</File>
 				<File Id="167237944" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step8.wav</ShortName>
@@ -204,7 +216,7 @@
 				</File>
 				<File Id="528600874" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EyeBeamDeactivation.wav</ShortName>
-					<CachePath>SFX/EyeBeamDeactivation_10C4C929.wem</CachePath>
+					<CachePath>SFX/EyeBeamDeactivation_09F7F8CD.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
@@ -378,6 +390,10 @@
 					<ShortName>MeOyesRev1.wav</ShortName>
 					<CachePath>SFX/MeOyesRev1_10C4C929.wem</CachePath>
 				</File>
+				<File Id="916682109" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>EyeBeamActivation.wav</ShortName>
+					<CachePath>SFX/EyeBeamActivation_10C4C929.wem</CachePath>
+				</File>
 				<File Id="943376979" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SatanasMeLlamaRev3.wav</ShortName>
 					<CachePath>SFX/SatanasMeLlamaRev3_10C4C929.wem</CachePath>
@@ -436,8 +452,8 @@
 				</File>
 			</Media>
 			<Events>
-				<Event Id="3111061815" Name="Fade_Out_2D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1931726204" Name="Play_2D_Music" DurationType="Infinite">
+				<Event Id="1557423726" Name="Fade_Out_Amalia_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2043365649" Name="Play_Amalia_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1055184408"/>
 					</MediaRefs>
@@ -445,6 +461,16 @@
 				<Event Id="1291943636" Name="Play_BaseBass" DurationType="OneShot" DurationMin="81.376564" DurationMax="81.376564">
 					<MediaRefs>
 						<MediaRef Id="648441544"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3935030902" Name="Play_Branch_Breaking" DurationType="OneShot" DurationMin="1.1394331" DurationMax="1.1394331">
+					<MediaRefs>
+						<MediaRef Id="161364360"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1700739467" Name="Play_Branch_Impact" DurationType="OneShot" DurationMin="0.48077098" DurationMax="0.48077098">
+					<MediaRefs>
+						<MediaRef Id="114392987"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2034692297" Name="Play_Button_Select" DurationType="OneShot" DurationMin="0.2740363" DurationMax="0.2740363">
@@ -523,6 +549,7 @@
 				<Event Id="3227116378" Name="Play_EyeBeam_Default" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="24771127"/>
+						<MediaRef Id="916682109"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2379313215" Name="Play_EyeBeam_Intensified" DurationType="Infinite">
@@ -564,10 +591,10 @@
 				</Event>
 				<Event Id="3430199064" Name="Play_EyeBeamActivation" DurationType="OneShot" DurationMin="10.25" DurationMax="10.25">
 					<MediaRefs>
-						<MediaRef Id="528600874"/>
+						<MediaRef Id="916682109"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2516728121" Name="Play_EyeBeamDeactivation" DurationType="OneShot" DurationMin="10.25" DurationMax="10.25">
+				<Event Id="2516728121" Name="Play_EyeBeamDeactivation" DurationType="OneShot" DurationMin="8.582021" DurationMax="8.582021">
 					<MediaRefs>
 						<MediaRef Id="528600874"/>
 					</MediaRefs>
@@ -649,6 +676,11 @@
 						<MediaRef Id="1015923652"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2068827636" Name="Play_Pushing_Stone" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="84490070"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2700195184" Name="Play_screams" DurationType="OneShot" DurationMin="3.1934083" DurationMax="3.1934083">
 					<MediaRefs>
 						<MediaRef Id="509309381"/>
@@ -705,11 +737,16 @@
 						<MediaRef Id="131488593"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2367458202" Name="Stop_2D_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2047366256" Name="Stop_EyeBeam_Default" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4241119515" Name="Stop_Amalia_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2047366256" Name="Stop_EyeBeam_Default" DurationType="OneShot" DurationMin="8.582021" DurationMax="8.582021">
+					<MediaRefs>
+						<MediaRef Id="528600874"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3359382657" Name="Stop_EyeBeam_Intensified" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2289315611" Name="Stop_Horror_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2251314098" Name="Stop_Pushing_Stone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
@@ -737,5 +774,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C30B8BF5-6590-BCE4-58ED-05D2BC5F2910}</FileHash>
+	<FileHash>{A41D10C0-056F-E82F-8BD5-845D0BB00EF9}</FileHash>
 </SoundBanksInfo>
