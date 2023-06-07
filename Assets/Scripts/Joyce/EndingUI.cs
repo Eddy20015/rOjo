@@ -53,7 +53,7 @@ public class EndingUI : MonoBehaviour
         GameStateManager.CursorOn();
     }
 
-    protected void ToggleUI(bool on = false)
+    protected virtual void ToggleUI(bool on = false)
     {
         deathUI.SetActive(on);
         videoImage.SetActive(on);
