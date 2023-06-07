@@ -50,7 +50,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AA368808-0C7B-1C8C-F670-06C598D5C883}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{5D6BA416-636E-405C-B485-FD500154AC13}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -216,7 +216,7 @@
 				</File>
 				<File Id="528600874" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EyeBeamDeactivation.wav</ShortName>
-					<CachePath>SFX/EyeBeamDeactivation_09F7F8CD.wem</CachePath>
+					<CachePath>SFX/EyeBeamDeactivation_0806292C.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
@@ -696,7 +696,7 @@
 						<MediaRef Id="1027631710"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2624903825" Name="Play_Spider_Steps" DurationType="OneShot" DurationMin="0.0816174" DurationMax="0.2651464">
+				<Event Id="2624903825" Name="Play_Spider_Steps" MaxAttenuation="15" DurationType="OneShot" DurationMin="0.0816174" DurationMax="0.2651464">
 					<MediaRefs>
 						<MediaRef Id="167237944"/>
 						<MediaRef Id="300024926"/>
@@ -774,5 +774,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7E8E7C4C-74FC-CFC4-9EB8-730047C282D0}</FileHash>
+	<FileHash>{AF1DBA11-6D53-EACD-9533-D613740C2AEE}</FileHash>
 </SoundBanksInfo>

@@ -850,6 +850,9 @@
 				<BlendContainer Name="Spider Steps" ID="{C8765093-D9A3-4BB4-A306-48D36608F349}" ShortID="844021027">
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{C50BBD7A-3272-493B-9A33-D5B346537383}"/>
@@ -858,6 +861,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Spider Attenuation" ID="{2AF4CDF9-C1FA-42D4-9C50-0ED7A7F1EBBE}" WorkUnitID="{B3D4B40B-45F9-4CC0-9D34-2A90892BF4EA}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
 						</Reference>
