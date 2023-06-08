@@ -31,7 +31,6 @@ public class Player2DMovement : MonoBehaviour
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
-    [SerializeField] private ParticleSystem landingParticles;
     //[SerializeField] private AnimationClip riseClip;
     private Vector3 originalScale; // faces right
 
@@ -164,7 +163,6 @@ public class Player2DMovement : MonoBehaviour
         if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
             anim.SetBool("Jumping", false);
-            LandingSmoke();
             /*if (airTime > airTimeLimit)
             {
                 print("landed");
@@ -252,10 +250,5 @@ public class Player2DMovement : MonoBehaviour
     public void SlowFall(bool on)
     {
         currDownGravity = on ? slowFallGravity: downGravity;
-    }
-
-    public void LandingSmoke()
-    {
-        landingParticles.Play();
     }
 }

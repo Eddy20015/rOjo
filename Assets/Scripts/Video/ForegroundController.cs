@@ -21,7 +21,6 @@ public class ForegroundController : VideoController
         base.Start();
         rawImage = GetComponent<RawImage>();
         rawImage.enabled = false;
-        HandVideo.enabled = false;
     }
 
     //This function assumes that all clips that will be played in level are
@@ -40,13 +39,14 @@ public class ForegroundController : VideoController
     public void PlayNewHandVideo(int HandIdx)
     {
         VideoPlayer HandPlayer = HandVideo.gameObject.GetComponent<VideoPlayer>();
-        if (HandIdx - 1 >= 0 && HandIdx - 1 < HandClips.Length && HandIdx - 1 < HandVideoPositions.Length)
+        if (HandIdx - 1 >= 0 && HandIdx < HandClips.Length && HandIdx < HandVideoPositions.Length)
         {
             HandPlayer.clip = HandClips[HandIdx - 1];
-            HandVideo.gameObject.transform.localPosition = new Vector3(HandVideoPositions[HandIdx - 1].x, HandVideoPositions[HandIdx - 1].y, 0);
+            HandVideo.gameObject.transform.position = HandVideoPositions[HandIdx - 1];
         }
-        HandPlayer.Play();
         HandVideo.enabled = true;
+        
+        HandPlayer.Play();
     }
 
     public void PauseForeground()
