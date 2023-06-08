@@ -2862,7 +2862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154702068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.009857178, y: -4.5275345, z: 0}
+  m_LocalPosition: {x: 0.12243652, y: -4.9672627, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7302,6 +7302,10 @@ PrefabInstance:
     - target: {fileID: 828395453918354452, guid: d08c8a3c65afb784d980239c089a7c03, type: 3}
       propertyPath: m_Name
       value: BorderCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 828395453936662448, guid: d08c8a3c65afb784d980239c089a7c03, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 828395453936662448, guid: d08c8a3c65afb784d980239c089a7c03, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -12123,7 +12127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 347.1
+      value: 959.1
       objectReference: {fileID: 0}
     - target: {fileID: 3764266573590916495, guid: 7352bdfb9cdb9db4d908437ff135013b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18696,7 +18700,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421764289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 347.09015, y: 1.2775345, z: -4.75}
+  m_LocalPosition: {x: 958.97754, y: 1.7172627, z: -4.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19627,7 +19631,7 @@ MonoBehaviour:
   StopAll:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6dc5df357d8e86b41a031626a45c9965, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: 6fdbcaa554bbf294ebc4b6d77dd1fdf5, type: 2}
   player: {fileID: 511841499}
   speedOffset: 3
   handsVid: {fileID: 32900000, guid: 1cc6fc469f8b5c741adb642361d0efd7, type: 3}
@@ -19635,7 +19639,7 @@ MonoBehaviour:
   ChaseMusic:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 6dc5df357d8e86b41a031626a45c9965, type: 2}
 --- !u!65 &1476032063
 BoxCollider:
   m_ObjectHideFlags: 0

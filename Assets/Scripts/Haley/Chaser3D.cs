@@ -13,7 +13,8 @@ public class Chaser3D : EndingUI
     [Header("Chaser Video")]
     [SerializeField] private VideoClip handsVid;
     [SerializeField] private GameObject redScreenImage;
-     
+
+    [Header("Audio")]
     private Vector3 moveDirection;
 
     private Rigidbody rb;
@@ -33,10 +34,7 @@ public class Chaser3D : EndingUI
         speed = pMove.getSpeed();
         drag = pMove.getDrag();
         moving = true;
-    }
 
-    private void OnEnable()
-    {
         ChaseMusic.Post(gameObject);
     }
 

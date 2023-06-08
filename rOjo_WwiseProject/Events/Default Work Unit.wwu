@@ -3,7 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="2D_Music" ID="{21148890-C5F8-44A8-A026-FD430DD7BAE1}" ShortID="210513226"/>
 				<Folder Name="Horror_Test" ID="{9B7ED429-C40D-456E-8743-CC6A78C38FFA}" ShortID="16240666">
 					<ChildrenList>
 						<Event Name="Play_Horror_Test" ID="{F43ED426-4896-4CA7-9909-60C700D6D5B0}">
@@ -27,35 +26,6 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="HorrorTest" ID="{31D6DC7B-3537-49E0-A743-D1ADCB848FC6}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Testing" ID="{6D7AFF98-8E1A-4D37-8126-49FD93C03817}" ShortID="196248531">
-					<ChildrenList>
-						<Event Name="Play_Testing_Audio" ID="{DC1C7FC9-0EAC-47CA-B360-69009B4447D4}">
-							<ChildrenList>
-								<Action Name="" ID="{37DE5285-94FA-4D2E-B68A-EB922A5185A4}" ShortID="944847933">
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Testing Audio" ID="{8BF46DAB-3AED-47D4-B605-4D38FF965FFC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Stop_Testing_Audio" ID="{3297D852-AF3E-4C2F-8857-91217EBC7BB2}">
-							<ChildrenList>
-								<Action Name="" ID="{483390BA-55E4-4936-B95C-29D866FDC04F}" ShortID="164913570">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="2"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Testing Audio" ID="{8BF46DAB-3AED-47D4-B605-4D38FF965FFC}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -851,8 +821,53 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Eye_Squishy" ID="{9DA4D004-D20C-4B07-8FC3-4DF70E0A3F7A}">
+							<ChildrenList>
+								<Action Name="" ID="{70EE9BAC-6B1A-4085-ADDE-23A9892B9C64}" ShortID="130366598">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Eye Squishy" ID="{A93CA664-9FD5-4C9A-877C-A6490D4F7250}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Stop_Loops" ID="{550FF629-EA82-4508-9215-5869C271F857}">
+					<ChildrenList>
+						<Action Name="" ID="{1608C4A1-0738-4037-BE0B-AA7640837FD6}" ShortID="454038586">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EyeBeam_Intensified" ID="{FFDBDE1C-C490-489E-84F8-CB7143FB8D01}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D943F568-29ED-41D6-ABBD-2BECC0F66420}" ShortID="959064212">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EyeBeam_Default" ID="{D807ED75-33A4-4CDB-B831-822EC4D5F810}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{885B1317-9C2B-4357-B5D4-41A41828FBC2}" ShortID="864042712">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pushing Stone" ID="{AB45A406-FBD9-403C-828F-A561BAB4827F}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

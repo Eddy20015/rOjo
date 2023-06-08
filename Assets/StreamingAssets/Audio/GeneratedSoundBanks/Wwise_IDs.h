@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID PLAY_DEEPHITTOBREATH4 = 4250637638U;
         static const AkUniqueID PLAY_DIRT_FOOTSTEPS = 1323035329U;
         static const AkUniqueID PLAY_ETHEREALTONE = 4119780300U;
+        static const AkUniqueID PLAY_EYE_SQUISHY = 2447590944U;
         static const AkUniqueID PLAY_EYEBEAM_DEFAULT = 3227116378U;
         static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED = 2379313215U;
         static const AkUniqueID PLAY_EYEBEAMACTIVATION = 3430199064U;
@@ -50,7 +51,6 @@ namespace AK
         static const AkUniqueID PLAY_SHEPARDSTONE = 845845902U;
         static const AkUniqueID PLAY_SPECIAL_CLICK = 1401754570U;
         static const AkUniqueID PLAY_SPIDER_STEPS = 2624903825U;
-        static const AkUniqueID PLAY_TESTING_AUDIO = 2946897393U;
         static const AkUniqueID PLAY_VICTORY_MUSIC = 2141970788U;
         static const AkUniqueID PLAY_WAWADISTORTION = 1918741923U;
         static const AkUniqueID PLAY_WHISTLEBREATHING = 1329546286U;
@@ -60,8 +60,8 @@ namespace AK
         static const AkUniqueID STOP_EYEBEAM_DEFAULT = 2047366256U;
         static const AkUniqueID STOP_EYEBEAM_INTENSIFIED = 3359382657U;
         static const AkUniqueID STOP_HORROR_TEST = 2289315611U;
+        static const AkUniqueID STOP_LOOPS = 3907435653U;
         static const AkUniqueID STOP_PUSHING_STONE = 2251314098U;
-        static const AkUniqueID STOP_TESTING_AUDIO = 87439343U;
         static const AkUniqueID STOP_WIND_IN_BRANCHES = 3026825475U;
     } // namespace EVENTS
 
@@ -89,6 +89,7 @@ namespace AK
         static const AkUniqueID PLAYER_HEALTH = 215992295U;
         static const AkUniqueID PULSETOSIRENVOL = 2685063653U;
         static const AkUniqueID SFX_VOLUME = 1564184899U;
+        static const AkUniqueID SQUISHEYEDISTANCE = 4159403376U;
         static const AkUniqueID WAWADISTORTIONVOL = 4222622707U;
         static const AkUniqueID WHISTLEBREATHINGVOL = 3844727424U;
     } // namespace GAME_PARAMETERS
