@@ -16,6 +16,7 @@ public class EndingUI : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] protected AK.Wwise.Event StopAll;
+    [SerializeField] protected AK.Wwise.Event playScream;
 
     private bool triggered;
 
@@ -36,6 +37,7 @@ public class EndingUI : MonoBehaviour
     protected IEnumerator PlayCutscene()
     {
         // cutscene moment
+        playScream.Post(gameObject);
         vPlayer.targetTexture.Release();
         GameStateManager.Cinematics();
         vPlayer.clip = cutscene;

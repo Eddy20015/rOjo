@@ -23,6 +23,7 @@ public class Chaser3D : EndingUI
     private float drag;
 
     public AK.Wwise.Event ChaseMusic;
+    public AK.Wwise.Event playDeath;
 
     void Start()
     {
@@ -87,6 +88,7 @@ public class Chaser3D : EndingUI
 
     private IEnumerator PlayHands()
     {
+        playDeath.Post(gameObject);
         redScreenImage.SetActive(true);
         vPlayer.targetTexture.Release();
         GameStateManager.Cinematics();

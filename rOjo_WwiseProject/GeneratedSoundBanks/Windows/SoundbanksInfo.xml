@@ -51,7 +51,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7FA16FFF-D535-2212-8C64-DD424DBF2C6F}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{80BFB825-E59B-0CC1-8675-373999B0F392}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -470,6 +470,12 @@
 			</Media>
 			<Events>
 				<Event Id="1557423726" Name="Fade_Out_Amalia_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3203840472" Name="Play_3D_Death" DurationType="OneShot" DurationMin="86.39157" DurationMax="86.39157">
+					<MediaRefs>
+						<MediaRef Id="400889494"/>
+						<MediaRef Id="916682109"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2043365649" Name="Play_Amalia_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1055184408"/>
@@ -613,11 +619,6 @@
 						<MediaRef Id="987764891"/>
 						<MediaRef Id="1011580158"/>
 						<MediaRef Id="1037799982"/>
-					</MediaRefs>
-				</Event>
-				<Event Id="3430199064" Name="Play_EyeBeamActivation" DurationType="OneShot" DurationMin="10.25" DurationMax="10.25">
-					<MediaRefs>
-						<MediaRef Id="916682109"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2516728121" Name="Play_EyeBeamDeactivation" DurationType="OneShot" DurationMin="7.008202" DurationMax="7.008202">
@@ -796,5 +797,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{05726F81-A32C-D168-2C25-4CA090BC8B36}</FileHash>
+	<FileHash>{67765271-7D95-E4AE-591A-7B744AA0D75F}</FileHash>
 </SoundBanksInfo>

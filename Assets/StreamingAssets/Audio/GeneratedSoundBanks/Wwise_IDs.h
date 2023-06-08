@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID FADE_OUT_AMALIA_MUSIC = 1557423726U;
+        static const AkUniqueID PLAY_3D_DEATH = 3203840472U;
         static const AkUniqueID PLAY_AMALIA_MUSIC = 2043365649U;
         static const AkUniqueID PLAY_BASEBASS = 1291943636U;
         static const AkUniqueID PLAY_BRANCH_BREAKING = 3935030902U;
@@ -32,7 +33,6 @@ namespace AK
         static const AkUniqueID PLAY_EYE_SQUISHY = 2447590944U;
         static const AkUniqueID PLAY_EYEBEAM_DEFAULT = 3227116378U;
         static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED = 2379313215U;
-        static const AkUniqueID PLAY_EYEBEAMACTIVATION = 3430199064U;
         static const AkUniqueID PLAY_EYEBEAMDEACTIVATION = 2516728121U;
         static const AkUniqueID PLAY_FOOTSTEPS = 3854155799U;
         static const AkUniqueID PLAY_GAME_BUTTON_CLICK = 4168403010U;

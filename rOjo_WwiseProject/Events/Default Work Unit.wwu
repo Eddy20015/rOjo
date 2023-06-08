@@ -415,6 +415,26 @@
 							<ChildrenList>
 								<Event Name="Play_EyeBeam_Default" ID="{418F7732-F144-4939-AA36-EED4047566A8}">
 									<ChildrenList>
+										<Action Name="" ID="{55731DDD-D74D-42C6-BB8C-DE07A3CC4821}" ShortID="109318344">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="30"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+										<Action Name="" ID="{43A9D9E0-B933-443B-AEB1-AEF8D4DA824C}" ShortID="657713731">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="18"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
 										<Action Name="" ID="{30CD4591-3BAC-4EA0-BE3B-29E9C76E9B7E}" ShortID="824935316">
 											<ReferenceList>
 												<Reference Name="Target">
@@ -672,17 +692,6 @@
 										</Action>
 									</ChildrenList>
 								</Event>
-								<Event Name="Play_EyeBeamActivation" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}">
-									<ChildrenList>
-										<Action Name="" ID="{6CF9774C-5F57-4FDC-9D84-4161888B1963}" ShortID="977743056">
-											<ReferenceList>
-												<Reference Name="Target">
-													<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
-												</Reference>
-											</ReferenceList>
-										</Action>
-									</ChildrenList>
-								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="Pushing Stone" ID="{2ABF37F8-3C93-4E8A-8D0A-4BDDBCC5557E}" ShortID="720883783">
@@ -832,6 +841,68 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_3D_Death" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}">
+							<ChildrenList>
+								<Action Name="" ID="{01D93A2F-1961-4847-A13A-5431B9928E57}" ShortID="121570326">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="29"/>
+										<Property Name="Highpass" Type="int16" Value="38"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{3C9EE49E-9405-4778-B054-7859F0D19167}" ShortID="643373355">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="13"/>
+										<Property Name="Pitch" Type="int32" Value="-350"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{6CF9774C-5F57-4FDC-9D84-4161888B1963}" ShortID="977743056">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{CA8141FC-14A8-4E22-9533-A84E550FEA76}" ShortID="841620114">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="12"/>
+										<Property Name="Volume" Type="Real64" Value="10"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choke" ID="{469DB396-63CB-45F4-A078-E62F5456C80D}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{F65ED1D4-E470-4BA5-92C4-1DF66ECDA810}" ShortID="810650">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choke" ID="{469DB396-63CB-45F4-A078-E62F5456C80D}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{9F45A382-ECF5-46F8-A054-E2CBB5F0B209}" ShortID="769651042">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="16"/>
+										<Property Name="Delay" Type="Real64" Value="5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choke" ID="{469DB396-63CB-45F4-A078-E62F5456C80D}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Stop_Loops" ID="{550FF629-EA82-4508-9215-5869C271F857}">
@@ -839,6 +910,7 @@
 						<Action Name="" ID="{1608C4A1-0738-4037-BE0B-AA7640837FD6}" ShortID="454038586">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -849,6 +921,7 @@
 						<Action Name="" ID="{D943F568-29ED-41D6-ABBD-2BECC0F66420}" ShortID="959064212">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -859,10 +932,22 @@
 						<Action Name="" ID="{885B1317-9C2B-4357-B5D4-41A41828FBC2}" ShortID="864042712">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Pushing Stone" ID="{AB45A406-FBD9-403C-828F-A561BAB4827F}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{81B0431E-67DA-443C-9131-2576066E3827}" ShortID="44336045">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EyeBeamActivation" ID="{8373B4D0-80F8-44E6-8D90-78A1764BC037}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
