@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameStateManager : MonoBehaviour
 {
     // using this as a GameStateManager and SceneManager
+    [Header("Scene Names")]
     private static GameStateManager Instance;
     private static GAMESTATE GameState;
 
@@ -20,6 +21,8 @@ public class GameStateManager : MonoBehaviour
 
     public delegate void OnPlay();
     public static event OnPlay Restarted;
+
+    private SceneTransition transition;
 
     // current GameState options
     public enum GAMESTATE
@@ -64,8 +67,10 @@ public class GameStateManager : MonoBehaviour
     {
         EnemyVideoController.numDefaultSound = 0;
         EnemyVideoController.numIntensifiedSound = 0;
-        SceneManager.LoadScene(MainLevelName); // replace with async loading later
-        Play();
+        Instance.StopAllCoroutines();
+        Instance.StartCoroutine(LoadLevelAsync(MainLevelName));
+        //SceneManager.LoadScene(MainLevelName); // replace with async loading later
+        //Play();
     }
 
     public static void QuitGame()
@@ -175,8 +180,28 @@ public class GameStateManager : MonoBehaviour
         SceneManager.LoadScene(CreditsName);
     }
 
-    //public IEnumerator LoadLevelAsync()
-    //{
+    public static IEnumerator LoadLevelAsync(string scene)
+    {
+        Instance.transition = FindObjectOfType<SceneTransition>();
+        Instance.transition.Open();
+        yield return new WaitForSeconds(Instance.transition.OpenTime());
 
-    //}
+        AsyncOperation operation = SceneManager.LoadSceneAsync(scene);
+        operation.allowSceneActivation = false;
+        float timeElapsed = 0;
+        float idleTime = Instance.transition.IdleTime();
+        while (operation.progress < .9f || timeElapsed <= idleTime)
+        {
+            float progress = Mathf.Min(operation.progress, (timeElapsed/ idleTime));
+            Instance.transition.UpdateUI(progress);
+            yield return new WaitForEndOfFrame();
+            timeElapsed += Time.deltaTime;
+        }
+
+        Instance.transition.UpdateUI(1);
+        Instance.transition.Close();
+        yield return new WaitForSeconds(Instance.transition.CloseTime());
+        operation.allowSceneActivation = true;
+        Play();
+    }
 }
