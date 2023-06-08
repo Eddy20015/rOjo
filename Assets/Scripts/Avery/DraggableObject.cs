@@ -44,14 +44,18 @@ public class DraggableObject : MonoBehaviour
     {
         if (isGrabbingObject && other.gameObject.name == "Facing Forward Check")
         {
-            //print("PLAYER FACING BOX!!");
+            if (Mathf.Sign(gameObject.transform.position.x - other.gameObject.transform.position.x) == Mathf.Sign(other.gameObject.transform.parent.transform.localScale.x)) //Check scale if facing the right way from origin of statue.
+            {
 
-            transform.Translate(playerMovement.GetXTrans() * Time.deltaTime, 0, 0);
-;
-            playerMovement.SetIsMovingObject(true);
-            if (!playshingPushSound) {
-                startPush.Post(gameObject);
-                playshingPushSound = true;
+                //print("PLAYER FACING BOX!!");
+                transform.Translate(playerMovement.GetXTrans() * Time.deltaTime, 0, 0);
+                ;
+                playerMovement.SetIsMovingObject(true);
+                if (!playshingPushSound)
+                {
+                    startPush.Post(gameObject);
+                    playshingPushSound = true;
+                }
             }
         }
         else if (!isGrabbingObject && other.gameObject.name == "Facing Forward Check")
