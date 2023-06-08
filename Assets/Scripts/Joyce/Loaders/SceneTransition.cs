@@ -8,9 +8,9 @@ public class SceneTransition : MonoBehaviour
     [SerializeField] protected GameObject screen;
 
     [Header("Animation Clips Lengths")]
-    [SerializeField] private float openLength = 1f;
-    [SerializeField] private float idleTime = 2f;
-    [SerializeField] private float closeLength = 1f;
+    [SerializeField] protected float openLength = 1f;
+    [SerializeField] protected float idleTime = 2f;
+    [SerializeField] protected float closeLength = 1f;
 
     private void Awake()
     {

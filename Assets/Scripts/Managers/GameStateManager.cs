@@ -88,9 +88,18 @@ public class GameStateManager : MonoBehaviour
     // quits to main menu
     public static void QuitToMainMenu()
     {
+        Cinematics();
+        Instance.StopAllCoroutines();
+        Instance.StartCoroutine(TransitionToMain());
+    }
+    
+    private static IEnumerator TransitionToMain()
+    {
+        Instance.transition = FindObjectOfType<SceneTransition>();
+        Instance.transition.Close();
+        yield return new WaitForSeconds(Instance.transition.CloseTime());
         MainMenu();
     }
-
     //GAME OVER MENU OPTIONS
     public static void Restart()
     {
@@ -207,7 +216,6 @@ public class GameStateManager : MonoBehaviour
         Instance.transition.Close();
         yield return new WaitForSeconds(Instance.transition.CloseTime());
         operation.allowSceneActivation = true;
-        Play();
         Checkpoint.LoadCheckpoint();
     }
 }
