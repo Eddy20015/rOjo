@@ -70,7 +70,7 @@ public class GameStateManager : MonoBehaviour
         Instance.StopAllCoroutines();
         Instance.StartCoroutine(LoadLevelAsync(MainLevelName));
         //SceneManager.LoadScene(MainLevelName); // replace with async loading later
-        //Play();
+        Play();
     }
 
     public static void QuitGame()
@@ -207,7 +207,6 @@ public class GameStateManager : MonoBehaviour
         Instance.transition.Close();
         yield return new WaitForSeconds(Instance.transition.CloseTime());
         operation.allowSceneActivation = true;
-
         Play();
         Checkpoint.LoadCheckpoint();
     }
