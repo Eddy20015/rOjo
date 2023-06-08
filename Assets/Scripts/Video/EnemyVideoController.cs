@@ -6,6 +6,7 @@ using UnityEngine.Video;
 public class EnemyVideoController : EyeAnimatorController
 {
     [SerializeField] GameObject Player;
+    private GameObject RippleEffect;
     // [SerializeField] Animation anim;
     // [SerializeField] AnimationClip ActiveClip;
     // [SerializeField] AnimationClip InactiveClip;
@@ -19,6 +20,8 @@ public class EnemyVideoController : EyeAnimatorController
     [SerializeField] private float lookingDuration = .02f;
     [SerializeField] private float fadeDuration = .5f;
     [SerializeField] private float exposeRate = 0.2f;
+    [SerializeField] private Vector3 initScale;
+    [SerializeField] private float RippleEffectDuration = 0.25f;
 
     [Header("Sounds")]
     [SerializeField] AK.Wwise.Event startDefault;
@@ -72,9 +75,13 @@ public class EnemyVideoController : EyeAnimatorController
     // Start is called before the first frame update
     protected new void Start()
     {
-        
+        RippleEffect = gameObject.transform.GetChild(0).gameObject;
 
-    eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
+        initScale = RippleEffect.transform.localScale;
+        
+        RippleEffect.SetActive(false);
+
+        eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
         eyeFieldOfView.SetViewDistance(viewDistance);
         eyeFieldOfView.SetFadeDuration(fadeDuration);
@@ -160,6 +167,27 @@ public class EnemyVideoController : EyeAnimatorController
         }
     }
 
+    private IEnumerator RippleEffectActivate()
+    {
+        float timeElapsed = 0;
+        while (timeElapsed < RippleEffectDuration/2.0f)
+        {
+            RippleEffect.transform.localScale = Vector3.Lerp(Vector3.zero, initScale, timeElapsed/(RippleEffectDuration/2.0f));
+            yield return new WaitForSeconds(.001f);
+            timeElapsed += Time.deltaTime;
+        }
+        
+        yield return new WaitForSeconds(.25f);
+        timeElapsed = 0;
+        while (timeElapsed < RippleEffectDuration/2.0f)
+        {
+            RippleEffect.transform.localScale = Vector3.Lerp(RippleEffect.transform.localScale, Vector3.zero, timeElapsed/(RippleEffectDuration/2.0f));
+            yield return new WaitForSeconds(.001f);
+            timeElapsed += Time.deltaTime;
+        }
+        
+    }
+
 
     private void FindDancer()
     {
@@ -181,10 +209,11 @@ public class EnemyVideoController : EyeAnimatorController
                         {
                             // VPlayer.clip = ActiveClip;
                             VPlayer.SetBool("Activated", true);
+                            RippleEffect.SetActive(true);
                             state = State.Active;
                         //     float angleToPlayer = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
                         //     eyeFrameFoundPct = Mathf.Abs(eyeAngle)/360f;
-                        //     StartCoroutine(Activate());
+                            StartCoroutine(RippleEffectActivate());
                         }
 
 
@@ -400,10 +429,10 @@ public class EnemyVideoController : EyeAnimatorController
 
         //Do nothing until the transition clip loop point is reached
         eyeFieldOfView.resetElapsedTime(); // Resets elapsed time for ColorLerp in FadeOut
-        
         while (!bContinue)
         {
             eyeFieldOfView.FadeOut();
+            
             yield return new WaitForSeconds(.001f);
         } 
         bContinue = false;
@@ -413,8 +442,11 @@ public class EnemyVideoController : EyeAnimatorController
         ClipSpeed(PlaySpeed);
 
         state = State.Inactive;
-
+        
+        
+        
         yield return new WaitForSeconds(Player.GetComponent<PlayerHealth>().GetExposureDecreaseDelay());
+        
         Player.GetComponent<PlayerHealth>().ChangeStartDecreasingVar(true);
     }
 }

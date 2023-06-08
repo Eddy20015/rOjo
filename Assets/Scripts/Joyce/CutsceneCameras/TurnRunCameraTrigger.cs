@@ -10,6 +10,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     [SerializeField] private GameObject chaser;
     [SerializeField] private Player2DMovement dancerMovement;
     [SerializeField] private Animator bobbingCamAnim;
+    [SerializeField] private GameObject pauseMenu;
 
     [Header("Border")]
     [SerializeField] private Animator borderAnim;
@@ -67,6 +68,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         playerMoveScript.enabled = true;
         chaser.SetActive(true);
         dancerMovement.enabled = false;
+        pauseMenu.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
