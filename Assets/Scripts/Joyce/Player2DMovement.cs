@@ -31,13 +31,14 @@ public class Player2DMovement : MonoBehaviour
 
     [Header("Graphics")]
     [SerializeField] private Animator anim;
+    [SerializeField] private ParticleSystem landingParticles;
     //[SerializeField] private AnimationClip riseClip;
     private Vector3 originalScale; // faces right
 
     [Header("Audio")]
     //[SerializeField] private string jumpSFX = "Jump";
     //[SerializeField] private string walkSFX = "Walk";
-    [SerializeField] private AK.Wwise.Event jumpLanding;
+    //[SerializeField] private AK.Wwise.Event jumpLanding;
     /*[SerializeField] private AK.Wwise.Event step;*/
     [SerializeField] private float stepFrequencey;
     private const float airTimeLimit = 0.5f;
@@ -163,6 +164,7 @@ public class Player2DMovement : MonoBehaviour
         if (isJumping && Mathf.Abs(myRigidbody.velocity.y) <= jumpBoundary)
         {
             anim.SetBool("Jumping", false);
+            LandingSmoke();
             /*if (airTime > airTimeLimit)
             {
                 print("landed");
@@ -250,5 +252,10 @@ public class Player2DMovement : MonoBehaviour
     public void SlowFall(bool on)
     {
         currDownGravity = on ? slowFallGravity: downGravity;
+    }
+
+    public void LandingSmoke()
+    {
+        landingParticles.Play();
     }
 }

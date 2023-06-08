@@ -52,11 +52,26 @@ public class EnemyVideoController : EyeAnimatorController
 
     private State state;
 
-    // Start is called before the first frame update
-    protected new void Start()
+    public void resetSound()
     {
         playingDefaultSound = false;
         playingIntensifiedSound = false;
+    }
+
+    private void OnEnable()
+    {
+        GameStateManager.Restarted += resetSound;
+    }
+
+    private void OnDisable()
+    {
+        GameStateManager.Restarted -= resetSound;
+    }
+
+    // Start is called before the first frame update
+    protected new void Start()
+    {
+        
 
     eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);

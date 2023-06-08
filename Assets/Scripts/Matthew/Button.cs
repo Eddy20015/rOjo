@@ -14,10 +14,10 @@ public class Button : MonoBehaviour
     private Button other_button;
 
     public bool collision;
-    
+
     [SerializeField]
     private bool timed;
-    
+
     [SerializeField]
     private int time;
 
@@ -30,7 +30,15 @@ public class Button : MonoBehaviour
     [SerializeField]
     private SpriteRenderer button_sprite;
 
-    
+    [Header("Sound")]
+    [SerializeField] private AK.Wwise.Event gameButtonSound;
+
+    private void Start()
+    {
+        button_sprite = GetComponent<SpriteRenderer>();
+    }
+
+
     private void ButtonPress(Sprite sprite)
     {
         button_sprite.sprite = sprite;
@@ -39,28 +47,22 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (two_button)
-        {
-            if (other.gameObject.CompareTag("Dancer"))
-            {
-                collision = true;
-                ButtonPress(button_pressed);
+        if (other.gameObject.CompareTag("Dancer")) {
+            ButtonPress(button_pressed);
+            gameButtonSound.Post(gameObject);
 
-                if (collision && other_button.collision)
-                {
+            if (two_button) {
+                collision = true;
+
+                if (collision && other_button.collision) {
                     door.SetActive(false);
                     StartCoroutine("Timer");
                 }
-            }
-        }
-        else
-        {
-            if (other.gameObject.CompareTag("Dancer"))
-            {
-                ButtonPress(button_pressed);
+            } else {
                 door.SetActive(false);
                 StartCoroutine("Timer");
             }
+
         }
     }
 
