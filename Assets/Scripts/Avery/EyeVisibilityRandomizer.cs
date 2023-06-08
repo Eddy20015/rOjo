@@ -6,6 +6,7 @@ public class EyeVisibilityRandomizer : MonoBehaviour
 {
     [SerializeField] float minTime;
     [SerializeField] float maxTime;
+    [SerializeField] AK.Wwise.Event playSquish;
 
     bool isActive = true;
 
@@ -23,6 +24,7 @@ public class EyeVisibilityRandomizer : MonoBehaviour
 
     public void SetVisibility()
     {
+        playSquish.Post(gameObject);
         if (isActive)
             DisableAllChildren();
         else
