@@ -56,6 +56,7 @@ public class EnemyVideoController : EyeAnimatorController
     {
         playingDefaultSound = false;
         playingIntensifiedSound = false;
+        //state = State.Active2Inactive;
     }
 
     private void OnEnable()

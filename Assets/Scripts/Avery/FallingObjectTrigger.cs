@@ -6,10 +6,12 @@ public class FallingObjectTrigger : MonoBehaviour
 {
     [SerializeField] List<GameObject> objects;
     [SerializeField] AK.Wwise.Event playBranches;
+    bool playedSound;
     
 
     private void Start()
     {
+        playedSound = false;
         foreach (GameObject obj in objects)
         {
             Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
@@ -27,7 +29,10 @@ public class FallingObjectTrigger : MonoBehaviour
                 Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
                 rb.gravityScale = 1f;
                 print("here");
-                playBranches.Post(gameObject);
+                if (!playedSound) {
+                    playBranches.Post(gameObject);
+                    playedSound = true;
+                }
             }
         }
         

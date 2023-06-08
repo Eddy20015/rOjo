@@ -1,5 +1,4 @@
 Event	ID	Name			Wwise Object Path	Notes
-	87439343	Stop_Testing_Audio			\Default Work Unit\Testing\Stop_Testing_Audio	
 	352180650	Play_GraduallyIncreasingHighPitch			\Default Work Unit\Horror Stems\Play_GraduallyIncreasingHighPitch	
 	359053976	Play_MusicBox2			\Default Work Unit\Horror Stems\Play_MusicBox2	
 	359053977	Play_MusicBox3			\Default Work Unit\Horror Stems\Play_MusicBox3	
@@ -25,20 +24,21 @@ Event	ID	Name			Wwise Object Path	Notes
 	2251314098	Stop_Pushing_Stone			\Default Work Unit\Game SFX\Pushing Stone\Stop_Pushing_Stone	
 	2289315611	Stop_Horror_Test			\Default Work Unit\Horror_Test\Stop_Horror_Test	
 	2379313215	Play_EyeBeam_Intensified			\Default Work Unit\Game SFX\Eye Beam\Play_EyeBeam_Intensified	
+	2447590944	Play_Eye_Squishy			\Default Work Unit\Game SFX\Play_Eye_Squishy	
 	2516728121	Play_EyeBeamDeactivation			\Default Work Unit\Game SFX\Eye Beam\Play_EyeBeamDeactivation	
 	2576967453	Play_PulseToSiren			\Default Work Unit\Horror Stems\Play_PulseToSiren	
 	2624903825	Play_Spider_Steps			\Default Work Unit\Game SFX\Play_Spider_Steps	
 	2700195184	Play_screams			\Default Work Unit\Game SFX\Play_screams	
 	2784914665	Play_ChaseMusic			\Default Work Unit\Music\Play_ChaseMusic	
-	2946897393	Play_Testing_Audio			\Default Work Unit\Testing\Play_Testing_Audio	
 	3026825475	Stop_Wind_in_Branches			\Default Work Unit\Game SFX\Wind\Stop_Wind_in_Branches	
 	3133528005	Play_Growl			\Default Work Unit\Horror Stems\Play_Growl	
+	3203840472	Play_3D_Death			\Default Work Unit\Game SFX\Play_3D_Death	
 	3227116378	Play_EyeBeam_Default			\Default Work Unit\Game SFX\Eye Beam\Play_EyeBeam_Default	
 	3359382657	Stop_EyeBeam_Intensified			\Default Work Unit\Game SFX\Eye Beam\Stop_EyeBeam_Intensified	
-	3430199064	Play_EyeBeamActivation			\Default Work Unit\Game SFX\Eye Beam\Play_EyeBeamActivation	
 	3606198378	Play_Choke			\Default Work Unit\Horror Stems\Play_Choke	
 	3808321334	Play_Jump_Landing			\Default Work Unit\Game SFX\Walking\Play_Jump_Landing	
 	3854155799	Play_Footsteps			\Default Work Unit\Game SFX\Walking\Play_Footsteps	
+	3907435653	Stop_Loops			\Default Work Unit\Stop_Loops	
 	3935030902	Play_Branch_Breaking			\Default Work Unit\Game SFX\Branches\Play_Branch_Breaking	
 	4119780300	Play_EtherealTone			\Default Work Unit\Horror Stems\Play_EtherealTone	
 	4168403010	Play_Game_Button_Click			\Default Work Unit\Game SFX\Play_Game_Button_Click	
@@ -70,106 +70,111 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4026379618	ChokeVol			\Default Work Unit\HorrorStemsRTPCs\ChokeVol	
 	4036542190	DeepHitToBreath2Vol			\Default Work Unit\HorrorStemsRTPCs\DeepHitToBreath2Vol	
 	4064624855	LowCelloVol			\Default Work Unit\HorrorStemsRTPCs\LowCelloVol	
+	4159403376	SquishEyeDistance			\Default Work Unit\SquishEyeDistance	
 	4222622707	WawaDistortionVol			\Default Work Unit\HorrorStemsRTPCs\WawaDistortionVol	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	24771127	EyeBeam_Default	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamDefault_81238AE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Default		4939296
-	37321306	MeOyesRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev2		127984
-	39914089	Step9	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step9_08F93BE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step9		1578
-	84490070	Pushing Stone	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Pushing Stone_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pushing Stone		1136144
-	94379695	Step3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step3_B2124D25.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step3		14228
-	101637563	AlInfernoTeVasNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasNorm		330844
-	114392987	Branch Impact	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Branch Impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Branches\Branch Impact		42548
-	119134536	AlInfernoTeVasRev5	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev5		294684
-	119632406	LowCello	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\LowCello_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\LowCello\LowCello\LowCello		2926572
-	124192241	Game Button Click	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Button Click_3CF7E987.wem		\Actor-Mixer Hierarchy\Default Work Unit\Game Button Click		27520
-	131488593	Wind in Branches	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\WIP - Calm Wind in Branches_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wind in Branches		4333818
-	143617217	HorrorTest	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\3D Music_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\HorrorTest		35168964
-	161364360	Branch Breaking	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Branch Breaking_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Branches\Branch Breaking		100642
-	167237944	Step8	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step8_694D515F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step8		1852
-	168685019	ShepardsTone	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\ShepardsTone_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\ShepardsTone\ShepardsTone\ShepardsTone		33303708
-	171236694	dirt7	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt7_2D17E18A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt7		8792
-	188098597	PanFlute	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\PanFlute_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\PanFlute\PanFlute		5306096
-	188501217	MeOyesRev4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev4		136804
-	196605607	CreepyOrgan	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\CreepyOrgan_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\CreepyOrgan\CreepyOrgan		6800316
-	209649964	DeepHitToBreath4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath4\DeepHitToBreath4		2582592
-	215979946	HijoMioRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev2		198544
-	234919899	SatanasMeLlamaRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev1		232944
-	285998284	TristezaDeAmor	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\TristezaDeAmor_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Tristeza De Amor\TristezaDeAmor\TristezaDeAmor		13219512
-	293235742	AlInfernoTeVasRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev3		362596
-	300024926	Step9	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step9_B8BD6497.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step9		1678
-	308771699	DeepHitToBreath1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath1\DeepHitToBreath1		1868520
-	309432596	dirt9	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt9_5173684E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt9		16052
-	400889494	Choke	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\Choke_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\Choke\Choke		15462436
-	402796264	dirt1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt1_BADE6132.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt1		19516
-	416008110	dirt6	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt6_1D5EF5C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt6		9446
-	422500357	Jump Landing	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\WIP Jump_46F7238F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump Landing		4502
-	425600712	DeepHitToBreath3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath3\DeepHitToBreath3		3344640
-	430397931	HijoMioRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev3		211776
-	441570897	Step8	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step8_5D67EDE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step8		1222
-	443098611	Growl	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\Growl_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\Growl\Growl		7634156
-	447533665	Step1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step1_4B14B70C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step1		1774
-	457631943	Step1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step1_DCFA141B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step1		2252
-	468227711	Step6	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step6_4212E194.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step6		1274
-	482014655	dirt3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt3_46A8EBAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt3		8138
-	509309381	screams	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\screams_F78178CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\screams		563460
-	528600874	EyeBeamDeactivation	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamDeactivation_0806292C.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeamDeactivation		1513964
-	556952082	Step7	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step7_B8B72C17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step7		1200
-	560556572	DiosProtegemeRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev1		214420
-	567021774	Step5	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step5_A938E58F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step5		4496
-	587648693	dirt4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt4_388A7FA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt4		8436
-	600366808	MeOyesRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev3		154444
-	627323670	DiosProtegemeRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev3		236472
-	627698659	HijoMioRev4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev4		154444
-	631164031	Sticky1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Sticky1_ACF59C5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Sticky1		22268
-	647072075	Step6	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step6_89C77974.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step6		1944
-	648441544	BaseBass	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\BaseBass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\BaseBass\BaseBass\BaseBass		14579556
-	656878381	dirt2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt2_C002AEB4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt2		11062
-	672950188	GraduallyIncreasingHighPitch	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\GraduallyIncreasingHighPitch_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\GraduallyIncreasingHighPitch\GraduallyIncreasingHighPitch		747148
-	685135932	AlInfernoTeVasRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev2		307912
-	695878958	MusicBox1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\MusicBox1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox1\MusicBox1		854752
-	702206143	WhistleBreathing	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\WhistleBreathing_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\WhistleBreathing\WhistleBreathing		3128548
-	706803607	DejaloRespirarRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev2		285864
-	709093758	DiosProtegemeRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev2		214420
-	720207293	MuestramePiedadRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev1		229416
-	726649052	EtherealTone	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\EtherialTone_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\EtherealTone\EtherealTone		3325236
-	728844885	SatanasMeLlamaNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaNorm		250584
-	748295014	MuestramePiedadRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev2		247056
-	761734425	HijoMioNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioNorm		176496
-	768801266	ChaseMusicFinal	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\ChaseMusicFinal_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ChaseMusic\ChaseMusicFinal\ChaseMusicFinal		35168964
-	769564896	DejaloRespirarNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarNorm		273516
-	790883363	Step4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step4_BBE3A70A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step4		1778
-	794721413	Step4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step4_E0656FBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step4		1552
-	795595669	DeepHitToBreath2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath2\DeepHitToBreath2		2258016
-	797256899	AlInfernoTeVasRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev1		308792
-	800309362	DiosProtegemeNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeNorm		156208
-	800918199	Step2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step2_20CB52B1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step2		11352
-	804560681	SatanasMeLlamaRev2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev2		241764
-	805324008	AlIAlInfernoTeVasRev4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlIAlInfernoTeVasRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlIAlInfernoTeVasRev4		307032
-	824338145	Stick3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Stick3_BDE16019.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Stick3		30916
-	833533991	Button Select	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Castanets Click_Higher_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button Select		48436
-	840613638	ChaseMusicFinal	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\ChaseMusicFinalDrum_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ChaseMusic\ChaseMusicFinal\ChaseMusicFinal		35168964
-	852492158	MuestramePiedadRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev3		185316
-	861748742	HijoMioRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev1		185316
-	862207827	Victory	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Victory_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Victory Music\Victory\Victory		3175296
-	862606870	dirt8	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt8_579193F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt8		13202
-	872878570	MusicBox2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\MusicBox2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox2\MusicBox2		910320
-	875559642	DejaloRespirarRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev3		189724
-	881563779	WawaDistortion	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\WawaDistortion_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\WawaDistortion\WawaDistortion		15144036
-	901624723	MeOyesRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev1		132396
-	916682109	EyeBeamActivation	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamActivation_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeamActivation		1808196
-	943376979	SatanasMeLlamaRev3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev3		222360
-	985543759	MeOyesNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesNorm		136804
-	987764891	DejaloRespirarRev1	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev1		277924
-	991653222	dirt5	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt5_0BC9789F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt5		14906
-	1011580158	EyeBeamIntensifier	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamIntensifier_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\EyeBeamIntensifier		4939296
-	1015923652	PulseToSiren	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\PulseToSiren_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\PulseToSiren\PulseToSiren		4747020
-	1027631710	Special Click	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Castanet Playing_Section_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Special Click		431172
-	1037799982	MuestramePiedadNorm	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadNorm		229416
-	1044381033	Testing Audio	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Castanets - Reverse_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Testing Audio		926156
-	1047848393	MusicBox3	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\MusicBox3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox3\MusicBox3		901500
-	1047857253	Step7	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step7_CA2F555A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step7		1714
-	1055184408	2D Music	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Level Music (Audio from Musescore)_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\2D Music		15197636
-	1055275767	Sticky2	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Sticky2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Sticky2		34020
-	1063987067	Stick4	C:\Users\edwar\OneDrive\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Stick4_8DC2DD2F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Stick4		18280
+	24771127	EyeBeam_Default	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamDefault_81238AE1.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Default		4939296
+	37321306	MeOyesRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev2		127984
+	39914089	Step9	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step9_08F93BE0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step9		1578
+	84490070	Pushing Stone	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Pushing Stone_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pushing Stone		1136144
+	94379695	Step3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step3_B2124D25.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step3		14228
+	101637563	AlInfernoTeVasNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasNorm		330844
+	114392987	Branch Impact	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Branch Impact_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Branches\Branch Impact		42548
+	119134536	AlInfernoTeVasRev5	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev5_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev5		294684
+	119632406	LowCello	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\LowCello_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\LowCello\LowCello\LowCello		2926572
+	123675704	Squish2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Squish2_13832595.wem		\Actor-Mixer Hierarchy\Default Work Unit\Eye Squishy\Squish2		53288
+	124192241	Game Button Click	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Button Click_3CF7E987.wem		\Actor-Mixer Hierarchy\Default Work Unit\Game Button Click		27520
+	131488593	Wind in Branches	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\WIP - Calm Wind in Branches_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Wind in Branches		4333818
+	143617217	HorrorTest	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\3D Music_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\HorrorTest		35168964
+	161364360	Branch Breaking	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Branch Breaking_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Branches\Branch Breaking		100642
+	167237944	Step8	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step8_694D515F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step8		1852
+	168685019	ShepardsTone	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\ShepardsTone_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\ShepardsTone\ShepardsTone\ShepardsTone		33303708
+	171236694	dirt7	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt7_2D17E18A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt7		8792
+	188098597	PanFlute	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\PanFlute_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\PanFlute\PanFlute		5306096
+	188501217	MeOyesRev4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev4		136804
+	196538568	Squish1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Squish1_3CDFFCFB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Eye Squishy\Squish1		44944
+	196605607	CreepyOrgan	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\CreepyOrgan_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\CreepyOrgan\CreepyOrgan		6800316
+	209649964	DeepHitToBreath4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath4\DeepHitToBreath4		2582592
+	215979946	HijoMioRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev2		198544
+	234919899	SatanasMeLlamaRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev1		232944
+	285998284	TristezaDeAmor	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\TristezaDeAmor_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Tristeza De Amor\TristezaDeAmor\TristezaDeAmor		13219512
+	293235742	AlInfernoTeVasRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev3		362596
+	293359393	Squish4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Squish4_70C0FAFA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Eye Squishy\Squish4		64976
+	300024926	Step9	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step9_B8BD6497.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step9		1678
+	308771699	DeepHitToBreath1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath1\DeepHitToBreath1		1868520
+	309432596	dirt9	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt9_5173684E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt9		16052
+	400889494	Choke	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\Choke_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\Choke\Choke		15462436
+	402796264	dirt1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt1_BADE6132.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt1		19516
+	416008110	dirt6	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt6_1D5EF5C1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt6		9446
+	422500357	Jump Landing	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\WIP Jump_46F7238F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump Landing		4502
+	425600712	DeepHitToBreath3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath3\DeepHitToBreath3		3344640
+	430397931	HijoMioRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev3		211776
+	441570897	Step8	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step8_5D67EDE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step8		1222
+	443098611	Growl	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\Growl_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\Growl\Growl		7634156
+	447533665	Step1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step1_4B14B70C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step1		1774
+	457631943	Step1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step1_DCFA141B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step1		2252
+	468227711	Step6	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step6_4212E194.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step6		1274
+	482014655	dirt3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt3_46A8EBAC.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt3		8138
+	509309381	screams	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\screams_F78178CF.wem		\Actor-Mixer Hierarchy\Default Work Unit\screams		563460
+	528600874	EyeBeamDeactivation	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamDeactivation_F0372A63.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeamDeactivation		1236340
+	556952082	Step7	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step7_B8B72C17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step7		1200
+	560556572	DiosProtegemeRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev1		214420
+	567021774	Step5	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step5_A938E58F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step5		4496
+	587648693	dirt4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt4_388A7FA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt4		8436
+	600366808	MeOyesRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev3		154444
+	627323670	DiosProtegemeRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev3		236472
+	627698659	HijoMioRev4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev4		154444
+	631164031	Sticky1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Sticky1_ACF59C5E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Sticky1		22268
+	647072075	Step6	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step6_89C77974.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step6		1944
+	648441544	BaseBass	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\BaseBass_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\BaseBass\BaseBass\BaseBass		14579556
+	656878381	dirt2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt2_C002AEB4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt2		11062
+	672950188	GraduallyIncreasingHighPitch	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\GraduallyIncreasingHighPitch_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\GraduallyIncreasingHighPitch\GraduallyIncreasingHighPitch		747148
+	685135932	AlInfernoTeVasRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev2		307912
+	695878958	MusicBox1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\MusicBox1_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox1\MusicBox1		854752
+	702206143	WhistleBreathing	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\WhistleBreathing_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\WhistleBreathing\WhistleBreathing		3128548
+	706803607	DejaloRespirarRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev2		285864
+	709093758	DiosProtegemeRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeRev2		214420
+	709136941	Squish3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Squish3_6513D77F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Eye Squishy\Squish3		24286
+	720207293	MuestramePiedadRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev1		229416
+	726649052	EtherealTone	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\EtherialTone_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\EtherealTone\EtherealTone		3325236
+	728844885	SatanasMeLlamaNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaNorm		250584
+	748295014	MuestramePiedadRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev2		247056
+	761734425	HijoMioNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioNorm		176496
+	768801266	ChaseMusicFinal	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\ChaseMusicFinal_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ChaseMusic\ChaseMusicFinal\ChaseMusicFinal		35168964
+	769543483	Squish5	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Squish5_F929702C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Eye Squishy\Squish5		38976
+	769564896	DejaloRespirarNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarNorm		273516
+	790883363	Step4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step4_BBE3A70A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step4		1778
+	794721413	Step4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step4_E0656FBB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step4		1552
+	795595669	DeepHitToBreath2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\DeepHitToBreath2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\DeepHitToBreath2\DeepHitToBreath2		2258016
+	797256899	AlInfernoTeVasRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlInfernoTeVasRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlInfernoTeVasRev1		308792
+	800309362	DiosProtegemeNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DiosProtegemeNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dios Protegeme\DiosProtegemeNorm		156208
+	800918199	Step2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step2_20CB52B1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Footsteps\Step2		11352
+	804560681	SatanasMeLlamaRev2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaRev2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev2		241764
+	805324008	AlIAlInfernoTeVasRev4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\AlIAlInfernoTeVasRev4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Al inferno te vas\AlIAlInfernoTeVasRev4		307032
+	824338145	Stick3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Stick3_BDE16019.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Stick3		30916
+	833533991	Button Select	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Castanets Click_Higher_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Button Select		48436
+	840613638	ChaseMusicFinal	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\ChaseMusicFinalDrum_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\ChaseMusic\ChaseMusicFinal\ChaseMusicFinal		35168964
+	852492158	MuestramePiedadRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadRev3		185316
+	861748742	HijoMioRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\HijoMioRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Hijo Mio\HijoMioRev1		185316
+	862207827	Victory	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Victory_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Victory Music\Victory\Victory		3175296
+	862606870	dirt8	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt8_579193F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt8		13202
+	872878570	MusicBox2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\MusicBox2_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox2\MusicBox2		910320
+	875559642	DejaloRespirarRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev3		189724
+	881563779	WawaDistortion	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\WawaDistortion_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\WawaDistortion\WawaDistortion		15144036
+	901624723	MeOyesRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesRev1		132396
+	916682109	EyeBeamActivation	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamActivation_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeamActivation		1808196
+	943376979	SatanasMeLlamaRev3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\SatanasMeLlamaRev3_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Satanas Me Llama\SatanasMeLlamaRev3		222360
+	985543759	MeOyesNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MeOyesNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\MeOyes\MeOyesNorm		136804
+	987764891	DejaloRespirarRev1	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\DejaloRespirarRev1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Dejalo Respirar\DejaloRespirarRev1		277924
+	991653222	dirt5	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\dirt5_0BC9789F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Dirt_Footsteps\Dirt\dirt5		14906
+	1011580158	EyeBeamIntensifier	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\EyeBeamIntensifier_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\EyeBeamIntensifier		4939296
+	1015923652	PulseToSiren	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\PulseToSiren_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\PulseToSiren\PulseToSiren		4747020
+	1027631710	Special Click	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Castanet Playing_Section_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Special Click		431172
+	1037799982	MuestramePiedadNorm	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\MuestramePiedadNorm_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\All Seeing Eye\EyeBeam_Intensified\Muestrame Piedad\MuestramePiedadNorm		229416
+	1047848393	MusicBox3	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Horror Stems\MusicBox3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Horror Stems\MusicBox3\MusicBox3		901500
+	1047857253	Step7	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Step7_CA2F555A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Steps\Step7		1714
+	1055184408	2D Music	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Level Music (Audio from Musescore)_D79FB2B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\2D Music		15197636
+	1055275767	Sticky2	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Sticky2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Sticky2		34020
+	1063987067	Stick4	C:\Users\Haley\Documents\GitHub\rOjo\rOjo_WwiseProject\.cache\Mac\SFX\Stick4_8DC2DD2F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Spider Steps\Sticky\Stick4		18280
 

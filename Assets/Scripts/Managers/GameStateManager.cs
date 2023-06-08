@@ -70,7 +70,7 @@ public class GameStateManager : MonoBehaviour
         Instance.StopAllCoroutines();
         Instance.StartCoroutine(LoadLevelAsync(MainLevelName));
         //SceneManager.LoadScene(MainLevelName); // replace with async loading later
-        //Play();
+        Play();
     }
 
     public static void QuitGame()
@@ -182,6 +182,11 @@ public class GameStateManager : MonoBehaviour
 
     public static IEnumerator LoadLevelAsync(string scene)
     {
+        // clicking new game sets the checkpoint to the very beginning of the level:
+        PlayerPrefs.SetFloat("checkpointX", -16f);
+        PlayerPrefs.SetFloat("checkpointY", -3.25f);
+        PlayerPrefs.SetFloat("checkpointZ", 0f);
+
         Instance.transition = FindObjectOfType<SceneTransition>();
         Instance.transition.Open();
         yield return new WaitForSeconds(Instance.transition.OpenTime());
@@ -203,5 +208,6 @@ public class GameStateManager : MonoBehaviour
         yield return new WaitForSeconds(Instance.transition.CloseTime());
         operation.allowSceneActivation = true;
         Play();
+        Checkpoint.LoadCheckpoint();
     }
 }
