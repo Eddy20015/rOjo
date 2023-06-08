@@ -37,7 +37,7 @@ public class Checkpoint : MonoBehaviour
         float checkpointZ = PlayerPrefs.GetFloat("checkpointZ");
         Vector3 checkpointPosition = new Vector3(checkpointX, checkpointY, checkpointZ);
         
-        if (hasReachedAtLeastOneCheckpoint)
-            GameObject.FindGameObjectWithTag("Dancer").transform.position = checkpointPosition;
+        //if (hasReachedAtLeastOneCheckpoint)
+        GameObject.FindGameObjectWithTag("Dancer").transform.position = checkpointPosition;
     }
 }
