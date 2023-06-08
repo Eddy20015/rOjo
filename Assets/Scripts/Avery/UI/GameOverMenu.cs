@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameOverMenu : EndingUI
 {
     [SerializeField] private AK.Wwise.Event clickSound;
+    [SerializeField] private AK.Wwise.Event stopLoops;
 
     private void Reloaded()
     {
@@ -14,8 +15,7 @@ public class GameOverMenu : EndingUI
     public void OnClickRestart()
     {
         //DisableAllChildren();
-        StopAll.Post(gameObject);
-        PlayClickSound();
+        stopLoops.Post(gameObject);
         ToggleUI(false);
         GameStateManager.Restart();
     }
@@ -23,7 +23,6 @@ public class GameOverMenu : EndingUI
     public void OnClickMainMenu()
     {
         StopAll.Post(gameObject);
-        PlayClickSound();
         GameStateManager.QuitToMainMenu();
     }
 

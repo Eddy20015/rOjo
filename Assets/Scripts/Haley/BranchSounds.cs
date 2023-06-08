@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BranchSounds : MonoBehaviour
 {
-    //[SerializeField] AK.Wwise.Event playImpact;
     Rigidbody2D rb;
     
     private void Start()
@@ -16,6 +15,5 @@ public class BranchSounds : MonoBehaviour
     {
         if (rb.gravityScale > 0)
             AkSoundEngine.PostEvent("Play_Branch_Impact", gameObject);
-        //playImpact.Post(gameObject);
     }
 }

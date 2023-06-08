@@ -6,6 +6,8 @@ public class EyeVisibilityRandomizer : MonoBehaviour
 {
     [SerializeField] float minTime;
     [SerializeField] float maxTime;
+    [SerializeField] AK.Wwise.Event playSquish;
+    GameObject dancer;
 
     bool isActive = true;
 
@@ -13,6 +15,7 @@ public class EyeVisibilityRandomizer : MonoBehaviour
     void Start()
     {
         StartCoroutine("WaitRandomSeconds");
+        dancer = GameObject.FindGameObjectWithTag("Dancer");
     }
 
     IEnumerator WaitRandomSeconds()
@@ -23,6 +26,10 @@ public class EyeVisibilityRandomizer : MonoBehaviour
 
     public void SetVisibility()
     {
+        AkSoundEngine.SetRTPCValue("SquishEyeDistance", Vector3.Distance(dancer.transform.position, transform.position));
+        print("here");
+        
+        playSquish.Post(gameObject);
         if (isActive)
             DisableAllChildren();
         else

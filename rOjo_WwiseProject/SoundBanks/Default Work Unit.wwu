@@ -13,7 +13,7 @@
 						<ObjectRef Name="Play_Jump_Landing" ID="{26E68202-6E6B-4162-9DD1-3213385FD6D3}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CreditMusic" ID="{B38691B6-C01D-41FA-8203-ECC9C6CA116A}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Dirt_Footsteps" ID="{0F8D6ADB-F556-420B-B6FD-D5BCD9A0C881}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_EyeBeamActivation" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_3D_Death" ID="{7031C64D-0C1B-422C-8036-54BD6B3B2060}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BaseBass" ID="{3F4C2CEF-22F8-425D-BDEA-302EBE31D5A9}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Game_Button_Click" ID="{8A0EE6E9-98C9-428B-ABBA-D64CF18E5513}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Pushing_Stone" ID="{3C426C6F-94F1-42C3-BAA2-7326E470DE18}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
@@ -21,6 +21,7 @@
 						<ObjectRef Name="Stop_Horror_Test" ID="{F989F61A-222C-4374-B76D-208B19143D48}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EtherealTone" ID="{0BD62C97-A1CB-44D8-8805-96BE8037DAE5}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Spider_Steps" ID="{5DF8CC64-1007-44EF-A031-D0BC377D4FA0}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Loops" ID="{550FF629-EA82-4508-9215-5869C271F857}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Choke" ID="{36BC3AA3-1EB4-4567-87ED-6ADE704E93CD}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Amalia_Music" ID="{45920070-F9A7-45B4-8EA8-3C66C0D26C35}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_PulseToSiren" ID="{645B138C-4BE5-45C2-9009-2C102A003F17}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
@@ -28,19 +29,18 @@
 						<ObjectRef Name="Stop_Wind_in_Branches" ID="{42E9939F-A8CC-466B-A813-8D07147D590C}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepHitToBreath1" ID="{F325EFA8-37AE-46C3-9B72-C709C3784F83}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_EyeBeam_Intensified" ID="{1F13CE81-D55A-470E-B4F3-F8028D0744C1}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_Testing_Audio" ID="{DC1C7FC9-0EAC-47CA-B360-69009B4447D4}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EyeBeam_Default" ID="{418F7732-F144-4939-AA36-EED4047566A8}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_EyeBeamDeactivation" ID="{F1E67CFB-8DE6-4960-9B35-EF66A03F997A}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_screams" ID="{C09F5604-63FC-499C-837C-EBA707729321}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Growl" ID="{66F656B7-87C4-49B5-987D-8297B1A4D920}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Footsteps" ID="{7E400A3D-B2A3-4A87-A259-E8DC9B02D632}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Eye_Squishy" ID="{9DA4D004-D20C-4B07-8FC3-4DF70E0A3F7A}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepHitToBreath4" ID="{93258156-CA94-4B08-8030-DD83E181E233}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_All" ID="{06A5830C-3DF3-4B62-BE68-97FD11A94F36}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_DeepHitToBreath2" ID="{986A9527-5733-4B81-AA6F-FBCD13A9095C}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Pushing_Stone" ID="{8EE500DF-CD8D-4B92-A157-81489C0B3A6F}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusicBox1" ID="{01B86EFC-D5D9-4BE8-B5DF-8DF1C14F2F0B}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Special_Click" ID="{759D350A-027C-4C01-BCCF-9A13C4B93CC6}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_Testing_Audio" ID="{3297D852-AF3E-4C2F-8857-91217EBC7BB2}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MusicBox3" ID="{193B6BF6-C996-4C48-A730-BD320D2A0999}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Horror_Test" ID="{F43ED426-4896-4CA7-9909-60C700D6D5B0}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ShepardsTone" ID="{F6F9033D-041D-4CC6-B01B-E81E8D388B4C}" WorkUnitID="{D4DDA30A-988B-4DAB-AE0F-CA810988D52A}" Origin="Manual" Filter="7"/>
