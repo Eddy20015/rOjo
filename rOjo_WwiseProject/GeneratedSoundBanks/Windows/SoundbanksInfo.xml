@@ -50,7 +50,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1AA715FA-6568-3D7E-78FD-B48273173203}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{060C0E43-4FE5-F65F-D29C-715D66053E9E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -216,7 +216,7 @@
 				</File>
 				<File Id="528600874" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EyeBeamDeactivation.wav</ShortName>
-					<CachePath>SFX/EyeBeamDeactivation_B6264989.wem</CachePath>
+					<CachePath>SFX/EyeBeamDeactivation_0806292C.wem</CachePath>
 				</File>
 				<File Id="556952082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step7.wav</ShortName>
@@ -426,6 +426,10 @@
 					<ShortName>MuestramePiedadNorm.wav</ShortName>
 					<CachePath>SFX/MuestramePiedadNorm_10C4C929.wem</CachePath>
 				</File>
+				<File Id="1044381033" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Castanets - Reverse.wav</ShortName>
+					<CachePath>SFX/Castanets - Reverse_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="1047848393" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Horror Stems\MusicBox3.wav</ShortName>
 					<CachePath>SFX/Horror Stems/MusicBox3_D79FB2B7.wem</CachePath>
@@ -480,7 +484,7 @@
 						<MediaRef Id="840613638"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3606198378" Name="Play_Choke" DurationType="OneShot" DurationMin="87.65499" DurationMax="87.65499">
+				<Event Id="3606198378" Name="Play_Choke" DurationType="OneShot" DurationMin="86.39157" DurationMax="86.39157">
 					<MediaRefs>
 						<MediaRef Id="400889494"/>
 					</MediaRefs>
@@ -590,7 +594,7 @@
 						<MediaRef Id="916682109"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2516728121" Name="Play_EyeBeamDeactivation" DurationType="OneShot" DurationMin="7.008202" DurationMax="7.008202">
+				<Event Id="2516728121" Name="Play_EyeBeamDeactivation" DurationType="OneShot" DurationMin="8.582021" DurationMax="8.582021">
 					<MediaRefs>
 						<MediaRef Id="528600874"/>
 					</MediaRefs>
@@ -706,6 +710,11 @@
 						<MediaRef Id="1063987067"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2946897393" Name="Play_Testing_Audio" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1044381033"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2141970788" Name="Play_Victory_Music" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="119632406"/>
@@ -730,15 +739,15 @@
 				</Event>
 				<Event Id="452547817" Name="Stop_All" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4241119515" Name="Stop_Amalia_Music" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="2047366256" Name="Stop_EyeBeam_Default" DurationType="OneShot" DurationMin="7.008202" DurationMax="7.008202">
+				<Event Id="2047366256" Name="Stop_EyeBeam_Default" DurationType="OneShot" DurationMin="8.582021" DurationMax="8.582021">
 					<MediaRefs>
 						<MediaRef Id="528600874"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3359382657" Name="Stop_EyeBeam_Intensified" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2289315611" Name="Stop_Horror_Test" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="3907435653" Name="Stop_Loops" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2251314098" Name="Stop_Pushing_Stone" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="87439343" Name="Stop_Testing_Audio" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3026825475" Name="Stop_Wind_in_Branches" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
@@ -765,5 +774,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C5F7958C-1425-02A7-FA34-FDDD4CDB5B79}</FileHash>
+	<FileHash>{2DD516F4-9D5A-5677-1BCE-07AA15A561A0}</FileHash>
 </SoundBanksInfo>
