@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2212844701658978775}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 9.24, y: 0.2, z: -1}
-  m_LocalScale: {x: 2, y: 14.61, z: 0.5}
+  m_LocalPosition: {x: 9.99, y: 0.25, z: -1}
+  m_LocalScale: {x: 6.6, y: 15.78, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5302949371666748240}
@@ -49,7 +49,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spider: {fileID: 5246985493343872634}
   exposeRate: 0.5
-  timeToDisableBeam: 0
 --- !u!60 &745423656194930867
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -60,7 +59,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -75,9 +74,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.00000019744039, y: 0.5577163}
-      - {x: 0.47045764, y: -0.21634057}
-      - {x: -0.47543424, y: -0.21107435}
+    - - {x: 0, y: 0.5773587}
+      - {x: -0.5, y: -0.28866667}
+      - {x: 0.5, y: -0.28866667}
 --- !u!50 &3127783583730741033
 Rigidbody2D:
   serializedVersion: 4
