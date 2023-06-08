@@ -29,6 +29,7 @@ namespace AK
         static const AkUniqueID PLAY_DEEPHITTOBREATH4 = 4250637638U;
         static const AkUniqueID PLAY_DIRT_FOOTSTEPS = 1323035329U;
         static const AkUniqueID PLAY_ETHEREALTONE = 4119780300U;
+        static const AkUniqueID PLAY_EYE_SQUISHY = 2447590944U;
         static const AkUniqueID PLAY_EYEBEAM_DEFAULT = 3227116378U;
         static const AkUniqueID PLAY_EYEBEAM_INTENSIFIED = 2379313215U;
         static const AkUniqueID PLAY_EYEBEAMACTIVATION = 3430199064U;
@@ -88,6 +89,7 @@ namespace AK
         static const AkUniqueID PLAYER_HEALTH = 215992295U;
         static const AkUniqueID PULSETOSIRENVOL = 2685063653U;
         static const AkUniqueID SFX_VOLUME = 1564184899U;
+        static const AkUniqueID SQUISHEYEDISTANCE = 4159403376U;
         static const AkUniqueID WAWADISTORTIONVOL = 4222622707U;
         static const AkUniqueID WHISTLEBREATHINGVOL = 3844727424U;
     } // namespace GAME_PARAMETERS

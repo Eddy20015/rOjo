@@ -4082,6 +4082,236 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<RandomSequenceContainer Name="Eye Squishy" ID="{A93CA664-9FD5-4C9A-877C-A6490D4F7250}" ShortID="130471713">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{C9D5B799-DC81-45F4-88D5-495989A89E00}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="328"/>
+											<Property Name="Min" Type="Real64" Value="-379"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{84286D2E-CC11-4D74-BB9B-03399DBC4607}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="2"/>
+											<Property Name="Min" Type="Real64" Value="-1"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Squish1" ID="{74B81DD5-2378-4F2C-9990-1593D58E5EFC}" ShortID="41586443">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Squish1" ID="{2BE99884-8C40-40CC-A6C4-9D94BD615729}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0699820855726368"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.045413906595009"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0249404241136525"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.279183852018497"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Squish1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="196538568"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Squish1" ID="{2BE99884-8C40-40CC-A6C4-9D94BD615729}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Squish2" ID="{D4C010FB-CF60-4BC7-BA34-E4A635683CB9}" ShortID="948897166">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Squish2" ID="{DA966182-0819-4857-A700-DA3E703174F3}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.142065039489112"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Squish2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="123675704"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Squish2" ID="{DA966182-0819-4857-A700-DA3E703174F3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Squish3" ID="{F5E63D9A-4D76-4267-BA61-01FE7E19048E}" ShortID="243824025">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Squish3" ID="{8BCF1188-8ADC-4EF8-9DA2-33E133B8FC41}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0911181638009535"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00329342760726338"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.277013855410931"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Squish3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="709136941"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Squish3" ID="{8BCF1188-8ADC-4EF8-9DA2-33E133B8FC41}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Squish4" ID="{793F5C74-2F90-42EA-8CF4-06F357A81C8B}" ShortID="815216932">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Squish4" ID="{A92C55B5-6DA6-4317-BC59-D8BC04370900}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.104691623840593"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00303586571706422"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.370837022507518"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Squish4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="293359393"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Squish4" ID="{A92C55B5-6DA6-4317-BC59-D8BC04370900}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Squish5" ID="{7A763B85-18C2-4917-92B2-50AFCC0622D4}" ShortID="896287789">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Squish5" ID="{35C98DF6-7362-47C0-B55B-81A7BE03AE59}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0534683164604424"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.00297046202558014"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.223378744323626"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Squish5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="769543483"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Squish5" ID="{35C98DF6-7362-47C0-B55B-81A7BE03AE59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="RTPC">
+							<Reference>
+								<Local>
+									<RTPC Name="" ID="{07F28FC2-958E-486A-AE89-E03C237F2B4D}" ShortID="721515775">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="SquishEyeDistance" ID="{8857A897-24AB-41DF-AF20-AF1410D5ADC1}" WorkUnitID="{B0F1DAB9-B28B-421F-8E26-349EB7410416}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{EBD2313B-BE18-4BC4-A078-516CE66968B3}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>0</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>15</XPos>
+																<YPos>-200</YPos>
+																<Flags>0</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>-200</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</Local>
+							</Reference>
+						</ObjectList>
+					</ObjectLists>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

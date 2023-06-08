@@ -821,6 +821,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Eye_Squishy" ID="{9DA4D004-D20C-4B07-8FC3-4DF70E0A3F7A}">
+							<ChildrenList>
+								<Action Name="" ID="{70EE9BAC-6B1A-4085-ADDE-23A9892B9C64}" ShortID="130366598">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Eye Squishy" ID="{A93CA664-9FD5-4C9A-877C-A6490D4F7250}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Stop_Loops" ID="{550FF629-EA82-4508-9215-5869C271F857}">
