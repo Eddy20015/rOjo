@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 
 public class SettingsMenu : MonoBehaviour
 {
-    private const float DEFAULT_VOLUME = 50f;
+    public static float DEFAULT_VOLUME = 50f;
 
     [SerializeField] Slider masterVolumeSlider;
     [SerializeField] Slider sfxVolumeSlider;
