@@ -66,6 +66,7 @@ public class Player2DMovement : MonoBehaviour
         if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.CINEMATIC)
         {
             anim.SetBool("Moving", false);
+            xtrans = 0;
             return;
         }
         xtrans = Input.GetAxis("Horizontal") * speed;
