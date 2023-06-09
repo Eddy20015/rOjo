@@ -13812,7 +13812,6 @@ Transform:
   - {fileID: 8666264061983908715}
   - {fileID: 9008159172435236613}
   - {fileID: 3774493631325150702}
-  - {fileID: 1747864585333450469}
   m_Father: {fileID: 2333184373230238935}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20091,7 +20090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: GrowlVol
-      value: -1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: BaseBassVol
@@ -20107,7 +20106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: MusicBox1Vol
-      value: -1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: MusicBox2Vol
@@ -20123,7 +20122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerGrowl
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: CreepyOrganVol
@@ -20151,7 +20150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerMusicBox1
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerMusicBox2
@@ -20203,7 +20202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: WhistleBreathingVol
-      value: -1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerWawaDistortion
@@ -20231,7 +20230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerWhistleBreathing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8475082313657469179, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: m_Name
@@ -20305,7 +20304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: ChokeVol
-      value: -1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: GrowlVol
@@ -20337,7 +20336,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerChoke
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerGrowl
@@ -22046,224 +22045,6 @@ CompositeCollider2D:
       - {x: 4.7439523, y: -1.142307}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
---- !u!1001 &3566038507940430536
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6226826844943886141}
-    m_Modifications:
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.475
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.53675
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 207.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: ChokeVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: GrowlVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: BaseBassVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: LowCelloVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: PanFluteVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: MusicBox1Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: MusicBox2Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: MusicBox3Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerChoke
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerGrowl
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: CreepyOrganVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: EtherealToneVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: PulseToSirenVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerBaseBass
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerLowCello
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerPanFlute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerMusicBox1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerMusicBox2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerMusicBox3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: WawaDistortionVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerCreepyOrgan
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: DeepHitToBreath1Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: DeepHitToBreath2Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: DeepHitToBreath3Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: DeepHitToBreath4Vol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: GradIncHighPitchVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerEtherealTone
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerPulseToSiren
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerShepardsTone
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: WhistleBreathingVol
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerWawaDistortion
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerDeepHitToBreath1
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerDeepHitToBreath2
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerDeepHitToBreath3
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerDeepHitToBreath4
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerGradIncHighPitch
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: TriggerWhistleBreathing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8475082313657469179, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-      propertyPath: m_Name
-      value: LevelMusicTrigger (6)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
---- !u!4 &1747864585333450469 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
-  m_PrefabInstance: {fileID: 3566038507940430536}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3635385097244910178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22482,7 +22263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: LowCelloVol
-      value: -1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: PanFluteVol
@@ -22498,7 +22279,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: MusicBox3Vol
-      value: -1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerChoke
@@ -22510,7 +22291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: CreepyOrganVol
-      value: -1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: EtherealToneVol
@@ -22526,7 +22307,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerLowCello
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerPanFlute
@@ -22542,7 +22323,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerMusicBox3
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: WawaDistortionVol
@@ -22550,7 +22331,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerCreepyOrgan
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: DeepHitToBreath1Vol
@@ -22586,7 +22367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: WhistleBreathingVol
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerWawaDistortion
@@ -22614,7 +22395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerWhistleBreathing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8475082313657469179, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: m_Name
@@ -22762,11 +22543,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: GrowlVol
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: BaseBassVol
-      value: -1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: LowCelloVol
@@ -22794,7 +22575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerGrowl
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: CreepyOrganVol
@@ -22802,7 +22583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: EtherealToneVol
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: PulseToSirenVol
@@ -22810,7 +22591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerBaseBass
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerLowCello
@@ -22898,7 +22679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerGradIncHighPitch
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerWhistleBreathing
@@ -22976,7 +22757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: ChokeVol
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: GrowlVol
@@ -23008,7 +22789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerChoke
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerGrowl
@@ -23020,7 +22801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: EtherealToneVol
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: PulseToSirenVol
@@ -23060,19 +22841,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: DeepHitToBreath1Vol
-      value: -1
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: DeepHitToBreath2Vol
-      value: -1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: DeepHitToBreath3Vol
-      value: -1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: DeepHitToBreath4Vol
-      value: -1
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: GradIncHighPitchVol
@@ -23080,7 +22861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerEtherealTone
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerPulseToSiren
@@ -23100,19 +22881,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerDeepHitToBreath1
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerDeepHitToBreath2
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerDeepHitToBreath3
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerDeepHitToBreath4
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerGradIncHighPitch
@@ -25028,7 +24809,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: PanFluteVol
-      value: -1
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: MusicBox1Vol
@@ -25036,7 +24817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: MusicBox2Vol
-      value: -1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: MusicBox3Vol
@@ -25056,11 +24837,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: EtherealToneVol
-      value: -1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: PulseToSirenVol
-      value: -1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerBaseBass
@@ -25072,7 +24853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerPanFlute
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerMusicBox1
@@ -25080,7 +24861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerMusicBox2
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerMusicBox3
@@ -25116,11 +24897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerEtherealTone
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerPulseToSiren
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040072435693036722, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
       propertyPath: TriggerShepardsTone
