@@ -51,6 +51,10 @@ public class GameStateManager : MonoBehaviour
         MainMenuName = MainMenuNameSetter;
         MainLevelName = MainLevelNameSetter;
         CreditsName = CreditsNameSetter;
+
+        AkSoundEngine.SetRTPCValue("Master_Volume", PlayerPrefs.GetFloat("MasterVolume", SettingsMenu.DEFAULT_VOLUME));
+        AkSoundEngine.SetRTPCValue("Music_Volume", PlayerPrefs.GetFloat("MusicVolume", SettingsMenu.DEFAULT_VOLUME));
+        AkSoundEngine.SetRTPCValue("SFX_Volume", PlayerPrefs.GetFloat("SFXVolume", SettingsMenu.DEFAULT_VOLUME));
     }
 
     // returns current GameState
