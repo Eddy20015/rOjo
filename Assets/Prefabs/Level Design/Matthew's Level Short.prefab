@@ -322,8 +322,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -120379527
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 74f9c85b53261224882df802afaf795e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12148,6 +12148,7 @@ Transform:
   - {fileID: 8389364905488463814}
   - {fileID: 4317370438316944740}
   - {fileID: 8715138056839432757}
+  - {fileID: 3156251317661634960}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12683,7 +12684,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5772220635375142182}
   - component: {fileID: 4551482446350507389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: crypt_hidden
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14059,7 +14060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7315564279624680657}
   - component: {fileID: 2880639459379986117}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: grass_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14259,7 +14260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7320317569320014679}
   - component: {fileID: 5545912257699427673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mansion_bg_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14343,7 +14344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965061642444136289}
   - component: {fileID: 8814282422947557270}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: grass_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16029,7 +16030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155457360331562027}
   - component: {fileID: 4708698994224925043}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: grass_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20211,6 +20212,161 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2971448545609933869, guid: 7cc1c8b945ccc874692836e2f6670d4c, type: 3}
   m_PrefabInstance: {fileID: 2115853175917541827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2179438220444684529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2333184373230238935}
+    m_Modifications:
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_text
+      value: 'The light
+
+        Is dimming
+
+        My heart
+
+        Not beating
+
+        The
+        crowd
+
+        Is cheering...
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_margin.z
+      value: -5.579834
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 3647b353b3f454c4dabad82e66696ff0, type: 2}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3269198966277167751, guid: 3647b353b3f454c4dabad82e66696ff0, type: 2}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190210
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315682, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315684, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 19.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315684, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208254315685, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3269198966277167751, guid: 3647b353b3f454c4dabad82e66696ff0, type: 2}
+    - target: {fileID: 3887638208287909494, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 16.558792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208287909494, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208287909494, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208287909497, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: timeStaysVisible
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208287909497, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: visibilitySpeedChange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -120.630066
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -105.38163
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.051834542
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887638208897827230, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+      propertyPath: m_Name
+      value: Poem Fade Trigger (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+--- !u!4 &3156251317661634960 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3887638208897827169, guid: cecc1e8629c3bc54786de8bc5c89ba8b, type: 3}
+  m_PrefabInstance: {fileID: 2179438220444684529}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2539811602867876684
 PrefabInstance:
