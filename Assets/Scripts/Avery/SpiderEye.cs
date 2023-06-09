@@ -24,6 +24,11 @@ public class SpiderEye : MonoBehaviour
         {
             Player.GetComponent<PlayerHealth>().IncreaseMeter(exposeRate);
         }
+
+        if (isSeeingPlayer != spider.GetSeeing())
+        {
+            spider.SetSeeing(isSeeingPlayer);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

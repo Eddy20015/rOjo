@@ -8,11 +8,15 @@ public class Spider : MonoBehaviour
 
     [SerializeField] float bodyMoveStrength, bodyRotateStrength, bodyMoveSpeed, bodyRotateSpeed, spiderMoveSpeed, spiderRotateSpeed;
 
+    [SerializeField] SpriteRenderer eye;
+
+    [SerializeField] Sprite eyeClosed, eyeOpen;
+
     float bodyMoveTime, bodyRotateTime, width, height, circumference, spiderPosition, targetRotation, oldRotation, rotationLerp;
 
     Quaternion oldSpiderRotation;
 
-    bool moving;
+    bool moving, seeing;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +69,12 @@ public class Spider : MonoBehaviour
     public void SetMoving(bool b)
     {
         moving = b;
+    }
+
+    public void SetSeeing(bool b)
+    {
+        seeing = b;
+        eye.sprite = b ? eyeOpen : eyeClosed;
     }
 
     void CalculateCircumference()
@@ -218,5 +228,10 @@ public class Spider : MonoBehaviour
     public float GetCircumference()
     {
         return circumference;
+    }
+
+    public bool GetSeeing()
+    {
+        return seeing;
     }
 }
