@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<MusicSegment Name="Amalia's Music" ID="{93C138C1-D8FC-43BF-ACB0-D3AFCECA2847}" ShortID="908443926">
 					<PropertyList>
-						<Property Name="EndPosition" Type="Real64" Value="86153.8548752834"/>
+						<Property Name="EndPosition" Type="Real64" Value="215232.811791383"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -16,23 +16,23 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<MusicTrack Name="Level Music (Audio from Musescore)" ID="{29C32636-7E69-4692-BDF7-1788AF05AB6D}" ShortID="5951420">
+						<MusicTrack Name="Main menu music" ID="{3D1FE0B2-D0AF-4359-A396-9CED0BA46BA4}" ShortID="527514982">
 							<ReferenceList>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Level Music (Audio from Musescore)" ID="{92646A2F-2208-48FB-B6BE-D34731A3015C}">
+								<AudioFileSource Name="Main menu music" ID="{F106415B-C455-4685-84C9-D365F8818893}">
 									<Language>SFX</Language>
-									<AudioFile>Level Music (Audio from Musescore).wav</AudioFile>
+									<AudioFile>Main menu music.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1055184408"/>
+										<MediaID ID="899456085"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{8375AE11-A057-4426-B39F-3C6C393AD643}">
+								<MusicTransition Name="Root" ID="{9DE396AB-ED80-4127-83A7-F82D9CB7C14D}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
@@ -43,18 +43,18 @@
 								<ObjectList Name="Sequences">
 									<Reference>
 										<Local>
-											<MusicTrackSequence Name="" ID="{2CC6BE91-194C-419A-ADDA-6EC450EAB4DE}">
+											<MusicTrackSequence Name="" ID="{D84CB678-7C93-41F0-A5EE-182DFA84C7D4}">
 												<ObjectLists>
 													<ObjectList Name="Clips">
 														<Reference>
 															<Local>
-																<MusicClip Name="Level Music (Audio from Musescore)" ID="{CEE9DCEF-89EB-4A7E-81BF-9F85A52CCD59}">
+																<MusicClip Name="Main menu music" ID="{E22B1B3E-51DB-439C-95F9-AF9F4E1C1EC1}">
 																	<PropertyList>
-																		<Property Name="EndTrimOffset" Type="Real64" Value="86153.8548752834"/>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="129078.9569161"/>
 																		<Property Name="FadeInMode" Type="int16" Value="0"/>
 																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																	</PropertyList>
-																	<AudioSourceRef Name="Level Music (Audio from Musescore)" ID="{92646A2F-2208-48FB-B6BE-D34731A3015C}"/>
+																	<AudioSourceRef Name="Main menu music" ID="{F106415B-C455-4685-84C9-D365F8818893}"/>
 																</MusicClip>
 															</Local>
 														</Reference>

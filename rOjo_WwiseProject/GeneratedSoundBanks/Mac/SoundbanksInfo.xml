@@ -51,7 +51,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{C3D7E5E6-3524-784A-CF66-5DF32BCFE41D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AAAB794F-5B0C-3035-9946-35B97BB075BE}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -407,6 +407,10 @@
 					<ShortName>Horror Stems\WawaDistortion.wav</ShortName>
 					<CachePath>SFX/Horror Stems/WawaDistortion_D79FB2B7.wem</CachePath>
 				</File>
+				<File Id="899456085" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Main menu music.wav</ShortName>
+					<CachePath>SFX/Main menu music_D79FB2B7.wem</CachePath>
+				</File>
 				<File Id="901624723" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>MeOyesRev1.wav</ShortName>
 					<CachePath>SFX/MeOyesRev1_10C4C929.wem</CachePath>
@@ -455,10 +459,6 @@
 					<ShortName>Step7.wav</ShortName>
 					<CachePath>SFX/Step7_CA2F555A.wem</CachePath>
 				</File>
-				<File Id="1055184408" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>Level Music (Audio from Musescore).wav</ShortName>
-					<CachePath>SFX/Level Music (Audio from Musescore)_D79FB2B7.wem</CachePath>
-				</File>
 				<File Id="1055275767" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Sticky2.wav</ShortName>
 					<CachePath>SFX/Sticky2_10C4C929.wem</CachePath>
@@ -476,9 +476,9 @@
 						<MediaRef Id="916682109"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2043365649" Name="Play_Amalia_Music" DurationType="Infinite">
+				<Event Id="2043365649" Name="Play_Amalia_Music" DurationType="OneShot" DurationMin="129.07895" DurationMax="129.07895">
 					<MediaRefs>
-						<MediaRef Id="1055184408"/>
+						<MediaRef Id="899456085"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1291943636" Name="Play_BaseBass" DurationType="OneShot" DurationMin="81.376564" DurationMax="81.376564">
@@ -789,6 +789,7 @@
 				<GameParameter Id="2912448678" Name="GradIncHighPitchVol"/>
 				<GameParameter Id="3844727424" Name="WhistleBreathingVol"/>
 				<GameParameter Id="3949021176" Name="MusicBox2Vol"/>
+				<GameParameter Id="4015289221" Name="FlamencoMusicVolume"/>
 				<GameParameter Id="4026379618" Name="ChokeVol"/>
 				<GameParameter Id="4036542190" Name="DeepHitToBreath2Vol"/>
 				<GameParameter Id="4064624855" Name="LowCelloVol"/>
@@ -797,5 +798,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{11715988-05B5-4BFE-946E-3DC8CB6B96C3}</FileHash>
+	<FileHash>{15914405-3EB2-F945-7EE1-F0B4FF4DFD8A}</FileHash>
 </SoundBanksInfo>
