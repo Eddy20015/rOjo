@@ -190,6 +190,17 @@ public class GameStateManager : MonoBehaviour
     public static void LoadCredits()
     {
         //Win();
+        //SceneManager.LoadScene(CreditsName);
+        Cinematics();
+        Instance.StopAllCoroutines();
+        Instance.StartCoroutine(TransitionToCredits());
+    }
+
+    private static IEnumerator TransitionToCredits()
+    {
+        Instance.transition = FindObjectOfType<SceneTransition>();
+        Instance.transition.Close();
+        yield return new WaitForSeconds(Instance.transition.CloseTime());
         SceneManager.LoadScene(CreditsName);
     }
 
