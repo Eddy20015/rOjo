@@ -94,7 +94,10 @@ public class Chaser3D : EndingUI
         GameStateManager.Cinematics();
         vPlayer.clip = handsVid;
         vPlayer.isLooping = false;
+        vPlayer.Prepare();
         vPlayer.Play();
+        yield return new WaitUntil(() => vPlayer.isPrepared);
+        yield return new WaitForEndOfFrame();
         redScreenImage.SetActive(true);
 
         yield return new WaitForSeconds((float)handsVid.length);
