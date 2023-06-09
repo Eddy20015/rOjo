@@ -96,7 +96,7 @@ public class GameStateManager : MonoBehaviour
         Instance.StopAllCoroutines();
         Instance.StartCoroutine(TransitionToMain());
     }
-    
+
     private static IEnumerator TransitionToMain()
     {
         Instance.transition = FindObjectOfType<SceneTransition>();
@@ -210,7 +210,7 @@ public class GameStateManager : MonoBehaviour
         float idleTime = Instance.transition.IdleTime();
         while (operation.progress < .9f || timeElapsed <= idleTime)
         {
-            float progress = Mathf.Min(operation.progress, (timeElapsed/ idleTime));
+            float progress = Mathf.Min(operation.progress, (timeElapsed / idleTime));
             Instance.transition.UpdateUI(progress);
             yield return new WaitForEndOfFrame();
             timeElapsed += Time.deltaTime;
@@ -220,6 +220,22 @@ public class GameStateManager : MonoBehaviour
         Instance.transition.Close();
         yield return new WaitForSeconds(Instance.transition.CloseTime());
         operation.allowSceneActivation = true;
-        Checkpoint.LoadCheckpoint();
+    }
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += LoadedMain;
+    }
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= LoadedMain;
+    }
+
+    private static void LoadedMain(Scene scene, LoadSceneMode mode)
+    {
+        print(scene.name + " loaded");
+        if (scene.name == MainLevelName)
+        {
+            Checkpoint.LoadCheckpoint();
+        }
     }
 }
