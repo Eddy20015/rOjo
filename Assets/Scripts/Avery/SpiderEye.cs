@@ -15,6 +15,7 @@ public class SpiderEye : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Dancer");
         rend = GetComponent<SpriteRenderer>();
+        rend.enabled = false;
     }
 
     // Update is called once per frame
@@ -28,6 +29,7 @@ public class SpiderEye : MonoBehaviour
         if (isSeeingPlayer != spider.GetSeeing())
         {
             spider.SetSeeing(isSeeingPlayer);
+            rend.enabled = isSeeingPlayer;
         }
     }
 
