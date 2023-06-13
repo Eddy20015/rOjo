@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class TurnRunCameraTrigger : CutCameraTrigger
 {
+    [Header("Cutscene")]
+    [SerializeField] private PlayableDirector cutscenePlayer;
+    [SerializeField] private float cutsceneTime = 5f;
+
     [Header("Camera Pass Off")]
     [SerializeField] private Transform HumanPlayer;
     [SerializeField] private Player3DMovement playerMoveScript;
@@ -34,11 +39,17 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         {
             borderAnim.SetTrigger("ZoomOut");
         }
+        // play cutscne here an have everything else on a coroutine
+        switcher.SetPriority(newCamIndex); // switches to the dolly camera
+        mainCam.orthographic = false;
+        dancerMovement.StopMoving();
+        dancerMovement.enabled = false;
+        cutscenePlayer.Play();
+        /*
         switcher.SetPriority(newCamIndex);
         cutAnim.SetTrigger(cutSceneName);
         mainCam.orthographic = false;
-
-        dancerMovement.enabled = false;
+        */
 
         Stop2DMusic.Post(gameObject);
         Start3DMusic.Post(gameObject);
@@ -59,16 +70,20 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         if(ppc3D)
             ppc3D.FadeInEffects(cutSceneClip.length);
 
+        yield return new WaitForSeconds(cutsceneTime);
+        
+        cutAnim.SetTrigger(cutSceneName);
+
         yield return new WaitForSeconds(cutSceneClip.length);
 
         switcher.ToggleAllCameras(false);
         mainCam.transform.SetParent(HumanPlayer);
         bobbingCamAnim.enabled = true;
-
         playerMoveScript.enabled = true;
         chaser.SetActive(true);
         dancerMovement.enabled = false;
         pauseMenu.SetActive(false);
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

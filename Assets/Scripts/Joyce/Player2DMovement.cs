@@ -259,4 +259,10 @@ public class Player2DMovement : MonoBehaviour
     {
         landingParticles.Play();
     }
+
+    public void StopMoving()
+    {
+        anim.SetBool("Moving", false);
+        xtrans = 0;
+    }
 }
