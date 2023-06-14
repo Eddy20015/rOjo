@@ -7,6 +7,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
 {
     [Header("Cutscene")]
     [SerializeField] private PlayableDirector cutscenePlayer;
+    [SerializeField] private GameObject eyeFlashPlayer;
     [SerializeField] private float cutsceneTime = 5f;
 
     [Header("Camera Pass Off")]
@@ -32,6 +33,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     {
         chaser.SetActive(false);
         bobbingCamAnim.enabled = false;
+        eyeFlashPlayer.SetActive(false);
     }
     protected override void StartTrigger()
     {
@@ -44,6 +46,8 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         mainCam.orthographic = false;
         dancerMovement.StopMoving();
         dancerMovement.enabled = false;
+        eyeFlashPlayer.SetActive(true);
+
         cutscenePlayer.Play();
         /*
         switcher.SetPriority(newCamIndex);

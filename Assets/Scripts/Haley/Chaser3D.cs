@@ -16,8 +16,9 @@ public class Chaser3D : EndingUI
 
     [Header("Eye Flash")]
     [SerializeField] private GameObject eyeFlashScreen;
+    [SerializeField] private VideoPlayer eyeFlashPlayer;
     [SerializeField] private Material paleChroma;
-    private Color matStartCol;
+    [SerializeField] private Color matStartCol;
 
     [Header("Audio")]
     private Vector3 moveDirection;
@@ -45,7 +46,6 @@ public class Chaser3D : EndingUI
 
         startDist = DistanceFromPlayer();
         eyeFlashScreen.SetActive(true);
-        matStartCol = paleChroma.GetColor("_TintColor");
 
         ChaseMusic.Post(gameObject);
     }
@@ -59,6 +59,7 @@ public class Chaser3D : EndingUI
         if(moving)
         {
             SetVidTransparency();
+            eyeFlashPlayer.playbackSpeed = Mathf.PingPong(Time.time, 10);
         }
     }
 
