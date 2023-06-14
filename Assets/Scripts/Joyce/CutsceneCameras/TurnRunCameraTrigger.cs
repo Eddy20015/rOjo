@@ -75,6 +75,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         cutAnim.SetTrigger(cutSceneName);
 
         yield return new WaitForSeconds(cutSceneClip.length);
+        cutscenePlayer.Stop();
 
         switcher.ToggleAllCameras(false);
         mainCam.transform.SetParent(HumanPlayer);
