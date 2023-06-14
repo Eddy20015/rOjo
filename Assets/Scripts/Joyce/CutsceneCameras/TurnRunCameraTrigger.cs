@@ -34,9 +34,11 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         chaser.SetActive(false);
         bobbingCamAnim.enabled = false;
         eyeFlashPlayer.SetActive(false);
+        playingCutscene = false;
     }
     protected override void StartTrigger()
     {
+        playingCutscene = true;
         if (borderAnim)
         {
             borderAnim.SetTrigger("ZoomOut");
@@ -60,6 +62,12 @@ public class TurnRunCameraTrigger : CutCameraTrigger
 
         StartCoroutine(OnCutSceneEnd());
     }
+
+    private void Update()
+    {
+        eyeFlashPlayer.SetActive(playingCutscene && GameStateManager.GetGameState() != GameStateManager.GAMESTATE.PAUSED);
+    }
+
     protected override void EndTrigger()
     {
         StopAllCoroutines();
@@ -88,7 +96,6 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         chaser.SetActive(true);
         dancerMovement.enabled = false;
         pauseMenu.SetActive(false);
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
