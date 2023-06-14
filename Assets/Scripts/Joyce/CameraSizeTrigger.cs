@@ -8,6 +8,7 @@ public class CameraSizeTrigger : MonoBehaviour
 
     [SerializeField] private float size = 3f;
     [SerializeField] private float transitionTime = 1;
+    [SerializeField] private float dampingVal = -1f;
 
     private void Awake()
     {
@@ -20,6 +21,8 @@ public class CameraSizeTrigger : MonoBehaviour
         if(collision.tag.Equals("Dancer"))
         {
             switcher.SetCurrSize(size, transitionTime);
+            if(dampingVal >= 0)
+                switcher.SetDamping(dampingVal);
         }
     }
 }

@@ -14,6 +14,11 @@ public class Chaser3D : EndingUI
     [SerializeField] private VideoClip handsVid;
     [SerializeField] private GameObject redScreenImage;
 
+    [Header("Eye Flash")]
+    [SerializeField] private GameObject eyeFlashScreen;
+    [SerializeField] private Material paleChroma;
+    private Color matStartCol;
+
     [Header("Audio")]
     private Vector3 moveDirection;
 
@@ -21,6 +26,8 @@ public class Chaser3D : EndingUI
     private float speed;
     private bool moving = true;
     private float drag;
+
+    private float startDist;
 
     public AK.Wwise.Event ChaseMusic;
     public AK.Wwise.Event playDeath;
@@ -36,6 +43,10 @@ public class Chaser3D : EndingUI
         drag = pMove.getDrag();
         moving = true;
 
+        startDist = DistanceFromPlayer();
+        eyeFlashScreen.SetActive(true);
+        matStartCol = paleChroma.GetColor("_TintColor");
+
         ChaseMusic.Post(gameObject);
     }
 
@@ -47,8 +58,16 @@ public class Chaser3D : EndingUI
 
         if(moving)
         {
-            DistanceFromPlayer();
+            SetVidTransparency();
         }
+    }
+
+    private void SetVidTransparency()
+    {
+        float currDist = DistanceFromPlayer();
+        Color color = paleChroma.GetColor("_TintColor");
+        color.a = 1 - Mathf.Clamp01(currDist / startDist);
+        paleChroma.SetColor("_TintColor", color);
     }
 
     private void FixedUpdate()
@@ -107,10 +126,17 @@ public class Chaser3D : EndingUI
         PlayMenu();
     }
 
-    public void DistanceFromPlayer()
+    public float DistanceFromPlayer()
     {
         float currDistance = Mathf.Abs(transform.position.z - player.transform.position.z);
 
         AkSoundEngine.SetRTPCValue("MonsterDistance", currDistance);
+
+        return currDistance;
+    }
+
+    private void OnDestroy()
+    {
+        paleChroma.SetColor("_TintColor", matStartCol);
     }
 }
