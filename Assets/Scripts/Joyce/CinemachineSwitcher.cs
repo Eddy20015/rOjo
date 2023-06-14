@@ -55,6 +55,11 @@ public class CinemachineSwitcher : MonoBehaviour
         confiner.m_BoundingShape2D = collider;
     }
 
+    public void SetDamping(float damping = 1f)
+    {
+        confiner.m_Damping = damping;
+    }
+
     public void SetCurrSize(float orthoSize, float transitionTime = 1f)
     {
         StopAllCoroutines();

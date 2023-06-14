@@ -7,6 +7,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
 {
     [Header("Cutscene")]
     [SerializeField] private PlayableDirector cutscenePlayer;
+    [SerializeField] private GameObject eyeFlashPlayer;
     [SerializeField] private float cutsceneTime = 5f;
 
     [Header("Camera Pass Off")]
@@ -32,9 +33,12 @@ public class TurnRunCameraTrigger : CutCameraTrigger
     {
         chaser.SetActive(false);
         bobbingCamAnim.enabled = false;
+        eyeFlashPlayer.SetActive(false);
+        playingCutscene = false;
     }
     protected override void StartTrigger()
     {
+        playingCutscene = true;
         if (borderAnim)
         {
             borderAnim.SetTrigger("ZoomOut");
@@ -44,6 +48,8 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         mainCam.orthographic = false;
         dancerMovement.StopMoving();
         dancerMovement.enabled = false;
+        eyeFlashPlayer.SetActive(true);
+
         cutscenePlayer.Play();
         /*
         switcher.SetPriority(newCamIndex);
@@ -56,6 +62,12 @@ public class TurnRunCameraTrigger : CutCameraTrigger
 
         StartCoroutine(OnCutSceneEnd());
     }
+
+    private void Update()
+    {
+        eyeFlashPlayer.SetActive(playingCutscene && GameStateManager.GetGameState() != GameStateManager.GAMESTATE.PAUSED);
+    }
+
     protected override void EndTrigger()
     {
         StopAllCoroutines();
@@ -75,6 +87,7 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         cutAnim.SetTrigger(cutSceneName);
 
         yield return new WaitForSeconds(cutSceneClip.length);
+        cutscenePlayer.Stop();
 
         switcher.ToggleAllCameras(false);
         mainCam.transform.SetParent(HumanPlayer);
@@ -83,7 +96,6 @@ public class TurnRunCameraTrigger : CutCameraTrigger
         chaser.SetActive(true);
         dancerMovement.enabled = false;
         pauseMenu.SetActive(false);
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
