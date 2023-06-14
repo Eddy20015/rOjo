@@ -15,19 +15,34 @@ public class ForegroundController : VideoController
     [SerializeField] private Vector3[] HandVideoPositions;
 
     int CurrIdx = 0;
+    private bool wasPaused;
+    private bool donePlaying;
 
-    protected override void Start()
+    protected override void Awake()
     {
-        base.Start();
+        base.Awake();
         rawImage = GetComponent<RawImage>();
         rawImage.enabled = false;
         HandVideo.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.PAUSED)
+            PauseForeground();
+        else if (wasPaused && !donePlaying)
+        {
+            wasPaused = false;
+            StartVPlayer();
+        }
     }
 
     //This function assumes that all clips that will be played in level are
     //populated in Clips in the correct order with no repeats
     public void PlayNewForeground()
     {
+        donePlaying = false;
+        wasPaused = false;
         if(CurrIdx >= 0)
         {
             VPlayer.clip = Clips[CurrIdx % Clips.Length];
@@ -51,6 +66,7 @@ public class ForegroundController : VideoController
 
     public void PauseForeground()
     {
+        wasPaused = true;
         PauseVPlayer();
     }
 
@@ -59,5 +75,21 @@ public class ForegroundController : VideoController
         StopVPlayer();
         rawImage.enabled = false;
         HandVideo.enabled = false;
+    }
+
+    private void DonePlaying(VideoPlayer vp)
+    {
+        donePlaying = true;
+        VPlayer.Stop();
+    }
+
+    private void OnEnable()
+    {
+        VPlayer.loopPointReached += DonePlaying;
+    }
+
+    private void OnDestroy()
+    {
+        VPlayer.loopPointReached -= DonePlaying;
     }
 }

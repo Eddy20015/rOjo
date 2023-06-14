@@ -9,16 +9,15 @@ public abstract class VideoController : MonoBehaviour
 
     protected bool bContinue;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
-        print("In the old start");
+        print("In the old awake");
         VPlayer = gameObject.GetComponent<VideoPlayer>();
     }
 
     protected void StartVPlayer()
     {
         VPlayer.Play();
-        
     }
 
     protected void PauseVPlayer()
