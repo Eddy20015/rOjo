@@ -903,6 +903,28 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Child_Choke" ID="{5C51B5E6-F94B-4164-827F-247462C36ACA}">
+							<ChildrenList>
+								<Action Name="" ID="{96EE3D1F-2EC1-4C90-8E9A-68742D052D52}" ShortID="590707077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choke" ID="{A38A0957-0BCE-4BED-84B1-C0302875001D}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Child_Drown" ID="{2629068F-350B-4704-9961-1EB466FEF42B}">
+							<ChildrenList>
+								<Action Name="" ID="{36C454A7-0629-4287-BCFA-437BC3CDF6F2}" ShortID="297947339">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choke2" ID="{DC5E0EF2-FA3A-40A4-9677-35CC300D95C1}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Event Name="Stop_Loops" ID="{550FF629-EA82-4508-9215-5869C271F857}">

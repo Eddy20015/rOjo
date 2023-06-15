@@ -4337,6 +4337,110 @@
 						</ObjectList>
 					</ObjectLists>
 				</RandomSequenceContainer>
+				<Folder Name="Drown Chokes" ID="{BDDCB31D-231E-42F6-9B84-8239F9C411ED}" ShortID="530734858">
+					<ChildrenList>
+						<Sound Name="Choke" ID="{A38A0957-0BCE-4BED-84B1-C0302875001D}" ShortID="435885317">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>48</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>730</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Choke" ID="{203D4E21-2E06-4CF5-A0BC-EF56A14A99AC}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.19745328335968"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="20.8582778572815"/>
+										<Property Name="TrimEnd" Type="Real64" Value="23.9172374617679"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Choke.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1009298550"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Choke" ID="{203D4E21-2E06-4CF5-A0BC-EF56A14A99AC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Choke2" ID="{DC5E0EF2-FA3A-40A4-9677-35CC300D95C1}" ShortID="340934907">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>48</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MakeUpGain" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>730</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX Audio Bus" ID="{CA3BC7F3-7B1D-4152-B34C-2D166CA09D8E}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Choke" ID="{1F3A72E2-2AE9-4588-A992-AE12A04C2CB7}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.023099135552"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="30.1104829658127"/>
+										<Property Name="TrimEnd" Type="Real64" Value="35.0842419405644"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Choke.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="57109975"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Choke" ID="{1F3A72E2-2AE9-4588-A992-AE12A04C2CB7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

@@ -17,6 +17,8 @@ public class CutCameraTrigger : MonoBehaviour
     [SerializeField] protected AnimationClip cutSceneClip;
     [SerializeField] protected string cutSceneName;
 
+    protected bool playingCutscene = false;
+
     virtual protected void StartTrigger(){}
     virtual protected void EndTrigger(){}
 
