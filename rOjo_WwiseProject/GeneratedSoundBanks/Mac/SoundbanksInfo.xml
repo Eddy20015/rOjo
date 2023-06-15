@@ -51,7 +51,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{AAAB794F-5B0C-3035-9946-35B97BB075BE}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7A1F8416-1032-D0B4-97DD-E90B3693560E}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -66,6 +66,10 @@
 				<File Id="39914089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step9.wav</ShortName>
 					<CachePath>SFX/Step9_08F93BE0.wem</CachePath>
+				</File>
+				<File Id="57109975" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Choke.wav</ShortName>
+					<CachePath>SFX/Choke_24876AAF.wem</CachePath>
 				</File>
 				<File Id="84490070" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pushing Stone.wav</ShortName>
@@ -435,6 +439,10 @@
 					<ShortName>dirt5.wav</ShortName>
 					<CachePath>SFX/dirt5_0BC9789F.wem</CachePath>
 				</File>
+				<File Id="1009298550" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Choke.wav</ShortName>
+					<CachePath>SFX/Choke_DD990E29.wem</CachePath>
+				</File>
 				<File Id="1011580158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EyeBeamIntensifier.wav</ShortName>
 					<CachePath>SFX/EyeBeamIntensifier_D79FB2B7.wem</CachePath>
@@ -505,6 +513,16 @@
 					<MediaRefs>
 						<MediaRef Id="768801266"/>
 						<MediaRef Id="840613638"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4016503849" Name="Play_Child_Choke" DurationType="OneShot" DurationMin="2.006537" DurationMax="2.006537">
+					<MediaRefs>
+						<MediaRef Id="1009298550"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1296508723" Name="Play_Child_Drown" DurationType="OneShot" DurationMin="3.2625575" DurationMax="3.2625575">
+					<MediaRefs>
+						<MediaRef Id="57109975"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3606198378" Name="Play_Choke" DurationType="OneShot" DurationMin="86.39157" DurationMax="86.39157">
@@ -798,5 +816,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{15914405-3EB2-F945-7EE1-F0B4FF4DFD8A}</FileHash>
+	<FileHash>{84AC9DB0-7F7E-4D35-CD98-2B313A0B845B}</FileHash>
 </SoundBanksInfo>

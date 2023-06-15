@@ -21,6 +21,8 @@ namespace AK
         static const AkUniqueID PLAY_BRANCH_IMPACT = 1700739467U;
         static const AkUniqueID PLAY_BUTTON_SELECT = 2034692297U;
         static const AkUniqueID PLAY_CHASEMUSIC = 2784914665U;
+        static const AkUniqueID PLAY_CHILD_CHOKE = 4016503849U;
+        static const AkUniqueID PLAY_CHILD_DROWN = 1296508723U;
         static const AkUniqueID PLAY_CHOKE = 3606198378U;
         static const AkUniqueID PLAY_CREDITMUSIC = 1734519570U;
         static const AkUniqueID PLAY_CREEPYORGAN = 4207504401U;
