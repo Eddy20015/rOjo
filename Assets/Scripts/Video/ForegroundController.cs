@@ -26,7 +26,6 @@ public class ForegroundController : VideoController
         HandVideo.enabled = false;
     }
 
-<<<<<<< HEAD
     private void Update()
     {
         if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.PAUSED)
@@ -36,17 +35,6 @@ public class ForegroundController : VideoController
             wasPaused = false;
             StartVPlayer();
         }
-=======
-    private void Update()
-    {
-        if (GameStateManager.GetGameState() == GameStateManager.GAMESTATE.PAUSED)
-            PauseForeground();
-        else if (wasPaused && !donePlaying)
-        {
-            wasPaused = false;
-            StartVPlayer();
-        }
->>>>>>> main
     }
 
     //This function assumes that all clips that will be played in level are
@@ -89,7 +77,6 @@ public class ForegroundController : VideoController
         HandVideo.enabled = false;
     }
 
-<<<<<<< HEAD
     private void DonePlaying(VideoPlayer vp)
     {
         donePlaying = true;
@@ -104,21 +91,5 @@ public class ForegroundController : VideoController
     private void OnDestroy()
     {
         VPlayer.loopPointReached -= DonePlaying;
-=======
-    private void DonePlaying(VideoPlayer vp)
-    {
-        donePlaying = true;
-        VPlayer.Stop();
-    }
-
-    private void OnEnable()
-    {
-        VPlayer.loopPointReached += DonePlaying;
-    }
-
-    private void OnDestroy()
-    {
-        VPlayer.loopPointReached -= DonePlaying;
->>>>>>> main
     }
 }
