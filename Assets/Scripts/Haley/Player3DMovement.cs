@@ -56,8 +56,8 @@ public class Player3DMovement : MonoBehaviour
     private void Update()
     {
         // Checks if player is on ground, changes animation as needed
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2 + 0.1f);
-        print(isGrounded);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight / 2 + 0.3f);
+        //print(isGrounded);
         //if(anim != null)
         //    anim.SetBool("isGrounded", isGrounded);
 

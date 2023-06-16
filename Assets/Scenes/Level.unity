@@ -16493,7 +16493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: RippleEffectDuration
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1140863353797431715, guid: 1d2e3d414f446418c84378165ab5fae9, type: 3}
       propertyPath: stopDefault.WwiseObjectReference
@@ -18886,7 +18886,7 @@ MonoBehaviour:
   Forwardspeed: 1
   groundDrag: 6
   airSpeed: 12.5
-  jumpForce: 1.25
+  jumpForce: 1.2
   airDrag: 1
   lookSpeedY: 2
   lookSpeedX: 2
@@ -24634,6 +24634,14 @@ PrefabInstance:
     - target: {fileID: 8823273982356923888, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823273982356923889, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
+      propertyPath: airSpeed
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8823273982356923889, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
+      propertyPath: jumpForce
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0da09d6a6a26394aa844ad5e78079e5, type: 3}
