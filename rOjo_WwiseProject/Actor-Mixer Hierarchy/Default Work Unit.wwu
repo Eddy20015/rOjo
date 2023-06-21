@@ -150,9 +150,14 @@
 				</Sound>
 				<BlendContainer Name="Dirt_Footsteps" ID="{7F906B5A-0300-46E4-83E9-FE6D5835083A}" ShortID="995026677">
 					<PropertyList>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-6</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -824,9 +829,14 @@
 				</Sound>
 				<BlendContainer Name="Spider Steps" ID="{C8765093-D9A3-4BB4-A306-48D36608F349}" ShortID="844021027">
 					<PropertyList>
+						<Property Name="Priority" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-3</Value>
+								<Value>-6</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -4441,6 +4451,52 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Sound Name="Exhale2" ID="{118267E6-FA02-4A79-AFDB-039322A9869D}" ShortID="737387276">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>20</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>30</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music Audio Bus" ID="{5010C48F-1FA3-4979-B90C-37DB3B93B989}" WorkUnitID="{5B8D1083-DEC3-463C-8BD0-82DDB8C85B91}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Exhale2" ID="{BDBBFF93-D08B-4377-9AFB-B2101EDE3AC9}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.135237876174046"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.02988844163312"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimBegin" Type="Real64" Value="1.68787272378762"/>
+								<Property Name="TrimEnd" Type="Real64" Value="3.70603795284646"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Exhale2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="39015080"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Exhale2" ID="{BDBBFF93-D08B-4377-9AFB-B2101EDE3AC9}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

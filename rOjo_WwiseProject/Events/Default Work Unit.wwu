@@ -303,7 +303,17 @@
 						</Event>
 						<Event Name="Play_Amalia_Music" ID="{523D6A0D-A907-4E01-BE70-4FBC12E92E53}">
 							<ChildrenList>
+								<Action Name="" ID="{7E0AE75D-94FC-435A-BC70-6298AAA889E1}" ShortID="320888674">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Exhale2" ID="{118267E6-FA02-4A79-AFDB-039322A9869D}" WorkUnitID="{58138382-C8C4-4FD2-8145-077691D20969}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
 								<Action Name="" ID="{B83F9ED1-590E-4E83-A29E-A6B87A8F2523}" ShortID="178297472">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Amalia's Music" ID="{93C138C1-D8FC-43BF-ACB0-D3AFCECA2847}" WorkUnitID="{81AE3EAE-941E-4B15-BBEC-ADEFF8F77299}"/>

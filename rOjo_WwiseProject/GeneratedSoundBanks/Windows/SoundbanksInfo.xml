@@ -51,7 +51,7 @@
 				<GameParameter Id="4222622707" Name="WawaDistortionVol"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{7A1F8416-1032-D0B4-97DD-E90B3693560E}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{E8890F09-EE40-98AB-33D7-3B18F1D8B857}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -63,13 +63,17 @@
 					<ShortName>MeOyesRev2.wav</ShortName>
 					<CachePath>SFX/MeOyesRev2_10C4C929.wem</CachePath>
 				</File>
+				<File Id="39015080" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Exhale2.wav</ShortName>
+					<CachePath>SFX/Exhale2_178F2778.wem</CachePath>
+				</File>
 				<File Id="39914089" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Step9.wav</ShortName>
 					<CachePath>SFX/Step9_08F93BE0.wem</CachePath>
 				</File>
 				<File Id="57109975" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Choke.wav</ShortName>
-					<CachePath>SFX/Choke_24876AAF.wem</CachePath>
+					<CachePath>SFX/Choke_EADF79A4.wem</CachePath>
 				</File>
 				<File Id="84490070" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pushing Stone.wav</ShortName>
@@ -441,7 +445,7 @@
 				</File>
 				<File Id="1009298550" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Choke.wav</ShortName>
-					<CachePath>SFX/Choke_DD990E29.wem</CachePath>
+					<CachePath>SFX/Choke_FF0A5FB8.wem</CachePath>
 				</File>
 				<File Id="1011580158" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>EyeBeamIntensifier.wav</ShortName>
@@ -484,8 +488,9 @@
 						<MediaRef Id="916682109"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2043365649" Name="Play_Amalia_Music" DurationType="OneShot" DurationMin="129.07895" DurationMax="129.07895">
+				<Event Id="2043365649" Name="Play_Amalia_Music" DurationType="OneShot" DurationMin="130.57895" DurationMax="130.57895">
 					<MediaRefs>
+						<MediaRef Id="39015080"/>
 						<MediaRef Id="899456085"/>
 					</MediaRefs>
 				</Event>
@@ -816,5 +821,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8AF136C7-A368-6F06-F087-4AEA3867048B}</FileHash>
+	<FileHash>{4D2F3CCE-F657-DE26-7F22-68ED7C54FD7D}</FileHash>
 </SoundBanksInfo>
