@@ -75,11 +75,11 @@ public class EnemyVideoController : EyeAnimatorController
     // Start is called before the first frame update
     protected new void Start()
     {
-        RippleEffect = gameObject.transform.GetChild(0).gameObject;
+        //RippleEffect = gameObject.transform.GetChild(0).gameObject;
 
-        initScale = RippleEffect.transform.localScale;
+        //initScale = RippleEffect.transform.localScale;
         
-        RippleEffect.SetActive(false);
+        //RippleEffect.SetActive(false);
 
         eyeFieldOfView = Instantiate(pfEyeFieldOfView, null).GetComponent<EyeFieldOfView>();
         eyeFieldOfView.SetFOV(fov);
@@ -209,11 +209,11 @@ public class EnemyVideoController : EyeAnimatorController
                         {
                             // VPlayer.clip = ActiveClip;
                             VPlayer.SetBool("Activated", true);
-                            RippleEffect.SetActive(true);
+                            //RippleEffect.SetActive(true);
                             state = State.Active;
                         //     float angleToPlayer = EyeFieldOfView.GetAngleFromVectorFloat(dirToPlayer);
                         //     eyeFrameFoundPct = Mathf.Abs(eyeAngle)/360f;
-                            StartCoroutine(RippleEffectActivate());
+                            //StartCoroutine(RippleEffectActivate());
                         }
 
 
