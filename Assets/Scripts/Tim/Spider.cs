@@ -18,6 +18,16 @@ public class Spider : MonoBehaviour
 
     bool moving, seeing;
 
+    [Header("Sounds")]
+    [SerializeField] AK.Wwise.Event startDefault;
+    [SerializeField] AK.Wwise.Event stopDefault;
+    [SerializeField] AK.Wwise.Event startIntensified;
+    [SerializeField] AK.Wwise.Event stopIntensified;
+    public static int numDefaultSound = 0;
+    public static int numIntensifiedSound = 0;
+    private bool playingDefaultSound = false;
+    private bool playingIntensifiedSound = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,6 +85,53 @@ public class Spider : MonoBehaviour
     {
         seeing = b;
         eye.sprite = b ? eyeOpen : eyeClosed;
+
+        if (!playingDefaultSound)
+        {
+            if (numDefaultSound == 0)
+            {
+                startDefault.Post(gameObject);
+                //print("start default");
+            }
+            playingDefaultSound = true;
+            numDefaultSound++;
+            //print("playing default = " + numDefaultSound);
+        }
+        else
+        {
+            numDefaultSound--;
+            playingDefaultSound = false;
+            if (numDefaultSound == 0)
+            {
+                stopDefault.Post(gameObject);
+                //print("stop default");
+            }
+            //print("playing default = " + numDefaultSound);
+        }
+
+        if (!playingIntensifiedSound)
+        {
+            if (numIntensifiedSound == 0)
+            {
+                startIntensified.Post(gameObject);
+                //print("start intensified");
+            }
+            numIntensifiedSound++;
+            playingIntensifiedSound = true;
+            //print("playing intensified = " + numIntensifiedSound);
+        }
+        else
+        {
+            numIntensifiedSound--;
+            playingIntensifiedSound = false;
+            if (numIntensifiedSound == 0)
+            {
+                stopIntensified.Post(gameObject);
+                //print("stop intensified");
+            }
+            //print("playing intensified = " + numIntensifiedSound);
+        }
+
     }
 
     void CalculateCircumference()

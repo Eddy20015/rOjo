@@ -80,7 +80,7 @@ public class ForegroundController : VideoController
     private void DonePlaying(VideoPlayer vp)
     {
         donePlaying = true;
-        VPlayer.Stop();
+        StopForeground();
     }
 
     private void OnEnable()

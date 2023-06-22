@@ -816,6 +816,11 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="Castanet Playing_Section" ID="{94CAE4A7-25D3-446A-9EB0-8DC3C34E31B6}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0142018760782059"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0865023361127086"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>Castanet Playing_Section.wav</AudioFile>
 							<MediaIDList>
@@ -1228,7 +1233,7 @@
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
 											<Property Name="Max" Type="Real64" Value="328"/>
-											<Property Name="Min" Type="Real64" Value="-404"/>
+											<Property Name="Min" Type="Real64" Value="-204"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -4072,6 +4077,13 @@
 				<Folder Name="Branches" ID="{9F65B511-97CB-4388-BCE7-630DEFB3EB1B}" ShortID="943328458">
 					<ChildrenList>
 						<Sound Name="Branch Breaking" ID="{5A819C79-3A3C-45B1-BE7E-B2A215449395}" ShortID="117987490">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
@@ -4094,6 +4106,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Branch Impact" ID="{3F6EB9C7-C485-4601-B7D9-31DE213D95EE}" ShortID="165452853">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{0DC6C792-07AD-43CA-B466-7D626E047DF7}"/>
